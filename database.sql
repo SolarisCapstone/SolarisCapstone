@@ -1,7 +1,7 @@
 CREATE TABLE Courses (
     course_name VARCHAR(255) PRIMARY KEY,
     description TEXT NOT NULL,
-    type VARCHAR(255) CHECK (status IN ('Major', 'Concentration', 'Elective')) NOT NULL, 
+    type VARCHAR(255) CHECK (status IN ('Core', 'Mathematics and Statistics', 'Capstone', 'Conc Required', 'Conc Elective', 'Conc Tech Elective')) NOT NULL, 
 );
 begin;
 insert into Courses values ('ITSC 1212', 'Introduction to Computer Science', 'Major');
