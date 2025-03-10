@@ -3,6 +3,29 @@ CREATE TABLE Courses (
     description TEXT NOT NULL,
     type VARCHAR(255) CHECK (status IN ('Core', 'Mathematics and Statistics', 'Capstone', 'Conc Required', 'Conc Elective', 'Conc Tech Elective')) NOT NULL, 
 );
+
+CREATE TABLE Prerequisites (
+    course_name VARCHAR(255) NOT NULL,
+    prerequisite_name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (course_name, prerequisite_name),
+    FOREIGN KEY (course_name) REFERENCES Courses(course_name),
+    FOREIGN KEY (prerequisite_name) REFERENCES Courses(course_name)
+);
+
+CREATE TABLE Catalogs (
+    catalog_id INT PRIMARY KEY,
+    catalog_name VARCHAR(255) NOT NULL,
+    description TEXT,
+);
+
+CREATE TABLE CatalogCourses (
+    catalog_id INT,
+    course_name VARCHAR(255),
+    PRIMARY KEY (catalog_id, course_name),
+    FOREIGN KEY (catalog_id) REFERENCES Catalogs(catalog_id),
+    FOREIGN KEY (course_name) REFERENCES Courses(course_name)
+);
+
 begin;
 INSERT INTO Courses (course_name, description, type) VALUES
     ('ITSC 1212', 'Introduction to Computer Science', 'Core'),
@@ -67,16 +90,20 @@ INSERT INTO Courses (course_name, description, type) VALUES
     ('ITIS 4350', 'Design Prototyping', 'Core'),
     ('ITIS 4360', 'Human-Centered Artificial Intelligence', 'Core'),
     ('ITIS 4390', 'Interaction Design Projects', 'Core');
-commit;
 
-CREATE TABLE Prerequisites (
-    course_name VARCHAR(255) NOT NULL,
-    prerequisite_name VARCHAR(255) NOT NULL,
-    PRIMARY KEY (course_name, prerequisite_name),
-    FOREIGN KEY (course_name) REFERENCES Courses(course_name),
-    FOREIGN KEY (prerequisite_name) REFERENCES Courses(course_name)
-);
-begin;
+INSERT INTO Catalogs (catalog_id, catalog_name) VALUES 
+    (1, 'Computer Science Science', 'Computer Science Bachelors in Science Major'),
+    (1, 'Computer Science Science', 'Computer Science Bachelors in Science Major'),
+    (2, 'Computer Science Arts', 'Computer Science Bachelors in Arts Major'),
+    (3, 'Data Science ', 'Data Science Concentration'),
+    (4, 'Cyber Security', 'Cyber Security Concentration'),
+    (5, 'Information Technology', 'Information Technology Concentration'),
+    (6, 'Bioinformatics', 'Bioinformatics Concentration'),
+    (7, 'Human Computer Interaction', 'Human Computer Interaction Concentration'),
+    (8, 'AI, Robotics, and Gaming', 'AI, Robotics, and Gaming Concentration'),
+    (9, 'Systems and Networks', 'Systems and Networks Concentration'),
+    (10, 'Web/Mobile Dev & Software Engr', 'Web/Mobile Dev & Software Engr Concentration');
+
 INSERT INTO Prerequisites (course_name, prerequisite_name) VALUES
     ('ITSC 1213', 'ITSC 1212'),
     ('ITSC 2175', 'ITSC 1212'),
@@ -135,27 +162,134 @@ INSERT INTO Prerequisites (course_name, prerequisite_name) VALUES
     ('ITIS 4260', 'ITSC 3146'),
     ('ITIS 4260', 'STAT 1220'),
     ('ITIS 4261', 'ITSC 3146');
-commit;
 
-CREATE TABLE Catalogs (
-    catalog_id INT PRIMARY KEY,
-    catalog_name VARCHAR(255) NOT NULL,
-    description TEXT,
-);
-begin;
-insert into Catalogs values (1, 'Computer Science', 'Computer Science Major');
-insert into Catalogs values (2, 'Data Science ', 'Data Science Concentration');
-commit;
-
-CREATE TABLE CatalogCourses (
-    catalog_id INT,
-    course_name VARCHAR(255),
-    PRIMARY KEY (catalog_id, course_name),
-    FOREIGN KEY (catalog_id) REFERENCES Catalogs(catalog_id),
-    FOREIGN KEY (course_name) REFERENCES Courses(course_name)
-);
-begin;
-insert into CatalogCourses values (1, 'ITSC 1212');
-insert into CatalogCourses values (1, 'ITSC 1213');
-insert into CatalogCourses values (1, 'ITSC 2214');
+INSERT INTO CatalogCourses (catalog_id, course_name) VALUES 
+    (1, 'ITSC 1212'),
+    (1, 'ITSC 1213'),
+    (1, 'ITSC 2214'),
+    (1, 'ITSC 1600'),
+    (1, 'ITSC 2600'),
+    (1, 'ITSC 2175'),
+    (1, 'MATH 2165'),
+    (1, 'ITSC 2181'),
+    (1, 'ITSC 3146'),
+    (1, 'ITSC 3155'),
+    (1, 'ITSC 3688'),
+    (1, 'MATH 2164'),
+    (1, 'STAT 2122'),
+    (1, 'ITCS 4232'),
+    (1, 'ITCS 4238'),
+    (1, 'ITIS 4390'),
+    (1, 'ITIS 4246'),
+    (1, 'ITSC 4155'),
+    (1, 'ITSC 4681'),
+    (1, 'ITSC 4682'),
+    (1, 'ITSC 4750'),
+    (1, 'ITSC 4850'),
+    (1, 'ITSC 4851'),
+    (1, 'ITSC 4990'),
+    (1, 'ITSC 4991'),
+    (2, 'ITSC 1212'),
+    (2, 'ITSC 1213'),
+    (2, 'ITSC 2214'),
+    (2, 'ITSC 1600'),
+    (2, 'ITSC 2600'),
+    (2, 'ITSC 2175'),
+    (2, 'MATH 2165'),
+    (2, 'ITSC 3688'),
+    (2, 'STAT 2223'),
+    (2, 'ITCS 4232'),
+    (2, 'ITIS 4390'),
+    (2, 'ITIS 4246'),
+    (2, 'ITSC 4155'),
+    (2, 'ITSC 4681'),
+    (2, 'ITSC 4682'),
+    (2, 'ITSC 4850'),
+    (2, 'ITSC 4851'),
+    (2, 'ITSC 4990'),
+    (2, 'ITSC 4991'),
+    (2, 'ITSC 4750'),
+    (3, 'ITCS 3160'),
+    (3, 'ITCS 3162'),
+    (3, 'ITCS 3156'),
+    (3, 'ITCS 3190'),
+    (3, 'ITCS 3216'),
+    (3, 'ITCS 4114'),
+    (3, 'ITCS 4121'),
+    (3, 'ITCS 4122'),
+    (3, 'ITCS 4152'),
+    (3, 'INFO 3236'),
+    (3, 'ITIS 4310'),
+    (4, 'ITCS 3160'),
+    (4, 'ITIS 3135'),
+    (4, 'ITIS 3200'),
+    (4, 'ITIS 3246'),
+    (4, 'ITIS 4166'),
+    (4, 'ITIS 4221'),
+    (4, 'ITIS 4250'),
+    (4, 'ITIS 4260'),
+    (4, 'ITIS 4214'),
+    (4, 'ITIS 4261'),
+    (5, 'ITIS 3130'),
+    (5, 'ITIS 3135'),
+    (5, 'ITIS 3200'),
+    (5, 'ITIS 3300'),
+    (5, 'ITIS 3160'),
+    (6, 'BINF 1101'),
+    (5, 'BINF 2111'),
+    (6, 'BINF 3101'),
+    (6, 'BINF 4600'),
+    (6, 'BIOL 3111'),
+    (6, 'BIOL 3166'),
+    (6, 'BINF 4211'),
+    (6, 'BINF 4171'),
+    (6, 'BINF 4191'),
+    (6, 'BINF 3131'),
+    (6, 'BINF 3201'),
+    (7, 'ITIS 3130'),
+    (7, 'ITIS 3135'),
+    (7, 'ITIS 3140'),
+    (7, 'ITIS 4350'),
+    (7, 'ITIS 3216'),
+    (7, 'ITIS 4214'),
+    (7, 'ITIS 4353'),
+    (7, 'ITIS 4355'),
+    (7, 'ITIS 4358'),
+    (7, 'ITIS 4360'),
+    (8, 'ITCS 3153'),
+    (8, 'ITCS 3156'),
+    (8, 'ITCS 3120'),
+    (8, 'ITCS 3153'),
+    (8, 'ITCS 3156'),
+    (8, 'ITCS 4101'),
+    (8, 'ITCS 4114'),
+    (8, 'ITCS 4123'),
+    (8, 'ITCS 4124'),
+    (8, 'ITCS 4150'),
+    (8, 'ITCS 4151'),
+    (8, 'ITCS 4152'),
+    (8, 'ITCS 4230'),
+    (8, 'ITCS 4231'),
+    (8, 'ITCS 4236'),
+    (9, 'ITCS 3146'),
+    (9, 'ITCS 3156'),
+    (9, 'ITCS 3160'),
+    (9, 'ITCS 3166'),
+    (9, 'ITCS 3190'),
+    (9, 'ITCS 4102'),
+    (9, 'ITCS 4141'),
+    (9, 'ITIS 3200'),
+    (9, 'ITIS 3246'),
+    (9, 'ITIS 4166'),
+    (10, 'ITCS 3160'),
+    (10, 'ITIS 3135'),
+    (10, 'ITIS 3310'),
+    (10, 'ITIS 4221'),
+    (10, 'ITCS 3112'),
+    (10, 'ITIS 3130'),
+    (10, 'ITIS 4350'),
+    (10, 'ITIS 3300'),
+    (10, 'ITIS 3320'),
+    (10, 'ITIS 4166'),
+    (10, 'ITIS 4180');
 commit;
