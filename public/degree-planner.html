@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degree Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-green-900 text-white p-6">
+
+    <div class="max-w-5xl mx-auto bg-white text-black p-6 rounded shadow-md">
+        <h1 class="text-2xl font-bold text-green-700">UNC Charlotte CS Degree Planner</h1>
+        <p class="text-gray-600">Below is the list of all required core courses for the Computer Science program.</p>
+ 
+        <!-- Core Courses Table -->
+        <table class="w-full mt-4 border border-gray-300">
+            <thead>
+                <tr class="bg-green-700 text-white">
+                    <th class="p-2">Course Code</th>
+                    <th class="p-2">Course Title</th>
+                    <th class="p-2">Credits</th>
+                    <th class="p-2">Prerequisites</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Core CS Courses -->
+                <tr><td class="p-2">ITSC 1212</td> <td class="p-2">Intro to Computer Science I</td> <td class="p-2">4</td> <td class="p-2">None</td></tr>
+                <tr><td class="p-2">ITSC 1213</td> <td class="p-2">Intro to Computer Science II</td> <td class="p-2">4</td> <td class="p-2">ITSC 1212</td></tr>
+                <tr><td class="p-2">ITSC 2600</td> <td class="p-2">Logic and Algorithms</td> <td class="p-2">3</td> <td class="p-2">ITSC 1213 or MATH 2165</td></tr>
+                <tr><td class="p-2">ITSC 2175</td> <td class="p-2">Logic and Algorithms</td> <td class="p-2">3</td> <td class="p-2">ITSC 1213 or MATH 2165</td></tr>
+                <tr><td class="p-2">ITSC 2214</td> <td class="p-2">Data Structures & Algorithms</td> <td class="p-2">3</td> <td class="p-2">ITSC 2175</td></tr>
+                <tr><td class="p-2">ITSC 2181</td> <td class="p-2">Intro to Computer Systems</td> <td class="p-2">4</td> <td class="p-2">ITSC 1213</td></tr>
+                <tr><td class="p-2">ITSC 3146</td> <td class="p-2">Operating Systems & Networking</td> <td class="p-2">3</td> <td class="p-2">ITSC 2181</td></tr>
+                <tr><td class="p-2">ITSC 3155</td> <td class="p-2">Software Engineering</td> <td class="p-2">3</td> <td class="p-2">ITSC 2214</td></tr>
+                <tr><td class="p-2">ITSC 3688</td> <td class="p-2">Computers & Society</td> <td class="p-2">3</td> <td class="p-2">None</td></tr>
+                <tr><td class="p-2">ITSC 4155</td> <td class="p-2">Capstone</td> <td class="p-2">3</td> <td class="p-2">Senior Standing</td></tr>
+
+                <!-- Math & Stats Courses -->
+                <tr class="bg-gray-200"><td colspan="4" class="p-2 font-bold text-green-700">Mathematics & Statistics</td></tr>
+                <tr><td class="p-2">MATH 1241</td> <td class="p-2">Calculus I</td> <td class="p-2">3</td> <td class="p-2">None</td></tr>
+                <tr><td class="p-2">MATH 1242</td> <td class="p-2">Calculus II</td> <td class="p-2">3</td> <td class="p-2">MATH 1241</td></tr>
+                <tr><td class="p-2">MATH 2164</td> <td class="p-2">Matrices & Linear Algebra</td> <td class="p-2">3</td> <td class="p-2">MATH 1241</td></tr>
+                <tr><td class="p-2">STAT 2122</td> <td class="p-2">Intro to Probability & Statistics</td> <td class="p-2">3</td> <td class="p-2">None</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Button to Go to Degree Planning -->
+        <div class="mt-6 text-center">
+            <a href="onboarding.html" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded">
+                Start Degree Planning
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
