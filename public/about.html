@@ -5,16 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graduation Planner</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> <!-- Added Alpine.js -->
 </head>
-<body class="bg-green-900 text-white flex items-center justify-center h-screen">
+<body class="bg-green-900 text-white flex flex-col items-center">
 
-    <div class="text-center">
-        <h1 class="text-4xl font-bold">UNC Charlotte Graduation Planner</h1>
+    <!--Header -->
+    <header class="w-full flex items-center p-4">
+        <img src="/public/images/asdfasdf.png" alt="Graduation Planner Logo" class="h-12 w-auto">
+    </header>
+
+   <!-- Carousel -->
+    <div class="w-full relative" x-data="{ activeSlide: 1, images: [
+        '/public/images/carousel/e5b4dac9-364c-4633-99c3-52000eb2724b_1140x641.jpg',
+        '/public/images/carousel/R1 Launch Slider 1800x750.jpg',
+        '/public/images/carousel/Romare-Bearden-Park-cropped.jpg'
+    ]}">
+        <div class="relative w-full h-96 overflow-hidden">
+            <template x-for="(image, index) in images" :key="index">
+                <img :src="image" alt="Slide"
+                    class="absolute w-full h-full object-cover transition-opacity duration-700"
+                    :class="{ 'opacity-100': activeSlide === index + 1, 'opacity-0': activeSlide !== index + 1 }">
+            </template>
+        </div>
+
+        <!-- Navigation -->
+        <div class="absolute inset-0 flex justify-between items-center px-4">
+            <button @click="activeSlide = activeSlide === 1 ? images.length : activeSlide - 1"
+                class="bg-black bg-opacity-50 p-2 text-white rounded-full">&#10094;</button>
+            <button @click="activeSlide = activeSlide === images.length ? 1 : activeSlide + 1"
+                class="bg-black bg-opacity-50 p-2 text-white rounded-full">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="text-center mt-8">
+        <h1 class="text-5xl font-bold">UNC Charlotte Graduation Planner</h1>
         <p class="text-lg mt-4">Plan your courses and graduate on time!</p>
-        <a href="course_catalog.html" class="mt-6 inline-block bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded">
+        <a href="course_catalog.html" class="mt-6 inline-block bg-green-600 hover:bg-green-500 text-white py-2 px-6 rounded text-lg">
             Start Planning
         </a>
     </div>
-<!-- this is a test commit -->
+
+    <!-- About Description -->
+    <div class="bg-white text-black text-center p-8 mt-12 w-full">
+        <h2 class="text-3xl font-semibold">About This Platform</h2>
+        <p class="text-lg mt-4 max-w-2xl mx-auto">
+            The Graduation Planner is designed to help UNC Charlotte students organize their courses, track their progress, and ensure they graduate on time. Easily browse course options, create custom schedules, and stay on top of academic requirements with our intuitive platform.
+        </p>
+    </div>
+
 </body>
 </html>
