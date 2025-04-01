@@ -1,8 +1,18 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS Prerequisites;
+DROP TABLE IF EXISTS CatalogCourses;
+DROP TABLE IF EXISTS Courses;
+DROP TABLE IF EXISTS Catalogs;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
 CREATE TABLE Courses (
     course_name VARCHAR(255) PRIMARY KEY,
     description TEXT NOT NULL,
-    type VARCHAR(255) CHECK (status IN ('Core', 'Mathematics and Statistics', 'Capstone', 'Conc Required', 'Conc Elective', 'Conc Tech Elective')) NOT NULL, 
+    type VARCHAR(255) CHECK (type IN ('Core', 'Mathematics and Statistics', 'Capstone', 'Conc Required', 'Conc Elective', 'Conc Tech Elective')) NOT NULL 
 );
+START TRANSACTION;
 
 CREATE TABLE Prerequisites (
     course_name VARCHAR(255) NOT NULL,
@@ -11,12 +21,14 @@ CREATE TABLE Prerequisites (
     FOREIGN KEY (course_name) REFERENCES Courses(course_name),
     FOREIGN KEY (prerequisite_name) REFERENCES Courses(course_name)
 );
+START TRANSACTION;
 
 CREATE TABLE Catalogs (
     catalog_id INT PRIMARY KEY,
     catalog_name VARCHAR(255) NOT NULL,
-    description TEXT,
+    description TEXT
 );
+START TRANSACTION;
 
 CREATE TABLE CatalogCourses (
     catalog_id INT,
@@ -25,8 +37,9 @@ CREATE TABLE CatalogCourses (
     FOREIGN KEY (catalog_id) REFERENCES Catalogs(catalog_id),
     FOREIGN KEY (course_name) REFERENCES Courses(course_name)
 );
+START TRANSACTION;
 
-begin;
+TRUNCATE TABLE Courses;
 INSERT INTO Courses (course_name, description, type) VALUES
     ('ITSC 1212', 'Introduction to Computer Science', 'Core'),
     ('ITSC 1213', 'Introduction to Computer Science II', 'Core'),
@@ -69,7 +82,7 @@ INSERT INTO Courses (course_name, description, type) VALUES
     ('ITCS 4180', 'Mobile Application Development', 'Core'),
     ('ITCS 4230', 'Intro to Game Design and Development', 'Core'),
     ('ITCS 4231', 'Advanced Game Design and Development', 'Core'),
-    ('ITCS 4232', 'Game Design and Development Studio', 'Core')
+    ('ITCS 4232', 'Game Design and Development Studio', 'Core'),
     ('ITIS 3130', 'Intro to Human-Centered Computing', 'Core'),
     ('ITIS 3135', 'Web-based Application Design and Development', 'Core'),
     ('ITIS 3200', 'Intro to Info Security & Privacy', 'Core'),
@@ -92,17 +105,16 @@ INSERT INTO Courses (course_name, description, type) VALUES
     ('ITIS 4390', 'Interaction Design Projects', 'Core');
 
 INSERT INTO Catalogs (catalog_id, catalog_name) VALUES 
-    (1, 'Computer Science Science', 'Computer Science Bachelors in Science Major'),
-    (1, 'Computer Science Science', 'Computer Science Bachelors in Science Major'),
-    (2, 'Computer Science Arts', 'Computer Science Bachelors in Arts Major'),
-    (3, 'Data Science ', 'Data Science Concentration'),
-    (4, 'Cyber Security', 'Cyber Security Concentration'),
-    (5, 'Information Technology', 'Information Technology Concentration'),
-    (6, 'Bioinformatics', 'Bioinformatics Concentration'),
-    (7, 'Human Computer Interaction', 'Human Computer Interaction Concentration'),
-    (8, 'AI, Robotics, and Gaming', 'AI, Robotics, and Gaming Concentration'),
-    (9, 'Systems and Networks', 'Systems and Networks Concentration'),
-    (10, 'Web/Mobile Dev & Software Engr', 'Web/Mobile Dev & Software Engr Concentration');
+    (1, 'Computer Science Science'),
+    (2, 'Computer Science Arts'),
+    (3, 'Data Science'),
+    (4, 'Cyber Security'),
+    (5, 'Information Technology'),
+    (6, 'Bioinformatics'),
+    (7, 'Human Computer Interaction'),
+    (8, 'AI, Robotics, and Gaming'),
+    (9, 'Systems and Networks'),
+    (10, 'Web/Mobile Dev & Software Engr');
 
 INSERT INTO Prerequisites (course_name, prerequisite_name) VALUES
     ('ITSC 1213', 'ITSC 1212'),
@@ -139,7 +151,7 @@ INSERT INTO Prerequisites (course_name, prerequisite_name) VALUES
     ('ITCS 4230', 'ITSC 2214'),
     ('ITCS 4231', 'ITCS 4230'),
     ('ITCS 4232', 'ITSC 3155'),
-    ('ITCS 4232', 'ITCS 4231')
+    ('ITCS 4232', 'ITCS 4231'),
     ('ITIS 3135', 'ITSC 2214'),
     ('ITIS 3200', 'ITSC 2214'),
     ('ITIS 3216', 'PSYCH1101'),
