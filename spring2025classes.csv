@@ -1,0 +1,2346 @@
+﻿Section Prerequisites for Term: 202510,,,,,,,
+,,,,,,,
+Term,Subject,Course,Section,CRN,Part of Term,Title,Prerequisites
+202510,ACCT,2121,001,20269,1,Principles of ACCT I,MATH 1120 or MATH 1241 or MATH 1242 or STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122
+,,,002,20270,1,Principles of ACCT I,MATH 1120 or MATH 1241 or MATH 1242 or STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122
+,,,003,20797,1,Principles of ACCT I,MATH 1120 or MATH 1241 or MATH 1242 or STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122
+,,,004,21051,1,Principles of ACCT I,MATH 1120 or MATH 1241 or MATH 1242 or STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122
+,,,005,21097,1,Principles of ACCT I,MATH 1120 or MATH 1241 or MATH 1242 or STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122
+,,,006,21492,1,Principles of ACCT I,MATH 1120 or MATH 1241 or MATH 1242 or STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122
+,,2122,001,20271,1,Principles of ACCT II,ACCT 2121
+,,,002,20272,1,Principles of ACCT II,ACCT 2121
+,,,003,20273,1,Principles of ACCT II,ACCT 2121
+,,,004,20955,1,Principles of ACCT II,ACCT 2121
+,,,090,21494,1,Principles of ACCT II,ACCT 2121
+,,3300,001,22041,1,Prof Dev for Accountants,ACCT 3311 or ACCT 3323
+,,,002,22829,1,Prof Dev for Accountants,ACCT 3311 or ACCT 3323
+,,,003,24576,1,Prof Dev for Accountants,ACCT 3311 or ACCT 3323
+,,3323,002,22691,1,Intermediate Accounting I,ACCT 2121 and INFO 2130
+,,,003,22692,1,Intermediate Accounting I,ACCT 2121 and INFO 2130
+,,,004,22693,1,Intermediate Accounting I,ACCT 2121 and INFO 2130
+,,,005,22694,1,Intermediate Accounting I,ACCT 2121 and INFO 2130
+,,,006,22695,1,Intermediate Accounting I,ACCT 2121 and INFO 2130
+,,,090,24869,1,Intermediate Accounting I,ACCT 2121 and INFO 2130
+,,,091,24870,1,Intermediate Accounting I,ACCT 2121 and INFO 2130
+,,,093,22696,1,Intermediate Accounting I,ACCT 2121 and INFO 2130
+,,,094,22697,1,Intermediate Accounting I,ACCT 2121 and INFO 2130
+,,3324,001,23292,1,Intermediate Accounting II,ACCT 3323
+,,,002,23293,1,Intermediate Accounting II,ACCT 3323
+,,,003,23294,1,Intermediate Accounting II,ACCT 3323
+,,,004,24839,1,Intermediate Accounting II,ACCT 3323
+,,,005,26926,1,Intermediate Accounting II,ACCT 3323
+,,3325,001,23296,1,Intermediate Accounting III,ACCT 3324
+,,,002,23297,1,Intermediate Accounting III,ACCT 3324
+,,,003,23298,1,Intermediate Accounting III,ACCT 3324
+,,3330,001,21346,1,Managerial Accounting,ACCT 2122 or ACCT 3323
+,,,002,21347,1,Managerial Accounting,ACCT 2122 or ACCT 3323
+,,3340,001,22181,1,ACCT Information Systems,ACCT 2121 and (ACCT 2122 or ACCT 3323) and INFO 2130 and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,002,24575,1,ACCT Information Systems,ACCT 2121 and (ACCT 2122 or ACCT 3323) and INFO 2130 and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,3350,001,21345,1,Introduction to Auditing,ACCT 3340 and (ACCT 3312 or ACCT 3324)
+,,,002,23301,1,Introduction to Auditing,ACCT 3340 and (ACCT 3312 or ACCT 3324)
+,,4220,001,21326,1,Income Tax,ACCT 3311 or ACCT 3324
+,,,002,23299,1,Income Tax,ACCT 3311 or ACCT 3324
+,,,090,27393,1,Income Tax,ACCT 3311 or ACCT 3324
+,,6122,U01,24606,1,Bus Tax II,ACCT 6121
+,,6150,U01,24605,1,Tax Strategy & Policy,ACCT 6121
+,,6262,U01,24603,1,Adv Fin Reporting and Anlys II,ACCT 6261
+,ADMN,8420,080,23178,1,Adv Intern Educ Lead Part II,ADMN 8410
+,AEEE,4290,090,26281,1,Advanced Instrumentation,ELET 2241
+,AERO,1102,001,22195,1,Foundations of Air Force II,AERO 1101
+,,,002,22196,1,Foundations of Air Force II,AERO 1101
+,,,003,22199,1,Foundations of Air Force II,AERO 1101
+,,2102,001,22194,1,Evol of Aerospace Studies II,AERO 2101
+,,,002,22197,1,Evol of Aerospace Studies II,AERO 2101
+,,3102,001,22198,1,Leadership Studies II,AERO 3101
+,,,002,23457,1,Leadership Studies II,AERO 3101
+,,4102,001,22290,1,Prep for Active Duty II,AERO 4101
+,AFRS,3121,001,26558,1,Contemporary African Art,ARTH 1211 or ARTH 1212
+,ANTH,3020,001,23189,1,Topics in Cultural Anth,ANTH 1101 or ANTH 1501
+,,3090,001,22415,1,Topics in Anthropology,ANTH 1101 or ANTH 1501
+,,3153,001,23141,1,Archaeological Analysis,ANTH 2151
+,,3601,001,21842,1,Foundations of Anth Theory,(ANTH 1101 or ANTH 1501) and ANTH 2171 and (ANTH 2151 or ANTH 2141) and (ANTH 2121 or ANTH 2161)
+,,3895,001,24163,1,Directed Individual Study,ANTH 1101 or ANTH 1501
+,,4020,001,24891,1,Topics in Cultural Anth,ANTH 1101 or ANTH 1501
+,,4050,001,23195,1,Topics in Archaeology,ANTH 2151
+,,4090,001,22452,1,Topics in Anthropology,ANTH 1101 or ANTH 1501
+,,,002,24892,1,Topics in Anthropology,ANTH 1101 or ANTH 1501
+,,4141,001,22483,1,Forensic Anthropology,ANTH 3141
+,,4601,001,22457,1,Seminar in General Anthro,ANTH 3101 or ANTH 3601
+,,4611,001,22458,1,Applied Senior Seminar,ANTH 3601 and ANTH 2171 and (ANTH 4122 or ANTH 4140 or ANTH 4453)
+,,4702,001,24953,1,Honors Writing in Anthropology,ANTH 4701
+,,6400,001,23373,1,Anthropology Practicum,ANTH 6611
+,ARBC,1202,001,23555,1,Elementary Arabic II,ARBC 1201
+,,2202,001,22271,1,Intermediate Arabic II,ARBC 2201
+,,3202,001,21931,1,Advanced Arabic II,ARBC 3201
+,ARCH,1102,001,20225,1,Comprehensive Studio,ARCH 1101
+,,,002,20226,1,Comprehensive Studio,ARCH 1101
+,,,003,20227,1,Comprehensive Studio,ARCH 1101
+,,,004,20228,1,Comprehensive Studio,ARCH 1101
+,,1602,001,22613,1,Writing Reading Thinking Archi,ARCH 1101
+,,,002,22735,1,Writing Reading Thinking Arch,ARCH 1101
+,,,003,22736,1,Writing Reading Thinking Arch,ARCH 1101
+,,,004,22737,1,Writing Reading Thinking Arch,ARCH 1101
+,,,005,24195,1,Writing Reading Thinking Arch,ARCH 1101
+,,2102,001,20229,1,Comprehensive Studio,ARCH 2101
+,,,002,20230,1,Comprehensive Studio,ARCH 2101
+,,,003,20232,1,Comprehensive Studio,ARCH 2101
+,,,004,22690,1,Comprehensive Studio,ARCH 2101
+,,,005,26965,1,Comprehensive Studio,ARCH 2101
+,,3102,001,20233,1,Architecture Design Studio,ARCH 3101
+,,,002,20234,1,Architecture Design Studio,ARCH 3101
+,,,003,20235,1,Architecture Design Studio,ARCH 3101
+,,,004,22365,1,Architecture Design Studio,ARCH 3101
+,,,005,24713,1,Architecture Design Studio,ARCH 3101
+,,4102,001,22832,1,Arch Design Studio VIII: Topic,ARCH 4101
+,,,002,24923,1,Arch Design Studio VIII: Topic,ARCH 4101
+,,,003,24924,1,Arch Design Studio VIII: Topic,ARCH 4101
+,,,004,24926,1,Arch Design Studio VIII: Topic,ARCH 4101
+,,4202,001,20900,1,Arch Hist II: 1750-Present,ARCH 4201 or ARCH 4211
+,,4204,001,21627,1,History/Theory Topics,ARCH 4202
+,,,002,22160,1,History/Theory Topics,ARCH 4202
+,,,003,24763,1,History/Theory Topics,ARCH 4202
+,,,004,23268,1,History/Theory Topics,ARCH 4202
+,,,006,27373,1,History/Theory Topics,ARCH 4202
+,,,007,27375,1,History/Theory Topics,ARCH 4202
+,,4302,001,21810,1,Environmental Syst Principles,ARCH 4301 or ARCH 4312
+,,4304,001,20902,1,Structural Systems,ARCH 4301 or ARCH 4312 and ARCH 4303 or ARCH 4313
+,,4605,001,21468,1,Computational Practice,ARCH 4604
+,,5202,001,20901,1,Arch History II: 1750-Present,ARCH 5201
+,,5302,001,21811,1,Environmental Syst Principles,ARCH 5301
+,,5304,001,20903,1,Structural Systems,ARCH 5303
+,,5605,001,21301,1,Computational Practice,ARCH 5604
+,,6102,001,20905,1,Design Studio Fundamentals,ARCH 6101
+,,6603,001,20904,1,Rep II:  Digital Fundamentals,ARCH 6602
+,,7102,001,22601,1,Design Studio Topics,ARCH 7101
+,,,002,22603,1,Design Studio Topics,ARCH 7101
+,,,003,22600,1,Design Studio Topics,ARCH 7101
+,,,004,24925,1,Design Studio Topics,ARCH 7101
+,,7104,001,20886,1,Design Studio: Diploma Project,ARCH 7103
+,,,002,20887,1,Design Studio: Diploma Project,ARCH 7103
+,,,003,21946,1,Design Studio: Diploma Project,ARCH 7103
+,,,004,22599,1,Design Studio: Diploma Project,ARCH 7103
+,ARTA,3201,001,20791,1,BFA Portfolio Review,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and ARTB 1206
+,,4901,001,22447,1,Senior Thesis 1,ARTA 3201
+,,,002,24473,1,Senior Thesis 1,ARTA 3201
+,,4902,001,22448,1,Senior Thesis 2,ARTA 3201 and ARTA 4901
+,,,002,24474,1,Senior Thesis 2,ARTA 3201 and ARTA 4901
+,ARTC,2171,001,20862,1,Ceramics Handbuilding,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,2172,090,20792,1,Ceramics Wheel 1,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,3171,001,20794,1,Ceramic Sculpture,ARTC 2171
+,,3172,090,21224,1,Ceramics Wheel 2,ARTC 2172
+,,3273,001,20795,1,Intermediate Ceramics,ARTC 3171 or ARTC 3172
+,,3274,001,26497,1,Advanced Ceramics,ARTC 3273 and ARTA 3201
+,ARTD,2134,001,24179,1,Figure Drawing I,ARTB 1203
+,,2139,001,22450,1,Drawing 2,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,3134,001,21217,1,Figure & Anatomy,ARTD 2134 or ARTB 1205
+,ARTE,4122,001,20753,1,Secondary Art Methods,ARTE 3121 and ARTE 3123
+,,4466,001,23218,1,ARTE Year Long Internship,ARTE 3121 or ARTE 4122
+,ARTF,2151,001,26500,1,Fibers 1,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,ARTG,2180,001,21023,1,Design Thinking,ARTB 1201 and ARTB 1203
+,,,002,22806,1,Design Thinking,ARTB 1201 and ARTB 1203
+,,2181,001,20763,1,Graphic Design I,ARTB 1201 and ARTB 1203
+,,2182,001,22406,1,Typography I,ARTB 1201 and ARTB 1203
+,,3183,001,20789,1,Graphic Design II,ARTB 1202 and ARTB 1204 and ARTG 2180 and ARTG 2181 and ARTG 2182 and ARTM 2105
+,,,090,23260,1,Graphic Design II,ARTB 1202 and ARTB 1204 and ARTG 2180 and ARTG 2181 and ARTG 2182 and ARTM 2105
+,,3184,001,20790,1,Typography II,ARTB 1202 and ARTB 1204 and ARTG 2180 and ARTG 2181 and ARTG 2182 and ARTM 2105
+,,,002,23267,1,Typography II,ARTB 1202 and ARTB 1204 and ARTG 2180 and ARTG 2181 and ARTG 2182 and ARTM 2105
+,,3185,090,22407,1,UX/UI Design Strategies,ARTB 1202 and ARTB 1204 and ARTG 2180 and ARTG 2181 and ARTG 2182 and ARTM 2105
+,,3186,001,22409,1,Communications Design,ARTB 1202 and ARTB 1204 and ARTG 2180 and ARTG 2181 and ARTG 2182 and ARTM 2105
+,,3408,001,21293,1,Graphic Design Internship,ARTG 3183 and ARTG 3184
+,,4180,001,20754,1,Print Production,ARTG 3184 and ARTG 3183 and ARTG 3186
+,,,090,26504,1,Print Production,ARTG 3184 and ARTG 3183 and ARTG 3186
+,,4182,001,22410,1,Design Research,ARTG 3183 and ARTG 3184 and ARTG 3185 and ARTG 3186
+,,4982,001,20755,1,Graphic Design Projects,ARTG 4180 and ARTG 3185 and ARTG 4182 and ARTM 3205
+,ARTH,3115,H01,26529,1,Honors Art History Methods,(ARTH 1211 or ARTA 1211) and (ARTH 1212 or ARTA 1212) and (ARTH 2110 or ARTA 2110) and ARTH 2614
+,,3121,001,21862,1,Contemporary African Art,ARTH 1211 or ARTH 1212
+,,3324,001,26527,1,Ancient Roman Art II,ARTH 1211
+,,3393,001,23259,1,History of Photography,ARTH 1212 or ARTA 1212
+,,4609,001,26528,1,Prob in Mod & Contemp Art Hist,(ARTH 3390 or ARTH 3393 or ARTH 3394) and ARTH 3114
+,ARTL,2186,001,20863,1,Illustration I,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,3185,001,23866,1,Digital Drawing & Painting,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204
+,,3286,001,21017,1,Narrative Illus: Entertainment,ARTL 2186 and ARTA 3201
+,,4981,001,20784,1,Illustration Projects,ARTA 3201 and ARTL 3186 and ARTL 3286 and ARTA 4600
+,ARTM,2105,001,24462,1,4D,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,3005,001,26565,1,Topics in Digital Media,ARTA 3201
+,,3101,090,24464,1,Game Design and Graphics,ARTM 2105
+,,3102,001,22388,1,3D Modeling and Animation,ARTM 2105
+,,3103,001,20788,1,Animation Production,ARTM 2105 and ARTA 3201
+,,3105,001,21436,1,Video Art,ARTM 2105
+,,3405,001,22770,1,Internship in Digital Media,ARTM 3103 or ARTM 3105 or ARTM 3205
+,ARTP,2131,001,20756,1,Painting I,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,3132,001,23163,1,Figurative Painting,ARTP 2131 and (ARTD 2134 or ARTB 1205) and ARTA 3201
+,,3161,001,22449,1,Mixed Media Painting,ARTP 2131
+,ARTR,2161,001,22470,1,Photo-Mechanical Print Media,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,2162,001,21444,1,Drawing/Expression in Print,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,3162,001,24290,1,Print Mixed Media,ARTR 2161 or ARTR 2162
+,,3263,001,23164,1,Bookmaking & Papermaking,ARTR 2161 or ARTR 2162
+,ARTT,2191,001,20786,1,Photo Media I,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,,002,21618,1,Photo Media I,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,,003,26566,1,Photo Media I,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,3193,001,26567,1,Alternative Photo Media,ARTT 2191 or ARTT 3190 or ARTT 3390
+,ARTZ,2104,001,20785,1,Installation Art,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,2141,090,20757,1,Sculpture Methods,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,2306,001,21425,1,Intro to 3D Mod & Digi Fab,ARTB 1201 and ARTB 1202 and ARTB 1203 and ARTB 1204 and (ARTB 1206 or ARTG 2180)
+,,3344,001,24617,1,Mixed Media,ARTC 2171 or ARTC 2172 or ARTZ 2141 or ARTZ 2306
+,ATRN,6109,001,22261,1,Clin Eval/Diag Upper Extrem,ATRN 6104
+,,6110,001,22262,1,Clin Eval/Diag Head and Spine,ATRN 6104
+,,6111,001,22263,1,Therapeutic Interventions,ATRN 6104 and ATRN 6106
+,,6121,001,22265,1,Behavioral Health in Sport Med,ATRN 6118
+,,6402,001,22266,1,Collegiate Sport Med Clin,ATRN 6401
+,,6406,001,22267,1,Immersive Clinical Rotation,ATRN 6405
+,BINF,2111,001,21559,1,Intro to BINF Computing,BINF 1101
+,,3121,001,21412,1,Statistics for Bioinformatics,BINF 2111 and (MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or STAT 1220 or STAT 1221 or STAT 2122)
+,,3201,001,21411,1,Genomic Methods,(BIOL 1110 and BIOL 1110L) or (BIOL 2120) and BINF 1101
+,,3900,002,27449,1,Undergraduate Research,BINF 1101
+,,,003,20986,1,Undergraduate Research,BINF 1101
+,,,004,27510,1,Undergraduate Research,BINF 1101
+,,4600,001,20985,1,Bioinformatics & Genomics Sem,BINF 3101
+,,6112,001,22821,1,Bioinformatics Programming II,BINF 6111
+,,6115,001,26496,H1,Introduction to UNIX Computing,BINF 6203
+,,6200,001,26570,1,Statistics for Bioinformatics,BINF 6100 and BINF 6111
+,,6201,001,21669,1,Molecular Sequence Analysis,BINF 6100
+,,6203,001,20708,1,Genomics,BINF 6100
+,,6211,001,20814,1,Dsg & Impl Bioinfor Databases,BINF 6111 and BINF 6112
+,,6310,001,20987,1,Advanced Stats for Genomics,BINF 6200
+,,8112,001,23045,1,Bioinformatics Programming II,BINF 8111
+,,8201,001,21672,1,Molecular Sequence Analysis,BINF 8100
+,,8203,001,20891,1,Genomics,BINF 8100
+,,8310,001,20988,1,Advanced Statistics,BINF 8200
+,BIOL,1110L,L01,20770,1,Principles of Biology I Lab,BIOL 1110
+,,,L02,20771,1,Principles of Biology I Lab,BIOL 1110
+,,,L03,20772,1,Principles of Biology I Lab,BIOL 1110
+,,,L04,20773,1,Principles of Biology I Lab,BIOL 1110
+,,,L05,20774,1,Principles of Biology I Lab,BIOL 1110
+,,,L06,20775,1,Principles of Biology I Lab,BIOL 1110
+,,,L07,20776,1,Principles of Biology I Lab,BIOL 1110
+,,,L08,20777,1,Principles of Biology I Lab,BIOL 1110
+,,,L09,20778,1,Principles of Biology I Lab,BIOL 1110
+,,,L10,20897,1,Principles of Biology I Lab,BIOL 1110
+,,,L11,26909,1,Principles of Biology I Lab,BIOL 1110
+,,,L12,26911,1,Principles of Biology I Lab,BIOL 1110
+,,,L80,27431,1,Principles of Biology I Lab,BIOL 1110
+,,,L90,26912,1,Principles of Biology I Lab,BIOL 1110
+,,,L91,26913,1,Principles of Biology I Lab,BIOL 1110
+,,2120,001,21113,1,General Biology I,Test BPLC or BIOL 1110 or Test AP22
+,,,002,21231,1,General Biology I,Test BPLC or BIOL 1110 or Test AP22
+,,,003,21872,1,General Biology I,Test BPLC or BIOL 1110 or Test AP22
+,,,004,21481,1,General Biology I,Test BPLC or BIOL 1110 or Test AP22
+,,,005,27403,1,General Biology I,Test BPLC or BIOL 1110 or Test AP22
+,,2130,001,20630,1,General Biology II,BIOL 2120 and BIOL 2120L
+,,,003,20995,1,General Biology II,BIOL 2120 and BIOL 2120L
+,,,004,21232,1,General Biology II,BIOL 2120 and BIOL 2120L
+,,,005,21692,1,General Biology II,BIOL 2120 and BIOL 2120L
+,,,006,23394,1,General Biology II,BIOL 2120 and BIOL 2120L
+,,2130L,L01,23658,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,,L02,23659,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,,L03,23660,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,,L04,23661,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,,L05,23662,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,,L06,23663,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,,L07,23664,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,,L08,23665,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,,L09,23666,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,,L10,23667,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,,L11,23668,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,,L12,23669,1,General Biology II Laboratory,BIOL 2120 and BIOL 2120L
+,,2259,001,20989,1,Fundamentals of Microbiology,(BIOL 1110 or BIOL 2120) and (CHEM 1203 or CHEM 1251)
+,,2259L,L01,20990,1,Fundamentals of Microbio Lab,BIOL 2259
+,,,L02,20994,1,Fundamentals of Microbio Lab,BIOL 2259
+,,,L03,20991,1,Fundamentals of Microbio Lab,BIOL 2259
+,,,L04,21973,1,Fundamentals of Microbio Lab,BIOL 2259
+,,,L05,20992,1,Fundamentals of Microbio Lab,BIOL 2259
+,,,L06,20993,1,Fundamentals of Microbio Lab,BIOL 2259
+,,2274,001,21233,1,Human Anatomy & Physiology II,BIOL 2273
+,,3111,001,20647,1,Cell Biology,BIOL 2120 and BIOL 2130 and CHEM 1252 and CHEM 1252L
+,,,002,21854,1,Cell Biology,BIOL 2120 and BIOL 2130 and CHEM 1252 and CHEM 1252L
+,,3111L,L01,20632,1,Cell Biology Lab,BIOL 3111 and (BIOL 2140L or BIOL 2130L)
+,,,L02,20996,1,Cell Biology Lab,BIOL 3111 and (BIOL 2140L or BIOL 2130L)
+,,,L03,22931,1,Cell Biology Lab,BIOL 3111 and (BIOL 2140L or BIOL 2130L)
+,,,L04,20645,1,Cell Biology Lab,BIOL 3111 and (BIOL 2140L or BIOL 2130L)
+,,,L05,20646,1,Cell Biology Lab,BIOL 3111 and (BIOL 2140L or BIOL 2130L)
+,,,L06,22932,1,Cell Biology Lab,BIOL 3111 and (BIOL 2140L or BIOL 2130L)
+,,,L07,21975,1,Cell Biology Lab,BIOL 3111 and (BIOL 2140L or BIOL 2130L)
+,,,L08,22184,1,Cell Biology Lab,BIOL 3111 and (BIOL 2140L or BIOL 2130L)
+,,3144,001,20659,1,Ecology,BIOL 2130 and BIOL 2120 and CHEM 1252 and CHEM 1252L
+,,,002,21696,1,Ecology,BIOL 2130 and BIOL 2120 and CHEM 1252 and CHEM 1252L
+,,3144L,L01,20665,1,Ecology Lab,BIOL 3144 and (BIOL 2140L or BIOL 2130L)
+,,,L02,20666,1,Ecology Lab,BIOL 3144 and (BIOL 2140L or BIOL 2130L)
+,,,L03,21000,1,Ecology Lab,BIOL 3144 and (BIOL 2140L or BIOL 2130L)
+,,,L04,21238,1,Ecology Lab,BIOL 3144 and (BIOL 2140L or BIOL 2130L)
+,,,L05,21976,1,Ecology Lab,BIOL 3144 and (BIOL 2140L or BIOL 2130L)
+,,,L06,22284,1,Ecology Lab,BIOL 3144 and (BIOL 2140L or BIOL 2130L)
+,,3161,001,20661,1,Intro to Biotechnology,BIOL 1110 or BIOL 2120
+,,3166,001,20668,1,Genetics,CHEM 1252 and CHEM 1252L and BIOL 2120 and BIOL 2130
+,,,002,21707,1,Genetics,CHEM 1252 and CHEM 1252L and BIOL 2120 and BIOL 2130
+,,3166L,L01,22285,1,Genetics Lab,BIOL 3166 and (BIOL 2140L or BIOL 2130L)
+,,,L02,20907,1,Genetics Lab,BIOL 3166 and (BIOL 2140L or BIOL 2130L)
+,,,L03,20667,1,Genetics Lab,BIOL 3166 and (BIOL 2140L or BIOL 2130L)
+,,,L04,21300,1,Genetics Lab,BIOL 3166 and (BIOL 2140L or BIOL 2130L)
+,,,L05,20906,1,Genetics Lab,BIOL 3166 and (BIOL 2140L or BIOL 2130L)
+,,,L06,22286,1,Genetics Lab,BIOL 3166 and (BIOL 2140L or BIOL 2130L)
+,,3222,001,22811,1,General Botany,BIOL 2130 and BIOL 2120
+,,3222L,L01,22812,1,General Botany Lab,BIOL 3222 and (BIOL 2140L or BIOL 2130L)
+,,3231,001,23774,1,Invertebrate Zoology,BIOL 2130 and BIOL 2120 and (BIOL 2140L or BIOL 2130L)
+,,3236,001,20908,1,General Zoology,BIOL 2130 and BIOL 2120
+,,,002,25692,1,General Zoology,BIOL 2130 and BIOL 2120
+,,3244,001,22287,1,Field Ecology,BIOL 2120 and BIOL 2130 and BIOL 2140L
+,,3273,001,21708,1,Animal Physiology,(BIOL 2120 or BIOL 1222) and (BIOL 2130 or BIOL 1233) and CHEM 1252 and CHEM 1252L
+,,,002,23415,1,Animal Physiology,(BIOL 2120 or BIOL 1222) and (BIOL 2130 or BIOL 1233) and CHEM 1252 and CHEM 1252L
+,,,003,25679,1,Animal Physiology,(BIOL 2120 or BIOL 1222) and (BIOL 2130 or BIOL 1233) and CHEM 1252 and CHEM 1252L
+,,3273L,L01,21391,1,Animal Physiology Lab,(BIOL 2140L or BIOL 2130L) and BIOL 3273
+,,,L02,21392,1,Animal Physiology Lab,(BIOL 2140L or BIOL 2130L) and BIOL 3273
+,,,L03,21483,1,Animal Physiology Lab,(BIOL 2140L or BIOL 2130L) and BIOL 3273
+,,,L04,21709,1,Animal Physiology Lab,(BIOL 2140L or BIOL 2130L) and BIOL 3273
+,,3274,001,22288,1,Scientific Writing,(BIOL 2120 or BIOL 1222) and (BIOL 2130 or BIOL 1233) and (BIOL 2140L or BIOL 2130L)
+,,,002,25694,1,Scientific Writing,(BIOL 2120 or BIOL 1222) and (BIOL 2130 or BIOL 1233) and (BIOL 2140L or BIOL 2130L)
+,,4165,001,25706,1,Investi Bacteriophage Genomics,BIOL 2120 and BIOL 2120L and BIOL 2130 and BIOL 2130L
+,,4167,001,25707,1,Medical Genetics,BIOL 3166 and BIOL 3111
+,,4244,001,21980,1,Conservation Biology,BIOL 3144
+,,4250,001,22937,1,Microbiology,BIOL 3111
+,,4250L,L01,21981,1,Microbiology Lab,BIOL 3111L and BIOL 4250
+,,,L02,21983,1,Microbiology Lab,BIOL 3111L and BIOL 4250
+,,4251,001,27364,1,Immunology,BIOL 3111
+,,4258,001,21388,1,Epidemics and Plagues,BIOL 3111
+,,4600,B01,25708,1,Senior Seminar,(BIOL 3111 and BIOL 3144 and BIOL 3166) and BIOL 3273 or BIOL 3272
+,,,C01,22164,1,Senior Seminar,(BIOL 3111 and BIOL 3144 and BIOL 3166) and BIOL 3273 or BIOL 3272
+,,4701,H01,20657,1,Honors Research II,BIOL 4700
+,,,H04,25410,1,Honors Research II,BIOL 4700
+,,,H05,21241,1,Honors Research II,BIOL 4700
+,,,H06,25411,1,Honors Research II,BIOL 4700
+,,,H08,22882,1,Honors Research II,BIOL 4700
+,,,H09,23578,1,Honors Research II,BIOL 4700
+,,,H11,25412,1,Honors Research II,BIOL 4700
+,,,H15,21334,1,Honors Research II,BIOL 4700
+,,,H17,23583,1,Honors Research II,BIOL 4700
+,,,H21,25417,1,Honors Research II,BIOL 4700
+,,,H22,25418,1,Honors Research II,BIOL 4700
+,BLAW,3150,001,20249,1,Business Law I,INFO 2130
+,,,002,21061,1,Business Law I,INFO 2130
+,,,003,21867,1,Business Law I,INFO 2130
+,,,090,20250,1,Business Law I,INFO 2130
+,,,091,20711,1,Business Law I,INFO 2130
+,,,092,27118,1,Business Law I,INFO 2130
+,,3250,001,20251,1,Business Law II,BLAW 3150
+,BPHD,8110,001,20822,1,Microeconomic Theory II,BPHD 8100
+,,8130,001,20823,1,Econometrics II,BPHD 8120
+,,8210,001,20248,1,Investments & Portfolio Theory,BPHD 8200
+,,8240,U90,20718,1,Derivatives,BPHD 8200
+,CEGR,2102,001,20828,1,Engineering Econ Analysis,ENGR 1201
+,,2103,L01,22573,1,Surveying and Tech. Drawing,ENGR 1202
+,,,L02,22574,1,Surveying and Tech. Drawing,ENGR 1202
+,,,L03,22781,1,Surveying and Tech. Drawing,ENGR 1202
+,,2154,L01,20536,1,Design Project Lab,CEGR 2102
+,,3111,090,21022,1,Construction Engineering,CEGR 3122 and CEGR 3255 and CEGR 3278
+,,3122,001,20680,1,Structural Analysis,MEGR 2144 and MATH 2171
+,,3141,001,20691,1,Intro to Environ Engineering,MATH 2171 and CHEM 1251 and CHEM 1251L and MEGR 2141
+,,3143,001,20796,1,Hydraulics and Hydrology,MEGR 2141 and MATH 2171
+,,3153,L01,20533,1,Transportation Lab,CEGR 3161
+,,,L02,20534,1,Transportation Lab,CEGR 3161
+,,3155,L01,20576,1,Environmental Lab,CHEM 1251 and CHEM 1251L and CEGR 3141
+,,,L02,20577,1,Environmental Lab,CHEM 1251 and CHEM 1251L and CEGR 3141
+,,3161,001,20573,1,Transportation Engineering I,MATH 2241 and CEGR 2102 and CEGR 2103 and MEGR 2141
+,,3221,001,20683,1,Structural Steel Design I,CEGR 3122 and CEGR 3255
+,,3225,001,20817,1,Reinforced Concrete Design I,CEGR 3122 and CEGR 3255
+,,3233,090,27084,1,Land Development Engrng Studio,CEGR 3161
+,,3235,001,22575,1,Lnd Dev Engnrng-Advncd Site An,CEGR 3153 and CEGR 3161
+,,3255,L01,20649,1,Structural Materials Lab I,MEGR 2141 and MEGR 2144
+,,,L02,20653,1,Structural Materials Lab I,MEGR 2141 and MEGR 2144
+,,,L03,20654,1,Structural Materials Lab I,MEGR 2141 and MEGR 2144
+,,,L04,22789,1,Structural Materials Lab I,MEGR 2141 and MEGR 2144
+,,,L05,22790,1,Structural Materials Lab I,MEGR 2141 and MEGR 2144
+,,,L06,22791,1,Structural Materials Lab I,MEGR 2141 and MEGR 2144
+,,3258,L01,20678,1,Geotechnical Lab,CEGR 3278
+,,,L02,20702,1,Geotechnical Lab,CEGR 3278
+,,,L03,21531,1,Geotechnical Lab,CEGR 3278
+,,3278,001,20679,1,Geotechnical Engineering,MATH 2171 and MEGR 2144
+,,4122,001,22626,1,Power Plant Design,CEGR 2102 and CEGR 3122 and CEGR 3278
+,,4144,001,24586,1,Engineering Hydrology,CEGR 3143
+,,4222,001,20684,1,Structural Steel Design II,CEGR 3122 and CEGR 3221
+,,4224,001,20686,1,Adv Structural Analysis,CEGR 3122
+,,4242,001,21958,1,Wastewater Treatment Design,CEGR 3141
+,,4262,001,20574,1,Traffic Engineering,CEGR 3161
+,,4264,001,26677,1,Landfill Design,CEGR 3278 and CEGR 3258
+,,4278,001,20642,1,Geotechnical Engineering II,CEGR 3278
+,,5122,001,24407,1,Power Plant Design,CEGR 2102 and CEGR 3122 and CEGR 3278
+,,5224,001,20687,1,Adv Structural Analysis,CEGR 3122
+,,5278,001,26678,1,Geotechnical Engineering II,CEGR 3258 and CEGR 3278
+,,6251,001,24502,1,Foundation Engineering,CEGR 3278
+,,8161,001,24931,1,Traffic Control and Operation,CEGR 5161
+,,8251,001,26679,1,Foundation Engineering,CEGR 3278
+,,8254,001,26681,1,Experimental Soil Mechanics,CEGR 3278
+,CHEM,1111L,M2B,21609,1,CHEM in Today's Society Lab,CHEM 1111
+,,1204,001,20664,1,"Intro Gen, Org, and Biochem II",CHEM 1203
+,,1204L,M1A,22782,1,"Intro Gen, Org, Biochem II Lab",CHEM 1203 and CHEM 1203L and CHEM 1204
+,,,M2A,22796,1,"Intro Gen, Org, Biochem II Lab",CHEM 1203 and CHEM 1203L and CHEM 1204
+,,,M3A,22174,1,"Intro Gen, Org, Biochem II Lab",CHEM 1203 and CHEM 1203L and CHEM 1204
+,,,T1A,25115,1,"Intro Gen, Org, Biochem II Lab",CHEM 1203 and CHEM 1203L and CHEM 1204
+,,,T2A,22797,1,"Intro Gen, Org, Biochem II Lab",CHEM 1203 and CHEM 1203L and CHEM 1204
+,,,W2A,22783,1,"Intro Gen, Org, Biochem II Lab",CHEM 1203 and CHEM 1203L and CHEM 1204
+,,1251,001,23041,1,General Chemistry I,Test MPLC or Test MATH or MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241 or ENGR 1241 or CHEM 1200
+,,,002,21601,1,General Chemistry I,Test MPLC or Test MATH or MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241 or ENGR 1241 or CHEM 1200
+,,,003,21602,1,General Chemistry I,Test MPLC or Test MATH or MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241 or ENGR 1241 or CHEM 1200
+,,,004,23320,1,General Chemistry I,Test MPLC or Test MATH or MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241 or ENGR 1241 or CHEM 1200
+,,1251L,M1E,21643,1,General Chemistry Lab I,CHEM 1251
+,,,M1F,21458,1,General Chemistry Lab I,CHEM 1251
+,,,M2D,20681,1,General Chemistry Lab I,CHEM 1251
+,,,M2E,20575,1,General Chemistry Lab I,CHEM 1251
+,,,M2F,21032,1,General Chemistry Lab I,CHEM 1251
+,,,R1D,20584,1,General Chemistry Lab I,CHEM 1251
+,,,R1E,21049,1,General Chemistry Lab I,CHEM 1251
+,,,R1F,21012,1,General Chemistry Lab I,CHEM 1251
+,,,R2D,26770,1,General Chemistry Lab I,CHEM 1251
+,,,R2E,20821,1,General Chemistry Lab I,CHEM 1251
+,,,R2F,20585,1,General Chemistry Lab I,CHEM 1251
+,,,R3D,26771,1,General Chemistry Lab I,CHEM 1251
+,,,T1D,20583,1,General Chemistry Lab I,CHEM 1251
+,,,T1F,22787,1,General Chemistry Lab I,CHEM 1251
+,,,T2D,25119,1,General Chemistry Lab I,CHEM 1251
+,,,T2E,20682,1,General Chemistry Lab I,CHEM 1251
+,,,T2F,25145,1,General Chemistry Lab I,CHEM 1251
+,,,T9D,24673,1,General Chemistry Lab I,CHEM 1251
+,,,W1D,20582,1,General Chemistry Lab I,CHEM 1251
+,,,W1E,26772,1,General Chemistry Lab I,CHEM 1251
+,,,W1F,26774,1,General Chemistry Lab I,CHEM 1251
+,,,W2D,25104,1,General Chemistry Lab I,CHEM 1251
+,,,W2E,21009,1,General Chemistry Lab I,CHEM 1251
+,,,W2F,21008,1,General Chemistry Lab I,CHEM 1251
+,,,W3D,21010,1,General Chemistry Lab I,CHEM 1251
+,,1252,001,20813,1,General Chemistry II,CHEM 1251
+,,,002,20663,1,General Chemistry II,CHEM 1251
+,,,003,22039,1,General Chemistry II,CHEM 1251
+,,1252L,M2C,22798,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,R1C,21303,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,R2B,27040,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,R2C,20677,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,R3C,24674,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,T1C,21775,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,T2C,22793,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,T3B,25035,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,T3C,22794,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,T9C,20587,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,W2B,26808,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,W2C,23401,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,W3B,26809,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,,W3C,26810,1,General Chemistry Lab II,CHEM 1251 and CHEM 1251L and CHEM 1252
+,,2131,001,20530,1,Organic Chemistry I,CHEM 1251 and CHEM 1252
+,,,002,20815,1,Organic Chemistry I,CHEM 1251 and CHEM 1252
+,,,003,21441,1,Organic Chemistry I,CHEM 1251 and CHEM 1252
+,,2131L,M1G,20590,1,Organic Chemistry Lab I,CHEM 1251 and CHEM 1251L and CHEM 1252 and CHEM 1252L and (CHEM 2131 or CHEM 2130)
+,,,M2G,21007,1,Organic Chemistry Lab I,CHEM 1251 and CHEM 1251L and CHEM 1252 and CHEM 1252L and (CHEM 2131 or CHEM 2130)
+,,,M3G,26850,1,Organic Chemistry Lab I,CHEM 1251 and CHEM 1251L and CHEM 1252 and CHEM 1252L and (CHEM 2131 or CHEM 2130)
+,,,R2G,26851,1,Organic Chemistry Lab I,CHEM 1251 and CHEM 1251L and CHEM 1252 and CHEM 1252L and (CHEM 2131 or CHEM 2130)
+,,,T2G,24670,1,Organic Chemistry Lab I,CHEM 1251 and CHEM 1251L and CHEM 1252 and CHEM 1252L and (CHEM 2131 or CHEM 2130)
+,,,W1G,24695,1,Organic Chemistry Lab I,CHEM 1251 and CHEM 1251L and CHEM 1252 and CHEM 1252L and (CHEM 2131 or CHEM 2130)
+,,,W2G,21779,1,Organic Chemistry Lab I,CHEM 1251 and CHEM 1251L and CHEM 1252 and CHEM 1252L and (CHEM 2131 or CHEM 2130)
+,,,W3G,22788,1,Organic Chemistry Lab I,CHEM 1251 and CHEM 1251L and CHEM 1252 and CHEM 1252L and (CHEM 2131 or CHEM 2130)
+,,2132,001,20531,1,Organic Chemistry II,CHEM 2131
+,,,002,21028,1,Organic Chemistry II,CHEM 2131
+,,2132L,M1H,20592,1,Organic Chemistry Lab II,CHEM 2131L and CHEM 2132
+,,,M3H,27044,1,Organic Chemistry Lab II,CHEM 2131L and CHEM 2132
+,,,R2H,23400,1,Organic Chemistry Lab II,CHEM 2131L and CHEM 2132
+,,,T3H,24672,1,Organic Chemistry Lab II,CHEM 2131L and CHEM 2132
+,,,W1H,21610,1,Organic Chemistry Lab II,CHEM 2131L and CHEM 2132
+,,,W3H,21011,1,Organic Chemistry Lab II,CHEM 2131L and CHEM 2132
+,,2141,001,20532,1,Survey of Physical Chemistry,CHEM 1252 and CHEM 1252L and (MATH 1120 or MATH 1241) and (PHYS 1101 or PHYS 2101)
+,,3111,001,20826,1,Quantitative Analysis,CHEM 1252 and CHEM 1252L
+,,,002,20844,1,Quantitative Analysis,CHEM 1252 and CHEM 1252L
+,,,093,26857,1,Quantitative Analysis,CHEM 1252 and CHEM 1252L
+,,3121,001,22044,1,Inorganic Chemistry,CHEM 2131
+,,3142,001,20545,1,Physical Chemistry,CHEM 1252 and CHEM 1252L and CHEM 3141 and (MATH 1241 or ENGR 1241) and MATH 1242 and PHYS 2102 and PHYS 2102L and (MATH 2241 or MATH 2242 or MATH 2164 or MATH 2171 or STAT 3128)
+,,3142L,001,20594,1,Physical Chemistry Lab,CHEM 3141L and (CHEM 3141 or CHEM 3142)
+,,,002,20595,1,Physical Chemistry Lab,CHEM 3141L and (CHEM 3141 or CHEM 3142)
+,,3695,001,20546,1,Chemistry Seminar I,CHEM 2131
+,,,002,21139,1,Chemistry Seminar I,CHEM 2131
+,,4111,001,20547,1,Instrumental Analysis,CHEM 3111 and CHEM 3141 and CHEM 3141L
+,,,002,21770,1,Instrumental Analysis,CHEM 3111 and CHEM 3141 and CHEM 3141L
+,,4133,001,20548,1,Meth Organic Struct Determ,CHEM 2132 and (CHEM 2132L or CHEM 2136L)
+,,4165,001,20825,1,Prin of Biochemistry I,CHEM 2132
+,,,002,22175,1,Prin of Biochemistry I,CHEM 2132
+,,4166,001,20555,1,Prin of Biochemistry II,CHEM 4165
+,,4695,001,20556,1,Chemistry Seminar II,CHEM 3695 and (CHEM 2132 or CHEM 2141 or CHEM 3111 or CHEM 3121 or CHEM 3141)
+,,,H01,25990,1,Chemistry Seminar II,CHEM 3695 and (CHEM 2132 or CHEM 2141 or CHEM 3111 or CHEM 3121 or CHEM 3141)
+,,4696,001,20557,1,Chemistry Seminar,CHEM 3695 and CHEM 4695
+,,,H01,20558,1,Chemistry Seminar,CHEM 3695 and CHEM 4695
+,,6103,001,26962,1,Syn & Characterization of Nano,NANO 8101 and NANO 8102
+,CHES,4800,001,26875,1,LEADS Capstone Project,CHES 2600 or COSC 2600
+,CHFD,2412,001,20945,1,Practicum I: Obsrv/Rec Behav,CHFD 2111
+,,,002,20927,1,Practicum I: Obsrv/Rec Behav,CHFD 2111
+,,3113,001,20463,1,Families-Core Partnerships,CHFD 2111 and CHFD 2113 and CHFD 2412
+,,3114,090,20750,1,Resp App Infants & Toddlers,CHFD 3112
+,,3115,090,21218,1,Eco App Lrn Dev:Erly Cd-Pre Ad,CHFD 2111 and CHFD 2113 and CHFD 2412
+,,3414,001,21219,1,"Lang, Lit, & Math Thnkng Chldr",CHFD 3112
+,CHNS,1202,001,20311,1,Elementary Chinese II,CHNS 1201
+,,,002,25262,1,Elementary Chinese II,CHNS 1201
+,,2202,001,25263,1,Intermediate Chinese II,CHNS 2201
+,,3202,001,20315,1,Chinese Gramm and Convers,CHNS 3201 or FORL 3201
+,,4050,001,26618,1,Topics in Chinese,CHNS 3202
+,CJUS,2320,001,21723,1,Introduction to Courts,CJUS 1100 or CJUS 1511
+,,,002,26212,1,Introduction to Courts,CJUS 1100 or CJUS 1511
+,,2340,001,21710,1,Criminological Theory,CJUS 1100 or CJUS 1511
+,,,002,21711,H1,Criminological Theory,CJUS 1100 or CJUS 1511
+,,,003,22926,1,Criminological Theory,CJUS 1100 or CJUS 1511
+,,,004,26213,1,Criminological Theory,CJUS 1100 or CJUS 1511
+,,2350,001,21847,1,Intro to Corrections,CJUS 1100 or CJUS 1511
+,,,002,24122,1,Intro to Corrections,CJUS 1100 or CJUS 1511
+,,,003,27231,1,Intro to Corrections,CJUS 1100 or CJUS 1511
+,,2360,001,21748,1,Ethics and the CJUS System,CJUS 1100 or CJUS 1511
+,,,002,21721,1,Ethics and the CJUS System,CJUS 1100 or CJUS 1511
+,,2361,001,21716,1,Juvenile Justice,CJUS 1100 or CJUS 1511
+,,,002,27232,1,Juvenile Justice,CJUS 1100 or CJUS 1511
+,,2370,001,21714,1,Rsch Methods in CJUS,CJUS 1100 or CJUS 1511
+,,,002,27233,1,Rsch Methods in CJUS,CJUS 1100 or CJUS 1511
+,,,003,22927,1,Rsch Methods in CJUS,CJUS 1100 or CJUS 1511
+,,,004,26215,1,Rsch Methods in CJUS,CJUS 1100 or CJUS 1511
+,,2380,001,21713,1,Intro to Law Enforcement,CJUS 1100 or CJUS 1511
+,,,090,22928,1,Intro to Law Enforcement,CJUS 1100 or CJUS 1511
+,,3000,001,21730,1,Topics in Criminal Justice,CJUS 1100 or CJUS 1511
+,,,002,26880,1,Topics in Criminal Justice,CJUS 1100 or CJUS 1511
+,,,003,22520,1,Topics in Criminal Justice,CJUS 1100 or CJUS 1511
+,,,004,26908,1,Topics in Criminal Justice,CJUS 1100 or CJUS 1511
+,,3320,001,23365,1,Criminal Justice and the Law,CJUS 2020 or CJUS 2320 or CJUS 3102 and (CJUS 1100 or CJUS 1511)
+,,3321,001,21722,1,Criminal Procedure,CJUS 2320 or CJUS 2020 or CJUS 3102 and (CJUS 1100 or CJUS 1511)
+,,3341,001,24727,1,The Criminal Offender,CJUS 1100 or CJUS 1511
+,,3351,001,22471,1,Community Corrections,(CJUS 2050 or CJUS 2350 or CJUS 2154) and (CJUS 1100 or CJUS 1511)
+,,3352,001,21749,1,Institutional Corrections,(CJUS 2050 or CJUS 2350 or CJUS 2154) and (CJUS 1100 or CJUS 1511)
+,,3353,001,21750,1,Juvenile Corrections,(CJUS 2350 or CJUS 2050 or CJUS 2154) and (CJUS 1100 or CJUS 1511)
+,,3354,090,21720,1,Punishment and Freedom,CJUS 1100 or CJUS 1511
+,,3363,001,26907,1,Mediation & Conflict Resltn,CJUS 1100 or CJUS 1511
+,,3366,001,26217,1,Domestic Violence,CJUS 1100 or CJUS 1511
+,,3380,001,23333,1,Law Enforcement Behav Systems,(CJUS 2010 or CJUS 2380 or CJUS 2000) and (CJUS 1100 or CJUS 1511)
+,,3800,002,26218,1,Directed Individual Study,CJUS 1100 or CJUS 1511
+,,4351,001,27234,1,Violence & Violent Offender,CJUS 1100 or CJUS 1511
+,,4352,001,26219,H1,Serial Murder,CJUS 1100 or CJUS 1511
+,,,002,26220,H2,Serial Murder,CJUS 1100 or CJUS 1511
+,,4360,001,22082,1,"Drugs, Crime, & CJUS System",CJUS 1100 or CJUS 1511
+,,4363,001,22475,1,"Gender, Race, and Justice",CJUS 1100 or CJUS 1511
+,,4370,001,21715,1,Data Analytics and Crime,CJUS 1100 or CJUS 1511
+,,4373,001,24171,1,Intelligence Analysis,CJUS 1100 or CJUS 1511
+,,4375,001,21758,1,Comm Police & Crime Analysis,CJUS 1100 or CJUS 1511
+,,,003,26227,1,Comm Police & Crime Analysis,CJUS 1100 or CJUS 1511
+,,4377,001,21728,1,Crime Measurement,CJUS 1100 or CJUS 1511
+,,4379,001,26228,1,Qual Analysis in CJ,CJUS 1100 or CJUS 1511
+,,4701,001,26230,1,CJUS Honors Thesis II,(CJUS 1100 or CJUS 1511) and CJUS 4700
+,,6902,003,21171,1,Thesis II,CJUS 6901
+,CMET,2105,002,26157,1,Plan Reading,ETCE 1222 and CMET 1400 and MATH 1103
+,,2135,001,23387,1,Building Information Modeling,ETCE 1104
+,,2175,001,26290,1,Survey of Structures,ETGR 2101 and ETCE 2221
+,,2221,001,26160,1,Construction Means & Methods,ETCE 1222 and CMET 1400
+,,3123,001,21724,1,Cost Estimating,CMET 2105 and CMET 2105L and CMET 2221
+,,3124,001,26161,1,Cost Estimating II,CMET 3123
+,,4130,001,22000,1,Infrastructure Systems,ETCE 3131 and CMET 3123
+,,4135,001,26164,1,Construction Technologies,CMET 3123 and CMET 3126 and CMET 3224
+,COMM,2102,001,26683,1,Advanced Public Speaking,COMM 1101
+,,2145,001,20175,1,Prin of Public Relations,JOUR 2100
+,,3051,001,21572,1,Topics in Health Communication,COMM 3115 or AFRS 2170
+,,3052,001,21225,1,Topics in Media & Tech Studies,COMM 3120
+,,,002,21377,1,Topics in Media & Tech Studies,COMM 3120
+,,,003,22188,1,Topics in Media & Tech Studies,COMM 3120
+,,,005,23239,1,Topics in Media & Tech Studies,COMM 3120
+,,,090,23210,1,Topics in Media & Tech Studies,COMM 3120
+,,,091,22763,1,Topics in Media & Tech Studies,COMM 3120
+,,,092,26687,1,Topics in Media & Tech Studies,COMM 3120
+,,3100,001,20176,1,Comm Research Methods,COMM 2100 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,002,21031,1,Comm Research Methods,COMM 2100 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,003,22655,1,Comm Research Methods,COMM 2100 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,004,20177,1,Comm Research Methods,COMM 2100 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,005,20885,1,Comm Research Methods,COMM 2100 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,006,25921,1,Comm Research Methods,COMM 2100 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,3115,001,20180,H1,Health Communication,COMM 2100 or HLTH 2101 or AFRS 2170
+,,,002,26138,1,Health Communication,COMM 2100 or HLTH 2101 or AFRS 2170
+,,3120,001,21808,1,"Media, Technology & Comm",COMM 2100
+,,,002,20181,1,"Media, Technology & Comm",COMM 2100
+,,,003,20182,1,"Media, Technology & Comm",COMM 2100
+,,3130,001,20186,1,Rhetoric and Public Culture,COMM 2100
+,,3141,001,20189,1,Organizational Communication,COMM 2100
+,,3142,001,22069,1,Applications in Org Comm,COMM 3141
+,,3160,001,22716,1,Business Communications,INFO 2130
+,,,002,20830,1,Business Communications,INFO 2130
+,,,003,20831,1,Business Communications,INFO 2130
+,,,004,20832,1,Business Communications,INFO 2130
+,,,005,20833,1,Business Communications,INFO 2130
+,,,006,20834,1,Business Communications,INFO 2130
+,,,007,20835,H1,Business Communications,INFO 2130
+,,,008,20836,1,Business Communications,INFO 2130
+,,,009,20837,1,Business Communications,INFO 2130
+,,,010,20838,1,Business Communications,INFO 2130
+,,,011,20839,1,Business Communications,INFO 2130
+,,,012,20840,1,Business Communications,INFO 2130
+,,,013,21573,1,Business Communications,INFO 2130
+,,,014,21606,1,Business Communications,INFO 2130
+,,,015,21821,1,Business Communications,INFO 2130
+,,,016,21822,1,Business Communications,INFO 2130
+,,,017,23435,1,Business Communications,INFO 2130
+,,,018,26692,1,Business Communications,INFO 2130
+,,,019,27361,1,Business Communications,INFO 2130
+,,,090,21430,1,Business Communications,INFO 2130
+,,,091,21431,1,Business Communications,INFO 2130
+,,,092,22077,1,Business Communications,INFO 2130
+,,,093,23227,1,Business Communications,INFO 2130
+,,,H01,22132,1,Business Communications,INFO 2130
+,,,H02,22133,1,Business Communications,INFO 2130
+,,3245,090,21574,1,Public Relations Writing,JOUR 2100 and JOUR 2160 and COMM 2145
+,,,091,23031,1,Public Relations Writing,JOUR 2100 and JOUR 2160 and COMM 2145
+,,3403,090,24596,1,Forensics Practicum,COMM 2103
+,,3880,003,20191,1,Independent Study,COMM 1101
+,,3891,001,22966,1,Honors Thesis II,COMM 3890
+,,4141,001,21452,1,Adv Organizational Comm,COMM 3141
+,,4145,001,20192,1,Communication Campaigns,COMM 3245 and COMM 2145
+,,,090,23966,1,Communication Campaigns,COMM 3245 and COMM 2145
+,,4615,001,24597,H1,Seminar in Health Comm,COMM 3115
+,,4652,001,24282,1,Adv Sem Media & Tech Studies,COMM 3120
+,,,002,24284,1,Adv Sem Media & Tech Studies,COMM 3120
+,,6999,001,25782,1,Thesis,COMM 6100 and COMM 6101
+,COSC,4800,001,26877,1,LEADS Capstone Project,CHES 2600 or COSC 2600
+,CSLG,6111,001,21856,1,Adv Counseling Techniques,CSLG 6100 and CSLG 6110
+,,,090,20421,1,Adv Counseling Techniques,CSLG 6100 and CSLG 6110
+,,6120,001,21620,1,Group Counseling,CSLG 6110
+,,,090,20422,1,Group Counseling,CSLG 6110
+,,7143,090,20915,1,Child-Centered Relation. Trng.,CSLG 7142
+,,7430,001,20429,1,Practicum in Counseling,CSLG 6100 and CSLG 6101 and CSLG 6110 and CSLG 7142
+,,,003,20738,1,Practicum in Counseling,CSLG 6100 and CSLG 6101 and CSLG 6110 and CSLG 7142
+,,,004,21625,1,Practicum in Counseling,CSLG 6100 and CSLG 6101 and CSLG 6110 and CSLG 7142
+,,,005,22421,1,Practicum in Counseling,CSLG 6100 and CSLG 6101 and CSLG 6110 and CSLG 7142
+,,,090,20430,1,Practicum in Counseling,CSLG 6100 and CSLG 6101 and CSLG 6110 and CSLG 7142
+,,,091,20431,1,Practicum in Counseling,CSLG 6100 and CSLG 6101 and CSLG 6110 and CSLG 7142
+,,7435,001,21518,1,Internship in Counseling,CSLG 7430 and CSLG 7142
+,,,002,20829,1,Internship in Counseling,CSLG 7430 and CSLG 7142
+,,,003,22322,1,Internship in Counseling,CSLG 7430 and CSLG 7142
+,,,091,20432,1,Internship in Counseling,CSLG 7430 and CSLG 7142
+,,,093,22323,1,Internship in Counseling,CSLG 7430 and CSLG 7142
+,,8443,001,21997,1,Doctoral Internship: Research,CSLG 8105
+,,,002,25051,1,Doctoral Internship: Research,CSLG 8105
+,CTCM,2530,001,23861,1,Critical Thinking & Comm,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,002,23981,1,Critical Thinking & Comm,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,003,24374,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,015,24096,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,016,24097,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,017,24098,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,110,24230,1,Critical Thinking & Comm,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,111,24223,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,112,23742,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,136,24078,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,137,24079,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,138,24080,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,200,23786,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,201,23778,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,202,23779,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,203,23780,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,236,24640,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,245,25368,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,246,23590,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,247,25369,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,248,27467,H2,Critical Thinking,(WRDS 1103 or UWRT 1103 or ENGL 1103) or (WRDS 1104 or UWRT 1104)
+,,,260,23959,1,Interdisciplinary Critical Thi,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,338,23996,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,339,23997,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,341,23999,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,342,23998,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,400,24041,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,401,24043,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,403,24045,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,404,24046,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,405,24047,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,406,26319,1,Critical Thinking,(WRDS 1103 or UWRT 1103 or ENGL 1103) or (WRDS 1104 or UWRT 1104)
+,,,435,26079,1,Critical Thinking,(WRDS 1103 or UWRT 1103 or ENGL 1103) or (WRDS 1104 or UWRT 1104)
+,,,436,26081,1,Critical Thinking,(WRDS 1103 or UWRT 1103 or ENGL 1103) or (WRDS 1104 or UWRT 1104)
+,,,437,26082,1,Critical Thinking,(WRDS 1103 or UWRT 1103 or ENGL 1103) or (WRDS 1104 or UWRT 1104)
+,,,438,26083,1,Critical Thinking,(WRDS 1103 or UWRT 1103 or ENGL 1103) or (WRDS 1104 or UWRT 1104)
+,,,625,23648,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,626,23649,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,627,23650,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,644,24426,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,702,24247,1,Critical Thinking,(WRDS 1103 or ENGL 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,703,24253,1,Critical Thinking,(WRDS 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,704,27442,1,Critical Thinking,(WRDS 1103 or UWRT 1103 or ENGL 1103) or (WRDS 1104 or UWRT 1104)
+,,,705,27470,1,Critical Thinking,(WRDS 1103 or UWRT 1103 or ENGL 1103) or (WRDS 1104 or UWRT 1104)
+,,,710,24219,1,Critical Thinking,(WRDS 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,711,26367,1,Critical Thinking,(WRDS 1103 or UWRT 1103 or ENGL 1103) or (WRDS 1104 or UWRT 1104)
+,,,741,24125,1,Critical Thinking and Communic,(WRDS 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,742,24137,1,Critical Thinking and Communic,(WRDS 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,H71,24359,1,Critical Thinking,(WRDS 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,H72,24395,1,Critical Thinking,(WRDS 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,H73,24397,1,Critical Thinking,(WRDS 1103 or UWRT 1103) or (WRDS 1104 or UWRT 1104)
+,,,H74,27305,1,Critical Thinking,(WRDS 1103 or UWRT 1103 or ENGL 1103) or (WRDS 1104 or UWRT 1104)
+,DANC,1210,001,22486,1,Ballet for Majors I B,DANC 1209
+,,,002,26545,1,Ballet for Majors I B,DANC 1209
+,,1218,001,22489,1,Modern Dance for Majors IB,DANC 1217
+,,2210,001,20350,1,Ballet for Majors II B,DANC 2209
+,,2216,001,23643,1,Choreography I,DANC 1280 and DANC 1210 and DANC 1217
+,,2218,001,20452,1,Modern Dance for Majors IIB,DANC 2217
+,,2403,001,27495,1,Dancing for Choreographers,DANC 1209 or DANC 1210 or DANC 1217 or DANC 1218 or DANC 2209 or DANC 2210 or DANC 2217 or DANC 2218 or DANC 3210 or DANC 3218
+,,3131,001,23647,1,Hip Hop and Street Dance,DANC 2130
+,,3202,002,24877,1,Prof Train Cert in Dance,DANC 3201
+,,3210,001,20342,1,Ballet for Majors III,DANC 2210
+,,3218,001,25196,1,Modern Dance for Majors III,DANC 2218
+,,3230,001,22542,1,Choreography II,DANC 2216
+,,4202,001,24013,1,Prof Train Cert in Dance,DANC 4201
+,,4227,001,25197,1,Elementary Methods,DANC 1209 and DANC 1217 and DANC 1280 and (EDUC 1100 or EDUC 2100 or EDUC 1511) and SPED 2100
+,,4328,001,25198,1,Teaching Dance,DANC 1280 and DANC 2119
+,,,002,25684,1,Teaching Dance,DANC 1280 and DANC 2119
+,,4800,001,27143,1,Dance Capstone Project,DANC 4110
+,,,002,27144,1,Dance Capstone Project,DANC 4110
+,DSBA,6156,U90,21286,1,Applied Machine Learning,DSBA 6201 or HCIP 6102
+,,,U91,21873,1,Applied Machine Learning,DSBA 6201 or HCIP 6102
+,,6162,U01,23285,1,Data Mining,DSBA 6160
+,,6165,U90,22501,1,AI & Deep Learning,DSBA 6156
+,,6190,U90,22172,1,Cloud Comput for Data Analysis,DSBA 6160 and DSBA 6156
+,,6211,U01,21539,1,Advanced Business Analytics,DSBA 6201 or DSBA 6162
+,,,U90,21538,1,Advanced Business Analytics,DSBA 6201 or DSBA 6162
+,DTSC,2301,001,22536,H1,Modeling and Society,DTSC 1302 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,002,24598,H1,Modeling and Society,DTSC 1302 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,2302,001,22537,H2,Modeling and Society,DTSC 1301 and DTSC 1302 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,002,24599,H2,Modeling and Society,DTSC 1301 and DTSC 1302 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4301,001,22541,H1,Data Science for Social Good A,DTSC 3602 and STAT 2223
+,,4302,001,22543,H2,Data Science for Social Good B,STAT 2223 and DTSC 3602
+,ECGR,2104,002,21414,1,Computer Engr Programming II,ECGR 2103 or ITSC 1212 or ITCS 1212 or ITIS 1212
+,,,091,21166,1,Computer Engr Programming II,ECGR 2103 or ITSC 1212 or ITCS 1212 or ITIS 1212
+,,2111,001,20644,1,Network Theory I,MATH 2171
+,,2112,001,20651,1,Network Theory II,(ECGR 2111 or ECGR 2161) and MATH 2171 and PHYS 2102 and ECGR 2254
+,,,002,20621,1,Network Theory II,(ECGR 2111 or ECGR 2161) and MATH 2171 and PHYS 2102 and ECGR 2254
+,,2155,L02,21415,1,Instrum and Networks Lab,MATH 1242 and ECGR 2111
+,,,L03,24660,1,Instrum and Networks Lab,MATH 1242 and ECGR 2111
+,,,L91,26598,1,Instrum and Networks Lab,MATH 1242 and ECGR 2111
+,,2156,L01,23015,1,Logic and Networks Lab,ECGR 2155 and ECGR 2112 and ECGR 2181
+,,,L02,23016,1,Logic and Networks Lab,ECGR 2155 and ECGR 2112 and ECGR 2181
+,,,L04,24661,1,Logic and Networks Lab,ECGR 2155 and ECGR 2112 and ECGR 2181
+,,,L05,26600,1,Logic and Networks Lab,ECGR 2155 and ECGR 2112 and ECGR 2181
+,,2161,L01,25697,1,Basic Electrical Engineering I,PHYS 2102
+,,,L02,20474,1,Basic Electrical Engineering I,PHYS 2102
+,,,L03,21154,1,Basic Electrical Engineering I,PHYS 2102
+,,,L04,21155,1,Basic Electrical Engineering I,PHYS 2102
+,,,L05,21156,1,Basic Electrical Engineering I,PHYS 2102
+,,,L06,21157,1,Basic Electrical Engineering I,PHYS 2102
+,,,L07,21158,1,Basic Electrical Engineering I,PHYS 2102
+,,,L08,21159,1,Basic Electrical Engineering I,PHYS 2102
+,,,L09,21160,1,Basic Electrical Engineering I,PHYS 2102
+,,,L10,21161,1,Basic Electrical Engineering I,PHYS 2102
+,,,L11,21248,1,Basic Electrical Engineering I,PHYS 2102
+,,,L12,22239,1,Basic Electrical Engineering I,PHYS 2102
+,,,L13,22240,1,Basic Electrical Engineering I,PHYS 2102
+,,,L14,22241,1,Basic Electrical Engineering I,PHYS 2102
+,,,L15,22242,1,Basic Electrical Engineering I,PHYS 2102
+,,,L16,25699,1,Basic Electrical Engineering I,PHYS 2102
+,,,L17,25698,1,Basic Electrical Engineering I,PHYS 2102
+,,,L18,25700,1,Basic Electrical Engineering I,PHYS 2102
+,,2181,001,20611,1,Logic System Design I,MATH 1242
+,,2254,001,22511,1,Analytical Foundations of ECE,MATH 2171 and MATH 2164
+,,,002,23024,1,Analytical Foundations of ECE,MATH 2171 and MATH 2164
+,,3111,001,20655,1,Signals and Systems,ECGR 2112 and ECGR 2254
+,,3112,001,20652,1,System Analysis II,ECGR 3111
+,,3121,001,22769,1,Intro Electromagnetic Fields,ECGR 2112 and MATH 2241
+,,3122,001,20650,1,Electromagnetic Waves,ECGR 3121
+,,3123,091,20662,1,Data Comm and Networking,ECGR 2181 and ECGR 2111
+,,3131,001,20648,1,Fund Electronics & Semiconduct,ECGR 2112
+,,3132,001,20640,1,Electronics,ECGR 3131
+,,3142,001,20660,1,Electrical Energy Conversion,ECGR 3121
+,,3155,L01,20602,1,Systems & Electronics Lab,ECGR 2112 and ECGR 2156 and ECGR 3111 and ECGR 3131
+,,,L92,23028,1,Systems & Electronics Lab,ECGR 2112 and ECGR 2156 and ECGR 3111 and ECGR 3131
+,,3156,L02,21021,1,Electromag & Elec Devices Lab,ECGR 3155 and ECGR 3132
+,,,L03,22803,1,Electromag & Elec Devices Lab,ECGR 3155 and ECGR 3132
+,,,L91,20603,1,Electromag & Elec Devices Lab,ECGR 3155 and ECGR 3132
+,,3157,001,21632,1,ECE Junior Design,ECGR 3111 and ECGR 3131
+,,,002,26601,1,ECE Junior Design,ECGR 3111 and ECGR 3131
+,,3183,001,21491,1,Computer Organization,ECGR 2104 and ECGR 2181
+,,3695,001,23113,1,ECGR Educ Co-op Seminar,ENGR 3590 or ENGR 3500
+,,4105,001,23061,1,Introduction to ML,ECGR 3111 or ECGR 3101
+,,4106,001,22532,1,Real-Time Machine Learning,ECGR 3101 or ECGR 3111
+,,4123,001,26610,1,Analog & Digital Communication,ECGR 3111
+,,4124,001,21445,1,Digital Signal Processing,ECGR 3111
+,,4125,091,22544,1,Found of Optical Engineering,ECGR 3121 and PHYS 3141
+,,4127,001,22546,1,Machine Learning for IoT,ECGR 4105 or ECGR 5105
+,,4142,001,21447,1,Power System Analysis II,ECGR 4141
+,,4143,091,24665,1,Electrical Machinery,ECGR 3142
+,,4146,001,21851,1,Intro to VHDL,ECGR 2181
+,,4151,001,26741,1,Solar Cell Fundmntls & Technlg,ENGR 1202
+,,4189,091,26742,1,Cloud Native Architecture,ECGR 3180
+,,4190,001,21455,1,Power Generation: Oper & Cntrl,ECGR 4141
+,,4241,E01,21583,1,Elec Engr Senior Design I,ECGR 3121 and ECGR 3111 and ECGR 3131 and ECGR 3157
+,,,E02,21585,1,Elec Engr Senior Design I,ECGR 3121 and ECGR 3111 and ECGR 3131 and ECGR 3157
+,,,PE1,21694,1,Elec Engr Senior Design I,ECGR 3121 and ECGR 3111 and ECGR 3131 and ECGR 3157
+,,4242,E01,21695,1,Elec Engr Senior Design II,ECGR 4241
+,,,E02,21697,1,Elec Engr Senior Design II,ECGR 4241
+,,,E03,21698,1,Elec Engr Senior Design II,ECGR 4241
+,,,PE1,21699,1,Elec Engr Senior Design II,ECGR 4241
+,,4251,CP1,21590,1,Comp Engr Senior Design I,ECGR 3101 and ECGR 3111 and ECGR 3131 and ECGR 3157
+,,,CP2,21591,1,Comp Engr Senior Design I,ECGR 3101 and ECGR 3111 and ECGR 3131 and ECGR 3157
+,,4252,CP1,21700,1,Comp Engr Senior Design II,ECGR 4251
+,,,CP2,21701,1,Comp Engr Senior Design II,ECGR 4251
+,,,CP3,21702,1,Comp Engr Senior Design II,ECGR 4251
+,,4433,001,22587,1,VLSI Systems Design,ECGR 3131 and ECGR 2181
+,,5127,001,23068,1,Machine Learning for IoT,ECGR 5105
+,,6115,001,25881,1,Optimal Control Theory,ECGR 6111
+,,6197,001,26754,1,Power Electronics II,ECGR 5144
+,,8115,001,25882,1,Optimal Control Theory,ECGR 8111
+,,8197,001,26756,1,Power Electronics II,ECGR 5144
+,ECON,3112,001,21350,1,Econometrics,(ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and INFO 2130
+,,,002,21482,1,Econometrics,(ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and INFO 2130
+,,,003,21916,1,Econometrics,(ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and INFO 2130
+,,3115,090,21917,1,Money and Banking,ECON 2101 and ECON 2102 and (MATH 1120 or MATH 1241) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,3122,001,21351,1,Intermediate Microeconomics,ECON 2101 and ECON 2102 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,3123,090,21060,1,Intermediate Macroeconomics,ECON 2101 and ECON 2102 and (MATH 1120 or MATH 1242 or MATH 1241) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,3125,001,20154,1,Managerial Economics,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and INFO 2130 and (ECON 2102 or ECON 1202)
+,,,002,21054,1,Managerial Economics,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and INFO 2130 and (ECON 2102 or ECON 1202)
+,,,003,21167,1,Managerial Economics,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and INFO 2130 and (ECON 2102 or ECON 1202)
+,,,004,20155,1,Managerial Economics,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and INFO 2130 and (ECON 2102 or ECON 1202)
+,,,080,21390,H2,Managerial Economics,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and INFO 2130 and (ECON 2102 or ECON 1202)
+,,3141,001,27010,1,Health Economics,(ECON 2102 or ECON 1202) and (ECON 2101 or ECON 1201) and (MATH 1120 or MATH 1241) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,3161,001,23279,1,Game Theory,(ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and (MATH 1120 or MATH 1241) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,3171,001,21196,1,International Busn Economics,(ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202)
+,,4112,001,21352,1,Econometrics II,ECON 3112 and ECON 2101 and ECON 2102 and (MATH 1120 or MATH 1241) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4117,001,20870,1,Busn & Econ Forecasting,ECON 3112 and ECON 2101 and ECON 2102 and INFO 2130 and (MATH 1120 or MATH 1241) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4172,001,22701,1,Econ of International Finance,ECON 3123 or (ECON 3171 and ECON 2102) and ECON 2101 and ECON 2102 and (MATH 1120 or MATH 1241) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4200,001,21535,1,Senior Seminar,ECON 3112 and ECON 3122 and ECON 3123
+,,,002,21197,1,Senior Seminar,ECON 3112 and ECON 3122 and ECON 3123
+,,6217,090,21765,1,Advanced Microeconometrics,ECON 6112 or ECON 6113
+,,6218,U90,20156,1,Adv Busn & Econ Forecasting,ECON 6112
+,,6219,001,27302,1,Financial Econometrics,ECON 6218 or MATH 6201
+,,6238,U90,27304,1,Real Estate & Urban Economics,ECON 2102
+,,6257,U90,21666,1,Applied Computational Econ,ECON 6201 and ECON 6202
+,,6901,090,20157,1,Research Methods for Econ I,ECON 6112 or ECON 6113 and (ECON 6201 or ECON 6202 or ECON 6203)
+,,6902,090,22703,1,Research Methods for Econ II,ECON 6901
+,EDCI,8157,090,25643,1,Analysis of Inqry C&I Edu Dev.,RSCH 8110 and RSCH 8111 and RSCH 8210
+,,8263,090,25648,1,Anti-Racism Activism in Ed.,EDCI 8260 and EDCI 8261 and EDCI 8262 and ELED 6260 and ELED 6261 and ELED 6262
+,,8475,001,22352,1,College Co-Teaching Internship,EDCI 8681
+,EDUC,4200,081,24455,1,Current Issues in Global Educ,(EDUC 1100 or EDUC 2100 or EDUC 1511) and LBST 2301 and (INTL 2100 or INTL 2121 or INTL 2131) and (INTL 1101 or INTL 1501)
+,,4201,081,24457,1,Theory and Practice Seminar,(EDUC 1100 or EDUC 2100 or EDUC 1511) and (INTL 1101 or INTL 1501) and LBST 2301 and (INTL 2100 or INTL 2121 or INTL 2131) and EDUC 4200
+,,6152,080,24356,H1,Principles of Coaching II,EDUC 6150
+,,6153,080,24354,H2,Appl of Coaching Principles,(EDUC 6150 and EDUC 6151) and EDUC 6152
+,ELDT,6121,085,23145,1,Advanced Instructional Design,EIST 6110 or ELDT 6110
+,,6180,085,26232,1,LDT Proj Mngmnt and Leadership,ELDT 6100 and ELDT 6110 and ELDT 6130
+,,6492,085,22725,1,Capstone Proj in LDT,(EIST 6100 or ELDT 6100) and (EIST 6110 or ELDT 6110) and (EIST 6130 or ELDT 6130)
+,,,086,24025,1,Capstone Proj in LDT,(EIST 6100 or ELDT 6100) and (EIST 6110 or ELDT 6110) and (EIST 6130 or ELDT 6130)
+,ELED,5210,080,22522,1,Teach Math to El Sch Learners,ELED 5110 and READ 5111
+,,,081,26098,1,Teach Math to El Sch Learners,ELED 5110 and READ 5111
+,,5310,080,23098,1,Teach and Assess Elem Math,ELED 5210 and READ 5211
+,,6263,081,22631,1,Anti-Racist Activism in Educ,ELED 6260 and ELED 6261 and ELED 6262
+,ELET,2241,001,21739,1,Instrumentation and Controls,ETEL 2101 or ETGR 2106
+,,3232,080,22957,1,Adv Microcontroller Systems,ELET 1102 and ELET 2231
+,,3242,080,24350,1,Fundamentals Control Systems,ELET 3113
+,EMGT,5114,08O,23765,1,Production Control Systems,EMGT 5202
+,,,O90,23766,1,Production Control Systems,EMGT 5202
+,,5141,08G,23768,1,Engr Experimental Design,EMGT 5202
+,,,G90,23769,1,Engr Experimental Design,EMGT 5202
+,,5170,S90,22380,1,Total Quality Systems,EMGT 5202
+,,5202,08Z,21919,1,Stochastic System Analysis,EMGT 5201
+,,,Z90,21920,1,Stochastic System Analysis,EMGT 5201
+,,6965,08H,27270,1,Energy Analytics,EMGT 5202
+,,,H90,27275,1,Energy Analytics,EMGT 5202
+,,6985,08H,21684,1,Engineering Mgmt Project,EMGT 6980
+,,,H90,21685,1,Engineering Mgmt Project,EMGT 6980
+,ENGL,3201,001,21255,1,Intermediate Poetry Writing,ENGL 2125 or ENGL 2126 or ENGL 2127 or ENGL 2128 or ENGL 2200 or ENGL 2201 or ENGL 2202
+,,3202,001,21130,1,Intermediate Fiction Writing,ENGL 2125 or ENGL 2126 or ENGL 2127 or ENGL 2128 or ENGL 2200 or ENGL 2201 or ENGL 2202
+,,4202,090,21542,1,Advanced Poetry Writing,ENGL 2126 or ENGL 2127 or ENGL 2125 or ENGL 2200 or ENGL 2201 or ENGL 2202
+,,4203,001,21776,1,Advanced Fiction Writing,ENGL 2126 or ENGL 2125 or ENGL 2128 or ENGL 2200 or ENGL 2201 or ENGL 2202
+,,4206,001,23512,1,Writing Creative Nonfiction,ENGL 2125 or ENGL 2126 or ENGL 2127 or ENGL 2128 or ENGL 2200 or ENGL 2201 or ENGL 2202
+,,4209,001,23012,1,Fiction Writing Workshop,ENGL 2125 or ENGL 2126 or ENGL 2128 or ENGL 2200 or ENGL 2201 or ENGL 2202
+,,4254,090,20596,1,Tch Engl/Comm Skills MDSK Lrnr,MDLG 3130 or SECD 4140 and MDSK 3100 and MDSK 3151 and MDSK 4210
+,,5181,090,20589,1,Writing User Documents,ENGL 2116
+,,5254,080,20598,1,Tch En/Comm Skills Middle Sec,MDSK 6162 and (MDSK 6162L or MDSK 6163) and MDSK 5204
+,,6495,001,27512,1,Internship in College Teaching,ENGL 6195
+,ENGR,1201,002,23132,1,Intro to Engr Pract & Princ I,MATH 1103 or Test MPLC or MATH 1241 or MATH 1242 or MATH 2241
+,,,004,22401,1,Intro to Engr Pract & Princ I,MATH 1103 or Test MPLC or MATH 1241 or MATH 1242 or MATH 2241
+,,,005,23135,1,Intro to Engr Pract & Princ I,MATH 1103 or Test MPLC or MATH 1241 or MATH 1242 or MATH 2241
+,,,007,24362,1,Intro to Engr Pract & Princ I,MATH 1103 or Test MPLC or MATH 1241 or MATH 1242 or MATH 2241
+,,,008,24363,1,Intro to Engr Pract & Princ I,MATH 1103 or Test MPLC or MATH 1241 or MATH 1242 or MATH 2241
+,,,009,25865,1,Intro to Engr Pract & Princ I,MATH 1103 or Test MPLC or MATH 1241 or MATH 1242 or MATH 2241
+,,,010,23134,1,Intro to Engr Pract & Princ I,MATH 1103 or Test MPLC or MATH 1241 or MATH 1242 or MATH 2241
+,,,011,22402,1,Intro to Engr Pract & Princ I,MATH 1103 or Test MPLC or MATH 1241 or MATH 1242 or MATH 2241
+,,,012,25866,1,Intro to Engr Pract & Princ I,MATH 1103 or Test MPLC or MATH 1241 or MATH 1242 or MATH 2241
+,,,013,25867,1,Intro to Engr Pract & Princ I,MATH 1103 or Test MPLC or MATH 1241 or MATH 1242 or MATH 2241
+,,1202,C01,20690,1,Intro Engr Pract & Prin II,ENGR 1201 and MATH 1241
+,,,EC1,21594,1,Intro Engr Pract & Prin II,ENGR 1201 and MATH 1241
+,,,EC2,21408,1,Intro Engr Pract & Prin II,ENGR 1201 and MATH 1241
+,,,M01,20196,1,Intro Engr Pract & Prin II,ENGR 1201 and MATH 1241
+,,,M02,20197,1,Intro Engr Pract & Prin II,ENGR 1201 and MATH 1241
+,,,M03,20198,1,Intro Engr Pract & Prin II,ENGR 1201 and MATH 1241
+,,,M04,20200,1,Intro Engr Pract & Prin II,ENGR 1201 and MATH 1241
+,,,M05,20201,1,Intro Engr Pract & Prin II,ENGR 1201 and MATH 1241
+,,,M06,25073,1,Intro Engr Pract & Prin II,ENGR 1201 and MATH 1241
+,,,M07,26343,1,Intro Engr Pract & Prin II,ENGR 1201 and MATH 1241
+,,,S01,20349,1,Intro Engr Pract & Prin II,ENGR 1201 and MATH 1241
+,,3790,001,23478,1,Engineering Honors Seminar I,ECGR 3253 or ECGR 4241 or ECGR 4251 or ETGR 4100 or MEGR 3255 or MEGR 3275 or MEGR 3355 or MEGR 3455 or SEGR 3290
+,,3791,001,21527,1,Engineering Honors Seminar II,ENGR 3790 and (CEGR 3201 or CMET 4272 or ECGR 3254 or ECGR 4242 or ECGR 4252 or ETCE 4272 or ETGR 4200 or MEGR 3256 or MEGR 3276 or MEGR 3356 or MEGR 3456 or SEGR 3291)
+,ENVE,3111,001,26767,1,Construction Engineering,CEGR 3141
+,EPID,8274,001,23525,1,Adv Methods in Epidemiology,HLTH 6211
+,,8275,001,26727,1,Spatial Epidemiology,HLTH 8270
+,ESCI,1101L,L01,20204,1,Earth Science - Geography Lab,ESCI 1101
+,,,L02,20206,1,Earth Science - Geography Lab,ESCI 1101
+,,,L03,20208,1,Earth Science - Geography Lab,ESCI 1101
+,,,L04,20209,1,Earth Science - Geography Lab,ESCI 1101
+,,,L05,20210,1,Earth Science - Geography Lab,ESCI 1101
+,,,L06,20211,1,Earth Science - Geography Lab,ESCI 1101
+,,,L07,20212,1,Earth Science - Geography Lab,ESCI 1101
+,,,L08,20213,1,Earth Science - Geography Lab,ESCI 1101
+,,,L09,20214,1,Earth Science - Geography Lab,ESCI 1101
+,,,L10,20215,1,Earth Science - Geography Lab,ESCI 1101
+,,,L11,20216,1,Earth Science - Geography Lab,ESCI 1101
+,,,L12,20218,1,Earth Science - Geography Lab,ESCI 1101
+,,,L14,22030,1,Earth Science - Geography Lab,ESCI 1101
+,,,L90,20219,1,Earth Science - Geography Lab,ESCI 1101
+,,,L91,20220,1,Earth Science - Geography Lab,ESCI 1101
+,,,L92,20221,1,Earth Science - Geography Lab,ESCI 1101
+,,,L93,20223,1,Earth Science - Geography Lab,ESCI 1101
+,,2210,001,21170,1,Field Meth in Earth & Env Sci,ESCI 1101 and (GEOL 1200 or GEOL 1200X) and GEOL 1200L and ESCI 1101L
+,,2222,001,24006,1,Environmental Science,ESCI 1101 and ESCI 1501
+,,3000,001,26406,1,Topics in Earth Sciences,ESCI 1101 or GEOL 1200 and GEOL 1200L
+,,,002,26506,1,Topics in Earth Sciences,ESCI 1101 or GEOL 1200 and GEOL 1200L
+,,3101,001,21759,1,Global Environmental Change,ESCI 1101 or METR 1102
+,,,002,26469,1,Global Environmental Change,ESCI 1101 or METR 1102
+,,3205,001,21112,1,Water Resources,ESCI 2222
+,,4000,002,26408,1,Topics in Earth Sciences,ESCI 1101 and (GEOL 1200 or GEOL 1200X) and GEOL 1200L
+,,,003,26440,1,Topics in Earth Sciences,ESCI 1101 and (GEOL 1200 or GEOL 1200X) and GEOL 1200L
+,,4122,001,24036,1,Statistics in Earth Sciences,STAT 1220 or STAT 1221 or STAT 1222 or MATH 2122 or STAT 2122 or MATH 3122 or STAT 3122
+,,4190,001,26438,1,Cont. Environmental Issues,ESCI 2222
+,,4600,001,21374,1,Earth & Env Sciences Seminar,(ESCI 1101 or ESCI 1101X) and ESCI 1101L and (GEOL 1200 or GEOL 1200X) and GEOL 1200L
+,,,002,22167,1,Earth & Env Sciences Seminar,(ESCI 1101 or ESCI 1101X) and ESCI 1101L and (GEOL 1200 or GEOL 1200X) and GEOL 1200L
+,,5000,003,26410,1,Topics in Earth Sciences,ESCI 1101 and (GEOL 1200 or GEOL 1200X) and GEOL 1200L
+,,,004,26441,1,Topics in Earth Sciences,ESCI 1101 and (GEOL 1200 or GEOL 1200X) and GEOL 1200L
+,,5222,001,26401,1,Watershed Science,ESCI 5140
+,ETCE,1211,001,21742,1,Construction Surveying I,MATH 1103 and ETCE 1104
+,,1211L,L01,21744,1,Construction Surveying I Lab,MATH 1103
+,,,L02,21745,1,Construction Surveying I Lab,MATH 1103
+,,,L03,21746,1,Construction Surveying I Lab,MATH 1103
+,,,L04,27297,1,Construction Surveying I Lab,MATH 1103
+,,2163L,L01,22424,1,Construction Mat. and Str. Lab,ETCE 1222 and ETGR 2102
+,,,L02,22425,1,Construction Mat. and Str. Lab,ETCE 1222 and ETGR 2102
+,,2410,001,21735,1,Intro Environ Engr Tech,MATH 1103 and ETGR 2101
+,,3163,001,22423,1,Structural Analysis & Design I,ETGR 2102
+,,3242,001,21747,1,Hydraulics & Hydrology,ETGR 2102 and ETCE 2410 and PHYS 1102
+,,4266,001,21736,1,Reinforced Concrete Design,ETCE 3163 or ETCE 3111 or ETCE 3264 or ETCE 3112
+,,4350,001,21738,1,Const Geotech & Foundations,ETCE 3131
+,ETEL,2101,001,27251,1,Circuit Fundamentals,MATH 1103
+,,2271,001,24352,1,Digital Fundamentals,MATH 1103 and ETEL 2171
+,,2281,001,24353,1,Doing and Making,ETEL 2181 and ETEL 2271
+,,3231,001,26357,1,"Power, Machines and Energy",ETEL 3131 or ELET 2241
+,,3261,001,26176,1,Applied Control Systems,ETEL 3101
+,,4161,001,26178,1,Elements of Automation,ETEL 3181
+,ETFS,3103L,L01,26358,1,Fire Behavior Lab,ETFS 3103
+,ETGR,1201,031,24364,1,Intro to Engr Tech,MATH 1100 or MATH 1101
+,,,032,25870,1,Intro to Engr Tech,MATH 1100 or MATH 1101
+,,2101,001,22078,1,Applied Mechanics I,MATH 1103
+,,2102,001,21427,1,Applied Mechanics II,ETGR 2101
+,,2106,001,21466,1,Electronic Circuits & Devices,MATH 1103
+,,2272,001,20973,1,Engineering Analysis II,ETGR 2171 or MATH 1121 or MATH 1241
+,,3171,001,21085,1,Engineering Analysis III,MATH 1242 or ETGR 2272
+,,,ON1,21264,1,Engineering Analysis III,MATH 1242 or ETGR 2272
+,,4100,001,20843,1,Capstone Design Project I,(ETME 3100 and ETME 3113 and ETME 3143 or ETME 3250 and ETME 3150 and ETME 3213) or ETEL 3281
+,,,080,21087,1,Capstone Design Project I,(ETME 3100 and ETME 3113 and ETME 3143 or ETME 3250 and ETME 3150 and ETME 3213) or ETEL 3281
+,,4200,001,21754,1,Capstone Design Project II,ETGR 4100
+,,,002,21753,1,Capstone Design Project II,ETGR 4100
+,,4302,001,22005,1,Industrial Hygiene,ETGR 2230 and CHEM 1200 and (MATH 1100 or MATH 1101) and PHYS 1101
+,,,080,26297,1,Industrial Hygiene,ETGR 2230 and CHEM 1200 and (MATH 1100 or MATH 1101) and PHYS 1101
+,,4303,001,22006,1,Applied Ergo & Human Factors,ETGR 2230 and (MATH 1100 or MATH 1101) and PHYS 1101
+,,,080,22432,1,Applied Ergo & Human Factors,ETGR 2230 and (MATH 1100 or MATH 1101) and PHYS 1101
+,ETME,1112,001,21089,1,CAD Modeling II,ETME 1111
+,,,002,21090,1,CAD Modeling II,ETME 1111
+,,2102,001,20376,1,Mechanisms,ETME 1111 and (PHYS 1101 or PHYS 2101) and (MATH 1121 or MATH 1241)
+,,,002,26901,1,Mechanisms,ETME 1111 and (PHYS 1101 or PHYS 2101) and (MATH 1121 or MATH 1241)
+,,2142,001,24129,1,Applied Manufacturing,ETGR 1101 or ETGR 1201
+,,3100,001,21091,1,Junior Design Practicum,ETME 2100 and ETME 3133
+,,3123L,L01,22947,1,Stress Analysis Laboratory,ETME 3123 and (UWRT 1103 or WRDS 1103) or (UWRT 1104 or WRDS 1104)
+,,,L02,22948,1,Stress Analysis Laboratory,ETME 3123 and (UWRT 1103 or WRDS 1103) or (UWRT 1104 or WRDS 1104)
+,,3150,001,21094,1,App CAD Modeling & Simulation,ETME 1111 and ETME 2102 and ETME 3123
+,,3213,001,21095,1,Machine Design I,ETME 2102 and ETME 3123 and (ETME 2130 or ETME 2141)
+,,3250,001,24164,1,Princ. of Thermal Engineering,(ETGR 2272 or MATH 1242) and ETME 3133
+,,4250,090,27422,1,Thermal Engineering Appl.,ETME 3250
+,,4250L,L01,24293,1,Thermal Fluids Laboratory,(WRDS 1103 or WRDS 1104) and ETME 3250
+,EXER,2169,001,22899,1,Hum Anat & Phys for Hlth Pr II,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,002,22900,1,Hum Anat & Phys for Hlth Pr II,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,003,26826,1,Hum Anat & Phys for Hlth Pr II,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,2169L,L01,22902,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L02,22903,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L03,22904,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L04,22905,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L05,26942,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L07,22906,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L09,22907,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L10,22908,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L11,22909,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L13,22910,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L14,22911,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L16,23073,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L17,23074,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L18,23075,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L20,23077,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L22,22914,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,,L23,26827,1,Hum Anat & Phys Lab II Hlth,(KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,2298,001,22923,1,Applied Kinesiology,(EXER 2168 or KNES 2168) and (EXER 2168L or KNES 2168L) or (BIOL 2273 and BIOL 2273L)
+,,3280,001,23080,1,Exer Physiology:Princ & Theory,(KNES 2169 or EXER 2169) or BIOL 2274 or BIOL 1274 or BIOL 0074
+,,3285,001,23083,1,Principles of Strength & Cond,KNES 3280 or EXER 3280
+,,3286,001,23084,1,Exer Testing: Found & Theory,EXER 3280 or ATRN 3280 or KNES 3280
+,,3287,001,23085,1,Exer Testing:Principles & Apps,KNES 3280 or EXER 3280
+,,,002,23086,1,Exer Testing:Principles & Apps,KNES 3280 or EXER 3280
+,,,003,23087,1,Exer Testing:Principles & Apps,KNES 3280 or EXER 3280
+,,,004,23090,1,Exer Testing:Principles & Apps,KNES 3280 or EXER 3280
+,,,005,23091,1,Exer Testing:Principles & Apps,KNES 3280 or EXER 3280
+,,3490,001,23110,1,Exercise Science Internship,(KNES 3660 or EXER 3660) and (KNES 2290 or EXER 2290)
+,,4121,001,23116,1,Pharma for the Phys Active,EXER 3280 or ATRN 3280 or KNES 3280
+,,4285,001,23114,1,Adv Str & Cond Theory & Tech,(KNES 3285 or EXER 3285)
+,,4286,001,23117,1,Exercise Prescription,(EXER 3286 or ATRN 3286 or KNES 3286) and (EXER 3287 or ATRN 3287 or KNES 3287)
+,,4293,001,23119,1,Biomechanics,EXER 3280 or ATRN 3280 or KNES 3280
+,,4490,001,23111,1,Exercise Science Internship,(KNES 2290 or EXER 2290) and (KNES 3660 or EXER 3660)
+,FILM,3221,001,23199,1,Advanced Screenwriting,FILM 3220
+,,4220,001,21813,1,Film Fests & Impact Production,FILM 3120
+,,4221,001,27391,1,Community-Based Film Prod.,(FILM 2201 or FILM 1502) and FILM 3120
+,,4690,001,21934,1,Capstone Film/Media Production,FILM 3120
+,FINN,3120,002,20278,1,Financial Management,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,003,21102,1,Financial Management,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,004,22516,1,Financial Management,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,005,20799,1,Financial Management,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,006,21921,1,Financial Management,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,080,26939,H2,Financial Management,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,090,20866,1,Financial Management,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,091,23386,1,Financial Management,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,U01,20277,1,Financial Management,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,3222,001,20252,1,Investments,FINN 3120
+,,,002,21496,1,Investments,FINN 3120
+,,,003,20253,1,Investments,FINN 3120
+,,3223,090,22177,1,International Fin Management,FINN 3120
+,,3225,090,24624,1,Commercial Bank Management,FINN 3120
+,,3226,001,20254,1,Financial Theory & Practice,FINN 3120
+,,,002,21486,1,Financial Theory & Practice,FINN 3120
+,,,003,22713,1,Financial Theory & Practice,FINN 3120
+,,3255,090,22699,1,Real Estate Principles,FINN 3120
+,,3261,090,20872,1,Real Estate Finance,FINN 3120
+,,3265,001,22700,1,Asset & Property Management,FINN 3255
+,,3271,001,20255,1,Prin of Risk Mgmt & Insur,INFO 2130
+,,3272,001,20256,1,Life Ins & Prof Fin Planning,INFO 2130 and (ACCT 3311 or ACCT 3323)
+,,3273,090,21356,1,Property and Liab Insur Oper,INFO 2130
+,,3278,001,22704,1,RMI Sales and Negotiations,INFO 2130
+,,4159,090,20258,1,Student Managed Invest Fund II,FINN 4158
+,,4160,090,22705,1,Equity Analysis,FINN 3120
+,,4275,001,21497,1,Enterprise Risk Management,FINN 3271
+,,6210,U90,20260,1,Financial Elements Derivatives,FINN 6152
+,,6212,U90,21189,1,Adv Methods in Math Fin,FINN 6210
+,,6215,U90,21190,1,Risk Mgmt in Corporations,FINN 6203
+,,6216,U01,21276,1,Quantitative Risk Management,FINN 6203
+,FLED,5104,084,22326,1,Assessment in Teaching FLED,MDSK 6162 and MDSK 5204 and (MDSK 6162L or MDSK 6163) and FLED 5200 and (MDSK 5100L or FLED 5105)
+,,5105,085,23913,1,Applied Content Pedagogy,MDSK 5204 and MDSK 6162 and (MDSK 6162L or MDSK 6163)
+,,5200,080,22360,1,Methods in Foreign Languages,MDSK 6162 and MDSK 5204 and (MDSK 6162L or MDSK 6163)
+,FREN,1202,001,24717,1,Elementary French II,FREN 1201 or FREN 1100
+,,,002,20336,1,Elementary French II,FREN 1201 or FREN 1100
+,,,003,25278,1,Elementary French II,FREN 1201 or FREN 1100
+,,,004,22009,1,Elementary French II,FREN 1201 or FREN 1100
+,,,005,23586,1,Elementary French II,FREN 1201 or FREN 1100
+,,2201,001,24144,1,Intermediate French I,FREN 1202 or FREN 1102
+,,2202,001,24145,1,Intermediate French II,FREN 2201
+,,3201,001,25317,1,French Grammar & Conversation,FREN 2202
+,,3202,001,20375,1,French Grammar & Composition,FREN 2202
+,,3203,001,20377,1,Intro to French Literature,FREN 2202
+,,3210,002,22171,1,Intro to Business French,FREN 2202
+,,4007,001,21603,1,Studies in French Culture,FREN 3201 or FREN 3202
+,,4410,001,21935,1,Prof Internship in French,FREN 3201 and FREN 3202
+,,,002,27300,1,Prof Internship in French,FREN 3201 and FREN 3202
+,GEOG,2102,001,23230,1,Intro to Cartographic Design,GEOG 1103
+,,3120,001,21257,1,Fndmntls Geographic Info Systm,GEOG 1103 or ESCI 2210
+,,,002,21376,1,Fndmntls Geographic Info Systm,GEOG 1103 or ESCI 2210
+,,4103,001,23295,1,Computer Prog for GIS App,GEOG 1103
+,,4131,001,21565,1,Environmental Modeling w/ GIS,GEOG 4120 or GEOG 3120
+,,4132,001,26422,1,Spatial Model Social & Eco App,GEOG 3120
+,,4215,001,26522,1,Urban Ecology,ESCI 2222
+,,5103,001,23300,1,Programming for GIS,GEOG 6125
+,,5131,001,21566,1,Environmental Modeling w/ GIS,GEOG 5120
+,,6282,001,26429,1,CyberGIS and Big Data,GEOG 6125
+,,8120,001,22085,1,Spatial Statistics,GRAD 8101
+,GEOL,1200L,L01,20559,1,Physical Geology Lab,GEOL 1200
+,,,L02,20560,1,Physical Geology Lab,GEOL 1200
+,,,L03,20561,1,Physical Geology Lab,GEOL 1200
+,,,L04,23426,1,Physical Geology Lab,GEOL 1200
+,,,L05,20563,1,Physical Geology Lab,GEOL 1200
+,,,L06,20565,1,Physical Geology Lab,GEOL 1200
+,,,L07,20566,1,Physical Geology Lab,GEOL 1200
+,,,L08,20567,1,Physical Geology Lab,GEOL 1200
+,,,L90,20571,1,Physical Geology Lab,GEOL 1200
+,,,L91,20572,1,Physical Geology Lab,GEOL 1200
+,,,L92,20562,1,Physical Geology Lab,GEOL 1200
+,,,L94,20564,1,Physical Geology Lab,GEOL 1200
+,,1210,090,20239,1,Earth History,GEOL 1200 and GEOL 1200L
+,,1210L,L01,22086,1,Earth History Lab,(GEOL 1200 or GEOL 1200X) and GEOL 1200L and GEOL 1210
+,,3105,001,21757,1,Mineral Resources,GEOL 1200
+,,3190,001,20240,1,Environmental Geology,(GEOL 1200 or GEOL 1200X) and GEOL 1200L
+,,4100,001,21258,1,Igneous & Metamorphic Petr,GEOL 3115
+,,4115,001,22609,1,Applied Geophysics,GEOL 1200
+,,4145,001,26435,1,Hydrogeology,(CHEM 1251 and CHEM 1251L) and ((GEOL 1200 and GEOL 1200L) or (ESCI 1101 and ESCI 1101L))
+,,5100,001,26432,1,Igneous & Metamorphic Petr,GEOL 3115
+,,5145,001,26437,1,Hydrogeology,GEOL 1200 or ESCI 1101 and CHEM 1251
+,GERM,1202,001,20974,1,Elementary German II,GERM 1201 or GERM 1101
+,,,002,20381,1,Elementary German II,GERM 1201 or GERM 1101
+,,2201,001,20382,1,Intermediate German I,GERM 1202 or GERM 1102
+,,2202,001,20394,1,Intermediate German II,GERM 2201
+,,3202,001,20383,1,Adv GERM Lang & Culture II,GERM 2202 or GERM 2204
+,GRAD,6101,001,21630,1,Linear Regression,GRAD 6100
+,,6104,001,26425,1,Spatial Statistics,GRAD 6101
+,,8104,002,26426,1,Spatial Statistics,GRAD 8101
+,,8212,001,22134,1,Academic Writing,(GRAD 6010 or GRAD 6212) or (GRAD 8010 or GRAD 8210)
+,GRNT,3600,001,20502,1,Senior Sem & Field Exp Aging,GRNT 2100
+,HCIP,5122,U01,22114,1,Visual Analytics,HCIP 6380
+,,,U90,23429,1,Visual Analytics,HCIP 6380
+,,6108,090,22563,1,Intermed Decision Analysis/HC,HCIP 5376
+,,6156,U91,26836,1,Machine Learning,ITCS 6150
+,,6162,U01,24611,1,Knowledge Discovery in Data,ITCS 6160
+,,6250,090,21895,1,Problem Solving Hlth Analytics,HCIP 6102
+,,6400,001,21036,1,HIA Internship,HADM 6100 and HCIP 6380
+,HHUM,3020,001,24194,1,Topics in HHUM,HHUM 2100
+,,,002,24274,1,Topics in HHUM,HHUM 2100
+,,,003,24280,1,Topics in HHUM,HHUM 2100
+,,,004,24883,1,Topics in HHUM,HHUM 2100
+,,,005,26223,1,Topics in HHUM,HHUM 2100
+,,,006,26444,1,Topics in HHUM,HHUM 2100
+,,,007,26457,1,Topics in HHUM,HHUM 2100
+,,,008,26458,1,Topics in HHUM,HHUM 2100
+,,,009,26551,1,Topics in HHUM,HHUM 2100
+,,,090,27038,1,Topics in HHUM,HHUM 2100
+,,4800,001,25638,1,HHUM Portfolio Capstone,HHUM 2100
+,,,002,25896,H1,HHUM Portfolio Capstone,HHUM 2100
+,HIST,4000,A01,20845,1,Topics in Amer Historiography,HIST 2600 or HIST 3600
+,,4002,A01,22915,1,Topics in Non-West Historio,HIST 2600 or HIST 3600
+,,4003,A02,26066,1,Topics in Transnational Hist,HIST 2600 or HIST 3600
+,,4600,A01,20808,1,Senior Research Seminar,(HIST 2600 or HIST 3600 or HIST 2100) and (HIST 4000 or HIST 4001 or HIST 4002 or HIST 4003 or HIST 4004 or HIST 4797)
+,,,A02,23251,1,Senior Research Seminar,(HIST 2600 or HIST 3600 or HIST 2100) and (HIST 4000 or HIST 4001 or HIST 4002 or HIST 4003 or HIST 4004 or HIST 4797)
+,,,A90,21845,1,Senior Research Seminar,(HIST 2600 or HIST 3600 or HIST 2100) and (HIST 4000 or HIST 4001 or HIST 4002 or HIST 4003 or HIST 4004 or HIST 4797)
+,,4799,001,20910,1,Honors Research and Thesis,HIST 4797
+,,5000,A01,20689,1,Problems in American History,HIST 2600 or HIST 3600
+,,5799,A01,26130,1,Honors Research and Thesis--EE,HIST 4797 or HIST 5797
+,HLTH,4104,001,20780,1,Epidemiology,HLTH 2102 or (HLTH 3101 or HLTH 2102)
+,,4400,001,26693,1,Public Health Internship,HLTH 3400
+,,6226,001,22210,1,Community Health Methods,HLTH 6211
+,,6227,090,21884,1,Community Hlth Plan & Eval,HLTH 6212
+,,6230,001,21885,1,Comm Health Practice Capstone,HLTH 6471
+,,6250,001,26769,1,Health Policy Capstone,HLTH 6471
+,,6270,001,21889,1,Epidemiologic Methods,HLTH 6211
+,,6280,001,21888,1,Epidemiology Capstone Course,HLTH 6471
+,,8282,001,22842,1,Health Survey Design & Rsch,HLTH 8201
+,HONR,3700,H01,21406,1,Honors College Topics,LBST 2301
+,,,H02,21405,1,Honors College Topics,LBST 2301
+,,,H03,21386,1,Honors College Topics,LBST 2301
+,,,H04,21900,1,Honors College Topics,LBST 2301
+,HPSY,8103,001,22438,1,Basic Qnt Analyses for Bhv Sci,PSYC 8102 or HPSY 8102
+,,8150,001,22439,1,Intro to Psych Treatment,PSYC 8151 or HPSY 8151
+,,8255,001,24417,1,Community Interventions,PSYC 8155 or HPSY 8155
+,,8262,003,22441,1,Practicum in Health Psychology,HPSY 8200
+,,8450,003,22442,1,Practicum in Clinical Psyc,PSYC 8150 or HPSY 8150
+,,,004,22443,1,Practicum in Clinical Psyc,PSYC 8150 or HPSY 8150
+,HSMT,3104,001,22833,1,Health Information Systems,HSMT 2101 and (HSMT 2104 or HSMT 3103)
+,,,002,22834,1,Health Information Systems,HSMT 2101 and (HSMT 2104 or HSMT 3103)
+,,,080,26994,1,Health Information Systems,HSMT 2101 and (HSMT 2104 or HSMT 3103)
+,,3201,001,21649,1,Hlth Syst Leadership & Ethics,HSMT 2101 and HSMT 2103 and (HSMT 2104 or HSMT 3103)
+,,,002,27013,1,Hlth Syst Leadership & Ethics,HSMT 2101 and HSMT 2103 and (HSMT 2104 or HSMT 3103)
+,,,003,21650,1,Hlth Syst Leadership & Ethics,HSMT 2101 and HSMT 2103 and (HSMT 2104 or HSMT 3103)
+,,,004,21651,1,Hlth Syst Leadership & Ethics,HSMT 2101 and HSMT 2103 and (HSMT 2104 or HSMT 3103)
+,,,080,27011,1,Hlth Syst Leadership & Ethics,HSMT 2101 and HSMT 2103 and (HSMT 2104 or HSMT 3103)
+,,,081,27014,1,Hlth Syst Leadership & Ethics,HSMT 2101 and HSMT 2103 and (HSMT 2104 or HSMT 3103)
+,,3203,001,27019,1,Intro Accounting & Finance,HSMT 2101 and (HSMT 2104 or HSMT 3103)
+,,,080,27016,1,Intro Accounting & Finance,HSMT 2101 and (HSMT 2104 or HSMT 3103)
+,,,090,21654,1,Intro Accounting & Finance,HSMT 2101 and (HSMT 2104 or HSMT 3103)
+,,3204,001,22835,1,Health Org Behavior,HSMT 2101 and HSMT 2103 and (HSMT 2104 or HSMT 3103)
+,,,002,22836,1,Health Org Behavior,HSMT 2101 and HSMT 2103 and (HSMT 2104 or HSMT 3103)
+,,,080,27026,1,Health Org Behavior,HSMT 2101 and HSMT 2103 and (HSMT 2104 or HSMT 3103)
+,,4201,002,23536,1,Health Policy & Law,HSMT 3201
+,,4202,090,21882,1,Quality Management,(HSMT 3104 or HSMT 4103) and (HSMT 3204 or HSMT 4101)
+,,,091,22754,1,Quality Management,(HSMT 3104 or HSMT 4103) and (HSMT 3204 or HSMT 4101)
+,,4600,001,22838,1,Health Systems Capstone,HSMT 2101 and HSMT 2103 and (HSMT 3104 or HSMT 4103) and (HSMT 3204 or HSMT 4101) and HSMT 3203 and HSMT 3201 and (HSMT 2104 or HSMT 3103)
+,,,002,22845,1,Health Systems Capstone,HSMT 2101 and HSMT 2103 and (HSMT 3104 or HSMT 4103) and (HSMT 3204 or HSMT 4101) and HSMT 3203 and HSMT 3201 and (HSMT 2104 or HSMT 3103)
+,,,003,22839,1,Health Systems Capstone,HSMT 2101 and HSMT 2103 and (HSMT 3104 or HSMT 4103) and (HSMT 3204 or HSMT 4101) and HSMT 3203 and HSMT 3201 and (HSMT 2104 or HSMT 3103)
+,,,091,22840,1,Health Systems Capstone,HSMT 2101 and HSMT 2103 and (HSMT 3104 or HSMT 4103) and (HSMT 3204 or HSMT 4101) and HSMT 3203 and HSMT 3201 and (HSMT 2104 or HSMT 3103)
+,,,092,22841,1,Health Systems Capstone,HSMT 2101 and HSMT 2103 and (HSMT 3104 or HSMT 4103) and (HSMT 3204 or HSMT 4101) and HSMT 3203 and HSMT 3201 and (HSMT 2104 or HSMT 3103)
+,HSRD,8261,090,23521,1,"Hlthcre Prg Evl, Outcms & Qual",HLTH 8270
+,INES,8998,001,21132,1,Doctoral Research,INES 8999
+,,,002,21133,1,Doctoral Research,INES 8999
+,,,003,21134,1,Doctoral Research,INES 8999
+,,,004,21135,1,Doctoral Research,INES 8999
+,,,005,24521,1,Doctoral Research,INES 8999
+,INFO,3130,001,20261,1,Management Info Systems,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 1201 or ECON 2101) and (ECON 1202 or ECON 2102) and INFO 2130
+,,,002,21341,1,Management Info Systems,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 1201 or ECON 2101) and (ECON 1202 or ECON 2102) and INFO 2130
+,,,003,21052,1,Management Info Systems,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 1201 or ECON 2101) and (ECON 1202 or ECON 2102) and INFO 2130
+,,,004,21073,1,Management Info Systems,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 1201 or ECON 2101) and (ECON 1202 or ECON 2102) and INFO 2130
+,,,006,21081,1,Management Info Systems,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 1201 or ECON 2101) and (ECON 1202 or ECON 2102) and INFO 2130
+,,,007,22633,1,Management Info Systems,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 1201 or ECON 2101) and (ECON 1202 or ECON 2102) and INFO 2130
+,,,008,22635,1,Management Info Systems,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 1201 or ECON 2101) and (ECON 1202 or ECON 2102) and INFO 2130
+,,,090,21665,1,Management Info Systems,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 1201 or ECON 2101) and (ECON 1202 or ECON 2102) and INFO 2130
+,,,091,26951,1,Management Info Systems,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 1201 or ECON 2101) and (ECON 1202 or ECON 2102) and INFO 2130
+,,,092,22634,1,Management Info Systems,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 1201 or ECON 2101) and (ECON 1202 or ECON 2102) and INFO 2130
+,,3221,001,21928,1,Programming for Bus Analytics,INFO 2130
+,,3231,001,20262,1,Busn Applications Development,INFO 2130
+,,,090,23257,1,Busn Applications Development,INFO 2130
+,,3233,001,20263,1,Data and Information Mgmt,INFO 3130
+,,,002,21474,1,Data and Information Mgmt,INFO 3130
+,,,003,22561,1,Data and Information Mgmt,INFO 3130
+,,3234,001,21513,1,Busn Info Sys Analysis & Dsgn,INFO 3233
+,,,002,25024,1,Busn Info Sys Analysis & Dsgn,INFO 3233
+,,,090,22168,1,Busn Info Sys Analysis & Dsgn,INFO 3233
+,,3237,090,24559,1,Business Analytics II,INFO 3221 and INFO 3233 and INFO 3236
+,,,091,21930,1,Business Analytics II,INFO 3221 and INFO 3233 and INFO 3236
+,,3238,001,22562,1,Social Media Analytics and App,INFO 3130
+,INTL,4701,H01,22989,1,Honors Research,INTL 4601
+,ITCS,3050,S01,27249,1,Topics in Computer Science,ITSC 1212
+,,,S03,27250,1,Topics in Computer Science,ITSC 1213
+,,3112,001,24408,1,Dsgn & Imp Object-oriented Sys,ITSC 2214 or ITCS 2214
+,,,002,23265,1,Dsgn & Imp Object-oriented Sys,ITSC 2214 or ITCS 2214
+,,,051,20804,1,Dsgn & Imp Object-oriented Sys,ITSC 2214 or ITCS 2214
+,,3120,002,26607,1,Intro Interactive Comp Graphic,(ITCS 2214 or ITSC 2214) and MATH 2164
+,,3153,001,20425,1,Intro Artificial Intelligence,MATH 2164 and ITSC 2214
+,,,002,21789,1,Intro Artificial Intelligence,MATH 2164 and ITSC 2214
+,,3156,001,26631,1,Intro to Machine Learning,ITSC 2214 and MATH 2164
+,,,091,26633,1,Intro to Machine Learning,ITSC 2214 and MATH 2164
+,,3160,002,24785,1,Database Design & Implem,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,003,22581,1,Database Design & Implem,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,004,20426,1,Database Design & Implem,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,051,22582,1,Database Design & Implem,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,092,23274,1,Database Design & Implem,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,3162,001,21418,1,Introduction to Data Mining,ITSC 2214 or ITCS 2214
+,,,002,24445,1,Introduction to Data Mining,ITSC 2214 or ITCS 2214
+,,3166,002,24446,1,Intro to Computer Networks,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,051,21463,1,Intro to Computer Networks,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,3190,001,26639,1,Intro Cloud Comp Data Analysis,ITSC 2214 or ITCS 2214
+,,3216,001,22147,1,Intro to Cognitive Science,PSYC 1101
+,,4010,005,27122,1,Topics in Computer Science,ITSC 2214
+,,4102,091,20454,1,Programming Languages,ITSC 2214 or ITCS 2214
+,,4114,001,26642,1,Real World Algorithms,ITSC 2214 and ITSC 2175
+,,4122,001,22150,1,Visual Analytics,STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122 or STAT 2223
+,,4141,001,26643,1,Computer System & Architecture,ITSC 3146
+,,4145,001,26645,1,Parallel Programming,ITSC 3146
+,,4151,001,22583,1,Intelligent Robotics,(ITCS 2214 or ITSC 2214) and MATH 2164
+,,4152,091,22080,1,Intro. to Computer Vision,ITCS 3156
+,,4180,091,21045,1,Mobile Application Development,ITCS 2214 or ITSC 2214
+,,4230,001,21404,1,Intro to Game Design & Dvlpmnt,ITSC 2214 or ITCS 2214
+,,4231,001,21041,1,Adv Game Design & Develpmnt,ITCS 4230
+,,4232,051,21237,1,Game Design & Dvlpmnt Studio,ITSC 3155 and ITCS 4231
+,,5231,001,21042,1,Adv Game Design & Development,ITCS 5230
+,,5232,051,21247,1,Game Design & Dvlpmnt Studio,ITCS 5120 and ITCS 5231
+,,6190,U01,24760,1,Cloud Comp for Data Analysis,ITCS 6114
+,,8160,001,24561,1,Database Systems,ITCS 8114
+,,8190,U01,24761,1,Cloud Comp for Data Analysis,ITCS 8114
+,ITIS,3135,051,22100,1,Web App Design and Development,ITSC 2214 or ITCS 2214
+,,,052,22482,1,Web App Design and Development,ITSC 2214 or ITCS 2214
+,,,053,22090,1,Web App Design and Development,ITSC 2214 or ITCS 2214
+,,,091,25018,1,Web App Design and Development,ITSC 2214 or ITCS 2214
+,,3200,001,20457,1,Intro to Info Security & Priv,ITSC 2214 or ITCS 2214
+,,,051,21595,1,Intro to Info Security & Priv,ITSC 2214 or ITCS 2214
+,,,091,20942,1,Intro to Info Security & Priv,ITSC 2214 or ITCS 2214
+,,3216,001,21846,1,Intro to Cognitive Science,PSYC 1101
+,,3246,001,27187,1,IT Infrast and SEC,ITSC 3146
+,,,091,22091,1,IT Infrast and SEC,ITSC 3146
+,,3300,001,21642,1,Software Req & Project Mgmt,ITIS 2300 or ITIS 3135
+,,,091,20807,1,Software Req & Project Mgmt,ITIS 2300 or ITIS 3135
+,,3310,091,21029,1,Software Arch & Design,ITCS 2214 or ITSC 2214
+,,3320,091,20675,1,Intro Software Testing & Assur,ITIS 3200 and ITIS 3300
+,,4166,051,21772,1,Network Based App Dvlpment,(ITIS 2300 or ITIS 3135) and ITCS 3160
+,,,052,24881,1,Network Based App Dvlpment,(ITIS 2300 or ITIS 3135) and ITCS 3160
+,,,091,24237,1,Network Based App Dvlpment,(ITIS 2300 or ITIS 3135) and ITCS 3160
+,,4180,091,21033,1,Mobile Application Development,ITCS 2214 or ITSC 2214
+,,4221,001,20676,1,Secure Prog Penetr Testing,(ITIS 3135 or ITIS 2300)
+,,,091,22459,1,Secure Prog Penetr Testing,(ITIS 3135 or ITIS 2300)
+,,,092,27371,1,Secure Prog Penetr Testing,(ITIS 3135 or ITIS 2300)
+,,4246,091,23384,1,Competitive Cyber Defense,ITIS 3200 and ITIS 3246
+,,4250,091,20460,1,Computer Forensics,ITIS 2300 or ITIS 3135
+,,,092,27336,1,Computer Forensics,ITIS 2300 or ITIS 3135
+,,4260,091,26477,1,Intro to Security Analytics,ITIS 3200 and ITSC 3146 and (STAT 1220 or STAT 1222 or STAT 1221 or STAT 2122)
+,,4261,091,24549,1,Introduction to Secured Cloud,ITSC 3146
+,,4390,091,23395,1,Interaction Design Projects,ITIS 3130 and ITIS 3135
+,,5221,001,21141,1,Secure Prog Penetr Testing,ITIS 4166 or ITIS 5166
+,,,091,22460,1,Secure Prog Penetr Testing,ITIS 4166 or ITIS 5166
+,,5260,091,26478,1,Intro to Security Analytics,ITIS 6200
+,,5261,091,24550,1,Intro Sec Cloud Comp,ITSC 3146
+,,5390,081,24180,1,Interaction Design Projects,ITIS 6400
+,,,091,24178,1,Interaction Design Projects,ITIS 6400
+,,6162,U01,24572,1,Knowledge Disc in Databases,ITCS 6160 or ITIS 6120
+,,,U02,26795,1,Data Mining,ITCS 6160 or ITIS 6120
+,,6177,051,21279,1,System Integration,ITIS 5166
+,,6220,U01,23263,1,Data Privacy,ITIS 6200
+,,6230,001,22487,1,Infrastructure Protection,ITIS 6200
+,,6330,001,22135,1,Malware Analysis,ITIS 6200
+,ITLN,1202,001,23623,1,Elementary Italian II,ITLN 1201
+,,,002,23624,1,Elementary Italian II,ITLN 1201
+,,3202,001,20975,1,Italian Grammar & Composition,ITLN 3201
+,ITSC,1213,001,22070,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,002,22071,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,003,22072,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,004,22073,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,005,22647,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,006,22648,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,007,22650,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,008,22651,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,009,23411,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,010,22106,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,011,22107,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,012,22108,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,013,22109,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,014,22799,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,015,22801,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,016,22800,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,,017,22807,1,Intro to Computer Science II,(ITSC 1212 or ITCS 1212 or ITIS 1212 or DTSC 1302) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1241)
+,,2175,001,21586,1,Logic and Algorithms,(ITSC 1212 or ITCS 1212 or DTSC 1302) and (MATH 1120 or MATH 1241)
+,,,051,21797,1,Logic and Algorithms,(ITSC 1212 or ITCS 1212 or DTSC 1302) and (MATH 1120 or MATH 1241)
+,,,091,23423,1,Logic and Algorithms,(ITSC 1212 or ITCS 1212 or DTSC 1302) and (MATH 1120 or MATH 1241)
+,,,092,25058,1,Logic and Algorithms,(ITSC 1212 or ITCS 1212 or DTSC 1302) and (MATH 1120 or MATH 1241)
+,,,101,21582,1,Logic and Algorithms,(ITSC 1212 or ITCS 1212 or DTSC 1302) and (MATH 1120 or MATH 1241)
+,,,102,21587,1,Logic and Algorithms,(ITSC 1212 or ITCS 1212 or DTSC 1302) and (MATH 1120 or MATH 1241)
+,,,103,23202,1,Logic and Algorithms,(ITSC 1212 or ITCS 1212 or DTSC 1302) and (MATH 1120 or MATH 1241)
+,,2181,001,24146,1,Intro to Computer Systems,(ITSC 1212 or ITCS 1212) or DTSC 1302
+,,,002,24148,1,Intro to Computer Systems,(ITSC 1212 or ITCS 1212) or DTSC 1302
+,,,003,24167,1,Intro to Computer Systems,(ITSC 1212 or ITCS 1212) or DTSC 1302
+,,,004,24170,1,Intro to Computer Systems,(ITSC 1212 or ITCS 1212) or DTSC 1302
+,,,005,25004,1,Intro to Computer Systems,(ITSC 1212 or ITCS 1212) or DTSC 1302
+,,,006,24174,1,Intro to Computer Systems,(ITSC 1212 or ITCS 1212) or DTSC 1302
+,,,007,25005,1,Intro to Computer Systems,(ITSC 1212 or ITCS 1212) or DTSC 1302
+,,,091,25148,1,Intro to Computer Systems,(ITSC 1212 or ITCS 1212) or DTSC 1302
+,,2214,001,22057,1,Data Structures and Algorithms,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,002,21802,1,Data Structures and Algorithms,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,003,26584,1,Data Structures and Algorithms,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,091,23203,1,Data Structures and Algorithms,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,101,21588,1,Data Structures and Algorithms,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,102,23137,1,Data Structures and Algorithms,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,103,24162,1,Data Structures and Algorithms,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,,104,25118,1,Data Structures and Algorithms,ITSC 1213 or ITCS 1213 or ITIS 1213
+,,3146,001,21589,1,Intro Oper Syst & Networking,(ITSC 2214 or ITCS 2214) and ITSC 2181
+,,,002,22659,1,Intro Oper Syst & Networking,(ITSC 2214 or ITCS 2214) and ITSC 2181
+,,,003,24999,1,Intro Oper Syst & Networking,(ITSC 2214 or ITCS 2214) and ITSC 2181
+,,,101,22139,1,Intro Oper Syst & Networking,(ITSC 2214 or ITCS 2214) and ITSC 2181
+,,,102,27329,1,Intro Oper Syst & Networking,(ITSC 2214 or ITCS 2214) and ITSC 2181
+,,3155,001,22163,1,Software Engineering,ITSC 2214 or ITCS 2214
+,,,051,23410,1,Software Engineering,ITSC 2214 or ITCS 2214
+,,,101,21584,1,Software Engineering,ITSC 2214 or ITCS 2214
+,,,102,21608,1,Software Engineering,ITSC 2214 or ITCS 2214
+,,,103,27326,1,Software Engineering,ITSC 2214 or ITCS 2214
+,,4155,001,22679,1,Software Development Projects,(ITSC 2214 or ITCS 2214) and (ITSC 3155 or ITIS 3300 or ITIS 3310 or ITCS 3155)
+,,,002,22680,1,Software Development Projects,(ITSC 2214 or ITCS 2214) and (ITSC 3155 or ITIS 3300 or ITIS 3310 or ITCS 3155)
+,,,003,26591,1,Software Development Projects,(ITSC 2214 or ITCS 2214) and (ITSC 3155 or ITIS 3300 or ITIS 3310 or ITCS 3155)
+,,,051,22681,1,Software Development Projects,(ITSC 2214 or ITCS 2214) and (ITSC 3155 or ITIS 3300 or ITIS 3310 or ITCS 3155)
+,,4851,001,27506,1,Senior Project II,ITSC 4850
+,JAPN,1202,001,23548,1,Elementary Japanese II,JAPN 1201
+,,,002,20874,1,Elementary Japanese II,JAPN 1201
+,,,003,20395,1,Elementary Japanese II,JAPN 1201
+,,,004,27294,1,Elementary Japanese II,JAPN 1201
+,,2201,001,20396,1,Intermediate Japanese I,JAPN 1202
+,,,002,22999,1,Intermediate Japanese I,JAPN 1202
+,,2202,001,20397,1,Intermediate Japanese II,JAPN 2201
+,,,002,22118,1,Intermediate Japanese II,JAPN 2201
+,,3060,001,23550,1,Topics in Japanese Film,WRDS 1103 or WRDS 1104 or UWRT 1103 or UWRT 1104 or ENGL 1103
+,,3101,001,22279,1,Kanji through Reading,JAPN 2202
+,,3201,001,20398,1,Upper Intermediate Japanese I,JAPN 2202
+,,3202,001,20399,1,Upper Intermediate Japanese II,JAPN 3201
+,,3203,001,25350,1,Upper Intermed. Japanese III,JAPN 2202
+,,3400,001,21942,1,Teaching Practicum,JAPN 3201 or JAPN 3202 or JAPN 3203
+,,4040,001,23551,1,Advanced Topics in Japanese,JAPN 3040 or JAPN 3130 or JAPN 3140 or JAPN 3060
+,,4207,001,22945,1,Business Japanese Writing,JAPN 3201 or JAPN 3202 or JAPN 3203
+,,4410,001,25088,1,Prof Internship in Japanese,JAPN 3201 and JAPN 3202
+,JOUR,2160,001,20246,1,Intro to Journalism,JOUR 2100
+,,,002,20247,1,Intro to Journalism,JOUR 2100
+,,,003,21829,1,Intro to Journalism,JOUR 2100
+,,,004,21830,1,Intro to Journalism,JOUR 2100
+,,,005,26734,1,Intro to Journalism,JOUR 2100
+,,3050,001,26807,1,Topics in Journalism,JOUR 2160
+,,,002,26736,1,Topics in Journalism,JOUR 2160
+,,,090,23233,1,Topics in Journalism,JOUR 2160
+,,,M90,22122,1,Topics in Journalism,JOUR 2160
+,,,R01,23232,1,Topics in Journalism,JOUR 2160
+,,,S01,20280,1,Topics in Journalism,JOUR 2160
+,,3160,001,20281,1,Adv News Reporting & Writing,JOUR 2160
+,,,002,26745,1,Adv News Reporting & Writing,JOUR 2160
+,,3161,001,26746,1,News Editing,JOUR 2160
+,,3162,001,20806,1,Feature Writing,JOUR 2160
+,,,002,24298,1,Feature Writing,JOUR 2160
+,,4410,001,21614,1,Professional Internship,JOUR 3160 or JOUR 3162
+,,,002,24539,1,Professional Internship,JOUR 3160 or JOUR 3162
+,,,003,24540,H2,Professional Internship,JOUR 3160 or JOUR 3162
+,KNES,4431,001,21295,1,Outdoor Adv Leadership Pract,KNES 3230 or KNES 3235
+,,6900,001,27285,1,Rsrch & Thesis in Kinesiology,KNES 6115 or KNES 5115
+,,,004,24970,1,Rsrch & Thesis in Kinesiology,KNES 6115 or KNES 5115
+,LACS,4410,001,25353,1,Professional Internship,(ARBC 3201 and ARBC 3202) or (CHNS 3201 and CHNS 3202) or (FREN 3201 and FREN 3202) or (GERM 3201 and GERM 3202) or (ITLN 3201 and ITLN 3202) or (JAPN 3201 and JAPN 3202) or (PORT 3201 and PORT 3202) or (RUSS 3201 and RUSS 3202) or (SPAN 3201 and SPAN 3202)
+,,4700,001,25367,1,Honors Project,LACS 3700
+,LTAM,3310,001,26721,1,SPAN AMERICAN CIV AND CULTURE,SPAN 3201 and SPAN 3202 and SPAN 3203
+,,4316,001,26723,1,"Soc, Pol, Cult, Econ Hisp Lit",(SPAN 3211 or SPAN 4208) or (SPAN 3212 or SPAN 4209) or (LTAM 3312 or LTAM 4309)
+,MAED,3224,002,23060,1,Teach Math Elem Sch 3-6,MAED 3222
+,,,003,26052,1,Teach Math Elem Sch 3-6,MAED 3222
+,,,080,22478,1,Teach Math Elem Sch 3-6,MAED 3222
+,,5252,080,22742,1,Teach Math Sec Sch Learn,MDSK 5204 and MDSK 6162 and (MDSK 6162L or MDSK 6163)
+,MATH,1103,001,20966,1,Precalc Math Science & Engr,Test MPLC or MATH 1100 or MATH 1101
+,,,002,20438,1,Precalc Math Science & Engr,Test MPLC or MATH 1100 or MATH 1101
+,,,003,20439,1,Precalc Math Science & Engr,Test MPLC or MATH 1100 or MATH 1101
+,,,004,20440,1,Precalc Math Science & Engr,Test MPLC or MATH 1100 or MATH 1101
+,,,005,20441,1,Precalc Math Science & Engr,Test MPLC or MATH 1100 or MATH 1101
+,,,006,20442,1,Precalc Math Science & Engr,Test MPLC or MATH 1100 or MATH 1101
+,,,007,20931,1,Precalc Math Science & Engr,Test MPLC or MATH 1100 or MATH 1101
+,,,008,24123,1,Precalc Math Science & Engr,Test MPLC or MATH 1100 or MATH 1101
+,,,009,24124,1,Precalc Math Science & Engr,Test MPLC or MATH 1100 or MATH 1101
+,,1120,001,20443,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,002,20444,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,003,20967,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,004,20445,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,005,20446,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,006,20447,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,007,20448,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,008,20449,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,009,20450,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,010,21305,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,011,21362,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,012,21269,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,700,26900,1,Calculus,Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,1121,001,20451,1,Calculus-Engr Tech,MATH 1103 or Test A02 or Test MPLC
+,,,002,22173,1,Calculus-Engr Tech,MATH 1103 or Test A02 or Test MPLC
+,,1241,001,23833,1,Calculus I,Test MPLC or MATH 1103
+,,,002,20464,1,Calculus I,Test MPLC or MATH 1103
+,,,003,26498,1,Calculus I,Test MPLC or MATH 1103
+,,,004,20465,1,Calculus I,Test MPLC or MATH 1103
+,,,005,20466,1,Calculus I,Test MPLC or MATH 1103
+,,,006,26499,1,Calculus I,Test MPLC or MATH 1103
+,,,007,20467,1,Calculus I,Test MPLC or MATH 1103
+,,,008,20468,1,Calculus I,Test MPLC or MATH 1103
+,,,009,24710,1,Calculus I,Test MPLC or MATH 1103
+,,,010,26762,1,Calculus I,Test MPLC or MATH 1103
+,,,090,21363,1,Calculus I,Test MPLC or MATH 1103
+,,1242,001,20477,1,Calculus II,MATH 1241 or ENGR 1241
+,,,002,20479,1,Calculus II,MATH 1241 or ENGR 1241
+,,,003,20480,1,Calculus II,MATH 1241 or ENGR 1241
+,,,004,20968,1,Calculus II,MATH 1241 or ENGR 1241
+,,,005,20481,1,Calculus II,MATH 1241 or ENGR 1241
+,,,006,20969,1,Calculus II,MATH 1241 or ENGR 1241
+,,,007,20484,1,Calculus II,MATH 1241 or ENGR 1241
+,,,008,20485,1,Calculus II,MATH 1241 or ENGR 1241
+,,,009,20487,1,Calculus II,MATH 1241 or ENGR 1241
+,,,010,21489,1,Calculus II,MATH 1241 or ENGR 1241
+,,,011,21755,1,Calculus II,MATH 1241 or ENGR 1241
+,,,012,20498,1,Calculus II,MATH 1241 or ENGR 1241
+,,,013,27434,1,Calculus II,MATH 1241 or ENGR 1241
+,,,091,21635,1,Calculus II,MATH 1241 or ENGR 1241
+,,1340,001,21361,1,Math for Elem Teachers I,Test MPLC
+,,,002,22178,1,Math for Elem Teachers I,Test MPLC
+,,1341,002,22024,1,Math for Elem Teachers II,MATH 1340
+,,2120,001,20500,1,Inter Applied Calculus,MATH 1120 or MATH 1241 or ENGR 1241
+,,2164,001,20501,1,Matrices & Linear Algebra,MATH 1120 or (MATH 1241 or ENGR 1241)
+,,,002,20509,1,Matrices & Linear Algebra,MATH 1120 or (MATH 1241 or ENGR 1241)
+,,,003,20510,1,Matrices & Linear Algebra,MATH 1120 or (MATH 1241 or ENGR 1241)
+,,,004,21074,1,Matrices & Linear Algebra,MATH 1120 or (MATH 1241 or ENGR 1241)
+,,,005,20511,1,Matrices & Linear Algebra,MATH 1120 or (MATH 1241 or ENGR 1241)
+,,,006,21206,1,Matrices & Linear Algebra,MATH 1120 or (MATH 1241 or ENGR 1241)
+,,,007,21365,1,Matrices & Linear Algebra,MATH 1120 or (MATH 1241 or ENGR 1241)
+,,,008,21640,1,Matrices & Linear Algebra,MATH 1120 or (MATH 1241 or ENGR 1241)
+,,,009,22711,1,Matrices & Linear Algebra,MATH 1120 or (MATH 1241 or ENGR 1241)
+,,,090,27394,1,Matrices & Linear Algebra,MATH 1120 or (MATH 1241 or ENGR 1241)
+,,2165,001,26109,1,Intro to Discrete Structures,(ECGR 2103 or ITSC 1212) and MATH 1241
+,,2167,001,26495,1,Intro to Math Reasoning,MATH 1242 or MATH 2120 and MATH 2164
+,,2171,001,20720,1,Differential Equations,MATH 1242
+,,,002,21216,1,Differential Equations,MATH 1242
+,,,003,20512,1,Differential Equations,MATH 1242
+,,,004,20513,1,Differential Equations,MATH 1242
+,,,005,22712,1,Differential Equations,MATH 1242
+,,,006,20514,1,Differential Equations,MATH 1242
+,,,008,20516,1,Differential Equations,MATH 1242
+,,2241,001,20930,1,Calculus III,MATH 1242
+,,,003,20518,1,Calculus III,MATH 1242
+,,,004,20519,1,Calculus III,MATH 1242
+,,,005,20520,1,Calculus III,MATH 1242
+,,,007,21366,1,Calculus III,MATH 1242
+,,,008,20521,1,Calculus III,MATH 1242
+,,,009,27147,1,Calculus III,MATH 1242
+,,2242,001,20522,1,Calculus IV,MATH 2241
+,,2340,001,26925,1,Number Concepts & Relationship,MATH 1100 or MATH 1101 or MATH 1103
+,,2342,001,21275,1,Data Analysis & Probability,STAT 1220 or STAT 1222
+,,3122,001,21761,1,Probability & Statistics I,MATH 2241
+,,3123,001,21207,1,Probability & Statistics II,MATH 3122 or STAT 3122
+,,3141,001,22026,1,Adv Calculus of One Variable,MATH 2241 and MATH 2164
+,,3142,001,20523,1,Adv Calc of Several Variables,MATH 3141
+,,3163,001,20524,1,Intro to Modern Algebra,MATH 1242 and MATH 2164
+,,,002,20525,1,Intro to Modern Algebra,MATH 1242 and MATH 2164
+,,3166,001,26766,1,Combinatorics,MATH 2164
+,,3180,001,24202,1,Predictive Analytics,MATH 1242 or STAT 1220 or STAT 1222
+,,3181,001,20535,1,Fund Concepts of Geometry,MATH 2164
+,,3227,001,23836,H1,Math Theory of Interest,MATH 1242 or MATH 1120
+,,3228,001,22025,H2,Financial Math,MATH 2228 or MATH 3227
+,,3800,001,27216,1,Directed Individual Study MATH,MATH 1242
+,,4051,001,21622,1,Comp Expl & Generation of Data,(MATH 2120 or MATH 2241) and (STAT 2122 or STAT 2223 or STAT 3123)
+,,4109,001,20540,1,Hist of Mathematical Thought,MATH 1241 or ENGR 1241
+,,4164,001,26284,1,Abstract Linear Algebra,MATH 3163 and MATH 2164
+,,4228,001,27407,1,Life Insurance Mathematics,(MATH 3122 or STAT 3122) and MATH 3228
+,,4229,001,22027,1,Advanced Life Insurance Math,MATH 4228 or MATH 3229
+,,5144,001,20541,1,Analysis II,MATH 5143
+,,5229,001,22718,1,Advanced Life Insurance Math,MATH 5228 or MATH 4228
+,,8144,001,20544,1,Real Analysis II,MATH 8143 or MATH 7143
+,MBAD,5159,090,20257,1,Stu Managed Invest Fund II,(FINN 3120 or MBAD 6152) and (FINN 3222 or FINN 6153 or MBAD 6153)
+,,6112,080,22643,H1,Econ of Business Decisions,(MBAD 5110 or Test MBA1) and (MBAD 5141 or Test MBA4)
+,,,U90,20159,1,Econ of Business Decisions,(MBAD 5110 or Test MBA1) and (MBAD 5141 or Test MBA4)
+,,6122,080,23323,H1,Decision Modeling & Analysis,(MBAD 5141 or Test MBA4) or MBAD 5142
+,,,U90,20236,1,Decision Modeling & Analysis,(MBAD 5141 or Test MBA4) or MBAD 5142
+,,6131,080,23324,H1,Fin & Mgrl Accounting,(MBAD 5131 or Test MBA3)
+,,,U90,21337,1,Fin & Mgrl Accounting,(MBAD 5131 or Test MBA3)
+,,6141,080,23325,H2,Operations Management,Test MBA4( or MBAD 5141)
+,,,U90,21343,1,Operations Management,Test MBA4( or MBAD 5141)
+,,6152,080,20205,H2,Financial Management,MBAD 6112 and MBAD 6131
+,,,U90,20207,1,Financial Management,MBAD 6112 and MBAD 6131
+,,6153,U90,22644,1,Investment Management,MBAD 6152
+,,6155,083,25084,1,Multinational Fin Mgmt,MBAD 6152
+,,6160,U90,20959,1,Real Estate Capital Markets,MBAD 6152
+,,6161,080,22645,H2,Human Behavior Organizations,MBAD 5110 and MBAD 5131 and MBAD 5141 and MBAD 5191
+,,,U91,27100,1,Human Behavior Organizations,MBAD 5110 and MBAD 5131 and MBAD 5141 and MBAD 5191
+,,6194,080,23416,H2,Global Strategic Management,MBAD 6112 and MBAD 6131 and MBAD 6141 and MBAD 6152 and MBAD 6161
+,,,U90,20231,1,Global Strategic Management,MBAD 6112 and MBAD 6131 and MBAD 6141 and MBAD 6152 and MBAD 6161
+,,6201,080,23318,H1,Bus Intelligence & Analytics,(MBAD 5121 or Test MBA2)
+,,,U01,21562,1,Bus Intelligence & Analytics,(MBAD 5121 or Test MBA2)
+,,,U90,21249,1,Bus Intelligence & Analytics,(MBAD 5121 or Test MBA2)
+,,6207,U90,20237,1,Business Project Management,MBAD 6141 and (MBAD 5121 or Test MBA2)
+,,6211,080,24685,H2,Advanced Business Analytics,MBAD 6201 or ITCS 6162
+,,,U90,21344,1,Advanced Business Analytics,MBAD 6201 or ITCS 6162
+,,,U91,21062,1,Advanced Business Analytics,MBAD 6201 or ITCS 6162
+,,6271,U90,23355,1,Consumer Behavior & Strategy,MBAD 6270 or MBAD 6171
+,,6273,080,27035,H1,Product and Brand Strategy,MBAD 6270
+,,6275,083,27397,1,Global Marketing Strategy,MBAD 6270 or MBAD 6171
+,,6276,U90,21743,1,Consumer Analytics,MBAD 6270
+,,6279,U90,21338,1,Design Thinking & Innovation,MBAD 6270
+,MDLG,3130,001,26251,1,Early Adolescent Learner,MDSK 2100
+,MDSK,3252,001,25705,1,Differentiating Instruction,MDSK 3151
+,,4251,091,22330,1,Tch Science Mdl & Sec Sch Lrnr,(MDLG 3130 or SECD 4140) and MDSK 3100 and MDSK 3151 and MDSK 4210
+,,4253,094,24789,1,Teach SS to Mdl & Sec Sch Lrnr,(MDLG 3130 or SECD 4140) and MDSK 3100 and MDSK 3151 and MDSK 4210
+,,4300,091,23036,1,Content Instruction/Assess,MDSK 3151
+,,,093,23038,1,Content Instruction/Assess,MDSK 3151
+,,,094,23162,1,Content Instruction/Assess,MDSK 3151
+,,5251,081,22331,1,Teach Science to Sec Sch Lrnrs,MDSK 5204 and MDSK 6162 and (MDSK 6162L or MDSK 6163)
+,,5253,083,20326,1,Teach Soc Stu Middle & Sec Sch,MDSK 6162 and (MDSK 6162L or MDSK 6163) and MDSK 5204
+,,5255,086,22334,1,CTE Methods,MDSK 6162 and MDSK 5204 and (MDSK 6162L or MDSK 6163)
+,,5300,081,23032,1,Content Instruction/Assess,MDSK 6162 and (MDSK 6162L or MDSK 6163) and MDSK 5204
+,,,082,23165,1,Content Instruction/Assess,MDSK 6162 and (MDSK 6162L or MDSK 6163) and MDSK 5204
+,,,083,23167,1,Content Instruction/Assess,MDSK 6162 and (MDSK 6162L or MDSK 6163) and MDSK 5204
+,,,084,23169,1,Content Instruction/Assess,MDSK 6162 and (MDSK 6162L or MDSK 6163) and MDSK 5204
+,,,086,23170,1,Content Instruction/Assess,MDSK 6162 and (MDSK 6162L or MDSK 6163) and MDSK 5204
+,MEGR,1100,001,22456,1,Found. Math and Sci. for Engr,ENGR 1201
+,,2141,001,20296,1,Engineering Mechanics I,PHYS 2101 and MATH 1242
+,,,002,20297,1,Engineering Mechanics I,PHYS 2101 and MATH 1242
+,,,003,20298,1,Engineering Mechanics I,PHYS 2101 and MATH 1242
+,,,C01,21439,1,Engineering Mechanics I,PHYS 2101 and MATH 1242
+,,2144,001,20300,1,Intro to Solid Mechanics,MEGR 2141
+,,,002,20299,1,Intro to Solid Mechanics,MEGR 2141
+,,,003,20301,1,Intro to Solid Mechanics,MEGR 2141
+,,,004,21883,1,Intro to Solid Mechanics,MEGR 2141
+,,,005,25989,1,Intro to Solid Mechanics,MEGR 2141
+,,,C01,21438,1,Intro to Solid Mechanics,MEGR 2141
+,,2156,L01,20303,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,,L02,20304,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,,L04,20305,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,,L05,22854,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,,L06,20306,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,,L07,20307,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,,L08,25407,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,,L09,20308,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,,L10,23703,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,,L11,25408,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,,L12,23704,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,,L3D,22289,1,Design Projects Lab I,ENGR 1201 and ENGR 1202 and PHYS 2102 and MEGR 2141
+,,2180,001,20309,1,Manufacturing Systems,ENGR 1202 and PHYS 2102L and MEGR 2141
+,,,002,23471,1,Manufacturing Systems,ENGR 1202 and PHYS 2102L and MEGR 2141
+,,2240,001,20688,1,Comput Meth for Engineers,MEGR 2141
+,,,002,20310,1,Comput Meth for Engineers,MEGR 2141
+,,,003,20312,1,Comput Meth for Engineers,MEGR 2141
+,,,004,21082,1,Comput Meth for Engineers,MEGR 2141
+,,2289,001,23732,1,Intro to Precision Engineering,MEGR 2141
+,,3111,001,20328,1,Thermodynamics I,MATH 2171 and PHYS 2101
+,,,002,20329,1,Thermodynamics I,MATH 2171 and PHYS 2101
+,,,003,20816,1,Thermodynamics I,MATH 2171 and PHYS 2101
+,,,004,23733,1,Thermodynamics I,MATH 2171 and PHYS 2101
+,,3112,001,20330,1,Thermodynamics II,MEGR 3111
+,,,002,21892,1,Thermodynamics II,MEGR 3111
+,,,003,22306,1,Thermodynamics II,MEGR 3111
+,,3114,001,21893,1,Fluid Mechanics,MEGR 3121 and MATH 2241
+,,,002,22307,1,Fluid Mechanics,MEGR 3121 and MATH 2241
+,,,003,22872,1,Fluid Mechanics,MEGR 3121 and MATH 2241
+,,3116,001,21646,1,Intro to Heat Transfer,MATH 2171 and MEGR 3111 and MEGR 3114
+,,3121,001,20331,1,Dynamics Systems I,MEGR 2141 and MATH 1242
+,,,002,20801,1,Dynamics Systems I,MEGR 2141 and MATH 1242
+,,,003,26854,1,Dynamics Systems I,MEGR 2141 and MATH 1242
+,,3122,001,20351,1,Dynamic Systems II,MEGR 2240 and MEGR 3121 and MATH 2171
+,,,002,22309,1,Dynamic Systems II,MEGR 2240 and MEGR 3121 and MATH 2171
+,,,003,22310,1,Dynamic Systems II,MEGR 2240 and MEGR 3121 and MATH 2171
+,,3152,L01,20352,1,Mechanics & Materials Lab,MEGR 2144 and MEGR 3121 and MEGR 3161 and MEGR 3171L
+,,,L02,20353,1,Mechanics & Materials Lab,MEGR 2144 and MEGR 3121 and MEGR 3161 and MEGR 3171L
+,,,L03,20354,1,Mechanics & Materials Lab,MEGR 2144 and MEGR 3121 and MEGR 3161 and MEGR 3171L
+,,,L04,20355,1,Mechanics & Materials Lab,MEGR 2144 and MEGR 3121 and MEGR 3161 and MEGR 3171L
+,,,L06,20358,1,Mechanics & Materials Lab,MEGR 2144 and MEGR 3121 and MEGR 3161 and MEGR 3171L
+,,,L07,20933,1,Mechanics & Materials Lab,MEGR 2144 and MEGR 3121 and MEGR 3161 and MEGR 3171L
+,,,L08,20934,1,Mechanics & Materials Lab,MEGR 2144 and MEGR 3121 and MEGR 3161 and MEGR 3171L
+,,,L09,21379,1,Mechanics & Materials Lab,MEGR 2144 and MEGR 3121 and MEGR 3161 and MEGR 3171L
+,,,L10,22846,1,Mechanics & Materials Lab,MEGR 2144 and MEGR 3121 and MEGR 3161 and MEGR 3171L
+,,3156,001,20359,1,Design Project Lab II,ECGR 2161 and MEGR 2144 and MEGR 2156 and MEGR 2180
+,,,002,20360,1,Design Project Lab II,ECGR 2161 and MEGR 2144 and MEGR 2156 and MEGR 2180
+,,,003,21380,1,Design Project Lab II,ECGR 2161 and MEGR 2144 and MEGR 2156 and MEGR 2180
+,,3161,001,20362,1,Intro to Engineering Materials,(CHEM 1251 or MEGR 1100) and MATH 2171 and MEGR 2144
+,,,002,21096,1,Intro to Engineering Materials,(CHEM 1251 or MEGR 1100) and MATH 2171 and MEGR 2144
+,,,003,22883,1,Intro to Engineering Materials,(CHEM 1251 or MEGR 1100) and MATH 2171 and MEGR 2144
+,,3171,001,20363,1,Intro to Measure & Instrum,ECGR 2161 and MATH 2241
+,,3171L,L01,20364,1,Instrumentation Lab,PHYS 2102L
+,,,L02,20365,1,Instrumentation Lab,PHYS 2102L
+,,,L03,20366,1,Instrumentation Lab,PHYS 2102L
+,,,L04,23705,1,Instrumentation Lab,PHYS 2102L
+,,,L05,20367,1,Instrumentation Lab,PHYS 2102L
+,,,L06,20368,1,Instrumentation Lab,PHYS 2102L
+,,,L07,20369,1,Instrumentation Lab,PHYS 2102L
+,,,L09,21222,1,Instrumentation Lab,PHYS 2102L
+,,,L10,25202,1,Instrumentation Lab,PHYS 2102L
+,,,L11,23706,1,Instrumentation Lab,PHYS 2102L
+,,,L12,23707,1,Instrumentation Lab,PHYS 2102L
+,,,L13,25203,1,Instrumentation Lab,PHYS 2102L
+,,3221,001,20371,1,Machine Analysis & Design I,MEGR 3121 and MEGR 2144
+,,,090,23736,1,Machine Analysis & Design I,MEGR 3121 and MEGR 2144
+,,3225,001,20372,1,Intro Finite Element Analysis,MEGR 2144 and MEGR 2240 and MATH 2171
+,,3232,001,20800,1,Plastic Part Design,ENGR 1202 and MEGR 2156
+,,3251,L01,20373,1,Thermal/Fluids Lab,MEGR 3111 and MEGR 3114 and MEGR 3171L
+,,,L02,20374,1,Thermal/Fluids Lab,MEGR 3111 and MEGR 3114 and MEGR 3171L
+,,,L03,20378,1,Thermal/Fluids Lab,MEGR 3111 and MEGR 3114 and MEGR 3171L
+,,,L04,20379,1,Thermal/Fluids Lab,MEGR 3111 and MEGR 3114 and MEGR 3171L
+,,,L05,21226,1,Thermal/Fluids Lab,MEGR 3111 and MEGR 3114 and MEGR 3171L
+,,,L07,21228,1,Thermal/Fluids Lab,MEGR 3111 and MEGR 3114 and MEGR 3171L
+,,,L10,25207,1,Thermal/Fluids Lab,MEGR 3111 and MEGR 3114 and MEGR 3171L
+,,3255,001,20380,1,Senior Design I,MEGR 3156 and MEGR 3171L and MEGR 3152 and MEGR 3251
+,,3256,001,20384,1,Senior Design II,MEGR 3255
+,,3272,001,22472,1,Bio-polymers and Composites,MEGR 3161
+,,3275,001,21442,1,Biomedical Engr Sr Design I,MEGR 2279 and MEGR 3156 and MEGR 3171L and MEGR 3152 and MEGR 3251
+,,3282,001,20385,1,Stat Proc Cntrl & Metrology,MEGR 2180
+,,3285,001,23479,1,Precision Senior Design I,MEGR 3152 and MEGR 3251 and MEGR 2289 and MEGR 3156 and MEGR 3171L
+,,3286,001,23480,1,Precision Senior Design II,MEGR 3285
+,,3355,001,20386,1,Motorsports Senior Design I,MEGR 2299 and MEGR 3156 and MEGR 3171L and MEGR 3152 and MEGR 3251
+,,3356,001,20387,1,Motorsports Senior Design II,MEGR 3355
+,,3455,001,20921,1,Energy Senior Design I,MEGR 2499 and MEGR 3156 and MEGR 3171L and MEGR 3152 and MEGR 3251
+,,3456,001,22233,1,Energy Senior Design II,MEGR 3455
+,,3695,001,21387,1,MEGR Co-Op Educ Sem,ENGR 3590 or ENGR 3500
+,,4235,001,22858,1,Waves and Optics,MATH 2171 and MEGR 3122
+,,4242,001,22859,1,Applied Vehicle Aerodynamics,MEGR 2240 and MEGR 3114
+,,4272,001,22861,1,Mech of Human Locomotor System,MEGR 2144
+,,4274,001,22863,1,Bioelectronic Medicine,MEGR 2180 or MEGR 2156 or MEGR 2279
+,,4290,001,25858,1,Intro to EV and Batteries,MEGR 3121 and MEGR 3112
+,,7182,001,20390,1,Machine Tool Metrology,MEGR 6181
+,,7213,001,25877,1,Intro to Comp Fluid Dyn,MATH 6171
+,,7283,001,25883,1,Adv Coordinate Metrology,MEGR 6181
+,,8108,001,21251,1,Finite Element Analy & Appl,MEGR 6141 and MATH 6171
+,,8142,001,25876,1,Theory of Elasticity II,MEGR 6141 and MATH 6172
+,,8182,001,20392,1,Machine Tool Metrology,MEGR 6181
+,,8213,001,25878,1,Intro to Comp Fluid Dyn,MATH 6171
+,METR,3140,001,26462,1,Fundamentals of Meteorology,METR 1102 or ESCI 1101
+,,3210,001,20241,1,Atmospheric Thermodynamics,METR 3140 and MATH 1242 and (MATH 1241 or ENGR 1241)
+,,3250,001,20242,1,Dynamic Meteorology,METR 3245 and MATH 1242 and PHYS 2101
+,,3340,001,22087,1,Weather Communications,METR 3245
+,,4105,001,21569,1,Meteorological Computer Apps,METR 3140 and MATH 1241
+,,4205,001,21570,1,Climate Dynamics,ESCI 3101 and METR 4105
+,,4350,001,26402,1,Mesoscale Meteorology,METR 3250
+,,4650,001,22088,1,Meteorology Seminar,METR 3245
+,MFPA,5132,001,26167,1,"Fire & Bldg Codes,Stand & Prac",ETFS 3103
+,MGMT,3140,001,20290,1,Mgmt & Org Behavior,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,002,20291,1,Mgmt & Org Behavior,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,004,21075,1,Mgmt & Org Behavior,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,005,24816,1,Mgmt & Org Behavior,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,006,21253,1,Mgmt & Org Behavior,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,007,21924,1,Mgmt & Org Behavior,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,008,21076,1,Mgmt & Org Behavior,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,009,23305,1,Mgmt & Org Behavior,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,010,27109,1,Mgmt & Org Behavior,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,080,26958,H1,Mgmt & Org Behavior,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,U01,20871,1,Mgmt & Org Behavior,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,3241,001,21252,1,Acquiring & Maintaining HR,MGMT 3140
+,,3242,001,21188,1,Developing & Retaining HR,MGMT 3140
+,,3243,001,27195,1,Employment Law,MGMT 3140
+,,3260,001,20962,1,Managerial Communication,MGMT 3140 and COMM 3160
+,,3275,001,22185,1,International Business Mgmt,MGMT 3140
+,,,002,20876,1,International Business Mgmt,MGMT 3140
+,,3277,001,21055,1,Entrepreneurship,MGMT 3140 or ENTR 3276
+,,,002,22186,1,Entrepreneurship,MGMT 3140 or ENTR 3276
+,,3280,002,21629,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,003,20293,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,004,20818,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,005,21536,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,006,21479,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,008,20294,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,009,22808,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,010,24817,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,011,27165,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,090,22169,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,091,20292,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,092,22092,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,093,24813,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,EA1,27094,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,H01,25071,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,,U01,27101,1,Strategic Management,ECON 3125 and INFO 3130 and OPER 3100 and MKTG 3110 and FINN 3120 and BLAW 3150 and MGMT 3140 and (MGMT 3160 or COMM 3160)
+,,3282,001,20295,1,Managerial Ethics,MGMT 3140
+,,,002,21832,1,Managerial Ethics,MGMT 3140
+,,3287,001,21634,1,Managerial Leadership,MGMT 3140 and MGMT 3282
+,,,002,27136,1,Managerial Leadership,MGMT 3140 and MGMT 3282
+,MKTG,3000,001,26739,1,Topics in Marketing,MKTG 3110
+,,,EA1,21340,1,Topics in Marketing,MKTG 3110
+,,,EA2,27353,1,Topics in Marketing,MKTG 3110
+,,3110,001,20275,1,Principles of Marketing,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,002,21104,1,Principles of Marketing,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,004,22140,1,Principles of Marketing,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,005,21277,1,Principles of Marketing,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,090,21105,1,Principles of Marketing,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,,091,21103,1,Principles of Marketing,ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130 and (MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122)
+,,3210,001,22638,1,Consumer Behavior,MKTG 3110
+,,,002,22639,1,Consumer Behavior,MKTG 3110
+,,3220,090,22640,1,Digital Marketing,MKTG 3110
+,,,091,23307,1,Digital Marketing,MKTG 3110
+,,3222,090,21056,1,Marketing Research,MKTG 3110
+,,3224,001,21922,1,Product and Brand Mgmt,MKTG 3110
+,,,002,21923,1,Product and Brand Mgmt,MKTG 3110
+,,3225,001,22637,1,Integrated MKTG Comm,MKTG 3110
+,,3226,001,21057,1,B2B Marketing and Retailing,MKTG 3110
+,,3228,001,21662,1,Marketing Analytics,MKTG 3110
+,,,002,26738,1,Marketing Analytics,MKTG 3110
+,,3230,001,21663,1,Social/Mobile Mktg & Analytics,MKTG 3110
+,,,002,21557,1,Social/Mobile Mktg & Analytics,MKTG 3110
+,,3231,090,22191,1,Global Marketing,MKTG 3110
+,,3400,001,20276,1,Marketing Internship,MKTG 3110
+,MPAD,6102,U90,21733,1,Foundations in Public Admn,POLS 1110 or POLS 1511
+,,6125,090,20099,1,Quant Rsch Meth Public Admn,STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122
+,,6126,090,21956,1,Data Analysis Decision Making,(STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and MPAD 6125
+,,6134,U90,21516,1,Human Resources Management,POLS 1110 or POLS 1511
+,,6187,090,20101,1,Adv Sem in Pub Mgmt Prob Solv,MPAD 6102 and MPAD 6104 and MPAD 6125 and MPAD 6126 and MPAD 6131 and MPAD 6134
+,,6188,090,20102,1,Rsch Appl in Public Admn,MPAD 6102 and MPAD 6104 and MPAD 6125 and MPAD 6126 and MPAD 6131 and MPAD 6134
+,MSCI,3102,001,20694,1,Applied Team Leadership,MSCI 3101
+,,4102,001,20695,1,Leadership Complex World,MSCI 4101
+,MSRE,6101,U01,20960,1,Real Estate Seminar,MSRE 5110 and MSRE 5131
+,,6120,U90,20963,H1,Real Estate Law,MSRE 5110 and MSRE 5131
+,,6160,U90,20964,1,Real Estate Capital Markets,MSRE 6152 and MSRE 5110 and MSRE 5131
+,,6220,U90,20965,H1,Real Estate Investments,MSRE 6159 or MSRE 6158
+,,6238,U90,26773,1,Real Estate & Urban Economics,ECON 2102
+,,6258,U90,23312,1,Site Feasibility Analysis,MSRE 5110 and MSRE 5131
+,,6999,U90,23434,1,Real Estate Capstone,MSRE 5110 and MSRE 5131 and MSRE 6101 and MSRE 6102 and MSRE 6120 and MSRE 6130 and MSRE 6152 and MSRE 6158 and MSRE 6159 and MSRE 6220 and MSRE 6230 and MSRE 6258
+,MUDD,6102,001,24503,1,Urban Design Studio II,MUDD 6101
+,MUED,2241,EO1,26621,1,Music Development & Learning,MUED 2200
+,,4192,FS1,20136,1,General Music Methods,MUSC 2400
+,,4192L,FS1,22212,1,General Methods Lab,MUSC 2400
+,MUPF,3241,EM1,25209,1,Adv Applied Music: Trumpet,MUSC 2400
+,,3248,DS1,27248,1,Adv Applied Music: Piano,MUSC 2400
+,,3250,001,27439,1,Adv Applied Music: Viola,MUSC 2400
+,,3253,CP1,22869,1,Adv Applied Music:  Voice,MUSC 2400
+,,,SD1,27228,1,Adv Applied Music:  Voice,MUSC 2400
+,,3254,JD1,21493,1,Adv Applied Music:  Flute,MUSC 2400
+,,3256,WC1,27227,1,Adv Applied Music:  Saxophone,MUSC 2400
+,MUSC,1230,GW1,21320,1,Structure & Style of Music I,MUSC 1100
+,,1230L,AY1,21500,1,Aural Skills & Sight-Sing I,MUSC 1102
+,,1231,JY1,20141,1,Structure & Style of Music II,MUSC 1230
+,,1231L,JY1,21501,1,Aural Skills & Sight-Sing II,MUSC 1230L
+,,1233,GW1,21898,1,Class Piano I,MUSC 1100
+,,1234,001,21680,1,Class Piano II,MUSC 1233
+,,2138,MH1,20137,1,Phon & Art II: English Diction,MUSC 2137
+,,2230,ES1,21679,1,Structure & Style of Music III,MUSC 1231
+,,2230L,ES1,21681,1,Aural Skills & Sight-Sing III,MUSC 1231L
+,,2231,JY1,20142,1,Structure & Style of Music IV,MUSC 2230
+,,2231L,JY1,21502,1,Aural Skills and Sight-Sing IV,MUSC 2230L
+,,2233,GW1,22579,1,Class Piano III,MUSC 1234
+,,2234,001,20118,1,Class Piano IV,MUSC 2233
+,,2236,WC1,26963,1,Jazz Improvisation II,MUSC 2235
+,,2238,CP1,22591,1,Phon & Art IV: French Diction,MUSC 2237
+,,2240,001,22213,1,Introduction to Composition,MUSC 1231 and MUSC 1231L
+,,3135,JD1,23348,1,Choral Conducting,MUSC 2138 and MUSC 3134
+,,3136,KO1,20128,1,Instrumental Conducting,MUSC 3134
+,,3171,JG1,21488,1,Music History II,MUSC 2231 and MUSC 2231L
+,,4135,RD1,26578,1,Percussion Pedagogy & Lit,MUSC 2400
+,,4137,MH1,23201,1,Vocal Pedagogy,MUSC 2400
+,,4138,WC1,26569,1,Jazz Pedagogy,MUSC 2400
+,,4230,KH1,23200,1,Form and Analysis,MUSC 2400
+,,4240,001,21499,1,Composition,MUSC 4145 or MUSC 4235
+,NANO,8103,001,22129,1,Synth & Charct Nanomaterials,NANO 8101 and NANO 8102
+,NUAN,8154,001,22216,1,Adv Pharm Non-Anesthetic Agent,NUAN 8155
+,,8157,001,22217,1,Adv Patho Nrs Anesthesia I,NURS 6273
+,,8162,001,22218,1,Principles II,NUAN 6151
+,,8171,001,23403,1,Prof Aspect Nrs Anesthesia,NUAN 8488
+,,8486,P01,22219,1,Residency III,NUAN 8159 and NUAN 8485
+,,8489,P01,23405,1,Clinical Residency VI,NUAN 8488
+,NUDN,8642,001,22215,1,Proj Develop II,NUDN 8641
+,,,002,22258,1,Proj Develop II,NUDN 8641
+,,,003,25920,1,Proj Develop II,NUDN 8641
+,NUNP,6203,090,21200,1,Adv Care of Critically Ill Adu,NUNP 6202 and NUNP 6250
+,,6260,090,20095,1,Adv Primary Care of Child/Adol,NURS 6220 and NURS 6230 and NURS 6430 and NUNP 6250 and NUNP 6450
+,,6402,P01,21201,1,Adv Prac Nurs Comp Care Pract,NUNP 6202
+,,,P02,21202,1,Adv Prac Nurs Comp Care Pract,NUNP 6202
+,,,P03,25916,1,Adv Prac Nurs Comp Care Pract,NUNP 6202
+,,6440,P91,20093,1,Adv Prim Care Reprod Hlth Prac,NUNP 6240
+,,,P92,20094,1,Adv Prim Care Reprod Hlth Prac,NUNP 6240
+,,,P93,21143,1,Adv Prim Care Reprod Hlth Prac,NUNP 6240
+,,6460,P91,20096,1,Adv Prim Care Child/Adol Pract,NURS 6220 and NURS 6230 and NURS 6430 and NUNP 6250 and NUNP 6450
+,,,P92,20097,1,Adv Prim Care Child/Adol Pract,NURS 6220 and NURS 6230 and NURS 6430 and NUNP 6250 and NUNP 6450
+,,,P93,20856,1,Adv Prim Care Child/Adol Pract,NURS 6220 and NURS 6230 and NURS 6430 and NUNP 6250 and NUNP 6450
+,NURN,4100,080,20160,1,Aging and Health,NURN 3103 and NURN 3108 and NURN 3104
+,,4440,080,20162,1,Community Health Nursing,NURN 3103 and NURN 3108 and NURN 3104
+,NURS,2100,001,20049,1,General Nutrition,CHEM 1204 or CHEM 1252
+,,2200,001,20050,1,Human Growth & Development,BIOL 2273 and BIOL 2273L or (KNES 2168 or EXER 2168) and (KNES 2168L or EXER 2168L)
+,,3108,001,20054,1,Hlth Assessmnt and Application,NURS 3105 and NURS 3107
+,,,002,20055,1,Hlth Assessmnt and Application,NURS 3105 and NURS 3107
+,,,003,20056,1,Hlth Assessmnt and Application,NURS 3105 and NURS 3107
+,,,004,21809,1,Hlth Assessmnt and Application,NURS 3105 and NURS 3107
+,,3205,001,20057,1,Pharmacology in Hlth & Illness,NURS 3107
+,,3250,001,20064,1,Nurs Care Childbearing Family,NURS 3102 and NURS 3105 and NURS 3107 and NURS 3108 and NURS 3425
+,,3260,001,20065,1,Nursing Care of Children,NURS 3102 and NURS 3105 and NURS 3107 and NURS 3108 and NURS 3425
+,,3430,P01,20059,1,Pract Illness & Disease Mgmt,NURS 3108 and NURS 3230
+,,,P02,20060,1,Pract Illness & Disease Mgmt,NURS 3108 and NURS 3230
+,,,P03,20061,1,Pract Illness & Disease Mgmt,NURS 3108 and NURS 3230
+,,,P04,20062,1,Pract Illness & Disease Mgmt,NURS 3108 and NURS 3230
+,,,P05,20063,1,Pract Illness & Disease Mgmt,NURS 3108 and NURS 3230
+,,,P06,22228,1,Pract Illness & Disease Mgmt,NURS 3108 and NURS 3230
+,,,P07,22229,1,Pract Illness & Disease Mgmt,NURS 3108 and NURS 3230
+,,,P08,23474,1,Pract Illness & Disease Mgmt,NURS 3108 and NURS 3230
+,,3440,P01,20066,1,Pract Nurs Care Child Family,NURS 3108
+,,,P02,20067,1,Pract Nurs Care Child Family,NURS 3108
+,,,P03,20068,1,Pract Nurs Care Child Family,NURS 3108
+,,,P04,20069,1,Pract Nurs Care Child Family,NURS 3108
+,,,P05,20070,1,Pract Nurs Care Child Family,NURS 3108
+,,,P06,22230,1,Pract Nurs Care Child Family,NURS 3108
+,,,P07,22231,1,Pract Nurs Care Child Family,NURS 3108
+,,,P08,23475,1,Pract Nurs Care Child Family,NURS 3108
+,,4120,001,20072,1,Psychiatric-Mental Hlth Nurs,NURS 3430 and NURS 3440
+,,4130,001,20078,1,Complex Illness & Disease Mgmt,NURS 3230
+,,4430,P01,20079,1,Prac Comp Illn & Disease Mgmt,NURS 3230 and NURS 3430
+,,,P02,21616,1,Prac Comp Illn & Disease Mgmt,NURS 3230 and NURS 3430
+,,,P03,20080,1,Prac Comp Illn & Disease Mgmt,NURS 3230 and NURS 3430
+,,,P04,20081,1,Prac Comp Illn & Disease Mgmt,NURS 3230 and NURS 3430
+,,,P05,20082,1,Prac Comp Illn & Disease Mgmt,NURS 3230 and NURS 3430
+,,,P06,22237,1,Prac Comp Illn & Disease Mgmt,NURS 3230 and NURS 3430
+,,,P07,22238,1,Prac Comp Illn & Disease Mgmt,NURS 3230 and NURS 3430
+,,,P08,25627,1,Prac Comp Illn & Disease Mgmt,NURS 3230 and NURS 3430
+,,4450,P01,21211,1,Design & Coordination of Care,NURS 4430
+,,,P02,21212,1,Design & Coordination of Care,NURS 4430
+,,,P03,21213,1,Design & Coordination of Care,NURS 4430
+,,,P04,23477,1,Design & Coordination of Care,NURS 4430
+,,,P05,21214,1,Design & Coordination of Care,NURS 4430
+,,,P06,23157,1,Design & Coordination of Care,NURS 4430
+,,,P07,23158,1,Design & Coordination of Care,NURS 4430
+,,,P08,25632,1,Design & Coordination of Care,NURS 4430
+,,6230,001,21268,1,Adv Hlth Assess & Diag Reason,BIOL 6274 or BIOL 6273
+,,,002,20090,1,Adv Hlth Assess & Diag Reason,BIOL 6274 or BIOL 6273
+,,6430,L01,20091,1,Adv Hlth Assessment Pract,BIOL 6273 or BIOL 6274
+,,,L02,20092,1,Adv Hlth Assessment Pract,BIOL 6273 or BIOL 6274
+,,,L04,20744,1,Adv Hlth Assessment Pract,BIOL 6273 or BIOL 6274
+,,,L05,20745,1,Adv Hlth Assessment Pract,BIOL 6273 or BIOL 6274
+,,,L06,21477,1,Adv Hlth Assessment Pract,BIOL 6273 or BIOL 6274
+,,,L07,21142,1,Adv Hlth Assessment Pract,BIOL 6273 or BIOL 6274
+,,,L08,23638,1,Adv Hlth Assessment Pract,BIOL 6273 or BIOL 6274
+,,6485,08P,21656,1,Adv Pract Nurs Admn & Lead,NURS 6185
+,OPER,3100,001,20264,1,Operations Management,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,002,20265,1,Operations Management,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,005,21850,1,Operations Management,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,006,20279,1,Operations Management,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,080,26953,H1,Operations Management,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,090,20868,1,Operations Management,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,091,20867,1,Operations Management,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,092,21926,1,Operations Management,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,093,26952,1,Operations Management,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,H01,21515,1,Operations Management,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,,U01,21065,1,Operations Management,(MATH 1120 or MATH 1241 or MATH 1242) and (STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) and ACCT 2121 and (ACCT 2122 or ACCT 3323) and (ECON 2101 or ECON 1201) and (ECON 2102 or ECON 1202) and INFO 2130
+,,3201,001,22698,1,Operations Planning & Control,OPER 3100
+,,3203,001,21053,1,Decision Modeling & Analysis,OPER 3100
+,,3204,090,20266,1,Mgmt of Svc & Project Oper,OPER 3100
+,,3206,090,20267,1,Quality Assurance & Mgmt,OPER 3100
+,,3208,001,20268,1,Supply Chain Management,OPER 3100
+,OPRS,3111,001,21546,1,Oper Rsch-Deterministic Models,(MATH 1242 or MATH 2120) and MATH 2164
+,,3113,001,20622,1,Oper Rsch-Probabilistic Models,(MATH 1242 or MATH 2120) and MATH 2164 and (STAT 2122 or STAT 3122 or STAT 3128 or MATH 3122)
+,OSCI,8208,001,21117,1,Adv Qualitative Data Analysis,OSCI 8206
+,,8949,001,22843,1,Ind Org Sci Rsch Project II,OSCI 8948
+,,8999,001,20713,1,Org Sci Dissertation II,OSCI 8998
+,,,002,27307,1,Org Sci Dissertation II,OSCI 8998
+,PHYS,1101,01A,20015,1,Introductory Physics I,MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or Test A02 or Test S02
+,,,01B,21191,1,Introductory Physics I,MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or Test A02 or Test S02
+,,,01C,22011,1,Introductory Physics I,MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or Test A02 or Test S02
+,,,01D,22012,1,Introductory Physics I,MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or Test A02 or Test S02
+,,,01E,22013,1,Introductory Physics I,MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or Test A02 or Test S02
+,,,01F,20016,1,Introductory Physics I,MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or Test A02 or Test S02
+,,,01G,21688,1,Introductory Physics I,MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or Test A02 or Test S02
+,,,01H,22015,1,Introductory Physics I,MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or Test A02 or Test S02
+,,,01J,22016,1,Introductory Physics I,MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or Test A02 or Test S02
+,,,01K,22143,1,Introductory Physics I,MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or Test A02 or Test S02
+,,,01L,22014,1,Introductory Physics I,MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or Test A02 or Test S02
+,,1101L,L01,20017,1,Introductory Physics I Lab,PHYS 1101
+,,,L02,20018,1,Introductory Physics I Lab,PHYS 1101
+,,,L03,20019,1,Introductory Physics I Lab,PHYS 1101
+,,,L04,27502,1,Introductory Physics I Lab,PHYS 1101
+,,,L05,20020,1,Introductory Physics I Lab,PHYS 1101
+,,,L06,20021,1,Introductory Physics I Lab,PHYS 1101
+,,,L07,20022,1,Introductory Physics I Lab,PHYS 1101
+,,,L08,21868,1,Introductory Physics I Lab,PHYS 1101
+,,,L09,22757,1,Introductory Physics I Lab,PHYS 1101
+,,,L10,23424,1,Introductory Physics I Lab,PHYS 1101
+,,,L11,22758,1,Introductory Physics I Lab,PHYS 1101
+,,,L12,22809,1,Introductory Physics I Lab,PHYS 1101
+,,,L13,25105,1,Introductory Physics I Lab,PHYS 1101
+,,,L24,22820,1,Introductory Physics I Lab,PHYS 1101
+,,1102,01A,20023,1,Introductory Physics II,PHYS 1101
+,,,01B,22291,1,Introductory Physics II,PHYS 1101
+,,,01C,22745,1,Introductory Physics II,PHYS 1101
+,,,01D,21689,1,Introductory Physics II,PHYS 1101
+,,,01E,21077,1,Introductory Physics II,PHYS 1101
+,,,01F,22804,1,Introductory Physics II,PHYS 1101
+,,,01G,27160,1,Introductory Physics II,PHYS 1101
+,,1102L,L01,20024,1,Introductory Physics II Lab,(PHYS 1101L or PHYS 2101L) and PHYS 1102
+,,,L02,20025,1,Introductory Physics II Lab,(PHYS 1101L or PHYS 2101L) and PHYS 1102
+,,,L03,20026,1,Introductory Physics II Lab,(PHYS 1101L or PHYS 2101L) and PHYS 1102
+,,,L04,20027,1,Introductory Physics II Lab,(PHYS 1101L or PHYS 2101L) and PHYS 1102
+,,,L05,20717,1,Introductory Physics II Lab,(PHYS 1101L or PHYS 2101L) and PHYS 1102
+,,,L06,22759,1,Introductory Physics II Lab,(PHYS 1101L or PHYS 2101L) and PHYS 1102
+,,,L07,22760,1,Introductory Physics II Lab,(PHYS 1101L or PHYS 2101L) and PHYS 1102
+,,,L08,22761,1,Introductory Physics II Lab,(PHYS 1101L or PHYS 2101L) and PHYS 1102
+,,1130L,L01,23346,1,Intro to Astronomy Lab,PHYS 1130
+,,,L02,23347,1,Intro to Astronomy Lab,PHYS 1130
+,,2101,01A,23205,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,01B,23206,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,01C,20031,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,02A,20032,1,Phys for Sci & Engr I,MATH 1241 or ENGR 1241
+,,,02B,22017,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,02C,20858,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,03A,22021,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,03B,22034,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,03C,20859,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,04A,22020,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,04B,22036,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,04C,22035,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,05A,24709,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,05B,24711,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,,05C,24712,1,Phys for Science & Engr I,MATH 1241 or ENGR 1241
+,,2101L,L01,20033,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L02,20036,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L03,20034,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L04,20035,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L05,20037,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L06,20039,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L07,20040,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L08,20719,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L09,20038,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L10,24897,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L11,24898,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L12,24899,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L13,24900,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L14,25106,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L15,25107,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L16,25108,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L17,27427,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L18,27428,1,Phys for Science & Engr I Lab,PHYS 2101
+,,,L19,27503,1,Phys for Science & Engr I Lab,PHYS 2101
+,,2102,01A,20041,1,Phys for Science & Engr II,PHYS 2101 and MATH 1242
+,,,01B,22748,1,Phys for Science & Engr II,PHYS 2101 and MATH 1242
+,,,01C,22749,1,Phys for Science & Engr II,PHYS 2101 and MATH 1242
+,,,02A,21464,1,Phys for Science & Engr II,PHYS 2101 and MATH 1242
+,,,02B,22750,1,Phys for Science & Engr II,PHYS 2101 and MATH 1242
+,,,02C,24126,1,Phys for Science & Engr II,PHYS 2101 and MATH 1242
+,,,03A,20042,1,Phys for Sci & Engr II,PHYS 2101 and MATH 1242
+,,,03B,22746,1,Phys for Science & Engr II,PHYS 2101 and MATH 1242
+,,,03C,22747,1,Phys for Science & Engr II,PHYS 2101 and MATH 1242
+,,2102L,L01,20043,1,Phys for Science & Engr II Lab,(PHYS 2101L or PHYS 1101L) and PHYS 2102
+,,,L02,20044,1,Phys for Science & Engr II Lab,(PHYS 2101L or PHYS 1101L) and PHYS 2102
+,,,L03,20045,1,Phys for Science & Engr II Lab,(PHYS 2101L or PHYS 1101L) and PHYS 2102
+,,,L04,22762,1,Phys for Science & Engr II Lab,(PHYS 2101L or PHYS 1101L) and PHYS 2102
+,,,L05,20046,1,Phys for Science & Engr II Lab,(PHYS 2101L or PHYS 1101L) and PHYS 2102
+,,,L06,24901,1,Phys for Science & Engr II Lab,(PHYS 2101L or PHYS 1101L) and PHYS 2102
+,,,L07,24902,1,Phys for Science & Engr II Lab,(PHYS 2101L or PHYS 1101L) and PHYS 2102
+,,,L08,27426,1,Phys for Science & Engr II Lab,(PHYS 2101L or PHYS 1101L) and PHYS 2102
+,,3101,001,20047,1,Topics & Meth of General Phys,PHYS 2102 and MATH 1242
+,,3102,001,22045,1,Physics for Sci& Eng III,PHYS 2102 and MATH 2171 or MATH 2241 or PHYS 3101
+,,3141,001,20048,1,Intro to Modern Physics,(PHYS 2102 or PHYS 1102) and (MATH 1241 or ENGR 1241) and MATH 1242
+,,,002,20238,1,Intro to Modern Physics,(PHYS 2102 or PHYS 1102) and (MATH 1241 or ENGR 1241) and MATH 1242
+,,3220,001,21798,1,Mathematical Methods Physics,PHYS 2102 and MATH 2241 and (PHYS 3101 or MEGR 3121)
+,,3282,L01,22190,1,Adv Lab in Modern Physics,PHYS 3141
+,,3900,001,27125,1,Undergraduate Research,PHYS 3282 and PHYS 3283
+,,,003,24209,1,Undergraduate Research,PHYS 3282 and PHYS 3283
+,,4110,001,21080,1,Intro to Biomedical Optics,PHYS 3141 and MATH 2171 or MATH 2241 and (PHYS 3121 or MEGR 2144)
+,,4151,001,21604,1,Thermal Physics,PHYS 3141 and PHYS 3101 and CHEM 1251 and CHEM 1251L and MATH 2241
+,,4222,001,20146,1,Classical Mechanics II,PHYS 3121 and MATH 2241
+,,4231,001,20147,1,Electromagnetic Theory I,(PHYS 3121 or MEGR 2144) and (MATH 2171 or MATH 2241) and (PHYS 3220 or MATH 2242)
+,,4242,001,24843,1,Quantum Mechanics II,PHYS 4241
+,,4271,001,22156,1,Waves & Optics,(MATH 2171 or PHYS 3101) and (PHYS 3121 or MEGR 2144)
+,,5151,001,22752,1,Thermal Physics,PHYS 3141 and PHYS 3101 and CHEM 1251 and CHEM 1251L and MATH 2241
+,,5222,001,20138,1,Classical Mechanics II,PHYS 3121 and MATH 2241
+,,5242,001,24844,1,Quantum Mechanics II,PHYS 4241
+,,5271,001,22157,1,Waves and Optics,PHYS 2102 and MATH 2171
+,,6131,001,21687,1,Classical Electromagnetism I,PHYS 4232
+,,6992,003,20148,1,Physics Thesis Research II,PHYS 6991
+,,,004,27482,1,Physics Thesis Research II,PHYS 6991
+,POLS,2220,001,20105,1,Political Science Methods,(POLS 1110 or POLS 1511 or POLS 1130 or POLS 1501 or POLS 1131 or POLS 1150 or POLS 1151 or POLS 1170) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or MATH 1242 or PHIL 2105 or STAT 1220 or STAT 1222)
+,,,002,21767,1,Political Science Methods,(POLS 1110 or POLS 1511 or POLS 1130 or POLS 1501 or POLS 1131 or POLS 1150 or POLS 1151 or POLS 1170) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or MATH 1242 or PHIL 2105 or STAT 1220 or STAT 1222)
+,,,003,20106,1,Political Science Methods,(POLS 1110 or POLS 1511 or POLS 1130 or POLS 1501 or POLS 1131 or POLS 1150 or POLS 1151 or POLS 1170) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or MATH 1242 or PHIL 2105 or STAT 1220 or STAT 1222)
+,,,080,27289,1,Political Science Methods,(POLS 1110 or POLS 1511 or POLS 1130 or POLS 1501 or POLS 1131 or POLS 1150 or POLS 1151 or POLS 1170) and (MATH 1100 or MATH 1101 or MATH 1103 or MATH 1120 or MATH 1121 or MATH 1241 or MATH 1242 or PHIL 2105 or STAT 1220 or STAT 1222)
+,,3700,A01,23444,1,Honors Research,POLS 2220
+,,,B01,25128,1,Honors Research,POLS 2220
+,,,C01,25141,1,Honors Research,POLS 2220
+,,4163,001,21729,1,Advanced Model United Nations,POLS 3163
+,,4600,001,20107,1,Senior Seminar,(POLS 1110 or POLS 1511) and (POLS 1130 or POLS 1501 or POLS 1131) and (POLS 1150 or POLS 1151) and POLS 2220
+,,,002,20108,1,Senior Seminar,(POLS 1110 or POLS 1511) and (POLS 1130 or POLS 1501 or POLS 1131) and (POLS 1150 or POLS 1151) and POLS 2220
+,,,080,24590,1,Senior Seminar,(POLS 1110 or POLS 1511) and (POLS 1130 or POLS 1501 or POLS 1131) and (POLS 1150 or POLS 1151) and POLS 2220
+,,4700,A01,22390,1,Honors Thesis,POLS 3700
+,,,A02,22391,1,Honors Thesis,POLS 3700
+,,,A03,22392,1,Honors Thesis,POLS 3700
+,,,A04,22393,1,Honors Thesis,POLS 3700
+,,,A05,24707,1,Honors Thesis,POLS 3700
+,,,A06,22394,1,Honors Thesis,POLS 3700
+,,,A07,22395,1,Honors Thesis,POLS 3700
+,,,A08,27413,1,Honors Thesis,POLS 3700
+,,,A09,27471,1,Honors Thesis,POLS 3700
+,,4990,001,27193,1,Senior Thesis,POLS 2220
+,PPOL,8102,001,23773,1,Public Policy Studio 2,PPOL 8101 and GRAD 8101
+,,8641,090,21831,1,Economic Analysis of PPOL II,PPOL 8640
+,,8663,090,27225,1,Health Policy,HADM 6100 or MPAD 6172
+,PROS,3102,080,26393,H2,Project Management: Practition,PROS 3101
+,,3104,080,26375,H1,ProjManagement: Intro to Agile,PROS 3101
+,,3203,080,22940,H2,Leadership Essentials: Special,PROS 3201
+,,3304,080,26392,H1,Role of HR Management in Orgs,PROS 3301
+,,3306,080,26396,H2,Acquisition/Talent Development,PROS 3301
+,,4101,080,26394,H2,Project Manager Advanced Roles,PROS 3101
+,,4600,080,24862,1,Professional Studies Capstone,PROS 3101 or PROS 3201 or PROS 3301
+,PSYC,1101L,L01,21084,1,General Psychology Lab,PSYC 1101
+,,,L02,20414,1,General Psychology Lab,PSYC 1101
+,,,L03,20415,1,General Psychology Lab,PSYC 1101
+,,,L04,21472,1,General Psychology Lab,PSYC 1101
+,,,L05,26796,1,General Psychology Lab,PSYC 1101
+,,,L06,27349,1,General Psychology Lab,PSYC 1101
+,,,L83,27357,1,General Psychology Lab,PSYC 1101
+,,,L86,27358,1,General Psychology Lab,PSYC 1101
+,,,L90,22378,1,General Psychology Lab,PSYC 1101
+,,,L91,20416,1,General Psychology Lab,PSYC 1101
+,,,L92,21285,1,General Psychology Lab,PSYC 1101
+,,,L93,27350,1,General Psychology Lab,PSYC 1101
+,,2101,001,22037,1,Research Methodology I,PSYC 1101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,002,23846,1,Research Methodology I,PSYC 1101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,003,26782,1,Research Methodology I,PSYC 1101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,090,20758,1,Research Methodology I,PSYC 1101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,2103,001,21626,1,Research Methodology II,PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,002,20760,1,Research Methodology II,PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,003,26794,1,Research Methodology II,PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,2104,001,22508,1,Crit Thinking About Research,PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,002,22707,1,Crit Thinking About Research,PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,003,22507,1,Crit Thinking About Research,PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,004,23926,1,Crit Thinking About Research,PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,005,22506,1,Crit Thinking About Research,PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,090,27283,1,Crit Thinking About Research,PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,2110,001,21398,1,Intro to Comparative Psych,PSYC 1101
+,,,002,23927,1,Intro to Comparative Psych,PSYC 1101
+,,2113,001,21245,1,Intro Brain Behav Mental Procs,PSYC 1101
+,,,002,23340,1,Intro Brain Behav Mental Procs,PSYC 1101
+,,,003,25072,1,Intro Brain Behav Mental Procs,PSYC 1101
+,,,080,27182,1,Intro Brain Behav Mental Procs,PSYC 1101
+,,2117,001,26786,1,Intro to Lifespan Dev,PSYC 1101
+,,,002,26787,1,Intro to Lifespan Dev,PSYC 1101
+,,,003,26788,1,Intro to Lifespan Dev,PSYC 1101
+,,2120,001,21246,1,Child Psychology,PSYC 1101
+,,,002,21115,1,Child Psychology,PSYC 1101
+,,,080,27207,1,Child Psychology,PSYC 1101
+,,2121,001,21162,1,Adolescent Psychology,PSYC 1101
+,,,002,21555,1,Adolescent Psychology,PSYC 1101
+,,,003,27282,1,Adolescent Psychology,PSYC 1101
+,,,080,27192,1,Adolescent Psychology,PSYC 1101
+,,2124,001,21777,1,Psyc of Adult Dvlpmnt & Aging,PSYC 1101
+,,,002,26473,1,Psyc of Adult Dvlpmnt & Aging,PSYC 1101
+,,2130,001,21399,1,Intro to Social Psychology,PSYC 1101
+,,,002,26946,1,Intro to Social Psychology,PSYC 1101
+,,,003,22187,1,Intro to Social Psychology,PSYC 1101
+,,,004,24964,1,Intro to Social Psychology,PSYC 1101
+,,,005,27322,1,Intro to Social Psychology,PSYC 1101
+,,,006,27343,1,Intro to Social Psychology,PSYC 1101
+,,,080,27199,1,Intro to Social Psychology,PSYC 1101
+,,2131,001,23936,1,Intro to Forensic Psychology,PSYC 1101
+,,,002,27279,1,Intro to Forensic Psychology,PSYC 1101
+,,2137,001,21400,1,Intro to Positive Psychology,PSYC 1101
+,,,002,22709,1,Intro to Positive Psychology,PSYC 1101
+,,,003,27037,1,Intro to Positive Psychology,PSYC 1101
+,,,080,27202,1,Intro to Positive Psychology,PSYC 1101
+,,2150,001,21304,1,Psychology of Adjustment,PSYC 1101
+,,,080,27194,1,Psychology of Adjustment,PSYC 1101
+,,2151,001,27281,1,Psyc Dstrs Dysfnc & Disordr,PSYC 1101
+,,,002,21402,1,Psyc Dstrs Dysfnc & Disordr,PSYC 1101
+,,,003,21403,1,Psyc Dstrs Dysfnc & Disordr,PSYC 1101
+,,,004,27323,1,Psyc Dstrs Dysfnc & Disordr,PSYC 1101
+,,,080,27221,1,Psyc Dstrs Dysfnc & Disordr,PSYC 1101
+,,2155,001,23019,1,Psyc Approaches to Diversity,PSYC 1101
+,,2160,001,26859,1,Intro to Health Psychology,PSYC 1101
+,,,002,23852,1,Intro to Health Psychology,PSYC 1101
+,,,080,27206,1,Intro to Health Psychology,PSYC 1101
+,,2165,001,27126,1,Intro to Community Psychology,PSYC 1101
+,,2171,001,22994,1,Intro to Ind/Org Psychology,PSYC 1101
+,,,080,27167,1,Intro to Ind/Org Psychology,PSYC 1101
+,,3001,001,23370,1,Topics in Psychology,PSYC 1101
+,,,002,26860,1,Topics in Psychology,PSYC 1101
+,,,004,27324,1,Topics in Psychology,PSYC 1101
+,,3111,001,24027,1,Psych of Learning and Memory,PSYC 1101 and PSYC 2113
+,,3113,001,26783,1,Physiological Psychology,PSYC 1101 and PSYC 2101 and PSYC 2113
+,,,002,27083,1,Physiological Psychology,PSYC 1101 and PSYC 2101 and PSYC 2113
+,,,090,26784,1,Physiological Psychology,PSYC 1101 and PSYC 2101 and PSYC 2113
+,,3114,001,26861,1,Motivation,PSYC 1101 and PSYC 2101
+,,3115,001,22093,1,Sensation & Perception,PSYC 1101 and PSYC 2113
+,,,002,26790,1,Sensation & Perception,PSYC 1101 and PSYC 2113
+,,,003,26791,1,Sensation & Perception,PSYC 1101 and PSYC 2113
+,,3116,001,21434,1,Human Cognitive Process,PSYC 1101 and PSYC 2113
+,,,002,21571,1,Human Cognitive Process,PSYC 1101 and PSYC 2113
+,,,003,23884,1,Human Cognitive Process,PSYC 1101 and PSYC 2113
+,,,090,21864,1,Human Cognitive Process,PSYC 1101 and PSYC 2113
+,,3135,001,26789,1,Psychology of Personality,PSYC 1101 and PSYC 2101
+,,3136,001,26792,1,Sexual Behavior,PSYC 1101 and PSYC 2113
+,,3216,001,20507,1,Intro to Cognitive Science,PSYC 1101
+,,4006,001,26862,1,Advanced Topics in Psychology,PSYC 1101 and PSYC 2101 and (PSYC 2103 or PSYC 2104) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4007,001,22095,1,Adv Topics in Psych Research,PSYC 2103 or PSYC 2104
+,,,002,24987,1,Adv Topics in Psych Research,PSYC 2103 or PSYC 2104
+,,,003,27098,1,Adv Topics in Psych Research,PSYC 2103 or PSYC 2104
+,,4103,001,22096,1,History and Systems,PSYC 1101 and PSYC 2101 and (PSYC 2103 or PSYC 2104) and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4316,001,23152,1,Cognitive Neuroscience,PSYC 1101 and PSYC 2113
+,,,002,26785,1,Cognitive Neuroscience,PSYC 1101 and PSYC 2113
+,,4625,001,24028,1,Seminar in Developmental Psyc,(PSYC 2103 or PSYC 2104) and (PSYC 2120 or PSYC 2121 or PSYC 2124) and PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,002,24963,1,Seminar in Developmental Psyc,(PSYC 2103 or PSYC 2104) and (PSYC 2120 or PSYC 2121 or PSYC 2124) and PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4650,001,22710,1,Seminar in Human Adapt & Beh,(PSYC 2103 or PSYC 2104) and PSYC 1101 and PSYC 2101 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4660,002,22997,1,Seminar in Health Psychology,(PSYC 2103 or PSYC 2104) and PSYC 1101 and PSYC 2101 and PSYC 2160 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,003,26797,1,Seminar in Health Psychology,(PSYC 2103 or PSYC 2104) and PSYC 1101 and PSYC 2101 and PSYC 2160 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,004,26865,1,Seminar in Health Psychology,(PSYC 2103 or PSYC 2104) and PSYC 1101 and PSYC 2101 and PSYC 2160 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4670,001,26798,1,Seminar in Industrial Psyc,PSYC 1101 and PSYC 2101 and (PSYC 2103 or PSYC 2104) and PSYC 2171 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4701,001,22505,1,Honors Thesis I,PSYC 1101 and PSYC 2101 and PSYC 2103 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4702,001,22504,1,Honors Thesis II,PSYC 1101 and PSYC 2101 and PSYC 2103 and (STAT 1220 or STAT 1221 or STAT 1222) and PSYC 4690 or PSYC 4701
+,,6145,001,27017,1,App Rsch Des & Prog Eval,PSYC 6102
+,READ,5211,080,22525,1,Methods of Literacy,READ 5111 and ELED 5110 and ELED 5112L
+,,,081,22526,1,Methods of Literacy,READ 5111 and ELED 5110 and ELED 5112L
+,,5311,080,23066,1,Lit Assess and Tiered Interven,READ 5211 and ELED 5210
+,RELS,4791,001,27269,1,Honors Thesis,RELS 4790
+,RESP,5101,080,21717,H1,Health Outcomes,RESP 6101
+,RSCH,6110,090,21284,1,Descriptive & Inferential Stat,RSCH 6101
+,,7140,090,27256,1,Multivariate Statistics,RSCH 6101 and RSCH 6110 and RSCH 6120
+,,7160,090,27341,1,Hierarchical Linear Models,RSCH 6110 and RSCH 6120
+,,8110,090,21787,1,Descriptive & Inferential Stat,RSCH 8210
+,,8112,090,21259,1,Survey Research Methods,RSCH 8210
+,,8120,090,20976,1,Advanced Statistics,RSCH 8210 and RSCH 8110
+,,8121,090,22641,1,Qual Data Collect & Analysis,RSCH 8111
+,,8140,090,27257,1,Multivariate Statistics,RSCH 8210 and RSCH 8110 and RSCH 8120
+,,8160,090,26604,1,Hierarchical Linear Models,RSCH 8110 and RSCH 8120
+,,8197,090,26605,1,Exp & Quasi-Exp Evaluations,RSCH 8210 or RSCH 7110 and RSCH 8110 or RSCH 6110
+,,8410,090,26606,1,Intern in Educational Research,RSCH 8140
+,,8411,090,24679,1,Intern in Teaching Ed Rsch,RSCH 8210
+,RUSS,1202,001,26377,1,Elementary Russian II,RUSS 1201
+,SECD,4140,001,20327,1,Adolescence and Sec Schools,MDSK 2100
+,SEGR,2105,001,22383,1,Comp Methods Sys Engr,ENGR 1202 and MATH 1242
+,,2110,001,22385,1,Systems Engineering Concepts,SEGR 2105
+,,2121,001,23741,1,Intro Logistics Sys & Supply,ENGR 1202
+,,3102,001,20361,1,"Sys Simulation, Model & Dep",STAT 3128
+,,3103,001,26541,1,Human System Interface,SEGR 2105
+,,3105,090,22384,1,Com Methods for Sys Engr II,SEGR 2105
+,,3110,001,22355,1,System Design and Deployment,SEGR 3105 and PHYS 2102
+,,3201,001,22386,1,Operations Research I,MATH 1242 and MATH 2164
+,,3202,001,22387,1,Operations Research II,MATH 2164 and STAT 3128
+,,3290,001,21037,1,Systems Design Project I,SEGR 2110 and SEGR 3110 and (SEGR 3102 or SEGR 3107)
+,,3291,001,20812,1,Systems Design Project II,SEGR 3290
+,,4114,001,22361,1,Production Control Systems,(STAT 1220 or STAT 1221 or STAT 1222) or STAT 3128 and SEGR 3201 and SEGR 3202
+,,4141,001,22176,1,Engr Experimental Design,STAT 3128
+,,4170,001,22364,1,Total Quality Systems,STAT 3128
+,,4201,001,21915,1,Deterministic System Analysis,MATH 2164
+,,4202,001,21918,1,Stochastic System Analysis,STAT 3128 and MATH 2164 and SEGR 3202
+,SOCY,2115,001,23931,1,Introduction to Organizations,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,002,21963,1,Introduction to Organizations,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,080,22772,1,Introduction to Organizations,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,2161,001,21967,1,Sociological Social Psychology,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,002,26247,1,Sociological Social Psychology,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,2169,001,21951,1,Sociology of Health & Illness,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,080,22996,1,Sociology of Health & Illness,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,3090,001,22953,1,Topics in Sociology,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,002,26248,1,Topics in Sociology,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,003,24933,1,Topics in Sociology,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,E01,24747,1,Topics in Sociology,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,3132,001,22540,1,Sociology of Sport,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,080,22777,1,Sociology of Sport,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,3143,001,23192,1,Social Movements,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,080,23932,1,Social Movements,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,LC1,27151,1,Social Movements,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,3153,001,21984,1,Sociological Theory,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,002,22154,1,Sociological Theory,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,080,22774,1,Sociological Theory,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,3155,001,21828,1,Sociological Research Methods,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,002,22539,1,Sociological Research Methods,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,080,23359,1,Sociological Research Methods,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,LC1,22978,1,Sociological Research Methods,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,3155L,080,23360,1,Sociological Rsrch Methods Lab,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,L01,22153,1,Sociological Rsrch Methods Lab,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,L02,22766,1,Sociological Rsrch Methods Lab,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,3173,001,26539,1,Criminology,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,080,26540,1,Criminology,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,3799,001,21297,1,Honors Thesis in Sociology,SOCY 3798
+,,4110,001,22518,1,Sociology of Aging,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,4111,002,24197,1,Social Inequality,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,080,23409,1,Social Inequality,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,4112,001,23001,1,Sociology of Work,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,4114,001,23002,1,Professionalism,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,080,23003,1,Professionalism,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,4115,001,24484,1,Organizational Sociology,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,080,24485,1,Organizational Sociology,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,4156,001,21964,1,Quantitative Analysis,SOCY 1101 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1501 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1511 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,002,21575,1,Quantitative Analysis,SOCY 1101 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1501 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1511 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,080,22775,1,Quantitative Analysis,SOCY 1101 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1501 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1511 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4156L,L01,20601,1,Quantitative Analysis Lab,SOCY 1101 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1501 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1511 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,L02,21530,1,Quantitative Analysis Lab,SOCY 1101 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1501 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1511 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,L80,22776,1,Quantitative Analysis Lab,SOCY 1101 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1501 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1511 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,,L90,21288,1,Quantitative Analysis Lab,SOCY 1101 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1501 and (STAT 1220 or STAT 1221 or STAT 1222) or SOCY 1511 and (STAT 1220 or STAT 1221 or STAT 1222)
+,,4169,001,26264,1,Health Disparities,SOCY 1101 and SOCY 2169
+,,4172,002,23193,1,Deviant Behavior,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,,080,23970,1,Deviant Behavior,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,4265,001,21969,1,Social Psychology of Law,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,4366,001,26269,1,Minorities and Aging,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,4371,001,23005,1,Comp Cultural SOCY Netherlands,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,4699,001,21952,1,Senior Seminar in Sociology,SOCY 1101 and (SOCY 3153 or SOCY 4153) and SOCY 3155 and SOCY 4156
+,,,080,21953,1,Senior Seminar in Sociology,SOCY 1101 and (SOCY 3153 or SOCY 4153) and SOCY 3155 and SOCY 4156
+,,,090,22979,1,Senior Seminar in Sociology,SOCY 1101 and (SOCY 3153 or SOCY 4153) and SOCY 3155 and SOCY 4156
+,,4756,001,23208,1,Honors Quantitive Analysis,STAT 1220 or STAT 1221 or STAT 1222
+,,4756L,L01,23209,1,Honors Quantitive Analysis Lab,(STAT 1220 or STAT 1221 or STAT 1222)
+,,4765,001,27150,1,Honors Social Psyc of Law,SOCY 1101 or SOCY 1501 or SOCY 1511
+,,6897,003,27267,1,Research Practicum,SOCY 6651 and SOCY 6652
+,SOWK,3184,001,20005,1,Practice Methods III,SOWK 3181
+,,,002,21992,1,Practice Methods III,SOWK 3181
+,,,090,20006,1,Practice Methods III,SOWK 3181
+,,3202,001,20007,1,Social Welfare Policy,SOWK 3201
+,,,002,20008,1,Social Welfare Policy,SOWK 3201
+,,,003,26370,1,Social Welfare Policy,SOWK 3201
+,,,090,21503,1,Social Welfare Policy,SOWK 3201
+,,3484,001,20009,1,SOWK Practicum II,SOWK 3482
+,,,002,20010,1,SOWK Practicum II,SOWK 3482
+,,,003,20011,1,SOWK Practicum II,SOWK 3482
+,,,090,20747,1,SOWK Practicum II,SOWK 3482
+,,3988,001,21670,1,Research II,SOWK 3900
+,,,002,21991,1,Research II,SOWK 3900
+,,,090,21671,1,Research II,SOWK 3900
+,,6442,080,20013,1,Social Work Practicum II,SOWK 6441
+,,,081,20014,1,Social Work Practicum II,SOWK 6441
+,,,082,26344,1,Social Work Practicum II,SOWK 6441
+,,,083,26345,1,Social Work Practicum II,SOWK 6441
+,,,084,26346,1,Social Work Practicum II,SOWK 6441
+,,,090,21192,1,Social Work Practicum II,SOWK 6441
+,,,091,20748,1,Social Work Practicum II,SOWK 6441
+,,,092,26224,1,Social Work Practicum II,SOWK 6441
+,,,093,26225,1,Social Work Practicum II,SOWK 6441
+,,7223,001,21325,1,Adv Social Wk Pract w/ Comm,SOWK 7222
+,,,002,21674,1,Adv Social Wk Pract w/ Comm,SOWK 7222
+,,,080,22851,H1,Adv Social Wk Pract w/ Comm,SOWK 7222
+,,,081,24320,H1,Adv Social Wk Pract w/ Comm,SOWK 7222
+,,,082,21193,H2,Adv Social Wk Pract w/ Comm,SOWK 7222
+,,,083,26231,H2,Adv Social Wk Pract w/ Comm,SOWK 7222
+,,,084,26233,H2,Adv Social Wk Pract w/ Comm,SOWK 7222
+,,,090,21194,1,Adv Social Wk Pract w/ Comm,SOWK 7222
+,,7444,001,21322,1,Advanced Social Work Pract II,SOWK 7443
+,,,002,22852,1,Advanced Social Work Pract II,SOWK 7443
+,,,080,22848,1,Advanced Social Work Pract II,SOWK 7443
+,,,081,22849,1,Advanced Social Work Pract II,SOWK 7443
+,,,082,24322,1,Advanced Social Work Pract II,SOWK 7443
+,,,083,24323,1,Advanced Social Work Pract II,SOWK 7443
+,,,084,21321,1,Advanced Social Work Pract II,SOWK 7443
+,,,090,20029,1,Advanced Social Work Pract II,SOWK 7443
+,,,091,20030,1,Advanced Social Work Pract II,SOWK 7443
+,,7651,001,21324,1,Reflection and Synthesis,SOWK 7222 and SOWK 7443
+,,,002,20878,1,Reflection and Synthesis,SOWK 7222 and SOWK 7443
+,,,003,22847,1,Reflection and Synthesis,SOWK 7222 and SOWK 7443
+,,,004,27106,1,Reflection and Synthesis,SOWK 7222 and SOWK 7443
+,,,080,22007,1,Reflection and Synthesis,SOWK 7222 and SOWK 7443
+,,,081,22853,1,Reflection and Synthesis,SOWK 7222 and SOWK 7443
+,,,082,24321,1,Reflection and Synthesis,SOWK 7222 and SOWK 7443
+,SPAN,1102,001,25274,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,002,25275,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,003,25276,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,004,25277,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,005,25279,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,006,25280,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,007,25281,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,008,25282,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,009,25283,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,010,25284,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,011,25285,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,012,25286,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,013,25287,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,014,25288,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,015,25289,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,016,25290,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,017,25291,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,018,25292,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,019,25293,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,,020,26902,1,Elementary Spanish II,SPAN 1101 or SPAN 1201
+,,2050,001,25300,1,Topics in Spanish,SPAN 1202
+,,2202,001,20320,1,Intermediate Spanish II,SPAN 2201
+,,,002,25299,1,Intermediate Spanish II,SPAN 2201
+,,3201,001,20321,1,Adv Grammar & Composition,SPAN 2202
+,,,002,20323,1,Adv Grammar & Composition,SPAN 2202
+,,3202,001,20324,1,Adv Conversation & Composition,SPAN 2202
+,,,002,23543,1,Adv Conversation & Composition,SPAN 2202
+,,3203,001,21824,1,Span for Heritage Spkrs,SPAN 2202
+,,3208,001,20333,1,Intro to Literary Analysis,SPAN 3201 or SPAN 3202 or SPAN 3203
+,,3209,001,22126,1,Spanish Civilization & Culture,SPAN 3201 or SPAN 3202 or SPAN 3203
+,,3210,001,20861,1,Spanish American Civ & Cult,SPAN 3201 or SPAN 3202 or SPAN 3203
+,,3220,001,25304,1,Span for Busn & Intern Trade,SPAN 3201 or SPAN 3202 or SPAN 3203
+,,4208,090,23544,1,Survey of Span Peninsular Lit,SPAN 3208 or LTAM 3308 and (SPAN 3201 or SPAN 3202 or SPAN 3203)
+,,4216,001,25306,1,"Soc, Pol, Cult, Econ Hisp Lit",SPAN 3208
+,SPED,3210,090,21373,1,Enhncng Social-Emtnl Dev Child,CHFD 2111 and CHFD 2113 and CHFD 2412
+,,4112,001,20473,1,Ath App Asmt Child w/Disab,SPED 4111
+,,4274,001,20401,1,Gen Curr Access & Mod,SPED 3100
+,,4275,001,20742,1,Tch Read to Elementary Lrnr,SPED 3100
+,,5173,080,20404,1,Diagnostic Assessment,SPED 5300 and SPED 5370
+,,5201,080,22433,1,Philosophy Behavior Analysis,SPED 5200
+,,,081,26713,1,Philosophy Behavior Analysis,SPED 5200
+,,5274,080,21176,1,Gen Curr Access & Adapt,SPED 5300 and SPED 5370 and SPED 5173
+,,5372,080,22616,1,Mathematics Instruction,SPED 5300 and SPED 5370 and SPED 5173
+,,6224,080,20842,1,Adapt Curr Mat & Clsrm Diff,SPED 5211 and SPED 6124 and SPED 6161
+,,6242,080,21857,1,Enhc Comm & Sppt Bhvrs Inc St,CHFD 6102 and CHFD 6210
+,,6335,080,22436,1,EBP for Learners with ASD,SPED 6115
+,,6350,080,22598,1,Yng Chd Disblts & Fams: In Col,CHFD 6102 and CHFD 6220
+,,6693,080,21039,1,Research Implementation,SPED 6692
+,,6694,080,21040,1,Research Dissemination & Ldrsh,SPED 6693
+,SPOA,2130,001,26517,1,Intro to Baseball Analytics,STAT 1220 or STAT 1221 or STAT 1222
+,STAT,1220,001,26502,1,Elements of Stat I (BUSN),Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,002,20624,1,Elements of Stat I (BUSN),Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,003,20625,1,Elements of Stat I (BUSN),Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,004,20626,1,Elements of Stat I (BUSN),Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,005,23840,1,Elements of Stat I (BUSN),Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,006,20627,1,Elements of Stat I (BUSN),Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,007,26503,1,Elements of Stat I (BUSN),Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,008,20628,1,Elements of Stat I (BUSN),Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,009,20623,1,Elements of Stat I (BUSN),Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,,700,21367,1,Elements of Stat I (BUSN),Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,1221,001,20629,1,Elements of Stat I (BIOL),Test MPLC or MATH 1100 or MATH 1101 or MATH 1103
+,,2122,001,20631,1,Intro to Prob & Stat,MATH 1242 or MATH 2120
+,,,002,20970,1,Intro to Prob & Stat,MATH 1242 or MATH 2120
+,,,003,21208,1,Intro to Prob & Stat,MATH 1242 or MATH 2120
+,,,090,21760,1,Intro to Prob & Stat,MATH 1242 or MATH 2120
+,,,091,22720,1,Intro to Prob & Stat,MATH 1242 or MATH 2120
+,,2223,001,20633,1,Elements of Statistics II,STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122
+,,,002,22828,1,Elements of Statistics II,STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122
+,,,003,27277,1,Elements of Statistics II,STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122
+,,3110,001,20634,1,Applied Regression,(STAT 1220 or STAT 1221 or STAT 1222 or STAT 2122) or (MATH 3122 or STAT 3122) and (MATH 1242 or MATH 2120)
+,,3122,001,21762,1,Probability & Statistics I,MATH 2241
+,,3123,001,21209,1,Probability & Statistics II,MATH 3122 or STAT 3122
+,,3128,001,21763,1,Prob & Stat for Engineers,MATH 2241
+,,,002,21210,1,Prob & Stat for Engineers,MATH 2241
+,,,003,20636,1,Prob & Stat for Engineers,MATH 2241
+,,,004,20635,1,Prob & Stat for Engineers,MATH 2241
+,,,005,21368,1,Prob & Stat for Engineers,MATH 2241
+,,,006,24731,1,Prob & Stat for Engineers,MATH 2241
+,,3150,001,21849,1,Time Series Analysis,STAT 2223 or STAT 3110
+,,3160,001,22767,1,Applied Multivariate Analysis,STAT 2223 or STAT 3110
+,,,002,27158,1,Applied Multivariate Analysis,STAT 2223 or STAT 3110
+,,3180,001,23344,1,Predictive Analytics,MATH 1242 and (STAT 1220 or STAT 1222)
+,,4116,001,23108,1,Statistical Computing,STAT 3123
+,,4124,001,23842,1,Applied Statistics II,STAT 4123
+,,5124,001,21764,1,Applied Statistics II,STAT 5123
+,,5127,001,20638,1,Theory of Statistics II,STAT 5126
+,,6115,090,24732,1,Stat Learning with Big Data,(STAT 5110 or DSBA 5110) and STAT 5123 and (STAT 6113 or ECON 6113) and STAT 6112
+,TESL,4103,090,25725,H1,Meth Tch Engl as 2nd Lang,MDSK 3151 and TESL 4204
+,THEA,1270,001,22047,1,Acting I,THEA 1265
+,,,002,26505,1,Acting I,THEA 1265
+,,2270,001,22663,1,Acting II,THEA 1270
+,,2280,001,23008,1,Acting in Physical Theatre,THEA 1265
+,,2290,001,24211,1,Acting on Camera I,THEA 2270
+,,2311,001,24039,1,Theatre History II,THEA 1300
+,,2320,001,24199,1,Playwriting I,THEA 1300
+,,2370,001,22050,1,Theatre Tchng Apprenticeship,THEA 1360
+,,3202,001,25905,1,Audition Techniques,THEA 2201 or THEA 1270
+,,3215,001,26475,1,Theatre Tech 2-Costume,THEA 1215
+,,3246,001,26479,1,Theatre Tech 2 - Sound,THEA 1245
+,,3310,001,25912,1,Dramaturgy,THEA 1300
+,,4001,004,25913,1,Topics in Theatre,THEA 3310
+,,4205,001,22664,1,Stage Dialects,THEA 1265 or THEA 1270
+,,4233,001,26494,1,Scenic Painting,THEA 1240 or THEA 1225
+,TRAN,3601,001,22276,1,Intro to Translation and Inter,FREN 3201 or FREN 3202 or GERM 3201 or GERM 3202 or JAPN 3201 or RUSS 3201 or SPAN 3201 or SPAN 3202 or SPAN 3203
+,,4422,001,22130,1,Practicum in Trans I- JAPN,JAPN 3201 or JAPN 3202 or JAPN 3203
+,,4424,001,21652,1,Practicum in Trans III - JAPN,JAPN 3201 or JAPN 3202 or JAPN 3203
+,,4444,001,21581,1,Practicum in Trans III - SPAN,TRAN 3601 or TRAN 4442
+,URBS,3801,C01,27485,1,Independent Study,URBS 2200
+,,,C02,27500,1,Independent Study,URBS 2200
+,WGST,3220,001,20302,1,Feminist Thought,WGST 1101 or WGST 1502 or WGST 1512
+,WRDS,2101,001,26554,1,Advanced Writing & Research,(UWRT 1103 or WRDS 1103) or UWRT 1102 or UWRT 1101 or (UWRT 1104 or WRDS 1104)
+,,,H01,26216,1,Advanced Writing & Research,(UWRT 1103 or WRDS 1103) or UWRT 1102 or UWRT 1101 or (UWRT 1104 or WRDS 1104)
+,,3102,002,23640,1,Effective Sentence & Writing,(UWRT 1103 or WRDS 1103) or UWRT 1102 or UWRT 1101 or (UWRT 1104 or WRDS 1104)
+,,3140,001,26137,1,Arguing With Images,(UWRT 1103 or WRDS 1103) or UWRT 1102 or UWRT 1101 or (UWRT 1104 or WRDS 1104)
+,,3211,001,23655,1,"Online WRT:Ethics,Social Media",(UWRT 1103 or WRDS 1103) or UWRT 1102 or UWRT 1101 or (UWRT 1104 or WRDS 1104)
+,,3215,001,26491,H2,Info Lit & Digital Composing,(UWRT 1103 or WRDS 1103) or UWRT 1102 or UWRT 1101 or (UWRT 1104 or WRDS 1104)
+,,,081,23653,H2,Info Lit & Digital Composing,(UWRT 1103 or WRDS 1103) or UWRT 1102 or UWRT 1101 or (UWRT 1104 or WRDS 1104)
+,,4011,001,23607,1,Topics in Writing Technologies,(UWRT 1103 or WRDS 1103) or UWRT 1102 or UWRT 1101 or (UWRT 1104 or WRDS 1104)
+,,4021,002,26214,1,Topics in Writing and Reading,(UWRT 1103 or WRDS 1103) or UWRT 1102 or UWRT 1101 or (UWRT 1104 or WRDS 1104)
+,,4201,002,23656,1,Composing Across Borders,(UWRT 1103 or WRDS 1103) or UWRT 1102 or UWRT 1101 or (UWRT 1104 or WRDS 1104)
+,,4210,001,26097,1,Contemporary Rhetorical Theory,(UWRT 1103 or WRDS 1103) or UWRT 1102 or UWRT 1101 or (UWRT 1104 or WRDS 1104)
+,,4400,001,24217,1,WRDS Internship Practicum,WRDS 4225
+,,4900,001,23937,1,Senior Research Capstone,WRDS 4225
+,,,,,,,

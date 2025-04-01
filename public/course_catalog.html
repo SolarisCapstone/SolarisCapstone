@@ -75,23 +75,24 @@
 
     </div>
 
-    <script>
-        fetch('/api/courses')
-            .then(response => response.json())
-            .then(data => {
-                const tableBody = document.querySelector('#courseTable tbody');
-                
-                data.forEach(course => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${course.course_name}</td>
-                        <td>${course.description}</td>
-                        <td>${course.type}</td>
-                    `;
-                    tableBody.appendChild(row);
-                });
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    </script>
+<script>
+    fetch('/api/courses')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.querySelector('#courseTable tbody');
+
+            data.forEach(course => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${course.course_name}</td>
+                    <td>${course.description}</td>
+                    <td>${course.type}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+</script>
+
 </body>
 </html>
