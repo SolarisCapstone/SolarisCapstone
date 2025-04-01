@@ -3,100 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DegreeWorks Setup</title>
+    <title>Graduation Timeline Planner</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        .semester {
+            padding: 20px;
+            border: 2px solid var(--charlotte-green);
+            margin-bottom: 10px;
+            min-height: 100px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .course {
+            background-color: var(--charlotte-light-gray);
+            border: 1px solid var(--charlotte-dark-gray);
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            flex: 1 0 21%;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: var(--charlotte-light-gray);
+            border: 1px solid var(--charlotte-green);
+            margin-bottom: 20px;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background-color: var(--charlotte-green);
+            width: 0%;
+        }
+        .courses-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body class="bg-green-900 text-white p-6">
+    <div class="container">
+        <header class="text-center">
+            <h1 class="text-2xl font-bold" style="color: var(--charlotte-green);">Graduation Timeline Planner</h1>
+            <p class="text-black font-semibold mt-4">Progress bar: <span id="progress-percent">0%</span></p>
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+            </div>
+        </header>
 
-    <div class="max-w-4xl mx-auto bg-white text-black p-6 rounded shadow-md">
-        <h1 class="text-2xl font-bold text-green-700">DegreeWorks Setup</h1>
-        <p class="text-gray-600">Mark the courses you have already completed.</p>
+        <section class="semesters">
+            <div id="spring25" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">Spring '25</div>
+            <div id="summer25" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">Summer '25</div>
+            <div id="fall25" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">Fall '25</div>
+            <div id="spring26" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">Spring '26</div>
+        </section>
 
-        <!-- Core Courses Section -->
-        <div class="mt-6">
-            <h2 class="text-lg font-semibold text-green-700">Core Courses</h2>
-            <table class="w-full mt-2 border border-gray-300">
-                <thead>
-                    <tr class="bg-green-700 text-white">
-                        <th class="p-2">Course</th>
-                        <th class="p-2">Title</th>
-                        <th class="p-2">Completed</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="p-2">ITSC 1212</td>
-                        <td class="p-2">Intro to Computer Science I</td>
-                        <td class="p-2 text-center">
-                            <input type="checkbox" class="course-checkbox" data-course="ITSC 1212">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="p-2">ITSC 1213</td>
-                        <td class="p-2">Intro to Computer Science II</td>
-                        <td class="p-2 text-center">
-                            <input type="checkbox" class="course-checkbox" data-course="ITSC 1213">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="p-2">ITSC 2175</td>
-                        <td class="p-2">Logic & Algorithms</td>
-                        <td class="p-2 text-center">
-                            <input type="checkbox" class="course-checkbox" data-course="ITSC 2175">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="p-2">ITSC 2214</td>
-                        <td class="p-2">Data Structures & Algorithms</td>
-                        <td class="p-2 text-center">
-                            <input type="checkbox" class="course-checkbox" data-course="ITSC 2214">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <section class="course-category">
+            <h2 class="category-title">Core Classes</h2>
+            <div class="courses-grid" id="core-classes">
+                <div class="course" id="ITSC1212" draggable="true" ondragstart="drag(event)">ITSC1212 - Intro to Computer Science I</div>
+                <div class="course" id="ITSC1213" draggable="true" ondragstart="drag(event)">ITSC1213 - Intro to Computer Science II</div>
+                <div class="course" id="ITSC2600" draggable="true" ondragstart="drag(event)">ITSC2600 - CS Program, Identity, Career</div>
+                <div class="course" id="ITSC2175" draggable="true" ondragstart="drag(event)">ITSC2175 - Logic and Algorithms</div>
+                <div class="course" id="ITSC2214" draggable="true" ondragstart="drag(event)">ITSC2214 - Data Structures and Algorithms</div>
+                <div class="course" id="ITSC2181" draggable="true" ondragstart="drag(event)">ITSC2181 - Intro to Computer Systems</div>
+                <div class="course" id="ITSC3146" draggable="true" ondragstart="drag(event)">ITSC3146 - Intro Oper Syst & Networking</div>
+                <div class="course" id="ITSC3155" draggable="true" ondragstart="drag(event)">ITSC3155 - Software Engineering</div>
+            </div>
+        </section>
 
-        <!-- Mathematics Section -->
-        <div class="mt-6">
-            <h2 class="text-lg font-semibold text-green-700">Mathematics & Statistics</h2>
-            <table class="w-full mt-2 border border-gray-300">
-                <thead>
-                    <tr class="bg-green-700 text-white">
-                        <th class="p-2">Course</th>
-                        <th class="p-2">Title</th>
-                        <th class="p-2">Completed</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="p-2">MATH 1241</td>
-                        <td class="p-2">Calculus I</td>
-                        <td class="p-2 text-center">
-                            <input type="checkbox" class="course-checkbox" data-course="MATH 1241">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="p-2">MATH 1242</td>
-                        <td class="p-2">Calculus II</td>
-                        <td class="p-2 text-center">
-                            <input type="checkbox" class="course-checkbox" data-course="MATH 1242">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <section class="course-category">
+            <h2 class="category-title">Math</h2>
+            <div class="courses-grid" id="math-classes">
+                <div class="course" id="MATH1241" draggable="true" ondragstart="drag(event)">MATH1241 - Calculus I</div>
+                <div class="course" id="MATH1242" draggable="true" ondragstart="drag(event)">MATH1242 - Calculus II</div>
+                <div class="course" id="MATH2164" draggable="true" ondragstart="drag(event)">MATH2164 - Matrices & Linear Algebra</div>
+                <div class="course" id="STAT2122" draggable="true" ondragstart="drag(event)">STAT2122 - Intro to Prob & Stat</div>
+            </div>
+        </section>
 
-        <!-- Button to Proceed -->
-        <div class="mt-6 text-center">
-            <button id="proceed-btn" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded">
-                Continue to Planner
-            </button>
-        </div>
+        <section class="course-category">
+            <h2 class="category-title">Concentration Electives</h2>
+            <div class="courses-grid">
+                <!-- Concentration Electives -->
+            </div>
+        </section>
 
+        <section class="course-category">
+            <h2 class="category-title">Gen-Eds/Outside Electives</h2>
+            <div class="courses-grid">
+                <!-- Gen-Eds/Outside Electives -->
+            </div>
+        </section>
     </div>
 
-    <script src="js/onboarding.js"></script>
+    <script>
+        let confettiShown = false;
 
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const placed = document.querySelectorAll('.semester .course').length;
+            const total = document.querySelectorAll('.course').length;
+            const percent = total > 0 ? Math.round((placed / total) * 100) : 0;
+            document.querySelector('.progress-bar-fill').style.width = `${percent}%`;
+            document.getElementById('progress-percent').textContent = `${percent}%`;
+
+            if (percent === 100 && !confettiShown) {
+                confetti();
+                confettiShown = true;
+            } else if (percent < 100) {
+                confettiShown = false;
+            }
+        }
+    </script>
 </body>
 </html>
