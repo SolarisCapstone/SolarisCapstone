@@ -8,63 +8,117 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
-        .semester {
-            padding: 20px;
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .semester, .course-category-box {
+            padding: 5px;
             border: 2px solid var(--charlotte-green);
-            margin-bottom: 10px;
-            min-height: 100px;
+            margin: 4px;
+            min-height: 250px;
+            min-width: 180px;
+            width: 180px;
+            background-color: #fff;
+            color: black;
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
+        }
+        .semester-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+        .semester-row, .course-categories {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            gap: 6px;
+            margin: 8px 0;
+            overflow-x: auto;
         }
         .course {
             background-color: var(--charlotte-light-gray);
             border: 1px solid var(--charlotte-dark-gray);
-            padding: 10px;
-            margin: 5px;
+            padding: 4px;
+            margin: 3px;
             cursor: pointer;
-            flex: 1 0 21%;
+            width: 150px;
+            text-align: center;
+            font-size: 13px;
         }
         .progress-bar {
             width: 100%;
-            height: 20px;
+            height: 16px;
             background-color: var(--charlotte-light-gray);
             border: 1px solid var(--charlotte-green);
-            margin-bottom: 20px;
+            margin: 6px 0 10px 0;
         }
         .progress-bar-fill {
             height: 100%;
             background-color: var(--charlotte-green);
             width: 0%;
         }
-        .courses-grid {
+        h2 {
+            color: var(--charlotte-green);
+            margin: 4px 0;
+            font-size: 16px;
+        }
+        h1 {
+            margin-bottom: 6px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 10px auto;
+            padding: 10px;
+            background: white;
+            color: black;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
+            justify-content: center;
+            gap: 12px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        footer a button {
+            font-size: 14px;
         }
     </style>
 </head>
-<body class="bg-green-900 text-white p-6">
+<body class="bg-green-900 text-white">
     <div class="container">
         <header class="text-center">
             <h1 class="text-2xl font-bold" style="color: var(--charlotte-green);">Graduation Timeline Planner</h1>
-            <p class="text-black font-semibold mt-4">Progress bar: <span id="progress-percent">0%</span></p>
+            <p class="text-black font-semibold">Progress bar: <span id="progress-percent">0%</span></p>
             <div class="progress-bar">
                 <div class="progress-bar-fill"></div>
             </div>
         </header>
 
-        <section class="semesters">
-            <div id="spring25" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">Spring '25</div>
-            <div id="summer25" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">Summer '25</div>
-            <div id="fall25" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">Fall '25</div>
-            <div id="spring26" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">Spring '26</div>
+        <section class="semester-row">
+            <div id="spring25" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="semester-title">Spring '25</div>
+            </div>
+            <div id="summer25" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="semester-title">Summer '25</div>
+            </div>
+            <div id="fall25" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="semester-title">Fall '25</div>
+            </div>
+            <div id="spring26" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="semester-title">Spring '26</div>
+            </div>
         </section>
 
-        <section class="course-category">
-            <h2 class="category-title">Core Classes</h2>
-            <div class="courses-grid" id="core-classes">
+        <section class="course-categories">
+            <div class="course-category-box" id="core-classes" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Core Classes</h2>
                 <div class="course" id="ITSC1212" draggable="true" ondragstart="drag(event)">ITSC1212 - Intro to Computer Science I</div>
                 <div class="course" id="ITSC1213" draggable="true" ondragstart="drag(event)">ITSC1213 - Intro to Computer Science II</div>
                 <div class="course" id="ITSC2600" draggable="true" ondragstart="drag(event)">ITSC2600 - CS Program, Identity, Career</div>
@@ -74,31 +128,32 @@
                 <div class="course" id="ITSC3146" draggable="true" ondragstart="drag(event)">ITSC3146 - Intro Oper Syst & Networking</div>
                 <div class="course" id="ITSC3155" draggable="true" ondragstart="drag(event)">ITSC3155 - Software Engineering</div>
             </div>
-        </section>
 
-        <section class="course-category">
-            <h2 class="category-title">Math</h2>
-            <div class="courses-grid" id="math-classes">
+            <div class="course-category-box" id="math-classes" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Math</h2>
                 <div class="course" id="MATH1241" draggable="true" ondragstart="drag(event)">MATH1241 - Calculus I</div>
                 <div class="course" id="MATH1242" draggable="true" ondragstart="drag(event)">MATH1242 - Calculus II</div>
                 <div class="course" id="MATH2164" draggable="true" ondragstart="drag(event)">MATH2164 - Matrices & Linear Algebra</div>
                 <div class="course" id="STAT2122" draggable="true" ondragstart="drag(event)">STAT2122 - Intro to Prob & Stat</div>
             </div>
-        </section>
 
-        <section class="course-category">
-            <h2 class="category-title">Concentration Electives</h2>
-            <div class="courses-grid">
-                <!-- Concentration Electives -->
+            <div class="course-category-box" id="concentration-electives" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>Concentration Electives</h2>
+                <div class="course" id="ITCS4145" draggable="true" ondragstart="drag(event)">ITCS4145 - Parallel Programming</div>
+                <div class="course" id="ITCS3166" draggable="true" ondragstart="drag(event)">ITCS3166 - Intro to Computer Networks</div>
+                <div class="course" id="ITCS3112" draggable="true" ondragstart="drag(event)">ITCS3112 - Dsgn & Imp Object-oriented Sys</div>
+                <div class="course" id="ITCS3160" draggable="true" ondragstart="drag(event)">ITCS3160 - Database Design & Implem</div>
+                <div class="course" id="ITIS3200" draggable="true" ondragstart="drag(event)">ITIS3200 - Intro to Info Security & Priv</div>
+                <div class="course" id="ITCS3153" draggable="true" ondragstart="drag(event)">ITCS3153 - Intro Artificial Intelligence</div>
+                <div class="course" id="ITIS3135" draggable="true" ondragstart="drag(event)">ITIS3135 - Web App Design and Development</div>
             </div>
         </section>
 
-        <section class="course-category">
-            <h2 class="category-title">Gen-Eds/Outside Electives</h2>
-            <div class="courses-grid">
-                <!-- Gen-Eds/Outside Electives -->
-            </div>
-        </section>
+        <footer>
+            <a href="about.html"><button>About</button></a>
+            <a href="course_catalog.html"><button>Course Catalog</button></a>
+            <a href="degree_planner.html"><button>Planner</button></a>
+        </footer>
     </div>
 
     <script>
@@ -114,9 +169,12 @@
 
         function drop(ev) {
             ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-            updateProgress();
+            const data = ev.dataTransfer.getData("text");
+            const dragged = document.getElementById(data);
+            if (!ev.target.classList.contains('course')) {
+                ev.target.appendChild(dragged);
+                updateProgress();
+            }
         }
 
         function updateProgress() {
