@@ -93,13 +93,16 @@
 </head>
 <body class="bg-green-900 text-white">
     <div class="container">
-        <header class="text-center">
+        <header class="text-center mb-4">
             <h1 class="text-2xl font-bold" style="color: var(--charlotte-green);">Graduation Timeline Planner</h1>
-            <p class="text-black font-semibold">Progress bar: <span id="progress-percent">0%</span></p>
+            <h2 class="text-lg font-semibold text-black">Computer Science, AI, Robotics, and Gaming Concentration, B.S.</h2>
+            <p class="text-black font-semibold mt-1">Progress bar: <span id="progress-percent">0%</span></p>
             <div class="progress-bar">
                 <div class="progress-bar-fill"></div>
             </div>
+            <button onclick="addSemester()" class="mt-2 px-4 py-1 bg-white text-green-900 font-bold rounded border border-green-700 hover:bg-green-100">Add Semester</button>
         </header>
+        
 
         <section class="semester-row">
             <div id="spring25" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -201,32 +204,48 @@
 
     <script>
         let confettiShown = false;
-
+        let semesterSequence = ["Spring", "Summer", "Fall"];
+        let lastSemesterIndex = 3; // index in your DOM
+        let currentYear = 2026;
+        let currentTermIndex = 0; // starts after Spring '26
+    
         function allowDrop(ev) {
             ev.preventDefault();
         }
-
+    
         function drag(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
         }
-
+    
         function drop(ev) {
-            ev.preventDefault();
-            const data = ev.dataTransfer.getData("text");
-            const dragged = document.getElementById(data);
-            if (!ev.target.classList.contains('course')) {
-                ev.target.appendChild(dragged);
-                updateProgress();
-            }
-        }
+    ev.preventDefault();
+    const data = ev.dataTransfer.getData("text");
+    const dragged = document.getElementById(data);
 
+    // Allow drop if the target is a semester OR course-category box
+    const dropTarget = ev.target.closest('.semester, .course-category-box');
+    if (dropTarget && !dropTarget.classList.contains('course')) {
+        dropTarget.appendChild(dragged);
+        updateProgress();
+    } else {
+        // Invalid drop location
+        const box = ev.target.closest('.course-category-box, .semester');
+        if (box) {
+            box.style.borderColor = "red";
+            setTimeout(() => box.style.borderColor = "var(--charlotte-green)", 1000);
+        }
+        alert("You can only place courses into semesters or course categories, not onto individual courses.");
+    }
+}
+
+    
         function updateProgress() {
             const placed = document.querySelectorAll('.semester .course').length;
             const total = document.querySelectorAll('.course').length;
             const percent = total > 0 ? Math.round((placed / total) * 100) : 0;
             document.querySelector('.progress-bar-fill').style.width = `${percent}%`;
             document.getElementById('progress-percent').textContent = `${percent}%`;
-
+    
             if (percent === 100 && !confettiShown) {
                 confetti();
                 confettiShown = true;
@@ -234,6 +253,33 @@
                 confettiShown = false;
             }
         }
+    
+        function addSemester() {
+            const row = document.querySelector('.semester-row');
+    
+            const newSemester = document.createElement('div');
+            newSemester.className = 'semester';
+            newSemester.setAttribute('ondrop', 'drop(event)');
+            newSemester.setAttribute('ondragover', 'allowDrop(event)');
+    
+            const term = semesterSequence[currentTermIndex];
+            const semTitle = `${term} '${String(currentYear).slice(-2)}`;
+            newSemester.id = `${term.toLowerCase()}${currentYear}`;
+    
+            const title = document.createElement('div');
+            title.className = 'semester-title';
+            title.innerText = semTitle;
+    
+            newSemester.appendChild(title);
+            row.appendChild(newSemester);
+    
+            currentTermIndex++;
+            if (currentTermIndex >= semesterSequence.length) {
+                currentTermIndex = 0;
+                currentYear++;
+            }
+        }
     </script>
+    
 </body>
 </html>
