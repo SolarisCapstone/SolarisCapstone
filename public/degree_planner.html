@@ -93,13 +93,16 @@
 </head>
 <body class="bg-green-900 text-white">
     <div class="container">
-        <header class="text-center">
+        <header class="text-center mb-4">
             <h1 class="text-2xl font-bold" style="color: var(--charlotte-green);">Graduation Timeline Planner</h1>
-            <p class="text-black font-semibold">Progress bar: <span id="progress-percent">0%</span></p>
+            <h2 class="text-lg font-semibold text-black">Computer Science, AI, Robotics, and Gaming Concentration, B.S.</h2>
+            <p class="text-black font-semibold mt-1">Progress bar: <span id="progress-percent">0%</span></p>
             <div class="progress-bar">
                 <div class="progress-bar-fill"></div>
             </div>
+            <button onclick="addSemester()" class="mt-2 px-4 py-1 bg-white text-green-900 font-bold rounded border border-green-700 hover:bg-green-100">Add Semester</button>
         </header>
+        
 
         <section class="semester-row">
             <div id="spring25" class="semester" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -137,7 +140,7 @@
                 <div class="course" id="STAT2122" draggable="true" ondragstart="drag(event)">STAT2122 - Intro to Prob & Stat</div>
             </div>
 
-            <div class="course-category-box" id="concentration-electives" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <!-- <div class="course-category-box" id="concentration-electives" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <h2>Concentration Electives</h2>
                 <div class="course" id="ITCS4145" draggable="true" ondragstart="drag(event)">ITCS4145 - Parallel Programming</div>
                 <div class="course" id="ITCS3166" draggable="true" ondragstart="drag(event)">ITCS3166 - Intro to Computer Networks</div>
@@ -146,7 +149,50 @@
                 <div class="course" id="ITIS3200" draggable="true" ondragstart="drag(event)">ITIS3200 - Intro to Info Security & Priv</div>
                 <div class="course" id="ITCS3153" draggable="true" ondragstart="drag(event)">ITCS3153 - Intro Artificial Intelligence</div>
                 <div class="course" id="ITIS3135" draggable="true" ondragstart="drag(event)">ITIS3135 - Web App Design and Development</div>
-            </div>
+            </div> -->
+
+            <!-- <section class="course-categories">
+                <div class="course-category-box" id="concentration-electives" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Concentration Electives - Choose 4</h2>
+                    <div class="course" id="ITCS4145" draggable="true" ondragstart="drag(event)">ITCS4145 - Parallel Programming</div>
+                    <div class="course" id="ITCS3166" draggable="true" ondragstart="drag(event)">ITCS3166 - Intro to Computer Networks</div>
+                    <div class="course" id="ITCS3112" draggable="true" ondragstart="drag(event)">ITCS3112 - Dsgn & Imp Object-oriented Sys</div>
+                    <div class="course" id="ITCS3160" draggable="true" ondragstart="drag(event)">ITCS3160 - Database Design & Implem</div>
+                    <div class="course" id="ITIS3200" draggable="true" ondragstart="drag(event)">ITIS3200 - Intro to Info Security & Priv</div>
+                    <div class="course" id="ITCS3153" draggable="true" ondragstart="drag(event)">ITCS3153 - Intro Artificial Intelligence</div>
+                    <div class="course" id="ITIS3135" draggable="true" ondragstart="drag(event)">ITIS3135 - Web App Design and Development</div>
+                </div> -->
+
+                <div class="course-category-box" id="concentration-required" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Concentration Required Course - Choose One</h2>
+                    <div class="course" id="ITCS3153" draggable="true" ondragstart="drag(event)">ITCS 3153 - Introduction to Artificial Intelligence</div>
+                    <div class="course" id="ITCS3156" draggable="true" ondragstart="drag(event)">ITCS 3156 - Introduction to Machine Learning</div>
+                </div>
+                
+                <div class="course-category-box" id="concentration-electives" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Concentration Elective Courses</h2>
+                    <div class="course" id="ITCS3120" draggable="true" ondragstart="drag(event)">ITCS 3120 - Introduction to Interactive Computer Graphics</div>
+                    <div class="course" id="ITCS3153-elec" draggable="true" ondragstart="drag(event)">ITCS 3153 - Introduction to Artificial Intelligence</div>
+                    <div class="course" id="ITCS3156-elec" draggable="true" ondragstart="drag(event)">ITCS 3156 - Introduction to Machine Learning</div>
+                    <div class="course" id="ITCS4101" draggable="true" ondragstart="drag(event)">ITCS 4101 - Introduction to Natural Language Processing</div>
+                    <div class="course" id="ITCS4114" draggable="true" ondragstart="drag(event)">ITCS 4114 - Real World Algorithms</div>
+                    <div class="course" id="ITCS4123" draggable="true" ondragstart="drag(event)">ITCS 4123 - Visualization and Visual Communication</div>
+                    <div class="course" id="ITCS4124" draggable="true" ondragstart="drag(event)">ITCS 4124 - Advanced 3D Computer Graphics</div>
+                    <div class="course" id="ITCS4150" draggable="true" ondragstart="drag(event)">ITCS 4150 - Mobile Robotics</div>
+                    <div class="course" id="ITCS4151" draggable="true" ondragstart="drag(event)">ITCS 4151 - Intelligent Robotics</div>
+                    <div class="course" id="ITCS4152" draggable="true" ondragstart="drag(event)">ITCS 4152 - Introduction to Computer Vision</div>
+                    <div class="course" id="ITCS4230" draggable="true" ondragstart="drag(event)">ITCS 4230 - Introduction to Game Design and Development</div>
+                    <div class="course" id="ITCS4231" draggable="true" ondragstart="drag(event)">ITCS 4231 - Advanced Game Design and Development</div>
+                    <div class="course" id="ITCS4236" draggable="true" ondragstart="drag(event)">ITCS 4236 - Artificial Intelligence for Computer Games</div>
+                </div>
+                
+            
+                <!-- <div class="course-category-box" id="concentration-required" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Concentration Required Course (pick one)</h2>
+                    <div class="course" id="ITCS4200" draggable="true" ondragstart="drag(event)">ITCS4200 - Emerging Technologies in Computing</div>
+                </div> -->
+            </section>
+            
         </section>
 
         <footer>
@@ -158,32 +204,48 @@
 
     <script>
         let confettiShown = false;
-
+        let semesterSequence = ["Spring", "Summer", "Fall"];
+        let lastSemesterIndex = 3; // index in your DOM
+        let currentYear = 2026;
+        let currentTermIndex = 0; // starts after Spring '26
+    
         function allowDrop(ev) {
             ev.preventDefault();
         }
-
+    
         function drag(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
         }
-
+    
         function drop(ev) {
-            ev.preventDefault();
-            const data = ev.dataTransfer.getData("text");
-            const dragged = document.getElementById(data);
-            if (!ev.target.classList.contains('course')) {
-                ev.target.appendChild(dragged);
-                updateProgress();
-            }
-        }
+    ev.preventDefault();
+    const data = ev.dataTransfer.getData("text");
+    const dragged = document.getElementById(data);
 
+    // Allow drop if the target is a semester OR course-category box
+    const dropTarget = ev.target.closest('.semester, .course-category-box');
+    if (dropTarget && !dropTarget.classList.contains('course')) {
+        dropTarget.appendChild(dragged);
+        updateProgress();
+    } else {
+        // Invalid drop location
+        const box = ev.target.closest('.course-category-box, .semester');
+        if (box) {
+            box.style.borderColor = "red";
+            setTimeout(() => box.style.borderColor = "var(--charlotte-green)", 1000);
+        }
+        alert("You can only place courses into semesters or course categories, not onto individual courses.");
+    }
+}
+
+    
         function updateProgress() {
             const placed = document.querySelectorAll('.semester .course').length;
             const total = document.querySelectorAll('.course').length;
             const percent = total > 0 ? Math.round((placed / total) * 100) : 0;
             document.querySelector('.progress-bar-fill').style.width = `${percent}%`;
             document.getElementById('progress-percent').textContent = `${percent}%`;
-
+    
             if (percent === 100 && !confettiShown) {
                 confetti();
                 confettiShown = true;
@@ -191,6 +253,33 @@
                 confettiShown = false;
             }
         }
+    
+        function addSemester() {
+            const row = document.querySelector('.semester-row');
+    
+            const newSemester = document.createElement('div');
+            newSemester.className = 'semester';
+            newSemester.setAttribute('ondrop', 'drop(event)');
+            newSemester.setAttribute('ondragover', 'allowDrop(event)');
+    
+            const term = semesterSequence[currentTermIndex];
+            const semTitle = `${term} '${String(currentYear).slice(-2)}`;
+            newSemester.id = `${term.toLowerCase()}${currentYear}`;
+    
+            const title = document.createElement('div');
+            title.className = 'semester-title';
+            title.innerText = semTitle;
+    
+            newSemester.appendChild(title);
+            row.appendChild(newSemester);
+    
+            currentTermIndex++;
+            if (currentTermIndex >= semesterSequence.length) {
+                currentTermIndex = 0;
+                currentYear++;
+            }
+        }
     </script>
+    
 </body>
 </html>
