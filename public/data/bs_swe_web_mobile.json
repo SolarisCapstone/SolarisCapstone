@@ -1,0 +1,70 @@
+{
+    "degree": "B.S. in Computer Science",
+    "concentration": "Web/Mobile Development and Software Engineering",
+    "requirements": {
+      "core_courses": [
+        "ITSC 1212",
+        "ITSC 1213",
+        "ITSC 1600 or ITSC 2600",
+        "ITSC 2175 or MATH 2165",
+        "ITSC 2214",
+        "ITSC 2181",
+        "ITSC 3146",
+        "ITSC 3155",
+        "ITSC 3688"
+      ],
+      "math_stats": [
+        "MATH 1241",
+        "MATH 1242",
+        "MATH 2164",
+        "STAT 2122"
+      ],
+      "capstone": [
+        "ITSC 4155",
+        "ITSC 4850",
+        "ITSC 4851",
+        "ITSC 4681",
+        "ITSC 4682",
+        "ITCS 4232",
+        "ITCS 4238",
+        "ITIS 4246",
+        "ITIS 4390",
+        "ITSC 4990",
+        "ITSC 4991"
+      ],
+      "outside_electives": {
+        "description": "15 credit hours of elective courses outside of ITSC/ITIS/ITCS prefix"
+      },
+      "concentration_requirements": {
+        "required": [
+          "ITIS 3135",
+          "ITIS 3310",
+          "ITSC 3160",
+          "ITIS 4221"
+        ],
+        "electives": {
+          "count": 3,
+          "course_pool": [
+            "ITCS 3112",
+            "ITIS 3130",
+            "ITIS 3300",
+            "ITIS 3320",
+            "ITIS 4166",
+            "ITIS 4180",
+            "ITIS 4340",
+            "ITIS 4350"
+          ]
+        },
+        "technical_electives": {
+          "count": 2,
+          "credit_hours": 6,
+          "allowed_prefixes": ["ITCS", "ITIS", "ITSC", "BINF"],
+          "excluded": ["ITSC 3688"]
+        }
+      }
+    },
+    "defaults": {
+      "credit_hours_per_course": 3
+    }
+  }
+  
