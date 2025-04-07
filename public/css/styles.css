@@ -1,0 +1,77 @@
+/* UNC Charlotte color scheme */
+:root {
+    --charlotte-green: #046A38;
+    --charlotte-light-green: #78BE21;
+    --charlotte-dark-gray: #1E1E1E;
+    --charlotte-light-gray: #F4F4F4;
+}
+
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--charlotte-dark-gray);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center Content */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h1, h2 {
+    color: var(--charlotte-green);
+}
+
+/* Buttons */
+button {
+    background-color: var(--charlotte-green);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--charlotte-light-green);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid var(--charlotte-light-gray);
+    text-align: center;
+}
+
+th {
+    background-color: var(--charlotte-green);
+    color: white;
+}
+
+td {
+    background-color: var(--charlotte-light-gray);
+}
+
+/* Dropdowns */
+select {
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid var(--charlotte-green);
+}
+
