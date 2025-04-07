@@ -1,47 +1,48 @@
-function normalizeConcentration(data) {
-    const sections = [];
-  
-    if (data.sections) sections.push(...data.sections);
-    if (data.coreCourses) sections.push({ label: "Core", courses: data.coreCourses });
-    if (data.mathStatsCourses) sections.push({ label: "Math", courses: data.mathStatsCourses });
-  
-    return sections;
-  }
-  
-  // Utility to display test result
-  function logResult(message, passed) {
-    const output = document.getElementById('testResults');
-    const result = document.createElement('div');
-    result.textContent = passed ? `✅ ${message}` : `❌ ${message}`;
-    result.style.color = passed ? 'lightgreen' : 'red';
-    result.style.fontWeight = 'bold';
-    output.appendChild(result);
-  }
-  
-  // Test 1: Empty input
-  function testEmptyInput() {
-    const result = normalizeConcentration({});
-    const passed = Array.isArray(result) && result.length === 0;
-    logResult("testEmptyInput - should return empty array", passed);
-  }
-  
-  // Test 2: Input with coreCourses
-  function testCoreCourseInput() {
-    const result = normalizeConcentration({
-      coreCourses: [{ code: "ITSC1212", title: "Intro to CS I" }]
+document.addEventListener("DOMContentLoaded", () => {
+  const resultsContainer = document.getElementById("test-output");
+
+  const test = (description, fn) => {
+    try {
+      fn();
+      const item = document.createElement("li");
+      item.textContent = `✅ ${description}`;
+      item.style.color = "green";
+      resultsContainer.appendChild(item);
+    } catch (error) {
+      const item = document.createElement("li");
+      item.textContent = `❌ ${description}: ${error.message}`;
+      item.style.color = "red";
+      resultsContainer.appendChild(item);
+    }
+  };
+
+  // Wait a short time after page load to let courses populate
+  setTimeout(() => {
+    // TEST: Did the JSON load and generate courses?
+    test("JSON data was loaded into core-classes", () => {
+      const coreBox = document.getElementById("core-classes");
+      const courses = coreBox.querySelectorAll(".course");
+      if (courses.length === 0) throw new Error("No core courses found.");
     });
-  
-    const passed =
-      result.length === 1 &&
-      result[0].label === "Core" &&
-      result[0].courses[0].code === "ITSC1212";
-  
-    logResult("testCoreCourseInput - should return core section with course", passed);
-  }
-  
-  // Run tests when DOM is ready
-  window.addEventListener("DOMContentLoaded", () => {
-    testEmptyInput();
-    testCoreCourseInput();
-  });
-  
+
+    // TEST: Are courses draggable?
+    test("Courses are draggable", () => {
+      const course = document.querySelector(".course");
+      if (!course || course.getAttribute("draggable") !== "true") {
+        throw new Error("Course not draggable.");
+      }
+    });
+
+    // TEST: All categories have at least one course
+    test("All course category boxes are populated", () => {
+      const boxes = ["core-classes", "math-classes", "concentration-required", "concentration-electives"];
+      boxes.forEach(id => {
+        const box = document.getElementById(id);
+        const courses = box.querySelectorAll(".course");
+        if (courses.length === 0) {
+          throw new Error(`No courses in ${id}`);
+        }
+      });
+    });
+  }, 1000); // Wait 1 second for JSON to load and render
+});
