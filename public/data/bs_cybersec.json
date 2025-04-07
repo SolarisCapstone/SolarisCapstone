@@ -1,0 +1,66 @@
+{
+    "degree": "Computer Science, Cybersecurity Concentration, B.S.",
+    "coreCourses": [
+        { "code": "ITSC 1212", "title": "Introduction to Computer Science I", "credits": 3 },
+        { "code": "ITSC 1213", "title": "Introduction to Computer Science II", "credits": 3 },
+        { "code": "ITSC 1600", "title": "Computing Professionals", "credits": 1 },
+        { "code": "ITSC 2600", "title": "Computing Professionals (Alt Option)", "credits": 1 },
+        { "code": "ITSC 2175", "title": "Logic and Algorithms", "credits": 3 },
+        { "code": "MATH 2165", "title": "Discrete Structures (Alt Option)", "credits": 3 },
+        { "code": "ITSC 2214", "title": "Data Structures and Algorithms", "credits": 3 },
+        { "code": "ITSC 2181", "title": "Introduction to Computer Systems", "credits": 3 },
+        { "code": "ITSC 3146", "title": "Operating Systems and Networking", "credits": 3 },
+        { "code": "ITSC 3155", "title": "Software Engineering", "credits": 3 },
+        { "code": "ITSC 3688", "title": "Computers and Their Impact on Society", "credits": 3 }
+      ],
+      "mathStatsCourses": [
+        { "code": "MATH 1241", "title": "Calculus I", "credits": 3 },
+        { "code": "MATH 1242", "title": "Calculus II", "credits": 3 },
+        { "code": "MATH 2164", "title": "Matrices and Linear Algebra", "credits": 3 },
+        { "code": "STAT 2122", "title": "Intro to Probability and Statistics", "credits": 3 }
+      ],
+      "capstoneCourses": [
+        { "choices": ["ITSC 4155", "ITSC 4232", "ITSC 4681", "ITSC 4682", "ITSC 4750", "ITSC 4850", "ITSC 4851", "ITSC 4990", "ITSC 4991", "ITIS 4390", "ITIS 4246"], "credits": 3 }
+      ],
+      "outsideElectives": {
+ 
+ 
+        "note": "15 credits in courses outside of ITIS/ITCS/ITSC",
+        "credits_required": 15
+      },
+      "concentration": {
+        "required": [
+ 
+ 
+          { "code": "ITCS 3160", "title": "Database Design and Implementation", "credits": 3 },
+          { "code": "ITIS 3135", "title": "Web-Based Application Design and Development", "credits": 3 },
+          { "code": "ITIS 3200", "title": "Intro to Info Security and Privacy", "credits": 3 },
+          { "code": "ITIS 3246", "title": "IT Infrastructure and Security", "credits": 3 },
+          { "code": "ITIS 4166", "title": "Network-Based App Development", "credits": 3 },
+          { "code": "ITIS 4221", "title": "Secure Programming and Pen Testing", "credits": 3 },
+          { "code": "ITIS 4250", "title": "Computer Forensics", "credits": 3 },
+          {
+            "code": "ITIS 4260/4214/4261", "title": "Usable Security and Privacy / Intro to Security Analysis / Intro to Secured Cloud",
+            "credits": 3
+          }
+        ],
+ 
+ 
+        "electives": {
+          "options": [
+            "ITCS 3120", "ITCS 3153", "ITCS 4101", "ITCS 4114", "ITCS 4123", "ITCS 4124", "ITCS 4150",
+            "ITCS 4151", "ITCS 4152", "ITCS 4230", "ITCS 4231", "ITCS 4236"
+          ],
+          "choose": 4,
+          "creditsEach": 3
+        },
+ 
+ 
+        "technical_electives": {
+          "note": "Choose 3 credits in ITCS/ITIS/ITSC/BINF 3xxx or 4xxx (except ITSC 3688)",
+          "credits_required": 3
+        }
+      }
+    }
+
+ 
