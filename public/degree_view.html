@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Degree Plan Viewer</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     /* Degree View Layout - Box-based */
@@ -52,30 +54,33 @@
     }
   </style>
 </head>
-<body>
+<body class="bg-green-900 text-white flex flex-col min-h-screen">
 
   <!-- Dynamic Header -->
   <header>
     <div data-include="components/header.html"></div>
   </header>
 
-  <div class="container">
-    <h1>Choose a Concentration</h1>
-    <select id="degreeSelect">
-      <option value="">-- Select Concentration --</option>
-      <option value="ba_ai_gaming_robo">AI, Robotics, and Gaming (B.S.)</option>
-      <option value="ba_bioinfo">Bioinformatics (B.A.)</option>
-      <option value="bs_bioinfo">Bioinformatics (B.S.)</option>
-      <option value="bs_datascience">Data Science (B.S.)</option>
-      <option value="bs_cybersec">Cybersecurity (B.S.)</option>
-      <option value="bs_swe_web_mobile">Web/Mobile Dev & SWE (B.S.)</option>
-      <option value="bs_software_systems">Systems and Networks (B.S.)</option>
-      <option value="ba_HCI">Human-Computer Interaction (B.A.)</option>
-      <option value="ba_it">Information Technology (B.A.)</option>
-    </select>
+  <!-- Page Content -->
+  <main class="flex-grow">
+    <div class="container">
+      <h1>Choose a Concentration</h1>
+      <select id="degreeSelect">
+        <option value="">-- Select Concentration --</option>
+        <option value="ba_ai_gaming_robo">AI, Robotics, and Gaming (B.S.)</option>
+        <option value="ba_bioinfo">Bioinformatics (B.A.)</option>
+        <option value="bs_bioinfo">Bioinformatics (B.S.)</option>
+        <option value="bs_datascience">Data Science (B.S.)</option>
+        <option value="bs_cybersec">Cybersecurity (B.S.)</option>
+        <option value="bs_swe_web_mobile">Web/Mobile Dev & SWE (B.S.)</option>
+        <option value="bs_software_systems">Systems and Networks (B.S.)</option>
+        <option value="ba_HCI">Human-Computer Interaction (B.A.)</option>
+        <option value="ba_it">Information Technology (B.A.)</option>
+      </select>
 
-    <div id="degreeOutput" style="margin-top: 30px;"></div>
-  </div>
+      <div id="degreeOutput" style="margin-top: 30px;"></div>
+    </div>
+  </main>
 
   <!-- Dynamic Footer -->
   <footer>
@@ -86,7 +91,10 @@
   <script src="js/courses.js"></script>
 
   <!-- Script to load header/footer dynamically -->
-  <script src="https://cdn.jsdelivr.net/gh/paul-browne/HTMLInclude/htmlinclude.min.js"></script>
+  <script src="js/HTMLInclude.min.js"></script>
+
+  <!-- Add at the bottom of degree_view.html or a new page -->
+<script src="js/test.js"></script>
 
 </body>
 </html>
