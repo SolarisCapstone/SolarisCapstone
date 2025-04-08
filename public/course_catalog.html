@@ -9,6 +9,12 @@
 </head>
 <body class="bg-green-900 text-white p-6">
 
+    <!-- Dynamic Header -->
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+
     <div class="max-w-5xl mx-auto bg-white text-black p-6 rounded shadow-md">
         <h1 class="text-2xl font-bold text-green-700">UNC Charlotte CS Degree Planner</h1>
         <p class="text-gray-600">Below is the list of all required core courses for the Computer Science program.</p>
@@ -93,6 +99,14 @@
         })
         .catch(error => console.error('Error fetching data:', error));
 </script>
+
+ <!-- Dynamic Footer -->
+ <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <!-- Header/Footer include loader -->
+  <script src="js/HTMLInclude.min.js"></script>
 
 </body>
 </html>

@@ -75,3 +75,7 @@ select {
     border: 1px solid var(--charlotte-green);
 }
 
+/* Header placeholder styling */
+header h1, header h2 {
+    color: #e6f2ea; /* soft, light green-tinted white for contrast */
+}
