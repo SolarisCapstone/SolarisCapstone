@@ -75,11 +75,14 @@ select {
     border: 1px solid var(--charlotte-green);
 }
 
+<<<<<<< HEAD
 /* Header placeholder styling */
 header h1, header h2 {
     color: #e6f2ea; /* soft, light green-tinted white for contrast */
 }
 
+=======
+>>>>>>> 18f7bf03fe1a1237952b89c526455cf662bd4ec0
 /* Login & Signup Page Styles */
 .login-page {
   background-color:var(--charlotte-green);
@@ -153,6 +156,7 @@ header h1, header h2 {
   text-decoration: underline;
 }
 
+<<<<<<< HEAD
 html, body {
   height: 100%;
   margin: 0;
@@ -166,3 +170,6 @@ body.login-page {
 footer {
   margin-top: auto;
 }
+=======
+
+>>>>>>> 18f7bf03fe1a1237952b89c526455cf662bd4ec0
