@@ -10,9 +10,9 @@
 <body class="bg-green-900 text-white p-6">
 
     <!-- Dynamic Header -->
-    <header>
-        <div data-include="components/header.html"></div>
-    </header>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
 
 
     <div class="max-w-5xl mx-auto bg-white text-black p-6 rounded shadow-md">
@@ -100,12 +100,12 @@
         .catch(error => console.error('Error fetching data:', error));
 </script>
 
- <!-- Dynamic Footer -->
- <footer>
+<!-- Dynamic Footer -->
+<footer>
     <div data-include="components/footer.html"></div>
   </footer>
 
-  <!-- Header/Footer include loader -->
+  <!-- Required for dynamic header/footer loading -->
   <script src="js/HTMLInclude.min.js"></script>
 
 </body>
