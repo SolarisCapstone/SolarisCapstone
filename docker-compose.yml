@@ -13,15 +13,15 @@ services:
       DB_HOST: db
       DB_USER: root
       DB_PASSWORD: password
-      DB_NAME: planner
+      DB_NAME: SolarisDatabase
 
   db:
     image: mysql:8
+    restart: always
     ports:
       - "3306:3306"
-    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: planner
+      MYSQL_DATABASE: SolarisDatabase
     volumes:
       - ./database/database.sql:/docker-entrypoint-initdb.d/init.sql
