@@ -20,7 +20,7 @@ RUN cp public/about.html public/index.html
 EXPOSE 3000
 
 # Start the server using nodemon (good for local development + auto reload)
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
 
 # ================================
 # HOW TO USE THIS DOCKERFILE
