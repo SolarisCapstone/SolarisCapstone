@@ -1,65 +1,147 @@
 {
-    "degree": "Computer Science, Human-Computer Interaction Concentration, B.A.",
-    "total_credit_hours": 120,
-    "sections": [
-      {
-        "label": "Core Courses",
-        "required_credits": 0,
-        "courses": [
-          { "code": "ITSC 1212", "title": "Introduction to Computer Science I", "credits": 4, "prerequisites": [] },
-          { "code": "ITSC 1213", "title": "Introduction to Computer Science II", "credits": 4, "prerequisites": ["ITSC 1212"] },
-          { "code": "ITSC 1600", "title": "Computing Professionals", "credits": 2, "prerequisites": [] },
-          { "code": "ITSC 2600", "title": "Computer Science Program, Identity, Career", "credits": 2, "prerequisites": [] },
-          { "code": "ITSC 2175", "title": "Logic and Algorithms", "credits": 3, "prerequisites": ["ITSC 1213"] },
-          { "code": "MATH 2165", "title": "Introduction to Discrete Structures", "credits": 3, "prerequisites": [] },
-          { "code": "ITSC 2214", "title": "Data Structures and Algorithms", "credits": 3, "prerequisites": ["ITSC 2175"] },
-          { "code": "ITSC 3688", "title": "Computers and Their Impact on Society", "credits": 3, "prerequisites": [] }
-        ]
-      },
-      {
-        "label": "Mathematics and Statistics Courses",
-        "required_credits": 6,
-        "courses": [
-          { "code": "MATH 1241", "title": "Calculus I", "credits": 3, "prerequisites": [] },
-          { "code": "STAT 1220", "title": "Elements of Statistics I", "credits": 3, "prerequisites": [] },
-          { "code": "STAT 2223", "title": "Elements of Statistics II", "credits": 3, "prerequisites": ["STAT 1220"] }
-        ]
-      },
-      {
-        "label": "Capstone Course",
-        "required_credits": 3,
-        "options": [
-          "ITSC 4155", "ITSC 4681", "ITSC 4682", "ITSC 4750",
-          "ITSC 4850", "ITSC 4851", "ITSC 4990", "ITSC 4991",
-          "ITIS 4246", "ITIS 4390", "ITCS 4232"
-        ],
-        "note": "Choose 1 course from the listed capstone options."
-      },
-      {
-        "label": "Concentration Requirements",
-        "required_credits": 12,
-        "courses": [
-          { "code": "ITIS 3130", "title": "Human-Centered Design", "credits": 3, "prerequisites": [] },
-          { "code": "ITIS 3135", "title": "Web-Based Application Design and Development", "credits": 3, "prerequisites": [] },
-          { "code": "ITIS 3140", "title": "User Experience Methods", "credits": 3, "prerequisites": [] },
-          { "code": "ITIS 4350", "title": "Rapid Prototyping", "credits": 3, "prerequisites": [] }
-        ]
-      },
-      {
-        "label": "Concentration Core Electives",
-        "required_credits": 6,
-        "note": "Choose 2 classes from: ITIS 3216, ITIS 4214, ITIS 4353, ITIS 4355, ITIS 4358, ITIS 4360"
-      },
-      {
-        "label": "Concentration Technical Electives",
-        "required_credits": 9,
-        "note": "9 credits from upper-division ITCS/ITSC/ITIS/BINF courses, excluding: ITCS 3130, 3135, ITIS 3130, 3135, 3140, 3216, 4214, 4350, 4353, 4355, 4358, 4360, ITSC 3688"
-      },
-      {
-        "label": "Elective Courses in Outside Disciplines",
-        "required_credits": 15,
-        "note": "15 credit hours from courses that are not ITIS, ITSC, or ITCS. General education or minor courses recommended."
-      }
-    ]
-  }
-  
+  "degree": "Computer Science, Human-Computer Interaction Concentration, B.A.",
+  "total_credit_hours": 120,
+  "sections": [
+    {
+      "label": "Core Courses",
+      "required_credits": 0,
+      "courses": [
+        {
+          "code": "ITSC 1212",
+          "title": "Introduction to Computer Science I",
+          "credits": 4,
+          "prerequisites": []
+        },
+        {
+          "code": "ITSC 1213",
+          "title": "Introduction to Computer Science II",
+          "credits": 4,
+          "prerequisites": ["ITSC 1212"]
+        },
+        {
+          "code": "ITSC 1600",
+          "title": "Computing Professionals",
+          "credits": 2,
+          "prerequisites": []
+        },
+        {
+          "code": "ITSC 2600",
+          "title": "Computer Science Program, Identity, Career",
+          "credits": 2,
+          "prerequisites": []
+        },
+        {
+          "code": "ITSC 2175",
+          "title": "Logic and Algorithms",
+          "credits": 3,
+          "prerequisites": ["ITSC 1213"]
+        },
+        {
+          "code": "MATH 2165",
+          "title": "Introduction to Discrete Structures",
+          "credits": 3,
+          "prerequisites": []
+        },
+        {
+          "code": "ITSC 2214",
+          "title": "Data Structures and Algorithms",
+          "credits": 3,
+          "prerequisites": ["ITSC 2175"]
+        },
+        {
+          "code": "ITSC 3688",
+          "title": "Computers and Their Impact on Society",
+          "credits": 3,
+          "prerequisites": []
+        }
+      ]
+    },
+    {
+      "label": "Mathematics and Statistics Courses",
+      "required_credits": 6,
+      "courses": [
+        {
+          "code": "MATH 1241",
+          "title": "Calculus I",
+          "credits": 3,
+          "prerequisites": []
+        },
+        {
+          "code": "STAT 1220",
+          "title": "Elements of Statistics I",
+          "credits": 3,
+          "prerequisites": []
+        },
+        {
+          "code": "STAT 2223",
+          "title": "Elements of Statistics II",
+          "credits": 3,
+          "prerequisites": ["STAT 1220"]
+        }
+      ]
+    },
+    {
+      "label": "Capstone Course",
+      "required_credits": 3,
+      "options": [
+        "ITSC 4155",
+        "ITSC 4681",
+        "ITSC 4682",
+        "ITSC 4750",
+        "ITSC 4850",
+        "ITSC 4851",
+        "ITSC 4990",
+        "ITSC 4991",
+        "ITIS 4246",
+        "ITIS 4390",
+        "ITCS 4232"
+      ],
+      "note": "Choose 1 course from the listed capstone options."
+    },
+    {
+      "label": "Concentration Requirements",
+      "required_credits": 12,
+      "courses": [
+        {
+          "code": "ITIS 3130",
+          "title": "Human-Centered Design",
+          "credits": 3,
+          "prerequisites": []
+        },
+        {
+          "code": "ITIS 3135",
+          "title": "Web-Based Application Design and Development",
+          "credits": 3,
+          "prerequisites": []
+        },
+        {
+          "code": "ITIS 3140",
+          "title": "User Experience Methods",
+          "credits": 3,
+          "prerequisites": []
+        },
+        {
+          "code": "ITIS 4350",
+          "title": "Rapid Prototyping",
+          "credits": 3,
+          "prerequisites": []
+        }
+      ]
+    },
+    {
+      "label": "Concentration Core Electives",
+      "required_credits": 6,
+      "note": "Choose 2 classes from: ITIS 3216, ITIS 4214, ITIS 4353, ITIS 4355, ITIS 4358, ITIS 4360"
+    },
+    {
+      "label": "Concentration Technical Electives",
+      "required_credits": 9,
+      "note": "9 credits from upper-division ITCS/ITSC/ITIS/BINF courses, excluding: ITCS 3130, 3135, ITIS 3130, 3135, 3140, 3216, 4214, 4350, 4353, 4355, 4358, 4360, ITSC 3688"
+    },
+    {
+      "label": "Elective Courses in Outside Disciplines",
+      "required_credits": 15,
+      "note": "15 credit hours from courses that are not ITIS, ITSC, or ITCS. General education or minor courses recommended."
+    }
+  ]
+}

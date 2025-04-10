@@ -1,100 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Degree Plan Viewer</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Degree Plan Viewer</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    /* Degree View Layout - Box-based */
-    #degreeOutput {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 20px;
-      justify-content: flex-start;
-    }
+    <style>
+      /* Degree View Layout - Box-based */
+      #degreeOutput {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 20px;
+        justify-content: flex-start;
+      }
 
-    .section {
-      border: 2px solid var(--charlotte-green);
-      background-color: white;
-      color: black;
-      padding: 10px;
-      border-radius: 8px;
-      width: 280px;
-      min-height: 150px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      flex-shrink: 0;
-    }
+      .section {
+        border: 2px solid var(--charlotte-green);
+        background-color: white;
+        color: black;
+        padding: 10px;
+        border-radius: 8px;
+        width: 280px;
+        min-height: 150px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        flex-shrink: 0;
+      }
 
-    .section h3 {
-      margin-top: 0;
-      color: var(--charlotte-green);
-      font-size: 16px;
-      border-bottom: 1px solid var(--charlotte-green);
-      padding-bottom: 4px;
-      margin-bottom: 8px;
-    }
+      .section h3 {
+        margin-top: 0;
+        color: var(--charlotte-green);
+        font-size: 16px;
+        border-bottom: 1px solid var(--charlotte-green);
+        padding-bottom: 4px;
+        margin-bottom: 8px;
+      }
 
-    .section ul {
-      padding: 0;
-      margin: 0;
-    }
+      .section ul {
+        padding: 0;
+        margin: 0;
+      }
 
-    .section li {
-      list-style: none;
-      background-color: var(--charlotte-light-gray);
-      border: 1px solid var(--charlotte-dark-gray);
-      padding: 6px;
-      margin: 4px 0;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body class="bg-green-900 text-white flex flex-col min-h-screen">
+      .section li {
+        list-style: none;
+        background-color: var(--charlotte-light-gray);
+        border: 1px solid var(--charlotte-dark-gray);
+        padding: 6px;
+        margin: 4px 0;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body class="bg-green-900 text-white flex flex-col min-h-screen">
+    <!-- Dynamic Header -->
+    <header>
+      <div data-include="components/header.html"></div>
+    </header>
 
-  <!-- Dynamic Header -->
-  <header>
-    <div data-include="components/header.html"></div>
-  </header>
+    <!-- Page Content -->
+    <main class="flex-grow">
+      <div class="container">
+        <h1>Choose a Concentration</h1>
+        <select id="degreeSelect">
+          <option value="">-- Select Concentration --</option>
+          <option value="ba_ai_gaming_robo">
+            AI, Robotics, and Gaming (B.S.)
+          </option>
+          <option value="ba_bioinfo">Bioinformatics (B.A.)</option>
+          <option value="bs_bioinfo">Bioinformatics (B.S.)</option>
+          <option value="bs_datascience">Data Science (B.S.)</option>
+          <option value="bs_cybersec">Cybersecurity (B.S.)</option>
+          <option value="bs_swe_web_mobile">Web/Mobile Dev & SWE (B.S.)</option>
+          <option value="bs_software_systems">
+            Systems and Networks (B.S.)
+          </option>
+          <option value="ba_HCI">Human-Computer Interaction (B.A.)</option>
+          <option value="ba_it">Information Technology (B.A.)</option>
+        </select>
 
-  <!-- Page Content -->
-  <main class="flex-grow">
-    <div class="container">
-      <h1>Choose a Concentration</h1>
-      <select id="degreeSelect">
-        <option value="">-- Select Concentration --</option>
-        <option value="ba_ai_gaming_robo">AI, Robotics, and Gaming (B.S.)</option>
-        <option value="ba_bioinfo">Bioinformatics (B.A.)</option>
-        <option value="bs_bioinfo">Bioinformatics (B.S.)</option>
-        <option value="bs_datascience">Data Science (B.S.)</option>
-        <option value="bs_cybersec">Cybersecurity (B.S.)</option>
-        <option value="bs_swe_web_mobile">Web/Mobile Dev & SWE (B.S.)</option>
-        <option value="bs_software_systems">Systems and Networks (B.S.)</option>
-        <option value="ba_HCI">Human-Computer Interaction (B.A.)</option>
-        <option value="ba_it">Information Technology (B.A.)</option>
-      </select>
+        <div id="degreeOutput" style="margin-top: 30px"></div>
+      </div>
+    </main>
 
-      <div id="degreeOutput" style="margin-top: 30px;"></div>
-    </div>
-  </main>
+    <!-- Dynamic Footer -->
+    <footer>
+      <div data-include="components/footer.html"></div>
+    </footer>
 
-  <!-- Dynamic Footer -->
-  <footer>
-    <div data-include="components/footer.html"></div>
-  </footer>
+    <!-- Required for dynamic header/footer loading -->
+    <script src="js/HTMLInclude.min.js"></script>
 
-  <!-- Main logic script for loading degrees -->
-  <script src="js/courses.js"></script>
+    <!-- Main logic script for loading degrees -->
+    <script src="js/courses.js"></script>
 
-  <!-- Script to load header/footer dynamically -->
-  <script src="js/HTMLInclude.min.js"></script>
-
-  <!-- Add at the bottom of degree_view.html or a new page -->
-<script src="js/test.js"></script>
-
-</body>
+    <!-- Add at the bottom of degree_view.html or a new page -->
+    <script src="js/test.js"></script>
+  </body>
 </html>

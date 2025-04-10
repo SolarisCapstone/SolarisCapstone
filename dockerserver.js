@@ -4,11 +4,18 @@ const path = require("path");
 
 const app = express();
 
+// const db = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'username',
+//     password: 'password',
+//     database: 'SolarisDatabase'
+// });
+
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "username",
-  password: "password",
-  database: "SolarisDatabase",
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "",
+  database: process.env.DB_NAME || "SolarisDatabase",
 });
 
 db.connect((err) => {
@@ -65,6 +72,8 @@ app.get("/api/catalogcourses", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log(`Server is running at http://localhost:3000`);
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
