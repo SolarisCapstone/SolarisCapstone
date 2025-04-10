@@ -35,8 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // TEST: All categories have at least one course
     test("All course category boxes are populated", () => {
-      const boxes = ["core-classes", "math-classes", "concentration-required", "concentration-electives"];
-      boxes.forEach(id => {
+      const boxes = [
+        "core-classes",
+        "math-classes",
+        "concentration-required",
+        "concentration-electives",
+      ];
+      boxes.forEach((id) => {
         const box = document.getElementById(id);
         const courses = box.querySelectorAll(".course");
         if (courses.length === 0) {

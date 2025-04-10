@@ -1,49 +1,131 @@
 {
-    "concentration": "Computer Science, Information Technology Concentration, B.A.",
-    "totalCredits": 120,
-    "requirements": {
-      "coreCourses": [
-        { "course": "ITSC 1212", "title": "Introduction to Computer Science I", "credits": 3, "prerequisites": [] },
-        { "course": "ITSC 1213", "title": "Introduction to Computer Science II", "credits": 3, "prerequisites": ["ITSC 1212"] },
-        { "course": "ITSC 1600", "title": "Computing Professionals", "credits": 1, "prerequisites": [] },
-        { "course": "ITSC 2600", "title": "Computer Science Program, Identity, Career", "credits": 1, "prerequisites": [] },
-        { "course": "ITSC 2175", "title": "Logic and Algorithms", "credits": 3, "prerequisites": ["ITSC 1213"] },
-        { "course": "MATH 2165", "title": "Intro to Discrete Structures", "credits": 3, "prerequisites": [] },
-        { "course": "ITSC 2214", "title": "Data Structures and Algorithms", "credits": 3, "prerequisites": ["ITSC 2175"] },
-        { "course": "ITSC 3688", "title": "Computers and Their Impact on Society", "credits": 3, "prerequisites": [] }
-      ],
-      "mathAndStats": [
-        { "course": "MATH 1241", "title": "Calculus I", "credits": 3, "prerequisites": [] },
-        { "course": "STAT 1220", "title": "Elements of Statistics I", "credits": 3, "prerequisites": [] },
-        { "course": "STAT 2223", "title": "Elements of Statistics II", "credits": 3, "prerequisites": ["STAT 1220"] }
-      ],
-      "capstone": [
+  "concentration": "Computer Science, Information Technology Concentration, B.A.",
+  "totalCredits": 120,
+  "requirements": {
+    "coreCourses": [
+      {
+        "course": "ITSC 1212",
+        "title": "Introduction to Computer Science I",
+        "credits": 3,
+        "prerequisites": []
+      },
+      {
+        "course": "ITSC 1213",
+        "title": "Introduction to Computer Science II",
+        "credits": 3,
+        "prerequisites": ["ITSC 1212"]
+      },
+      {
+        "course": "ITSC 1600",
+        "title": "Computing Professionals",
+        "credits": 1,
+        "prerequisites": []
+      },
+      {
+        "course": "ITSC 2600",
+        "title": "Computer Science Program, Identity, Career",
+        "credits": 1,
+        "prerequisites": []
+      },
+      {
+        "course": "ITSC 2175",
+        "title": "Logic and Algorithms",
+        "credits": 3,
+        "prerequisites": ["ITSC 1213"]
+      },
+      {
+        "course": "MATH 2165",
+        "title": "Intro to Discrete Structures",
+        "credits": 3,
+        "prerequisites": []
+      },
+      {
+        "course": "ITSC 2214",
+        "title": "Data Structures and Algorithms",
+        "credits": 3,
+        "prerequisites": ["ITSC 2175"]
+      },
+      {
+        "course": "ITSC 3688",
+        "title": "Computers and Their Impact on Society",
+        "credits": 3,
+        "prerequisites": []
+      }
+    ],
+    "mathAndStats": [
+      {
+        "course": "MATH 1241",
+        "title": "Calculus I",
+        "credits": 3,
+        "prerequisites": []
+      },
+      {
+        "course": "STAT 1220",
+        "title": "Elements of Statistics I",
+        "credits": 3,
+        "prerequisites": []
+      },
+      {
+        "course": "STAT 2223",
+        "title": "Elements of Statistics II",
+        "credits": 3,
+        "prerequisites": ["STAT 1220"]
+      }
+    ],
+    "capstone": [
+      {
+        "options": [
+          "ITSC 4155",
+          "ITSC 4681",
+          "ITSC 4682",
+          "ITSC 4750",
+          "ITSC 4850",
+          "ITSC 4851",
+          "ITSC 4990",
+          "ITSC 4991",
+          "ITIS 4390",
+          "ITIS 4246",
+          "ITCS 4232"
+        ],
+        "credits": 3
+      }
+    ],
+    "outsideElectives": {
+      "description": "15 credits from non-ITSC/ITIS/ITCS prefix courses",
+      "credits": 15
+    },
+    "concentrationRequirements": {
+      "requiredCourses": [
         {
-          "options": [
-            "ITSC 4155", "ITSC 4681", "ITSC 4682", "ITSC 4750",
-            "ITSC 4850", "ITSC 4851", "ITSC 4990", "ITSC 4991",
-            "ITIS 4390", "ITIS 4246", "ITCS 4232"
-          ],
+          "course": "ITIS 3130",
+          "title": "Human-Centered Design",
+          "credits": 3
+        },
+        {
+          "course": "ITIS 3135",
+          "title": "Web-Based Application Design and Development",
+          "credits": 3
+        },
+        {
+          "course": "ITIS 3200",
+          "title": "Introduction to Information Security and Privacy",
+          "credits": 3
+        },
+        {
+          "course": "ITIS 3300",
+          "title": "Software Requirements and Project Management",
+          "credits": 3
+        },
+        {
+          "course": "ITCS 3160",
+          "title": "Database Design and Implementation",
           "credits": 3
         }
       ],
-      "outsideElectives": {
-        "description": "15 credits from non-ITSC/ITIS/ITCS prefix courses",
-        "credits": 15
-      },
-      "concentrationRequirements": {
-        "requiredCourses": [
-          { "course": "ITIS 3130", "title": "Human-Centered Design", "credits": 3 },
-          { "course": "ITIS 3135", "title": "Web-Based Application Design and Development", "credits": 3 },
-          { "course": "ITIS 3200", "title": "Introduction to Information Security and Privacy", "credits": 3 },
-          { "course": "ITIS 3300", "title": "Software Requirements and Project Management", "credits": 3 },
-          { "course": "ITCS 3160", "title": "Database Design and Implementation", "credits": 3 }
-        ],
-        "technicalElectives": {
-          "creditsRequired": 18,
-          "options": "Any ITCS 3xxx/4xxx, ITIS 3xxx/4xxx, ITSC 3xxx/4xxx, BINF 3xxx/4xxx EXCEPT ITSC 3688"
-        }
+      "technicalElectives": {
+        "creditsRequired": 18,
+        "options": "Any ITCS 3xxx/4xxx, ITIS 3xxx/4xxx, ITSC 3xxx/4xxx, BINF 3xxx/4xxx EXCEPT ITSC 3688"
       }
     }
   }
-  
+}
