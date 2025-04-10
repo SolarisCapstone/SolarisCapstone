@@ -19,7 +19,7 @@ RUN cp public/about.html public/index.html
 # Expose port 3000 so we can access the app from outside the container
 EXPOSE 3000
 
-# Start the server using nodemon (good for local development + auto reload)
+# Start the server using npm start (see package.json for script)
 CMD ["npm", "start"]
 
 # ================================
@@ -38,26 +38,24 @@ CMD ["npm", "start"]
 #
 # NOTES:
 # - The app will launch with about.html (renamed as index.html) as homepage.
-# - Nodemon allows auto-reload when files change (dev-friendly).
-# - You'll need to install nodemon locally since it's not in version control:
+# - You'll need to install nodemon locally if you use it in dev:
 #       npm install --save-dev nodemon
-#
-# - For full hot reload (with file watching):
+# - For live local editing (hot-reloading):
 #       docker run -p 3000:3000 -v ${PWD}:/app ninertrack-app
 #
 # ========== Dev Tips & Commands ==========
 
-# ✅ For hot-reload while editing code locally (mount your folder inside container):
+#  Hot reload while editing:
 #    docker run -p 3000:3000 -v ${PWD}:/app ninertrack-app
 
-# 📦 View running containers:
+#  See running containers:
 #    docker ps
 
-# 🛑 Stop a running container:
+#  Stop a running container:
 #    docker stop <container_id>
 
-# ❌ Remove a stopped container:
+#  Remove a stopped container:
 #    docker rm <container_id>
 
-# 🧼 Prune ALL stopped containers:
+# Prune all stopped containers:
 #    docker container prune
