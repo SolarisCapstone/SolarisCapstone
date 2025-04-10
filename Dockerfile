@@ -24,7 +24,7 @@ CMD ["npm", "run", "dev"]
 
 # ================================
 # HOW TO USE THIS DOCKERFILE
-# (Make sure Docker Desktop is running!)
+# (Make sure Docker Desktop is running)
 #
 # 1. Build the Docker image:
 #    docker build -t ninertrack-app .
@@ -33,7 +33,7 @@ CMD ["npm", "run", "dev"]
 # 2. Run the Docker container:
 #    docker run -p 3000:3000 ninertrack-app
 #
-# 3. Open your browser:
+# 3. Open your browser (or just click the link in terminal):
 #    http://localhost:3000
 #
 # NOTES:
@@ -45,4 +45,19 @@ CMD ["npm", "run", "dev"]
 # - For full hot reload (with file watching):
 #       docker run -p 3000:3000 -v ${PWD}:/app ninertrack-app
 #
-# ================================
+# ========== Dev Tips & Commands ==========
+
+# ✅ For hot-reload while editing code locally (mount your folder inside container):
+#    docker run -p 3000:3000 -v ${PWD}:/app ninertrack-app
+
+# 📦 View running containers:
+#    docker ps
+
+# 🛑 Stop a running container:
+#    docker stop <container_id>
+
+# ❌ Remove a stopped container:
+#    docker rm <container_id>
+
+# 🧼 Prune ALL stopped containers:
+#    docker container prune
