@@ -12,25 +12,24 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // MySQL connection
-const db = mysql.createConnection({
+const db =mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Solaris12345!", // <<replace this with your real password
+  password: "Solaris12345!", //themysqlpassword that I made
   database: "login_system",
 });
-
 db.connect(err => {
   if (err) {
     console.error("Database connection failed:", err);
   } else {
-    console.log("Connected to MySQL ✅");
+    console.log("Connected to MySQL login-system");
   }
 });
 
-// Signup route
-app.post("/signup", (req, res) => {
+// This is the route for the signup-vaibhav
+app.post("/signup", (req,res) => {
   const { username, password } = req.body;
-  const sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+  const sql="INSERT INTO users (username, password) VALUES (?, ?)";
   db.query(sql, [username, password], (err, result) => {
     if (err) {
       if (err.code === "ER_DUP_ENTRY") {
@@ -42,7 +41,7 @@ app.post("/signup", (req, res) => {
   });
 });
 
-// Login route
+// And this is the route for the login-vaibhav
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
   const sql = "SELECT * FROM users WHERE username = ? AND password = ?";
@@ -55,7 +54,7 @@ app.post("/login", (req, res) => {
     }
   });
 });
-
+//server and port stuff ig
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
