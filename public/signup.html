@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Signup</title>
-    <link rel="stylesheet" href="/public/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <script>
       function validateForm() {
         const password = document.getElementById("password").value;
@@ -23,7 +23,7 @@
 
     <div class="login-box">
       <h2>Sign up</h2>
-      <form method="POST" action="/signup" onsubmit="return validateForm()">
+      <form id="signup-form">
         <label
           >Username:
           <input name="username" required />
@@ -38,7 +38,7 @@
         </label>
         <button type="submit">Sign Up</button>
       </form>
-      <a href="/public/login.html">Already have an account? Instead Log in</a>
+      <a href="/login.html">Already have an account? Instead Log in</a>
     </div>
 
     <!-- Andrew Dynamic Footer -->
@@ -48,5 +48,33 @@
 
     <!-- Andrew Script to load dynamic components -->
     <script src="js/HTMLInclude.min.js"></script>
+
+    <!-- Script for signup -->
+
+    <script>
+      document.getElementById("signup-form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const form =e.target;
+        const password = form.password.value;
+        const confirm = document.getElementById("confirm").value;
+    
+        if (password !== confirm) {
+          alert("Error: These passwords do not match.");
+          return;
+        }
+        
+        const res=await fetch("/signup", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username: form.username.value,
+            password: password,
+          }),
+        });
+    
+        const message = await res.text();
+        alert(message);
+      });
+    </script>
   </body>
 </html>
