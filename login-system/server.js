@@ -11,12 +11,13 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// MySQL connection
-const db =mysql.createConnection({
-  host: "localhost",
+//MySQL connection- no using railway
+const db = mysql.createConnection({
+  host: "switchyard.proxy.rlwy.net",
   user: "root",
-  password: "Solaris12345!", //themysqlpassword that I made
-  database: "login_system",
+  password: "uaWNLyViUUbdiyfQNcBCJMWcSMkAHXpq",  // here lies the all new Railway password
+  database: "login_system",  // new schema
+  port: 45892
 });
 db.connect(err => {
   if (err) {
