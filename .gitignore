@@ -6,3 +6,6 @@ node_modules/
 # Prettier shit (so you dont have to install it if you don't wanna):
 .prettierrc
 .prettierignore
+
+#login system
+login-system/.env
