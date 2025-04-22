@@ -1,0 +1,27 @@
+# Ignore node modules and system junk
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+
+# Optional: if you're not using local env vars this way
+.env
+
+# Mac and VSCode system files
+.DS_Store
+.vscode/
+
+# Git-related files (not needed in container)
+.git
+.gitignore
+
+# Local development logs or output
+*.log
+
+# Ignore unnecessary data
+courseinfo/
+mock_data/
+docs/
+
+# Ignore images (optional if not needed in container)
+# public/images/

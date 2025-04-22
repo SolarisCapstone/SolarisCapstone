@@ -1,49 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Signup</title>
-  <link rel="stylesheet" href="/public/css/styles.css">
-  <script>
-    function validateForm() {
-      const password = document.getElementById("password").value;
-      const confirm = document.getElementById("confirm").value;
-      if (password !== confirm) {
-        alert("Error: These passwords do not match.");
-        return false;
+  <head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script>
+      function validateForm() {
+        const password = document.getElementById("password").value;
+        const confirm = document.getElementById("confirm").value;
+        if (password !== confirm) {
+          alert("Error: These passwords do not match.");
+          return false;
+        }
+        return true;
       }
-      return true;
-    }
-  </script>
-</head>
-<body class="login-page">
-  <!-- Andrew Dynamic Header -->
-  <header>
-    <div data-include="components/header.html"></div>
-  </header>
+    </script>
+  </head>
+  <body class="login-page">
+    <!-- Andrew Dynamic Header -->
+    <header>
+      <div data-include="components/header.html"></div>
+    </header>
 
-  <div class="login-box">
-    <h2>Sign up</h2>
-    <form method="POST" action="/signup" onsubmit="return validateForm()">
-      <label>Username:
-        <input name="username" required>
-      </label>
-      <label>Password:
-        <input name="password" id="password" type="password" required>
-      </label>
-      <label>Confirm Password:
-        <input id="confirm" type="password" required>
-      </label>
-      <button type="submit">Sign Up</button>
-    </form>
-    <a href="/public/login.html">Already have an account? Instead Log in</a>
-  </div>
+    <div class="login-box">
+      <h2>Sign up</h2>
+      <form id="signup-form">
+        <label
+          >Username:
+          <input name="username" required />
+        </label>
+        <label
+          >Password:
+          <input name="password" id="password" type="password" required />
+        </label>
+        <label
+          >Confirm Password:
+          <input id="confirm" type="password" required />
+        </label>
+        <button type="submit">Sign Up</button>
+      </form>
+      <a href="/login.html">Already have an account? Instead Log in</a>
+    </div>
 
-  <!-- Andrew Dynamic Footer -->
-  <footer>
-    <div data-include="components/footer.html"></div>
-  </footer>
+    <!-- Andrew Dynamic Footer -->
+    <footer>
+      <div data-include="components/footer.html"></div>
+    </footer>
 
-  <!-- Andrew Script to load dynamic components -->
-  <script src="js/HTMLInclude.min.js"></script>
-</body>
+    <!-- Andrew Script to load dynamic components -->
+    <script src="js/HTMLInclude.min.js"></script>
+
+    <!-- Script for signup -->
+
+    <script>
+      document.getElementById("signup-form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const form =e.target;
+        const password = form.password.value;
+        const confirm = document.getElementById("confirm").value;
+    
+        if (password !== confirm) {
+          alert("Error: These passwords do not match.");
+          return;
+        }
+        
+        const res=await fetch("/signup", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username: form.username.value,
+            password: password,
+          }),
+        });
+    
+        const message = await res.text();
+        alert(message);
+      });
+    </script>
+  </body>
 </html>
