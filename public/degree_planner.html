@@ -103,7 +103,6 @@
 
        <header class="text-center mb-4">
            <h1 class="text-2xl font-bold" style="color: var(--charlotte-green);">Graduation Timeline Planner</h1>
-           <h2 class="text-lg font-semibold text-black">Computer Science, AI, Robotics, and Gaming Concentration, B.S.</h2>
            <p class="text-black font-semibold mt-1">Degree Select <span id="progress-percent">0%</span></p>
            <select id="degree-select" >
                <option value="ba_ai_gaming_robo.json">AI, Robotics, and Gaming Concentration</option>
@@ -282,35 +281,36 @@
 
 
 
-   document.addEventListener("DOMContentLoaded", () => {
-       const degreeSelect = document.getElementById("degree-select");
+       document.addEventListener("DOMContentLoaded", () => {
+    const degreeSelect = document.getElementById("degree-select");
+
+    if (degreeSelect.value) {
+        loadDegreeData(degreeSelect.value);
+    }
+
+    degreeSelect.addEventListener("change", (event) => {
+        loadDegreeData(event.target.value);
+    });
+});
 
 
-       loadDegreeData(degreeSelect.value);
-
-
-       degreeSelect.addEventListener("change", (event) => {
-           loadDegreeData(event.target.value);
-       });
-   });
-
-
-   function loadDegreeData(jsonFile) {
-       fetch(`data/${jsonFile}`)
-           .then(response => response.json())
-           .then(data => {
-               clearAllCategoryBoxes();
-
-
-               populateCategoryBox("core-classes", data.coreCourses);
-               populateCategoryBox("math-classes", data.mathStatsCourses);
-               populateCategoryBox("concentration-required", data.concentration.required);
-               populateCategoryBox("concentration-electives", data.concentration.electives.options.map(code => {
-                   return { code, title: code, credits: 3 };
-               }));
-           })
-           .catch(error => console.error("Error loading JSON data:", error));
-   }
+function loadDegreeData(majorId) {
+  fetch(`/api/degree/${majorId}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      clearAllCategoryBoxes();
+      populateCategoryBox("core-classes", data.coreCourses);
+      populateCategoryBox("math-classes", data.mathStatsCourses);
+      populateCategoryBox("concentration-required", data.concentration.required);
+      populateCategoryBox("concentration-electives", data.concentration.electives.options);
+    })
+    .catch((error) => console.error("Error loading degree data:", error));
+}
 
 
    function clearAllCategoryBoxes() {

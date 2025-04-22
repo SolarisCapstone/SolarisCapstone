@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
   host: "switchyard.proxy.rlwy.net",
   user: "root",
-  password: "uaWNLyViUUbdiyfQNcBCJMWcSMkAHXpq",  // here lies the all new Railway password
+  password: "password",  // here lies the all new Railway password
   database: "login_system",  // new schema
   port: 45892
 });

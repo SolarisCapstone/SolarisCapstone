@@ -46,6 +46,15 @@ CREATE TABLE CatalogCourses (
 );
 START TRANSACTION;
 
+CREATE TABLE UserPlans (
+    user_id INT,
+    course_name VARCHAR(255),
+    semester VARCHAR(255),
+    PRIMARY KEY (user_id, course_name, semester),
+    FOREIGN KEY (course_name) REFERENCES Courses(course_name)
+);
+
+
 TRUNCATE TABLE Courses;
 INSERT INTO Courses (course_name, description, type) VALUES
     ('MATH 1241', 'Calculus I', 'Mathematics and Statistics'),
