@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mysql = require("mysql2");
 const path = require("path");
@@ -11,14 +12,14 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//MySQL connection- no using railway
+//MySQL connection
 const db = mysql.createConnection({
-  host: "switchyard.proxy.rlwy.net",
-  user: "root",
-  password: "password",  // here lies the all new Railway password
-  database: "login_system",  // new schema
-  port: 45892
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
+
 db.connect(err => {
   if (err) {
     console.error("Database connection failed:", err);
