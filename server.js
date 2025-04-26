@@ -1,3 +1,4 @@
+/*
 const express = require("express");
 const mysql = require("mysql2");
 const path = require("path");
@@ -123,3 +124,5 @@ app.get("/api/catalogcourses", (req, res) => {
 app.listen(3000, () => {
   console.log(`Server is running at http://localhost:3000`);
 });
+
+*/
