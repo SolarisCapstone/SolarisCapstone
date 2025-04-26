@@ -1,77 +1,172 @@
 /* UNC Charlotte color scheme */
 :root {
-    --charlotte-green: #046A38;
-    --charlotte-light-green: #78BE21;
-    --charlotte-dark-gray: #1E1E1E;
-    --charlotte-light-gray: #F4F4F4;
+  --charlotte-green: #046a38;
+  --charlotte-light-green: #78be21;
+  --charlotte-dark-gray: #1e1e1e;
+  --charlotte-light-gray: #f4f4f4;
 }
 
 /* Global Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--charlotte-dark-gray);
-    color: white;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--charlotte-dark-gray);
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
 /* Center Content */
 .container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    background: white;
-    color: black;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Headings */
-h1, h2 {
-    color: var(--charlotte-green);
+h1,
+h2 {
+  color: var(--charlotte-green);
 }
 
 /* Buttons */
 button {
-    background-color: var(--charlotte-green);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: var(--charlotte-green);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: var(--charlotte-light-green);
+  background-color: var(--charlotte-light-green);
 }
 
 /* Table Styling */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-th, td {
-    padding: 10px;
-    border: 1px solid var(--charlotte-light-gray);
-    text-align: center;
+th,
+td {
+  padding: 10px;
+  border: 1px solid var(--charlotte-light-gray);
+  text-align: center;
 }
 
 th {
-    background-color: var(--charlotte-green);
-    color: white;
+  background-color: var(--charlotte-green);
+  color: white;
 }
 
 td {
-    background-color: var(--charlotte-light-gray);
+  background-color: var(--charlotte-light-gray);
 }
 
 /* Dropdowns */
 select {
-    padding: 5px;
-    border-radius: 5px;
-    background: white;
-    border: 1px solid var(--charlotte-green);
+  padding: 5px;
+  border-radius: 5px;
+  background: white;
+  border: 1px solid var(--charlotte-green);
 }
 
+/* Login & Signup Page Styles */
+.login-page {
+  background-color: var(--charlotte-green);
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background-image: url("/images/signupbckrd.png"); /* path fixed for the server */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay;
+  opacity: 0.98;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  margin: 40px auto;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--charlotte-dark-gray);
+}
+
+.login-box label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: var(--charlotte-dark-gray);
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--charlotte-green);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: var(--charlotte-light-green);
+}
+
+.login-box a {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: var(--charlotte-green);
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+/* Header placeholder styling */
+header h1,
+header h2 {
+  color: #e6f2ea;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body.login-page {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}

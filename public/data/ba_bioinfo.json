@@ -1,73 +1,180 @@
 {
-    "degree": "Computer Science, Bioinformatics Concentration, B.A.",
-    "total_credit_hours": 120,
-    "core_courses": [
-      { "code": "ITSC 1212", "title": "Introduction to Computer Science I", "credits": 3, "prerequisites": [] },
-      { "code": "ITSC 1213", "title": "Introduction to Computer Science II", "credits": 3, "prerequisites": ["ITSC 1212"] },
-      { "code": "ITSC 1600", "title": "Computing Professionals", "credits": 2, "prerequisites": [] },
-      { "code": "ITSC 2600", "title": "Computer Science Program, Identity, Career", "credits": 1, "prerequisites": [] },
-      { "code": "ITSC 2175", "title": "Logic and Algorithms", "credits": 3, "prerequisites": ["ITSC 1213"] },
-      { "code": "MATH 2165", "title": "Introduction to Discrete Structures", "credits": 3, "prerequisites": [] },
-      { "code": "ITSC 2214", "title": "Data Structures and Algorithms", "credits": 3, "prerequisites": ["ITSC 1213"] },
-      { "code": "ITSC 3688", "title": "Computers and Their Impact on Society", "credits": 3, "prerequisites": [] }
-    ],
-    "math_and_stats": [
-      { "code": "MATH 1241", "title": "Calculus I", "credits": 3 },
-      { "code": "STAT 1220", "title": "Elements of Statistics I (BUSN)", "credits": 3 },
-      { "code": "BINF 3121", "title": "Statistics for Bioinformatics", "credits": 3 }
-    ],
-    "related_courses": [
-      { "code": "BIOL 2120", "title": "General Biology I", "credits": 3 },
-      { "code": "BIOL 2130", "title": "General Biology II", "credits": 3 },
-      { "code": "CHEM 1251", "title": "General Chemistry I", "credits": 3 },
-      { "code": "CHEM 1251L", "title": "General Chemistry I Lab", "credits": 1 },
-      { "code": "CHEM 1252", "title": "General Chemistry II", "credits": 3 },
-      { "code": "CHEM 1252L", "title": "General Chemistry II Lab", "credits": 1 }
-    ],
-    "capstone_courses": [
-      { "code": "BINF 4650", "title": "Senior Project", "credits": 3 },
-      { "code": "ITSC 4681", "title": "Senior Design I", "credits": 3 },
-      { "code": "ITSC 4682", "title": "Senior Design II", "credits": 3 },
-      { "code": "ITSC 4750", "title": "Honors Thesis", "credits": 3 },
-      { "code": "ITSC 4850", "title": "Senior Project I", "credits": 3 },
-      { "code": "ITSC 4851", "title": "Senior Project II", "credits": 3 },
-      { "code": "ITSC 4232", "title": "Game Studio Capstone", "credits": 3 },
-      { "code": "ITIS 4246", "title": "Competitive Cyber Defense", "credits": 3 },
-      { "code": "ITIS 4390", "title": "Interaction Design Projects", "credits": 3 }
-    ],
-    "concentration_required": [
-      { "code": "BINF 1101", "title": "Intro to Bioinformatics and Genomics", "credits": 3 },
-      { "code": "BINF 2111", "title": "Intro to Bioinformatics Computing", "credits": 3 },
+  "degree": "Computer Science, Bioinformatics Concentration, B.A.",
+  "total_credit_hours": 120,
+  "coreCourses": [
+    {
+      "code": "ITSC 1212",
+      "title": "Introduction to Computer Science I",
+      "credits": 3,
+      "prerequisites": []
+    },
+    {
+      "code": "ITSC 1213",
+      "title": "Introduction to Computer Science II",
+      "credits": 3,
+      "prerequisites": ["ITSC 1212"]
+    },
+    {
+      "code": "ITSC 1600",
+      "title": "Computing Professionals",
+      "credits": 2,
+      "prerequisites": []
+    },
+    {
+      "code": "ITSC 2600",
+      "title": "Computer Science Program, Identity, Career",
+      "credits": 1,
+      "prerequisites": []
+    },
+    {
+      "code": "ITSC 2175",
+      "title": "Logic and Algorithms",
+      "credits": 3,
+      "prerequisites": ["ITSC 1213"]
+    },
+    {
+      "code": "MATH 2165",
+      "title": "Introduction to Discrete Structures",
+      "credits": 3,
+      "prerequisites": []
+    },
+    {
+      "code": "ITSC 2214",
+      "title": "Data Structures and Algorithms",
+      "credits": 3,
+      "prerequisites": ["ITSC 1213"]
+    },
+    {
+      "code": "ITSC 3688",
+      "title": "Computers and Their Impact on Society",
+      "credits": 3,
+      "prerequisites": []
+    }
+  ],
+
+  "mathStatsCourses": [
+    { "code": "MATH 1241", "title": "Calculus I", "credits": 3 },
+    {
+      "code": "STAT 1220",
+      "title": "Elements of Statistics I (BUSN)",
+      "credits": 3
+    },
+    {
+      "code": "BINF 3121",
+      "title": "Statistics for Bioinformatics",
+      "credits": 3
+    }
+  ],
+  "related_courses": [
+    { "code": "BIOL 2120", "title": "General Biology I", "credits": 3 },
+    { "code": "BIOL 2130", "title": "General Biology II", "credits": 3 },
+    { "code": "CHEM 1251", "title": "General Chemistry I", "credits": 3 },
+    { "code": "CHEM 1251L", "title": "General Chemistry I Lab", "credits": 1 },
+    { "code": "CHEM 1252", "title": "General Chemistry II", "credits": 3 },
+    { "code": "CHEM 1252L", "title": "General Chemistry II Lab", "credits": 1 }
+  ],
+
+  "capstoneCourses": [
+    { "code": "BINF 4650", "title": "Senior Project", "credits": 3 },
+    { "code": "ITSC 4681", "title": "Senior Design I", "credits": 3 },
+    { "code": "ITSC 4682", "title": "Senior Design II", "credits": 3 },
+    { "code": "ITSC 4750", "title": "Honors Thesis", "credits": 3 },
+    { "code": "ITSC 4850", "title": "Senior Project I", "credits": 3 },
+    { "code": "ITSC 4851", "title": "Senior Project II", "credits": 3 },
+    { "code": "ITSC 4232", "title": "Game Studio Capstone", "credits": 3 },
+    { "code": "ITIS 4246", "title": "Competitive Cyber Defense", "credits": 3 },
+    {
+      "code": "ITIS 4390",
+      "title": "Interaction Design Projects",
+      "credits": 3
+    }
+  ],
+
+  "concentration_required": [
+    {
+      "code": "BINF 1101",
+      "title": "Intro to Bioinformatics and Genomics",
+      "credits": 3
+    },
+    {
+      "code": "BINF 2111",
+      "title": "Intro to Bioinformatics Computing",
+      "credits": 3
+    },
+    { "code": "BINF 3101", "title": "Sequence Analysis", "credits": 3 },
+    {
+      "code": "BINF 4600",
+      "title": "Bioinformatics and Genomics Seminar",
+      "credits": 3
+    },
+    { "code": "BIOL 3111", "title": "Cell Biology", "credits": 3 },
+    { "code": "BIOL 3166", "title": "Genetics", "credits": 3 }
+  ],
+
+  "concentration": {
+    "required": [
+      {
+        "code": "BINF 1101",
+        "title": "Intro to Bioinformatics and Genomics",
+        "credits": 3
+      },
+      {
+        "code": "BINF 2111",
+        "title": "Intro to Bioinformatics Computing",
+        "credits": 3
+      },
       { "code": "BINF 3101", "title": "Sequence Analysis", "credits": 3 },
-      { "code": "BINF 4600", "title": "Bioinformatics and Genomics Seminar", "credits": 3 },
+      {
+        "code": "BINF 4600",
+        "title": "Bioinformatics and Genomics Seminar",
+        "credits": 3
+      },
       { "code": "BIOL 3111", "title": "Cell Biology", "credits": 3 },
       { "code": "BIOL 3166", "title": "Genetics", "credits": 3 }
     ],
-    "concentration_electives": [
-      {
-        "category": "Database / Analytics",
-        "options": [
-          { "code": "BINF 4211", "title": "Applied Data Mining for Bioinformatics", "credits": 3 }
-        ]
-      },
-      {
-        "category": "Professional Development",
-        "options": [
-          { "code": "BINF 4171", "title": "Business of Biotechnology", "credits": 3 },
-          { "code": "BINF 4191", "title": "Life Sciences and the Law", "credits": 3 }
-        ]
-      },
-      {
-        "category": "Upper-Division Elective",
-        "options": [
-          { "code": "BINF 3131", "title": "Bioinformatics Algorithms", "credits": 3 },
-          { "code": "BINF 3201", "title": "Genomic Methods", "credits": 3 }
-        ]
-      }
-    ],
-    "outside_electives": {
-      "description": "Electives that do not have ITSC, ITIS, or ITCS prefixes. Total: 15 credit hours",
-      "credit_hours": 15
+    "electives": {}
+  },
+
+  "concentration_electives": [
+    {
+      "category": "Database / Analytics",
+      "options": [
+        {
+          "code": "BINF 4211",
+          "title": "Applied Data Mining for Bioinformatics",
+          "credits": 3
+        }
+      ]
+    },
+    {
+      "category": "Professional Development",
+      "options": [
+        {
+          "code": "BINF 4171",
+          "title": "Business of Biotechnology",
+          "credits": 3
+        },
+        {
+          "code": "BINF 4191",
+          "title": "Life Sciences and the Law",
+          "credits": 3
+        }
+      ]
+    },
+    {
+      "category": "Upper-Division Elective",
+      "options": [
+        {
+          "code": "BINF 3131",
+          "title": "Bioinformatics Algorithms",
+          "credits": 3
+        },
+        { "code": "BINF 3201", "title": "Genomic Methods", "credits": 3 }
+      ]
     }
+  ],
+  "outside_electives": {
+    "description": "Electives that do not have ITSC, ITIS, or ITCS prefixes. Total: 15 credit hours",
+    "credit_hours": 15
   }
-  
+}

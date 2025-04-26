@@ -81,6 +81,7 @@ CREATE TABLE CatalogCourses (
 );
 START TRANSACTION;
 
+
 INSERT INTO Users (email, name, role) VALUES
 ('alice@student.edu', 'Alice Student', 'student'),
 ('bob@advisor.edu', 'Bob Advisor', 'advisor');
@@ -95,6 +96,14 @@ INSERT INTO AdvisorPreferences (
     user_id, advising_department, advising_focus, max_advisee_count
 ) VALUES
 (2, 'Computer Science', 'Supports Data Science and Cybersecurity students', 30);
+
+CREATE TABLE UserPlans (
+    user_id INT,
+    course_name VARCHAR(255),
+    semester VARCHAR(255),
+    PRIMARY KEY (user_id, course_name, semester),
+    FOREIGN KEY (course_name) REFERENCES Courses(course_name)
+);
 
 TRUNCATE TABLE Courses;
 INSERT INTO Courses (course_name, description, type) VALUES

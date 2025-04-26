@@ -1,70 +1,84 @@
 {
-    "degree": "Computer Science, Data Science Concentration, B.S.",
-    "credit_requirement": 120,
-    "sections": [
-      {
-        "name": "Core Courses",
-        "required": true,
-        "credit_hours": 29,
-        "courses": [
-          "ITSC 1212", "ITSC 1213", "ITSC 1600 or ITSC 2600",
-          "ITSC 2175 or MATH 2165", "ITSC 2214", "ITSC 2181",
-          "ITSC 3146", "ITSC 3155", "ITSC 3688"
-        ]
-      },
-      {
-        "name": "Mathematics and Statistics Courses",
-        "required": true,
-        "credit_hours": 12,
-        "courses": [
-          "MATH 1241", "MATH 1242",
-          "MATH 2164", "STAT 2122"
-        ]
-      },
-      {
-        "name": "Capstone Course",
-        "required": true,
-        "credit_hours": 3,
-        "courses": [
-          "ITSC 4155", "ITSC 4681", "ITSC 4682",
-          "ITSC 4750", "ITSC 4850", "ITSC 4851",
-          "ITSC 4990", "ITSC 4991", "ITCS 4232",
-          "ITIS 4390", "ITIS 4246"
-        ]
-      },
-      {
-        "name": "Elective Courses in Other Disciplines",
-        "required": true,
-        "credit_hours": 15,
-        "notes": "Courses that are not ITSC/ITIS/ITCS-prefixed"
-      },
-      {
-        "name": "Concentration Requirements",
-        "required": true,
-        "sections": [
-          {
-            "name": "Required Courses",
-            "courses": [
-              "ITSC 3160", "ITSC 3162"
-            ]
-          },
-          {
-            "name": "Concentration Electives",
-            "note": "Select 3 from the following list",
-            "courses": [
-              "ITCS 3190", "ITCS 3216", "ITCS 4114",
-              "ITCS 4121", "ITCS 4122", "ITCS 4152",
-              "ITCS 3156", "ITCS 3153", "INFO 3236",
-              "ITIS 4310", "ITIS 4311"
-            ]
-          },
-          {
-            "name": "Technical Electives",
-            "note": "Select 2 classes (6 credits total) from 3000/4000 level ITCS/ITSC/ITIS/BINF, excluding ITSC 3688",
-            "restrictions": ["Exclude ITSC 3688"]
-          }
-        ]
-      }
-    ]
-  }
-  
+  "degree": "Computer Science, Data Science Concentration, B.S.",
+  "credit_requirement": 120,
+  "sections": [
+    {
+      "name": "Core Courses",
+      "required": true,
+      "credit_hours": 29,
+      "courses": [
+        "ITSC 1212",
+        "ITSC 1213",
+        "ITSC 1600 or ITSC 2600",
+        "ITSC 2175 or MATH 2165",
+        "ITSC 2214",
+        "ITSC 2181",
+        "ITSC 3146",
+        "ITSC 3155",
+        "ITSC 3688"
+      ]
+    },
+    {
+      "name": "Mathematics and Statistics Courses",
+      "required": true,
+      "credit_hours": 12,
+      "courses": ["MATH 1241", "MATH 1242", "MATH 2164", "STAT 2122"]
+    },
+    {
+      "name": "Capstone Course",
+      "required": true,
+      "credit_hours": 3,
+      "courses": [
+        "ITSC 4155",
+        "ITSC 4681",
+        "ITSC 4682",
+        "ITSC 4750",
+        "ITSC 4850",
+        "ITSC 4851",
+        "ITSC 4990",
+        "ITSC 4991",
+        "ITCS 4232",
+        "ITIS 4390",
+        "ITIS 4246"
+      ]
+    },
+    {
+      "name": "Elective Courses in Other Disciplines",
+      "required": true,
+      "credit_hours": 15,
+      "notes": "Courses that are not ITSC/ITIS/ITCS-prefixed"
+    },
+    {
+      "name": "Concentration Requirements",
+      "required": true,
+      "sections": [
+        {
+          "name": "Required Courses",
+          "courses": ["ITSC 3160", "ITSC 3162"]
+        },
+        {
+          "name": "Concentration Electives",
+          "note": "Select 3 from the following list",
+          "courses": [
+            "ITCS 3190",
+            "ITCS 3216",
+            "ITCS 4114",
+            "ITCS 4121",
+            "ITCS 4122",
+            "ITCS 4152",
+            "ITCS 3156",
+            "ITCS 3153",
+            "INFO 3236",
+            "ITIS 4310",
+            "ITIS 4311"
+          ]
+        },
+        {
+          "name": "Technical Electives",
+          "note": "Select 2 classes (6 credits total) from 3000/4000 level ITCS/ITSC/ITIS/BINF, excluding ITSC 3688",
+          "restrictions": ["Exclude ITSC 3688"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,56 +1,148 @@
 {
-    "degree": "Computer Science, Bioinformatics Concentration, B.S.",
-    "totalCreditsRequired": 120,
-    "coreCourses": [
-      { "code": "ITSC 1212", "title": "Introduction to Computer Science I", "credits": 3, "prerequisites": [] },
-      { "code": "ITSC 1213", "title": "Introduction to Computer Science II", "credits": 3, "prerequisites": ["ITSC 1212"] },
-      { "code": "ITSC 1600", "title": "Computing Professionals", "credits": 1, "prerequisites": [] },
-      { "code": "ITSC 2175", "title": "Logic and Algorithms", "credits": 3, "prerequisites": ["ITSC 1213"] },
-      { "code": "ITSC 2214", "title": "Data Structures and Algorithms", "credits": 3, "prerequisites": ["ITSC 2175"] },
-      { "code": "ITSC 2181", "title": "Introduction to Computer Systems", "credits": 3, "prerequisites": ["ITSC 1213"] },
-      { "code": "ITSC 3146", "title": "Intro to Operating Systems and Networking", "credits": 3, "prerequisites": ["ITSC 2181"] },
-      { "code": "ITSC 3155", "title": "Software Engineering", "credits": 3, "prerequisites": ["ITSC 2214"] },
-      { "code": "ITSC 3688", "title": "Computers and Their Impact on Society", "credits": 3, "prerequisites": [] }
-    ],
-    "mathStatsCourses": [
-      { "code": "MATH 1241", "title": "Calculus I", "credits": 3, "prerequisites": [] },
-      { "code": "MATH 1242", "title": "Calculus II", "credits": 3, "prerequisites": ["MATH 1241"] },
-      { "code": "MATH 2164", "title": "Matrices and Linear Algebra", "credits": 3, "prerequisites": [] },
-      { "code": "STAT 2122", "title": "Intro to Probability and Statistics", "credits": 3, "prerequisites": [] }
-    ],
-    "capstoneOptions": [
-      { "code": "ITSC 4155", "title": "Software Development Projects", "credits": 3 },
-      { "code": "ITSC 4681", "title": "Senior Design I", "credits": 3 },
-      { "code": "ITSC 4682", "title": "Senior Design II", "credits": 3 },
-      { "code": "ITSC 4850", "title": "Senior Project I", "credits": 3 },
-      { "code": "ITSC 4851", "title": "Senior Project II", "credits": 3 },
-      { "code": "ITSC 4990", "title": "Undergraduate Research", "credits": 3 },
-      { "code": "ITSC 4991", "title": "Undergraduate Thesis", "credits": 3 },
-      { "code": "ITCS 4232", "title": "Game Studio", "credits": 3 },
-      { "code": "ITIS 4390", "title": "Interaction Design Projects", "credits": 3 },
-      { "code": "ITIS 4246", "title": "Competitive Cyber Defense", "credits": 3 },
-      { "code": "BINF 4650", "title": "Senior Project", "credits": 3 },
-      { "code": "BINF 4900", "title": "Principles of Team Science", "credits": 3 }
-    ],
-    "outsideElectivesNote": "15 credit hours from non-CS (non-ITSC/ITIS/ITCS/BINF) prefixes",
-    "concentrationRequirements": [
-      { "code": "BINF 1101", "title": "Intro to Bioinformatics and Genomics", "credits": 3 },
-      { "code": "BINF 2111", "title": "Intro to Bioinformatics Computing", "credits": 3 },
-      { "code": "BINF 3101", "title": "Sequence Analysis", "credits": 3 },
-      { "code": "BINF 4600", "title": "Bioinformatics and Genomics Seminar", "credits": 3 },
-      { "code": "BIOL 3111", "title": "Cell Biology", "credits": 3 },
-      { "code": "BIOL 3166", "title": "Genetics", "credits": 3 }
-    ],
-    "concentrationElectives": {
-      "required": 3,
-      "options": [
-        { "code": "BINF 3121", "title": "Database / Analytics", "credits": 3 },
-        { "code": "BINF 4211", "title": "Database / Analytics", "credits": 3 },
-        { "code": "BINF 4171", "title": "Professional Development", "credits": 3 },
-        { "code": "BINF 4191", "title": "Professional Development", "credits": 3 },
-        { "code": "BINF 3131", "title": "Upper Division Elective", "credits": 3 },
-        { "code": "BINF 3201", "title": "Upper Division Elective", "credits": 3 }
-      ]
+  "degree": "Computer Science, Bioinformatics Concentration, B.S.",
+  "totalCreditsRequired": 120,
+  "coreCourses": [
+    {
+      "code": "ITSC 1212",
+      "title": "Introduction to Computer Science I",
+      "credits": 3,
+      "prerequisites": []
+    },
+    {
+      "code": "ITSC 1213",
+      "title": "Introduction to Computer Science II",
+      "credits": 3,
+      "prerequisites": ["ITSC 1212"]
+    },
+    {
+      "code": "ITSC 1600",
+      "title": "Computing Professionals",
+      "credits": 1,
+      "prerequisites": []
+    },
+    {
+      "code": "ITSC 2175",
+      "title": "Logic and Algorithms",
+      "credits": 3,
+      "prerequisites": ["ITSC 1213"]
+    },
+    {
+      "code": "ITSC 2214",
+      "title": "Data Structures and Algorithms",
+      "credits": 3,
+      "prerequisites": ["ITSC 2175"]
+    },
+    {
+      "code": "ITSC 2181",
+      "title": "Introduction to Computer Systems",
+      "credits": 3,
+      "prerequisites": ["ITSC 1213"]
+    },
+    {
+      "code": "ITSC 3146",
+      "title": "Intro to Operating Systems and Networking",
+      "credits": 3,
+      "prerequisites": ["ITSC 2181"]
+    },
+    {
+      "code": "ITSC 3155",
+      "title": "Software Engineering",
+      "credits": 3,
+      "prerequisites": ["ITSC 2214"]
+    },
+    {
+      "code": "ITSC 3688",
+      "title": "Computers and Their Impact on Society",
+      "credits": 3,
+      "prerequisites": []
     }
+  ],
+  "mathStatsCourses": [
+    {
+      "code": "MATH 1241",
+      "title": "Calculus I",
+      "credits": 3,
+      "prerequisites": []
+    },
+    {
+      "code": "MATH 1242",
+      "title": "Calculus II",
+      "credits": 3,
+      "prerequisites": ["MATH 1241"]
+    },
+    {
+      "code": "MATH 2164",
+      "title": "Matrices and Linear Algebra",
+      "credits": 3,
+      "prerequisites": []
+    },
+    {
+      "code": "STAT 2122",
+      "title": "Intro to Probability and Statistics",
+      "credits": 3,
+      "prerequisites": []
+    }
+  ],
+  "capstoneOptions": [
+    {
+      "code": "ITSC 4155",
+      "title": "Software Development Projects",
+      "credits": 3
+    },
+    { "code": "ITSC 4681", "title": "Senior Design I", "credits": 3 },
+    { "code": "ITSC 4682", "title": "Senior Design II", "credits": 3 },
+    { "code": "ITSC 4850", "title": "Senior Project I", "credits": 3 },
+    { "code": "ITSC 4851", "title": "Senior Project II", "credits": 3 },
+    { "code": "ITSC 4990", "title": "Undergraduate Research", "credits": 3 },
+    { "code": "ITSC 4991", "title": "Undergraduate Thesis", "credits": 3 },
+    { "code": "ITCS 4232", "title": "Game Studio", "credits": 3 },
+    {
+      "code": "ITIS 4390",
+      "title": "Interaction Design Projects",
+      "credits": 3
+    },
+    { "code": "ITIS 4246", "title": "Competitive Cyber Defense", "credits": 3 },
+    { "code": "BINF 4650", "title": "Senior Project", "credits": 3 },
+    { "code": "BINF 4900", "title": "Principles of Team Science", "credits": 3 }
+  ],
+  "outsideElectivesNote": "15 credit hours from non-CS (non-ITSC/ITIS/ITCS/BINF) prefixes",
+  "concentrationRequirements": [
+    {
+      "code": "BINF 1101",
+      "title": "Intro to Bioinformatics and Genomics",
+      "credits": 3
+    },
+    {
+      "code": "BINF 2111",
+      "title": "Intro to Bioinformatics Computing",
+      "credits": 3
+    },
+    { "code": "BINF 3101", "title": "Sequence Analysis", "credits": 3 },
+    {
+      "code": "BINF 4600",
+      "title": "Bioinformatics and Genomics Seminar",
+      "credits": 3
+    },
+    { "code": "BIOL 3111", "title": "Cell Biology", "credits": 3 },
+    { "code": "BIOL 3166", "title": "Genetics", "credits": 3 }
+  ],
+  "concentrationElectives": {
+    "required": 3,
+    "options": [
+      { "code": "BINF 3121", "title": "Database / Analytics", "credits": 3 },
+      { "code": "BINF 4211", "title": "Database / Analytics", "credits": 3 },
+      {
+        "code": "BINF 4171",
+        "title": "Professional Development",
+        "credits": 3
+      },
+      {
+        "code": "BINF 4191",
+        "title": "Professional Development",
+        "credits": 3
+      },
+      { "code": "BINF 3131", "title": "Upper Division Elective", "credits": 3 },
+      { "code": "BINF 3201", "title": "Upper Division Elective", "credits": 3 }
+    ]
   }
-  
+}

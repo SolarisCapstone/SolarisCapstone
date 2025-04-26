@@ -1,3 +1,8 @@
 # Node junk
 node_modules/
 .env
+
+
+# Prettier shit (so you dont have to install it if you don't wanna):
+.prettierrc
+.prettierignore

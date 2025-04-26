@@ -1,6 +1,7 @@
 # Team Solaris Capstone - Interactive Graduation Planner
 
 ## Overview
+
 The **SolarisCapstone Interactive Graduation Planner** is a tool designed to help **UNC Charlotte computer science students** plan their graduation timeline efficiently. Current academic planning tools, such as **DegreeWorks** and **Schedule Wizard**, lack an intuitive interface and fail to provide a seamless way for students to map out their entire degree path. Our project aims to bridge this gap by offering an interactive solution that allows students to:
 
 - Plan their semester-wise course load.
@@ -13,6 +14,7 @@ This application will **eliminate the need for manual spreadsheets** and simplif
 ---
 
 ## Project Scope
+
 The primary goal of this project is to develop an interactive graduation planner that allows students to **map out their remaining coursework** with a clear, structured approach. The tool will include the following key components:
 
 - **Course Database:** A structured database containing **computer science course requirements** for UNC Charlotte.
@@ -25,7 +27,9 @@ By implementing these features, we aim to **streamline course planning, prevent 
 ---
 
 ## Assumptions
+
 To ensure the functionality and accuracy of the planner, the following assumptions will be made:
+
 - Students will have an accurate understanding of **which courses they have completed** based on their transcript.
 - Students using the planner will have already fulfilled or accounted for their **general education requirements**.
 - Academic advisors will be familiar with **UNC Charlotte’s course catalog** and provide guidance accordingly.
@@ -36,7 +40,9 @@ To ensure the functionality and accuracy of the planner, the following assumptio
 ---
 
 ## Constraints
+
 Given the scope and timeframe of the project, the following constraints have been identified:
+
 - The project will be completed **within 16 weeks**, broken into agile sprints for efficient development.
 - The planner will be **limited to undergraduate computer science majors**, with no support for interdisciplinary studies, graduate programs, or early entry pathways.
 - Only **course requirements from the 2024-2025 academic catalog** will be included, ensuring focus on the most recent curriculum.
@@ -47,6 +53,7 @@ Given the scope and timeframe of the project, the following constraints have bee
 ---
 
 ## Technology Stack
+
 To develop the **SolarisCapstone Interactive Graduation Planner**, we will utilize the following technologies:
 
 - **Frontend:** React.js (TBA) / Vue.js (TBA) for an intuitive, interactive user experience
@@ -58,7 +65,9 @@ To develop the **SolarisCapstone Interactive Graduation Planner**, we will utili
 ---
 
 ## Contributors
+
 This project is a collaborative effort by UNC Charlotte Computer Science students:
+
 - **Reid Moseley** – Role (Frontend, Backend, Database, etc.)
 - **Jonathan Revoir** – Role
 - **Vaibhav Satheesh** – Role
@@ -69,12 +78,15 @@ For any inquiries, feel free to reach out via our GitHub Discussions or email.
 ---
 
 ## License
+
 This project is developed for educational purposes and is **not officially affiliated with UNC Charlotte**. All content is open-source under the MIT License.
 
 ---
 
 ## Future Goals
+
 While this project is initially designed for UNC Charlotte, future iterations could:
+
 - Expand to include **additional majors and interdisciplinary studies**.
 - Support **other universities** with customizable degree planning.
 - Integrate with official student information systems (if approved by institutions).

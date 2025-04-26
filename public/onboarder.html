@@ -1,56 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Graduation Planner Onboarding</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="app.js"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Dynamic Header -->
+    <header>
+      <div data-include="components/header.html"></div>
+    </header>
+
     <div class="container">
-        <h1>Welcome to the Graduation Planner</h1>
-        <form id="onboardingForm">
-            <label for="major-select">Select your Major:</label>
-            <select id="major-select" name="major">
-                <!-- Options dynamically populated from the database -->
-            </select>
+      <h1>Welcome to the Graduation Planner</h1>
+      <form id="onboardingForm">
+        <label for="major-select">Select your Major:</label>
+        <select id="major-select" name="major">
+          <!-- Options dynamically populated from the database -->
+        </select>
 
-            <label for="concentration-select">Select your Concentration:</label>
-            <select id="concentration-select" name="concentration">
-                <!-- Options dynamically populated from the database -->
-            </select>
+        <label for="concentration-select">Select your Concentration:</label>
+        <select id="concentration-select" name="concentration">
+          <!-- Options dynamically populated from the database -->
+        </select>
 
-            <label for="start-semester">Starting Semester and Year:</label>
-            <select id="start-semester" name="semester">
-                <option value="spring">Spring</option>
-                <option value="summer">Summer</option>
-                <option value="fall">Fall</option>
-            </select>
-            <input type="number" name="year" placeholder="Year" min="2025">
+        <label for="start-semester">Starting Semester and Year:</label>
+        <select id="start-semester" name="semester">
+          <option value="spring">Spring</option>
+          <option value="summer">Summer</option>
+          <option value="fall">Fall</option>
+        </select>
+        <input type="number" name="year" placeholder="Year" min="2025" />
 
-            <label for="credit-hours">Credit Hours per Semester:</label>
-            <input type="number" id="credit-hours" name="credit_hours" value="12" min="1">
+        <label for="credit-hours">Credit Hours per Semester:</label>
+        <input
+          type="number"
+          id="credit-hours"
+          name="credit_hours"
+          value="12"
+          min="1"
+        />
 
-            <label for="transfer-credits">Do you have any transfer credits?</label>
-            <select id="transfer-credits" name="transfer_credits">
-                <option value="yes">Yes</option>
-                <option value="no" selected>No</option>
-            </select>
+        <label for="transfer-credits">Do you have any transfer credits?</label>
+        <select id="transfer-credits" name="transfer_credits">
+          <option value="yes">Yes</option>
+          <option value="no" selected>No</option>
+        </select>
 
-            <label for="summer-classes">Will you take summer classes?</label>
-            <select id="summer-classes" name="summer_classes">
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
+        <label for="summer-classes">Will you take summer classes?</label>
+        <select id="summer-classes" name="summer_classes">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
 
-            <label for="summer-credits">If yes, how many credit hours?</label>
-            <input type="number" id="summer-credits" name="summer_credits" min="1">
+        <label for="summer-credits">If yes, how many credit hours?</label>
+        <input
+          type="number"
+          id="summer-credits"
+          name="summer_credits"
+          min="1"
+        />
 
-            <button type="submit">Submit</button>
-        </form>
+        <button type="submit">Submit</button>
+      </form>
     </div>
+
     <script src="onboarder.js"></script>
 </body>
 </html>
 
+    <!-- Dynamic Footer -->
+    <footer>
+      <div data-include="components/footer.html"></div>
+    </footer>
+
+    <!-- Required for dynamic header/footer loading -->
+    <script src="js/HTMLInclude.min.js"></script>
+  </body>
+</html>

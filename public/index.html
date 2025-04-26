@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NinerTrack Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-green-900 text-white flex flex-col min-h-screen">
+    <!-- Dynamic Header -->
+    <header>
+      <div data-include="components/header.html"></div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="flex-grow flex justify-center items-center p-10">
+      <div class="text-center">
+        <h1 class="text-3xl font-bold mb-4">This is our index.html page.</h1>
+        <p class="text-lg">
+          I don't know what we're using it for but here it is for now.
+        </p>
+      </div>
+    </main>
+
+    <!-- Dynamic Footer -->
+    <footer>
+      <div data-include="components/footer.html"></div>
+    </footer>
+
+    <!-- Required for dynamic header/footer loading -->
+    <script src="js/HTMLInclude.min.js"></script>
+  </body>
+</html>
