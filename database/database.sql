@@ -1,11 +1,46 @@
 SET FOREIGN_KEY_CHECKS = 0;
 
+DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS UserPreferences;
+DROP TABLE IF EXISTS AdvisorPreferences;
 DROP TABLE IF EXISTS Prerequisites;
 DROP TABLE IF EXISTS CatalogCourses;
 DROP TABLE IF EXISTS Courses;
 DROP TABLE IF EXISTS Catalogs;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+CREATE TABLE Users (
+    user_id SERIAL PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    name VARCHAR(255) NOT NULL,
+    role ENUM('student', 'advisor') NOT NULL
+);
+START TRANSACTION;
+
+CREATE TABLE UserPreferences (
+    preference_id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    major VARCHAR(255) NOT NULL,
+    concentration VARCHAR(255),
+    start_semester ENUM('Fall', 'Spring', 'Summer') NOT NULL,
+    start_year INTEGER NOT NULL CHECK (start_year >= 2000 AND start_year <= 2100),
+    credit_hours_per_semester INTEGER CHECK (credit_hours_per_semester BETWEEN 1 AND 21),
+    takes_summer_classes BOOLEAN DEFAULT FALSE,
+    has_transfer_credits BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+);
+START TRANSACTION;
+
+CREATE TABLE AdvisorPreferences (
+    preference_id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    advising_department VARCHAR(255),
+    advising_focus TEXT,
+    max_advisee_count INTEGER CHECK (max_advisee_count >= 0),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+);
+START TRANSACTION;
 
 CREATE TABLE Courses (
     course_name VARCHAR(255) PRIMARY KEY,
@@ -46,6 +81,22 @@ CREATE TABLE CatalogCourses (
 );
 START TRANSACTION;
 
+
+INSERT INTO Users (email, name, role) VALUES
+('alice@student.edu', 'Alice Student', 'student'),
+('bob@advisor.edu', 'Bob Advisor', 'advisor');
+
+INSERT INTO UserPreferences (
+    user_id, major, concentration, start_semester, start_year,
+    credit_hours_per_semester, takes_summer_classes, has_transfer_credits
+    ) VALUES
+(1, 'Computer Science', 'Data Science', 'Fall', 2024, 15, TRUE, TRUE);
+
+INSERT INTO AdvisorPreferences (
+    user_id, advising_department, advising_focus, max_advisee_count
+) VALUES
+(2, 'Computer Science', 'Supports Data Science and Cybersecurity students', 30);
+
 CREATE TABLE UserPlans (
     user_id INT,
     course_name VARCHAR(255),
@@ -53,7 +104,6 @@ CREATE TABLE UserPlans (
     PRIMARY KEY (user_id, course_name, semester),
     FOREIGN KEY (course_name) REFERENCES Courses(course_name)
 );
-
 
 TRUNCATE TABLE Courses;
 INSERT INTO Courses (course_name, description, type) VALUES
