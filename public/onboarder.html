@@ -2,74 +2,123 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Graduation Planner Onboarding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="app.js"></script>
   </head>
-  <body>
+
+  <body class="bg-green-900 text-white flex flex-col min-h-screen">
     <!-- Dynamic Header -->
     <header>
       <div data-include="components/header.html"></div>
     </header>
 
-    <div class="container">
-      <h1>Welcome to the Graduation Planner</h1>
-      <form id="onboardingForm">
-        <label for="major-select">Select your Major:</label>
-        <select id="major-select" name="major">
-          <!-- Options dynamically populated from the database -->
-        </select>
+    <main class="flex-grow flex justify-center items-center p-10">
+      <div x-data="onboarding()" class="w-full max-w-2xl bg-white text-black p-8 rounded-lg shadow-lg">
+        <div class="text-center mb-6">
+          <p class="text-lg text-green-900">Awesome! Step <span x-text="step"></span>/6 - You're doing great!</p>
+        </div>
 
-        <label for="concentration-select">Select your Concentration:</label>
-        <select id="concentration-select" name="concentration">
-          <!-- Options dynamically populated from the database -->
-        </select>
+        <template x-if="step === 1">
+          <div>
+            <h1 class="text-3xl font-bold mb-4">Welcome!</h1>
+            <p class="mb-6">Let's get started. Tell us your name and email.</p>
+            <input x-model="name" type="text" placeholder="Name" class="w-full p-2 mb-2 rounded border">
+            <input x-model="email" type="email" placeholder="Email" class="w-full p-2 mb-4 rounded border">
+            <template x-if="error && (!name || !email)"><p class="text-red-500 text-sm">Please fill out all fields.</p></template>
+          </div>
+        </template>
 
-        <label for="start-semester">Starting Semester and Year:</label>
-        <select id="start-semester" name="semester">
-          <option value="spring">Spring</option>
-          <option value="summer">Summer</option>
-          <option value="fall">Fall</option>
-        </select>
-        <input type="number" name="year" placeholder="Year" min="2025" />
+        <template x-if="step === 2">
+          <div>
+            <h1 class="text-3xl font-bold mb-4">Degree & Concentration</h1>
+            <select x-model="degree" class="w-full p-2 mb-2 rounded border">
+              <option disabled selected value="">Select Degree</option>
+              <option>Bachelor of Science</option>
+              <option>Bachelor of Arts</option>
+            </select>
+            <select x-model="concentration" class="w-full p-2 mb-4 rounded border">
+              <option disabled selected value="">Select Concentration</option>
+              <option>AI & Robotics</option>
+              <option>Cybersecurity</option>
+              <option>Data Science</option>
+            </select>
+            <template x-if="error && (!degree || !concentration)"><p class="text-red-500 text-sm">Please select both degree and concentration.</p></template>
+          </div>
+        </template>
 
-        <label for="credit-hours">Credit Hours per Semester:</label>
-        <input
-          type="number"
-          id="credit-hours"
-          name="credit_hours"
-          value="12"
-          min="1"
-        />
+        <template x-if="step === 3">
+          <div>
+            <h1 class="text-3xl font-bold mb-4">Timeline Preferences</h1>
+            <select x-model="startSemester" class="w-full p-2 mb-2 rounded border">
+              <option disabled selected value="">Start Semester</option>
+              <option>Spring</option>
+              <option>Summer</option>
+              <option>Fall</option>
+            </select>
+            <input x-model="startYear" type="number" placeholder="Start Year" class="w-full p-2 mb-2 rounded border">
+            <input x-model="creditHours" type="number" placeholder="Credit Hours per Semester" class="w-full p-2 mb-2 rounded border">
+            <select x-model="takesSummer" class="w-full p-2 mb-4 rounded border">
+              <option disabled selected value="">Summer Classes?</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+            <input x-show="takesSummer === 'Yes'" x-model="summerCredits" type="number" placeholder="Summer Credit Hours" class="w-full p-2 mb-2 rounded border">
+            <template x-if="creditHours > 18"><p class="text-yellow-600 text-sm">Warning: Heavy load (>18 credit hours)!</p></template>
+            <template x-if="summerCredits > 14"><p class="text-yellow-600 text-sm">Warning: High summer load (>14 credits)!</p></template>
+            <template x-if="error && (!startSemester || !startYear || startYear < 2025 || !creditHours || creditHours <= 0 || !takesSummer)"><p class="text-red-500 text-sm">Please complete all fields correctly.</p></template>
+          </div>
+        </template>
 
-        <label for="transfer-credits">Do you have any transfer credits?</label>
-        <select id="transfer-credits" name="transfer_credits">
-          <option value="yes">Yes</option>
-          <option value="no" selected>No</option>
-        </select>
+        <template x-if="step === 4">
+          <div>
+            <h1 class="text-3xl font-bold mb-4">Graduation Target</h1>
+            <select x-model="graduationTarget" class="w-full p-2 mb-4 rounded border">
+              <option disabled selected value="">Choose Target</option>
+              <option>ASAP</option>
+              <option>Within 4 years</option>
+              <option>Specific Year</option>
+            </select>
+            <template x-if="error && !graduationTarget"><p class="text-red-500 text-sm">Please select a graduation target.</p></template>
+          </div>
+        </template>
 
-        <label for="summer-classes">Will you take summer classes?</label>
-        <select id="summer-classes" name="summer_classes">
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
+        <template x-if="step === 5">
+          <div>
+            <h1 class="text-3xl font-bold mb-4">Transfer Credits</h1>
+            <select x-model="hasTransferCredits" class="w-full p-2 mb-4 rounded border">
+              <option disabled selected value="">Any Transfer Credits?</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+            <div x-show="hasTransferCredits === 'Yes'" class="mt-4">
+              <h2 class="text-xl mb-2">Select Transferred Gen Ed Courses:</h2>
+              <div class="flex flex-col space-y-2">
+                <label><input type="checkbox" class="mr-2"> English Composition</label>
+                <label><input type="checkbox" class="mr-2"> College Algebra</label>
+                <label><input type="checkbox" class="mr-2"> Intro to Psychology</label>
+                <label><input type="checkbox" class="mr-2"> Public Speaking</label>
+              </div>
+            </div>
+            <template x-if="error && !hasTransferCredits"><p class="text-red-500 text-sm">Please answer about transfer credits.</p></template>
+          </div>
+        </template>
 
-        <label for="summer-credits">If yes, how many credit hours?</label>
-        <input
-          type="number"
-          id="summer-credits"
-          name="summer_credits"
-          min="1"
-        />
+        <template x-if="step === 6">
+          <div class="text-center">
+            <h1 class="text-3xl font-bold mb-4">All Set!</h1>
+            <p class="mb-6">You're ready to start planning your graduation journey!</p>
+          </div>
+        </template>
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-
-    <script src="onboarder.js"></script>
-</body>
-</html>
+        <div class="flex justify-between mt-6">
+          <button x-show="step > 1" @click="prevStep" class="bg-gray-700 hover:bg-gray-600 py-2 px-4 rounded">Back</button>
+          <button x-show="step < 6" @click="nextStep" class="bg-green-700 hover:bg-green-600 py-2 px-4 rounded">Next</button>
+        </div>
+      </div>
+    </main>
 
     <!-- Dynamic Footer -->
     <footer>
@@ -78,5 +127,39 @@
 
     <!-- Required for dynamic header/footer loading -->
     <script src="js/HTMLInclude.min.js"></script>
+
+    <!-- AlpineJS Setup -->
+    <script>
+      function onboarding() {
+        return {
+          step: 1,
+          name: '',
+          email: '',
+          degree: '',
+          concentration: '',
+          startSemester: '',
+          startYear: '',
+          creditHours: '',
+          takesSummer: '',
+          summerCredits: '',
+          graduationTarget: '',
+          hasTransferCredits: '',
+          error: false,
+          nextStep() {
+            this.error = false;
+            if (this.step === 1 && (!this.name || !this.email)) this.error = true;
+            else if (this.step === 2 && (!this.degree || !this.concentration)) this.error = true;
+            else if (this.step === 3 && (!this.startSemester || !this.startYear || this.startYear < 2025 || !this.creditHours || this.creditHours <= 0 || !this.takesSummer)) this.error = true;
+            else if (this.step === 4 && (!this.graduationTarget)) this.error = true;
+            else if (this.step === 5 && (!this.hasTransferCredits)) this.error = true;
+            else this.step++;
+          },
+          prevStep() {
+            this.error = false;
+            this.step--;
+          }
+        }
+      }
+    </script>
   </body>
 </html>

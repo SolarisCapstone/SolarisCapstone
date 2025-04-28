@@ -1,4 +1,19 @@
 $(document).ready(function () {
+    // Populate Majors Dropdown
+    $.get('/api/majors', function (majors) {
+        majors.forEach(function (major) {
+            $('#major-select').append(`<option value="${major.id}">${major.name}</option>`);
+        });
+    });
+
+    // Populate Concentrations Dropdown
+    $.get('/api/concentrations', function (concentrations) {
+        concentrations.forEach(function (concentration) {
+            $('#concentration-select').append(`<option value="${concentration.id}">${concentration.name}</option>`);
+        });
+    });
+
+    // Handle Form Submission
     $('#onboardingForm').on('submit', function (event) {
         event.preventDefault();
 
