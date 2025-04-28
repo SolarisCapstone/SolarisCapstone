@@ -1,3 +1,4 @@
+/*
 require("dotenv").config();
 const express = require("express");
 const mysql = require("mysql2");
@@ -66,3 +67,4 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
+*/
