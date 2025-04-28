@@ -17,7 +17,10 @@ const pool = new Pool({
   user: process.env.PGUSER,
   password: process.env.PGPASSWORD,
   database: process.env.PGDATABASE,
-  port: process.env.PGPORT
+  port: process.env.PGPORT,
+  ssl: {
+    rejectUnauthorized: false, // Allow self-signed certificates
+  },
 });
 
 
@@ -205,8 +208,6 @@ app.get("/api/catalogcourses", (req, res) => {
 
 
 const PORT = process.env.PORT || 3000;
-
-
 app.listen(PORT, () => {
  console.log(`Server is running at http://localhost:${PORT}`);
 });
