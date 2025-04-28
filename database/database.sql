@@ -7,6 +7,8 @@ DROP TABLE IF EXISTS Prerequisites;
 DROP TABLE IF EXISTS CatalogCourses;
 DROP TABLE IF EXISTS Courses;
 DROP TABLE IF EXISTS Catalogs;
+DROP TABLE IF EXISTS PrerequisiteGroups;
+DROP TABLE IF EXISTS UserPlans;
 
 SET FOREIGN_KEY_CHECKS = 1;
 
@@ -41,6 +43,18 @@ CREATE TABLE AdvisorPreferences (
     FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
 );
 START TRANSACTION;
+
+CREATE TABLE UserPlans (
+    plan_id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    course_name VARCHAR(255) NOT NULL,
+    semester ENUM('Fall', 'Spring', 'Summer') NOT NULL,
+    year INTEGER NOT NULL CHECK (year >= 2000 AND year <= 2100),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (course_name) REFERENCES Courses(course_name)
+);
+START TRANSACTION;
+
 
 CREATE TABLE Courses (
     course_name VARCHAR(255) PRIMARY KEY,
