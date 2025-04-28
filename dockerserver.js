@@ -13,11 +13,11 @@ const app = express();
 
 
 const pool = new Pool({
- user: "postgres",
- host: "localhost",
- database: "solaris_capstone",
- password: "password",
- port: 5432,
+  host: process.env.PGHOST,
+  user: process.env.PGUSER,
+  password: process.env.PGPASSWORD,
+  database: process.env.PGDATABASE,
+  port: process.env.PGPORT
 });
 
 
@@ -32,22 +32,22 @@ pool.connect((err) => {
 
 
 // Login-system JawsDB database
-// const userDB = mysql.createConnection({
-//  host: process.env.DB_HOST,
-//  user: process.env.DB_USER,
-//  password: process.env.DB_PASSWORD,
-//  database: process.env.DB_NAME,
-//  port: process.env.DB_PORT
-// });
+const userDB = mysql.createConnection({
+ host: process.env.DB_HOST,
+ user: process.env.DB_USER,
+ password: process.env.DB_PASSWORD,
+ database: process.env.DB_NAME,
+ port: process.env.DB_PORT
+});
 
 
-// userDB.connect(err => {
-//  if (err) {
-//    console.error("User DB (JawsDB) connection failed:", err);
-//  } else {
-//    console.log("Connected to JawsDB for Login System.");
-//  }
-// });
+userDB.connect(err => {
+ if (err) {
+   console.error("User DB (JawsDB) connection failed:", err);
+ } else {
+   console.log("Connected to JawsDB for Login System.");
+ }
+});
 
 
 //here is the middleware
