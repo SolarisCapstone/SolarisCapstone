@@ -4,8 +4,53 @@ DROP TABLE IF EXISTS Prerequisites;
 DROP TABLE IF EXISTS CatalogCourses;
 DROP TABLE IF EXISTS Courses;
 DROP TABLE IF EXISTS Catalogs;
+DROP TABLE IF EXISTS PrerequisiteGroups;
+DROP TABLE IF EXISTS UserPlans;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
+CREATE TABLE Users (
+    user_id SERIAL PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    name VARCHAR(255) NOT NULL,
+    role ENUM('student', 'advisor') NOT NULL
+);
+START TRANSACTION;
+
+CREATE TABLE UserPreferences (
+    preference_id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    major VARCHAR(255) NOT NULL,
+    concentration VARCHAR(255),
+    start_semester ENUM('Fall', 'Spring', 'Summer') NOT NULL,
+    start_year INTEGER NOT NULL CHECK (start_year >= 2000 AND start_year <= 2100),
+    credit_hours_per_semester INTEGER CHECK (credit_hours_per_semester BETWEEN 1 AND 21),
+    takes_summer_classes BOOLEAN DEFAULT FALSE,
+    has_transfer_credits BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+);
+START TRANSACTION;
+
+CREATE TABLE AdvisorPreferences (
+    preference_id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    advising_department VARCHAR(255),
+    advising_focus TEXT,
+    max_advisee_count INTEGER CHECK (max_advisee_count >= 0),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+);
+START TRANSACTION;
+
+CREATE TABLE UserPlans (
+    plan_id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    course_name VARCHAR(255) NOT NULL,
+    semester ENUM('Fall', 'Spring', 'Summer') NOT NULL,
+    year INTEGER NOT NULL CHECK (year >= 2000 AND year <= 2100),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (course_name) REFERENCES Courses(course_name)
+);
+START TRANSACTION;
 
 CREATE TABLE Courses (
     course_name VARCHAR(255) PRIMARY KEY,
