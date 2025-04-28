@@ -1,133 +1,149 @@
-SET FOREIGN_KEY_CHECKS = 0;
+-- PostgreSQL-cleaned and FIXED database.sql
 
-DROP TABLE IF EXISTS Users;
-DROP TABLE IF EXISTS UserPreferences;
-DROP TABLE IF EXISTS AdvisorPreferences;
-DROP TABLE IF EXISTS Prerequisites;
+-- Drop tables if they exist (correct order to avoid FK errors)
+DROP TABLE IF EXISTS UserPlans;
 DROP TABLE IF EXISTS CatalogCourses;
+DROP TABLE IF EXISTS Prerequisites;
 DROP TABLE IF EXISTS Courses;
+DROP TABLE IF EXISTS AdvisorPreferences;
+DROP TABLE IF EXISTS UserPreferences;
+DROP TABLE IF EXISTS Users;
 DROP TABLE IF EXISTS Catalogs;
 DROP TABLE IF EXISTS PrerequisiteGroups;
-DROP TABLE IF EXISTS UserPlans;
 
-SET FOREIGN_KEY_CHECKS = 1;
-
+-- Create tables
 CREATE TABLE Users (
     user_id SERIAL PRIMARY KEY,
     email VARCHAR(255) NOT NULL UNIQUE,
     name VARCHAR(255) NOT NULL,
-    role ENUM('student', 'advisor') NOT NULL
+    role TEXT CHECK (role IN ('student', 'advisor')) NOT NULL
 );
-START TRANSACTION;
 
 CREATE TABLE UserPreferences (
     preference_id SERIAL PRIMARY KEY,
-    user_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL REFERENCES Users(user_id) ON DELETE CASCADE,
     major VARCHAR(255) NOT NULL,
     concentration VARCHAR(255),
-    start_semester ENUM('Fall', 'Spring', 'Summer') NOT NULL,
-    start_year INTEGER NOT NULL CHECK (start_year >= 2000 AND start_year <= 2100),
+    start_semester TEXT CHECK (start_semester IN ('Fall', 'Spring', 'Summer')) NOT NULL,
+    start_year INTEGER NOT NULL CHECK (start_year BETWEEN 2000 AND 2100),
     credit_hours_per_semester INTEGER CHECK (credit_hours_per_semester BETWEEN 1 AND 21),
     takes_summer_classes BOOLEAN DEFAULT FALSE,
-    has_transfer_credits BOOLEAN DEFAULT FALSE,
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+    has_transfer_credits BOOLEAN DEFAULT FALSE
 );
-START TRANSACTION;
 
 CREATE TABLE AdvisorPreferences (
     preference_id SERIAL PRIMARY KEY,
-    user_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL REFERENCES Users(user_id) ON DELETE CASCADE,
     advising_department VARCHAR(255),
     advising_focus TEXT,
-    max_advisee_count INTEGER CHECK (max_advisee_count >= 0),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
+    max_advisee_count INTEGER CHECK (max_advisee_count >= 0)
 );
-START TRANSACTION;
-
-CREATE TABLE UserPlans (
-    plan_id SERIAL PRIMARY KEY,
-    user_id INTEGER NOT NULL,
-    course_name VARCHAR(255) NOT NULL,
-    semester ENUM('Fall', 'Spring', 'Summer') NOT NULL,
-    year INTEGER NOT NULL CHECK (year >= 2000 AND year <= 2100),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
-    FOREIGN KEY (course_name) REFERENCES Courses(course_name)
-);
-START TRANSACTION;
-
 
 CREATE TABLE Courses (
     course_name VARCHAR(255) PRIMARY KEY,
     description TEXT NOT NULL,
-    type VARCHAR(255) CHECK (type IN ('Core', 'Mathematics and Statistics', 'Capstone', 'Conc Required', 'Conc Elective', 'Conc Tech Elective')) NOT NULL 
+    type VARCHAR(255) CHECK (type IN ('Core', 'Mathematics and Statistics', 'Capstone', 'Conc Required', 'Conc Elective', 'Gen Ed', 'Conc Tech Elective')) NOT NULL
 );
-START TRANSACTION;
-
-CREATE TABLE Prerequisites (
-    course_name VARCHAR(255) NOT NULL,
-    prerequisite_name VARCHAR(255) NOT NULL,
-    PRIMARY KEY (course_name, prerequisite_name),
-    FOREIGN KEY (course_name) REFERENCES Courses(course_name),
-    FOREIGN KEY (prerequisite_name) REFERENCES Courses(course_name),
-    ALTER TABLE Prerequisites ADD COLUMN group_id INT
-); 
-START TRANSACTION;
 
 CREATE TABLE PrerequisiteGroups (
-    group_id INT PRIMARY KEY,
-    logic_type ENUM('AND', 'OR') NOT NULL,
+    group_id SERIAL PRIMARY KEY,
+    logic_type TEXT CHECK (logic_type IN ('AND', 'OR')) NOT NULL
 );
-START TRANSACTION;
+
+CREATE TABLE Prerequisites (
+    course_name VARCHAR(255) NOT NULL REFERENCES Courses(course_name),
+    prerequisite_name VARCHAR(255) REFERENCES Courses(course_name),
+    group_id INT REFERENCES PrerequisiteGroups(group_id),
+    PRIMARY KEY (course_name, prerequisite_name)
+);
 
 CREATE TABLE Catalogs (
-    catalog_id INT PRIMARY KEY,
+    catalog_id SERIAL PRIMARY KEY,
     catalog_name VARCHAR(255) NOT NULL,
     description TEXT
 );
-START TRANSACTION;
 
 CREATE TABLE CatalogCourses (
-    catalog_id INT,
-    course_name VARCHAR(255),
-    PRIMARY KEY (catalog_id, course_name),
-    FOREIGN KEY (catalog_id) REFERENCES Catalogs(catalog_id),
-    FOREIGN KEY (course_name) REFERENCES Courses(course_name)
+    catalog_id INT REFERENCES Catalogs(catalog_id),
+    course_name VARCHAR(255) REFERENCES Courses(course_name),
+    PRIMARY KEY (catalog_id, course_name)
 );
-START TRANSACTION;
 
+CREATE TABLE UserPlans (
+    user_id INT REFERENCES Users(user_id),
+    course_name VARCHAR(255) REFERENCES Courses(course_name),
+    semester VARCHAR(255),
+    PRIMARY KEY (user_id, course_name, semester)
+);
 
+-- Insert initial users
 INSERT INTO Users (email, name, role) VALUES
 ('alice@student.edu', 'Alice Student', 'student'),
 ('bob@advisor.edu', 'Bob Advisor', 'advisor');
 
-INSERT INTO UserPreferences (
-    user_id, major, concentration, start_semester, start_year,
-    credit_hours_per_semester, takes_summer_classes, has_transfer_credits
-    ) VALUES
+-- Insert initial preferences
+INSERT INTO UserPreferences (user_id, major, concentration, start_semester, start_year, credit_hours_per_semester, takes_summer_classes, has_transfer_credits) VALUES
 (1, 'Computer Science', 'Data Science', 'Fall', 2024, 15, TRUE, TRUE);
 
-INSERT INTO AdvisorPreferences (
-    user_id, advising_department, advising_focus, max_advisee_count
-) VALUES
+INSERT INTO AdvisorPreferences (user_id, advising_department, advising_focus, max_advisee_count) VALUES
 (2, 'Computer Science', 'Supports Data Science and Cybersecurity students', 30);
 
-CREATE TABLE UserPlans (
-    user_id INT,
-    course_name VARCHAR(255),
-    semester VARCHAR(255),
-    PRIMARY KEY (user_id, course_name, semester),
-    FOREIGN KEY (course_name) REFERENCES Courses(course_name)
-);
+-- Insert starter catalog
+INSERT INTO Catalogs (catalog_id, catalog_name) VALUES 
+(1, 'Bioinformatics BA'),
+(2, 'Bioinformatics BS'),
+(3, 'AI Robotics and Gaming BS'),
+(4, 'Data Science BS'),
+(5, 'Systems and Networks BS'),
+(6, 'Cybersecurity BS'),
+(7, 'Human-Computer Interaction BA'),
+(8, 'Information Technology BA'),
+(9, 'Web/Mobile Dev & Software Engr BS');
 
-TRUNCATE TABLE Courses;
 INSERT INTO Courses (course_name, description, type) VALUES
-    ('MATH 1241', 'Calculus I', 'Mathematics and Statistics'),
-    ('MATH 1242', 'Calculus II', 'Mathematics and Statistics'),
-    ('MATH 2164', 'Matricies and Linear Algebra', 'Mathematics and Statistics'),
-    ('MATH 2165', 'Introduction to Discrete Structures', 'Mathematics and Statistics'),
-    ('STAT 1220', 'Elements of Statistics', 'Mathematics and Statistics'),
-    ('STAT 2122', 'Introduction to Probability and Statistics', 'Mathematics and Statistics'),
-    ('STAT 2223', 'Elements of Statistics II', 'Mathematics and Statistics'),
+
+	-- Mathematics and Statistics Core
+	('MATH 1100', 'College Algebra', 'Mathematics and Statistics'),
+	('MATH 1101', 'College Algebra with Workshop', 'Mathematics and Statistics'),
+	('MATH 1102', 'Introduction to Mathematical Thinking', 'Mathematics and Statistics'),
+	('MATH 1103', 'Precalculus Mathematics for Science and Engineering', 'Mathematics and Statistics'),
+	('MATH 1105', 'Finite Mathematics', 'Mathematics and Statistics'),
+	('MATH 1120', 'Calculus for Business', 'Mathematics and Statistics'),
+	('MATH 1121', 'Calculus for Engineering Technology', 'Mathematics and Statistics'),
+	('MATH 1241', 'Calculus I', 'Mathematics and Statistics'),
+	('MATH 1242', 'Calculus II', 'Mathematics and Statistics'),
+	('MATH 2120', 'Intermediate Applied Calculus', 'Mathematics and Statistics'),
+	('MATH 2164', 'Matrices and Linear Algebra', 'Mathematics and Statistics'),
+	('MATH 2165', 'Introduction to Discrete Structures', 'Mathematics and Statistics'),
+	('MATH 2171', 'Differential Equations', 'Mathematics and Statistics'),
+	('MATH 2228', 'Actuarial Science IA: Mathematical Theory of Interest', 'Mathematics and Statistics'),
+	('MATH 3122', 'Probability & Statistics I', 'Mathematics and Statistics'),
+	('MATH 3123', 'Probability & Statistics II', 'Mathematics and Statistics'),
+	('MATH 3141', 'Advanced Calculus of One Variable', 'Mathematics and Statistics'),
+	('MATH 3142', 'Advanced Calculus of Several Variables', 'Mathematics and Statistics'),
+	('MATH 3163', 'Introduction to Modern Algebra', 'Mathematics and Statistics'),
+	('MATH 3171', 'Applied Mathematics', 'Mathematics and Statistics'),
+	('MATH 3181', 'Fundamental Concepts of Geometry', 'Mathematics and Statistics'),
+	('MATH 3228', 'Actuarial Science IB', 'Mathematics and Statistics'),
+	('MATH 4051', 'Computational Exploration and Generation of Data', 'Mathematics and Statistics'),
+	('MATH 4109', 'History of Mathematical Thought', 'Mathematics and Statistics'),
+	('MATH 4161', 'Number Theory', 'Mathematics and Statistics'),
+	('MATH 4163', 'Modern Algebra', 'Mathematics and Statistics'),
+	('MATH 4164', 'Abstract Linear Algebra', 'Mathematics and Statistics'),
+	('MATH 4181', 'Introduction to Topology', 'Mathematics and Statistics'),
+	('MATH 4226', 'Mathematics of Financial Markets', 'Mathematics and Statistics'),
+	('MATH 4228', 'Actuarial Science IIA', 'Mathematics and Statistics'),
+	('MATH 4229', 'Actuarial Science IIB', 'Mathematics and Statistics'),
+
+	-- Statistics Core
+	('STAT 1220', 'Elements of Statistics I (Business)', 'Mathematics and Statistics'),
+	('STAT 1221', 'Elements of Statistics I', 'Mathematics and Statistics'),
+	('STAT 1222', 'Introduction to Statistics', 'Mathematics and Statistics'),
+	('STAT 1322', 'Introduction to Statistics II', 'Mathematics and Statistics'),
+	('STAT 2122', 'Introduction to Probability and Statistics', 'Mathematics and Statistics'),
+	('STAT 2223', 'Elements of Statistics II', 'Mathematics and Statistics'),
+
+    -- Comp Sci Stuff
     ('ITSC 1212', 'Introduction to Computer Science', 'Core'),
     ('ITSC 1213', 'Introduction to Computer Science II', 'Core'),
     ('ITSC 2214', 'Data Structures and Algorithms', 'Core'),
@@ -143,16 +159,17 @@ INSERT INTO Courses (course_name, description, type) VALUES
     ('ITSC 3688', 'Computers and their Impact on Society', 'Core'),
     ('ITSC 3790', 'Honors Research', 'Core'),
     ('ITSC 3990', 'Undergraduate Research', 'Core'),
-    ('ITCS 4238', 'Intellegent and Interactive System Studio', 'Capstone'),
-    ('ITIS 4390', 'Interation Design Projects', 'Capstone'),
+    ('ITCS 4238', 'Intelligent and Interactive System Studio', 'Capstone'),
+    ('ITIS 4390', 'Interaction Design Projects', 'Capstone'),
     ('ITIS 4246', 'Competitive Cyber Defense', 'Capstone'),
     ('ITSC 4155', 'Software Development Projects', 'Capstone'),
-    ('ITSC 4681', 'Senior Design I', 'Captsone'),
-    ('ITSC 4682', 'Senior Design II', 'Captsone'),
-    ('ITSC 4750', 'Honors Thesis', 'Captsone'),
-    ('ITSC 4850', 'Senior Project I', 'Captsone'),
-    ('ITSC 4851', 'Senior Project II', 'Captsone'),
-    ('ITSC 4990', 'Undergraduate Research', 'Captstone'),
+	('ITCS 4232', 'Game Design and Development Studio', 'Capstone'),
+    ('ITSC 4681', 'Senior Design I', 'Capstone'),
+    ('ITSC 4682', 'Senior Design II', 'Capstone'),
+    ('ITSC 4750', 'Honors Thesis', 'Capstone'),
+    ('ITSC 4850', 'Senior Project I', 'Capstone'),
+    ('ITSC 4851', 'Senior Project II', 'Capstone'),
+    ('ITSC 4990', 'Undergraduate Research', 'Capstone'),
     ('ITSC 4991', 'Undergraduate Thesis', 'Capstone'),
     ('ITCS 3050', 'Topics in Computer Science', 'Core'),
     ('ITCS 3112', 'Design and Implementation of Object-Oriented Systems', 'Conc Elective'),
@@ -171,8 +188,8 @@ INSERT INTO Courses (course_name, description, type) VALUES
     ('ITCS 4114', 'Real World Algorithms', 'Conc Elective'),
     ('ITCS 4121', 'Information Visualization', 'Conc Elective'),
     ('ITCS 4122', 'Visual Analytics', 'Core'),
-    ('ITCS 4123', 'Vizualization and Visual Communication', 'Conc Elective'),
-    ('ITCS 4124', 'Advanced 3D Computer Graphics', 'Conc Elective')
+    ('ITCS 4123', 'Visualization and Visual Communication', 'Conc Elective'),
+    ('ITCS 4124', 'Advanced 3D Computer Graphics', 'Conc Elective'),
     ('ITCS 4141', 'Computer Systems and Architecture', 'Conc Elective'),
     ('ITCS 4145', 'Parallel Programming', 'Core'),
     ('ITCS 4150', 'Mobile Robotics', 'Conc Elective'),
@@ -181,7 +198,6 @@ INSERT INTO Courses (course_name, description, type) VALUES
     ('ITCS 4180', 'Mobile Application Development', 'Core'),
     ('ITCS 4230', 'Intro to Game Design and Development', 'Conc Elective'),
     ('ITCS 4231', 'Advanced Game Design and Development', 'Conc Elective'),
-    ('ITCS 4232', 'Game Design and Development Studio', 'Capstone'),
     ('ITCS 4236', 'Artificial Intellegence for Computer Games', 'Conc Elective'),
     ('ITIS 3130', 'Intro to Human-Centered Computing', 'Core'),
     ('ITIS 3135', 'Web-based Application Design and Development', 'Core'),
@@ -197,7 +213,6 @@ INSERT INTO Courses (course_name, description, type) VALUES
     ('ITIS 4180', 'Mobile Application Development', 'Conc Elective'),
     ('ITIS 4214', 'Usable Security and Privacy', 'Conc Required'),
     ('ITIS 4221', 'Secure Programming and Penetration Testing', 'Conc Required'),
-    ('ITIS 4246', 'Competitive Cyber Defense', 'Capstone'),
     ('ITIS 4250', 'Computer Forensics', 'Conc Required'),
     ('ITIS 4260', 'Intro to Security Analysis', 'Conc Required'),
     ('ITIS 4261', 'Intro to Secured Cloud Computing', 'Conc Required'),
@@ -207,38 +222,43 @@ INSERT INTO Courses (course_name, description, type) VALUES
     ('ITIS 4355', 'Accessible Design and Implementation', 'Conc Elective'),
     ('ITIS 4358', 'Physical Computing', 'Conc Elective'),  
     ('ITIS 4360', 'Human-Centered Artificial Intelligence', 'Conc Elective'),
-    ('ITIS 4390', 'Interaction Design Projects', 'Capstone'),
-    ('BINF 1101', 'Intro to Bioinformatics and Genomics', 'Conc Required'),
+
+	-- Bioinf Stuff
+	('BINF 1101', 'Intro to Bioinformatics and Genomics', 'Conc Required'),
     ('BINF 2111', 'Intro to Bioinformatics Computing', 'Conc Required'),
     ('BINF 3101', 'Sequence Analysis', 'Conc Required'),
     ('BINF 3121', 'Statistics for Bioinformatics', 'Core'),
     ('BINF 3131', 'Bioinformatics Algorithms', 'Conc Elective'),
-    ('BINF 3201', 'Genomic Methods', 'Conc Elective'),    
+    ('BINF 3201', 'Genomic Methods', 'Conc Elective'),
+	('BINF 3900', 'Undergraduate Research', 'Core'),
     ('BINF 4211', 'Applied Data Mining for Bioinformatics', 'Conc Elective'),
     ('BINF 4171', 'Business of Biotechnology', 'Conc Elective'),
     ('BINF 4191', 'Life Sciences and the Law', 'Conc Elective'),
     ('BINF 4600', 'Bioinformatics and Genomics Seminar', 'Conc Required'),
     ('BINF 4650', 'Senior Project', 'Capstone'),
     ('BINF 4900', 'Principles of Team Science', 'Capstone'),
-    ('BIOL 2120', 'General Biology I', 'Core'),
-    ('BIOL 2130', 'General Biology II', 'Core'),
+	
+	-- Extra Biology Classes Just in Case
+	('BIOL 1000', 'Special Topics in Biology', 'Core'),
+	('BIOL 1110', 'Principles of Biology I', 'Core'),
+	('BIOL 1110L', 'Principles of Biology I Laboratory', 'Core'),
+	('BIOL 1115', 'Principles of Biology II', 'Core'),
+	('BIOL 2000', 'Special Topics in Biology', 'Core'),
+	('BIOL 2120', 'General Biology I', 'Core'),
+	('BIOL 2120L', 'General Biology I Laboratory', 'Core'),
+	('BIOL 2130', 'General Biology II', 'Core'),
     ('BIOL 3111', 'Cell Biology', 'Conc Required'),
     ('BIOL 3166', 'Genetics', 'Conc Required'),
     ('CHEM 1251', 'General Chemistry I', 'Core'),
     ('CHEM 1251L', 'General Chemistry I Lab', 'Core'),
     ('CHEM 1252', 'General Chemistry II', 'Core'),
+
+	-- Extra random/gen-ed stuff
+	('PSYCH 1101', 'General Psychology', 'Gen Ed'),
+	('PHIL 2105', 'Deductive Logic', 'Gen Ed'),
     ('CHEM 1252L', 'General Chemistry II Lab', 'Core');
 
-INSERT INTO Catalogs (catalog_id, catalog_name) VALUES 
-    (1, 'Bioinformatics BA'),
-    (2, 'Bioinformatics BS'),
-    (3, 'AI Robotics and Gaming BS'),
-    (4, 'Data Science BS'),
-    (5, 'Systems and Networks BS'),
-    (6, 'Cybersecurity BS'),
-    (7, 'Human-Computer Interaction BA'),
-    (8, 'Information Technology BA'),
-    (9, 'Web/Mobile Dev & Software Engr BS');
+
 
 INSERT INTO PrerequisiteGroups (group_id, logic_type) VALUES 
     (1, 'AND'),
@@ -297,7 +317,7 @@ INSERT INTO Prerequisites (course_name, prerequisite_name, group_id) VALUES
     ('ITCS 3160', 'ITSC 1213', NULL),
     ('ITCS 3162', 'ITSC 2214', NULL),
     ('ITCS 3166', 'ITSC 1213', NULL),
-    ('ITCS 3190', 'ITSC 2214'), NULL,
+    ('ITCS 3190', 'ITSC 2214', NULL),
     ('ITCS 3216', 'PSYCH 1101', NULL),
     ('ITCS 4010', 'ITSC 2214', NULL),
     ('ITCS 4102', 'ITSC 2214', NULL),
@@ -311,7 +331,7 @@ INSERT INTO Prerequisites (course_name, prerequisite_name, group_id) VALUES
     ('ITCS 4145', 'ITSC 3146', NULL),
     ('ITCS 4151', 'ITSC 2214', 1),
     ('ITCS 4151', 'MATH 2164', 1),
-    ('ITCS 4152', 'ITSC 3156', NULL),
+    ('ITCS 4152', 'ITCS 3156', NULL),
     ('ITCS 4180', 'ITSC 2214', NULL),
     ('ITCS 4230', 'ITSC 2214', NULL),
     ('ITCS 4231', 'ITCS 4230', NULL),
@@ -321,21 +341,17 @@ INSERT INTO Prerequisites (course_name, prerequisite_name, group_id) VALUES
     ('ITIS 3200', 'ITSC 2214', NULL),
     ('ITIS 3216', 'PSYCH 1101', NULL),
     ('ITIS 3246', 'ITSC 3146', NULL),
-    ('ITIS 3300', 'ITIS 2300', 2),
-    ('ITIS 3300', 'ITIS 3135', 2),
+    ('ITIS 3300', 'ITIS 3135', NULL),
     ('ITIS 3310', 'ITSC 2214', NULL),
     ('ITIS 3320', 'ITIS 3200', 1),
     ('ITIS 3320', 'ITIS 3300', 1),
-    ('ITIS 4166', 'ITIS 2300', 2),
-    ('ITIS 4166', 'ITCS 3135', 2),
+    ('ITIS 4166', 'ITIS 3135', NULL),
     ('ITIS 4166', 'ITCS 3160', 1),
     ('ITIS 4180', 'ITSC 2214', NULL),
-    ('ITIS 4221', 'ITIS 3135', 2),
-    ('ITIS 4221', 'ITIS 2300', 2),
+    ('ITIS 4221', 'ITIS 3135', NULL),
     ('ITIS 4246', 'ITIS 3200', 1),
     ('ITIS 4246', 'ITIS 3246', 1),
-    ('ITIS 4250', 'ITIS 2300', 2),
-    ('ITIS 4250', 'ITIS 3150', 2),
+    ('ITIS 4250', 'ITIS 3135', NULL),
     ('ITIS 4260', 'ITIS 3200', 1),
     ('ITIS 4260', 'ITSC 3146', 1),
     ('ITIS 4260', 'STAT 1220', 2),
@@ -403,7 +419,6 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (2, 'ITSC 4851'),
     (2, 'ITSC 4990'),
     (2, 'ITSC 4991'),
-    (2, 'ITSC 4155'),
     (2, 'BINF 4650'),
     (2, 'ITIS 4390'),
     (2, 'ITIS 4246'),
@@ -419,6 +434,7 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (2, 'BINF 3201'),
     (3, 'ITSC 1212'),
     (3, 'ITSC 1213'),
+	(3, 'ITSC 2214'),	
     (3, 'ITSC 1600'),
     (3, 'ITSC 2600'),
     (3, 'ITSC 2175'),
@@ -427,21 +443,22 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (3, 'ITSC 3146'),
     (3, 'ITSC 3155'),
     (3, 'ITSC 3688'),
+	(3, 'MATH 1241'),
     (3, 'MATH 1242'),
     (3, 'MATH 2164'),
     (3, 'STAT 2122'),
-    (3, 'ITSC 4232'),
+    (3, 'ITCS 4232'),
     (3, 'ITSC 4155'),
     (3, 'ITSC 4850'),
     (3, 'ITSC 4851'),
     (3, 'ITSC 4681'),
-    (3, 'ITCS 4682'),
-    (3, 'ITCS 4750'),
-    (3, 'ITCS 4990'),
-    (3, 'ITCS 4991'),
+    (3, 'ITSC 4682'),
+    (3, 'ITSC 4750'),
+    (3, 'ITSC 4990'),
+    (3, 'ITSC 4991'),
     (3, 'ITIS 4390'),
     (3, 'ITIS 4246'),
-    (3, 'ITCS 3135'),
+    (3, 'ITIS 3135'),
     (3, 'ITCS 3156'),
     (3, 'ITCS 3120'),
     (3, 'ITCS 3153'),
@@ -452,9 +469,6 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (3, 'ITCS 4150'),
     (3, 'ITCS 4151'),
     (3, 'ITCS 4152'),
-    (3, 'ITCS 3156'),
-    (3, 'ITCS 4320'),
-    (3, 'ITCS 4321'),
     (3, 'ITCS 4236'),
     (4, 'ITSC 1212'),
     (4, 'ITSC 1213'),
@@ -475,14 +489,14 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (4, 'ITSC 4850'),
     (4, 'ITSC 4851'),
     (4, 'ITSC 4681'),
-    (4, 'ITCS 4682'),
-    (4, 'ITCS 4750'),
-    (4, 'ITCS 4990'),
-    (4, 'ITCS 4991'),
+    (4, 'ITSC 4682'),
+    (4, 'ITSC 4750'),
+    (4, 'ITSC 4990'),
+    (4, 'ITSC 4991'),
     (4, 'ITCS 4232'),
     (4, 'ITIS 4390'),
     (4, 'ITIS 4246'),
-    (4, 'ITSC 3160'),
+    (4, 'ITCS 3160'),
     (4, 'ITCS 3162'),
     (4, 'ITCS 3190'),
     (4, 'ITCS 3216'),
@@ -490,7 +504,6 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (4, 'ITCS 4122'),
     (4, 'ITCS 4152'),
     (4, 'ITCS 3156'),
-    (4, 'INFO 3236'),
     (4, 'ITIS 4310'),
     (5, 'ITSC 1212'),
     (5, 'ITSC 1213'),
@@ -511,15 +524,14 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (5, 'ITSC 4850'),
     (5, 'ITSC 4851'),
     (5, 'ITSC 4681'),
-    (5, 'ITCS 4682'),
-    (5, 'ITCS 4750'),
-    (5, 'ITCS 4990'),
-    (5, 'ITCS 4991'),
+    (5, 'ITSC 4682'),
+    (5, 'ITSC 4750'),
+    (5, 'ITSC 4990'),
+    (5, 'ITSC 4991'),
     (5, 'ITCS 4232'),
     (5, 'ITIS 4390'),
     (5, 'ITIS 4246'),
-    (5, 'ITCS 3145'),
-    (5, 'ITSC 3160'),
+    (5, 'ITCS 3160'),
     (5, 'ITCS 3166'),
     (5, 'ITCS 3143'),
     (5, 'ITCS 3190'),
@@ -548,15 +560,15 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (6, 'ITSC 4850'),
     (6, 'ITSC 4851'),
     (6, 'ITSC 4681'),
-    (6, 'ITCS 4682'),
-    (6, 'ITCS 4750'),
-    (6, 'ITCS 4990'),
-    (6, 'ITCS 4991'),
+    (6, 'ITSC 4682'),
+    (6, 'ITSC 4750'),
+    (6, 'ITSC 4990'),
+    (6, 'ITSC 4991'),
     (6, 'ITCS 4232'),
     (6, 'ITIS 4390'),
     (6, 'ITIS 4246'),
-    (6, 'ITSC 3160'),
-    (6, 'ITSC 3135'),
+    (6, 'ITCS 3160'),
+    (6, 'ITIS 3135'),
     (6, 'ITIS 3200'),
     (6, 'ITIS 3246'),
     (6, 'ITIS 4166'),
@@ -578,13 +590,13 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (7, 'STAT 1220'),
     (7, 'STAT 2223'),
     (7, 'ITSC 4155'),
-    (7, 'ITSC 4750')
+    (7, 'ITSC 4750'),
     (7, 'ITSC 4850'),
     (7, 'ITSC 4851'),
     (7, 'ITSC 4681'),
-    (7, 'ITCS 4682'),
-    (7, 'ITCS 4990'),
-    (7, 'ITCS 4991'),
+    (7, 'ITSC 4682'),
+    (7, 'ITSC 4990'),
+    (7, 'ITSC 4991'),
     (7, 'ITIS 4390'),
     (7, 'ITIS 4246'),
     (7, 'ITCS 4232'),
@@ -612,9 +624,9 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (8, 'ITSC 4850'),
     (8, 'ITSC 4851'),
     (8, 'ITSC 4681'),
-    (8, 'ITCS 4682'),
-    (8, 'ITCS 4990'),
-    (8, 'ITCS 4991'),
+    (8, 'ITSC 4682'),
+    (8, 'ITSC 4990'),
+    (8, 'ITSC 4991'),
     (8, 'ITIS 4390'),
     (8, 'ITIS 4246'), 
     (8, 'ITCS 4232'),
@@ -622,7 +634,7 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (8, 'ITIS 3135'),
     (8, 'ITIS 3200'),
     (8, 'ITIS 3300'),
-    (8, 'ITSC 3160'),
+    (8, 'ITCS 3160'),
     (9, 'ITSC 1212'),
     (9, 'ITSC 1213'),
     (9, 'ITSC 1600'),
@@ -642,22 +654,21 @@ INSERT INTO CatalogCourses (catalog_id, course_name) VALUES
     (9, 'ITSC 4850'),
     (9, 'ITSC 4851'),
     (9, 'ITSC 4681'),
-    (9, 'ITCS 4682'),
-    (9, 'ITCS 4990'),
-    (9, 'ITCS 4991'),
+    (9, 'ITSC 4682'),
+    (9, 'ITSC 4990'),
+    (9, 'ITSC 4991'),
     (9, 'ITIS 4390'), 
     (9, 'ITIS 4246'), 
     (9, 'ITCS 4232'), 
     (9, 'ITIS 3135'),
     (9, 'ITIS 3310'),
-    (9, 'ITSC 3160'),
+    (9, 'ITCS 3160'),
     (9, 'ITIS 4221'),
-    (9, 'ITIS 3112'),
+    (9, 'ITCS 3112'),
     (9, 'ITIS 3130'),
     (9, 'ITIS 3300'),
     (9, 'ITIS 3320'),
     (9, 'ITIS 4166'),
     (9, 'ITIS 4180'),
-    (9, 'ITIS 4340'),
     (9, 'ITIS 4350');
 commit;

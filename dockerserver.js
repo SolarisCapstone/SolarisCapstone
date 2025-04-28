@@ -1,30 +1,28 @@
 //jawsDB environment
 require("dotenv").config();
 
-const express = require("express");
-const { Pool } = require("pg");
+require("express");
+const mysql = require("mysql2");
 const path = require("path");
 const bodyParser = require("body-parser");
-const mysql = require("mysql2");
 
 const app = express();
 
-const pool = new Pool({
-  user: "postgres",
+// Our MySQL for the course data
+const courseDB = mysql.createConnection({
   host: "localhost",
-  database: "solaris_capstone",
+  user: "root",
   password: "password",
-  port: 5432,
+  database: "SolarisDatabase",
 });
 
-pool.connect((err) => {
+courseDB.connect((err) => {
   if (err) {
-    console.error("Database connection failed: " + err.stack);
+    console.error("Course DB connection failed: " + err.stack);
     return;
   }
-  console.log("Connected to PostgreSQL database.");
-}
-);
+  console.log("Connected to Local Course Database.");
+});
 
 // Login-system JawsDB database
 const userDB = mysql.createConnection({
@@ -83,60 +81,38 @@ app.get("/", (req, res) => {
 });
 
 //The degree planners API routes(from jonathans original server)
-app.get("/api/degree/:majorId", async (req, res) => {
+
+app.get("/api/degree/:majorId", (req, res) => {
   const majorId = req.params.majorId;
 
-  try {
-    const coreCoursesQuery = `
-      SELECT course_name AS code, description AS title 
-      FROM Courses 
-      WHERE type = 'Core' AND course_name IN (
-        SELECT course_name FROM CatalogCourses WHERE catalog_id = $1
-      )
-    `;
-    const mathStatsCoursesQuery = `
-      SELECT course_name AS code, description AS title 
-      FROM Courses 
-      WHERE type = 'Mathematics and Statistics' AND course_name IN (
-        SELECT course_name FROM CatalogCourses WHERE catalog_id = $1
-      )
-    `;
-    const concentrationRequiredQuery = `
-      SELECT course_name AS code, description AS title 
-      FROM Courses 
-      WHERE type = 'Conc Required' AND course_name IN (
-        SELECT course_name FROM CatalogCourses WHERE catalog_id = $1
-      )
-    `;
-    const concentrationElectivesQuery = `
-      SELECT course_name AS code, description AS title 
-      FROM Courses 
-      WHERE type = 'Conc Elective' AND course_name IN (
-        SELECT course_name FROM CatalogCourses WHERE catalog_id = $1
-      )
-    `;
+  const coreCoursesQuery=`SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Core' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = ?)`;
+  const mathStatsCoursesQuery = `SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Mathematics and Statistics' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = ?)`;
+  const concentrationRequiredQuery = `SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Conc Required' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = ?)`;
+  const concentrationElectivesQuery = `SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Conc Elective' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = ?)`;
 
-    const coreCourses = await pool.query(coreCoursesQuery, [majorId]);
-    const mathStatsCourses = await pool.query(mathStatsCoursesQuery, [majorId]);
-    const concentrationRequired = await pool.query(concentrationRequiredQuery, [majorId]);
-    const concentrationElectives = await pool.query(concentrationElectivesQuery, [majorId]);
-
+  Promise.all([
+    courseDB.promise().query(coreCoursesQuery, [majorId]),
+    courseDB.promise().query(mathStatsCoursesQuery, [majorId]),
+    courseDB.promise().query(concentrationRequiredQuery, [majorId]),
+    courseDB.promise().query(concentrationElectivesQuery, [majorId])
+  ])
+  .then(([coreCourses, mathStatsCourses, concentrationRequired, concentrationElectives]) => {
     res.json({
-      coreCourses: coreCourses.rows,
-      mathStatsCourses: mathStatsCourses.rows,
+      coreCourses: coreCourses[0],
+      mathStatsCourses: mathStatsCourses[0],
       concentration: {
-        required: concentrationRequired.rows,
+        required: concentrationRequired[0],
         electives: {
-          options: concentrationElectives.rows,
-        },
-      },
+          options: concentrationElectives[0]
+        }
+      }
     });
-  } catch (error) {
-    console.error("Error fetching degree data:", error);
+  })
+  .catch((err) => {
+    console.error("Error fetching degree data:", err.stack);
     res.status(500).send("Internal Server Error");
-  }
+  });
 });
-
 
 app.get("/api/courses", (req, res) => {
   const query ="SELECT course_name, description, type FROM Courses";
