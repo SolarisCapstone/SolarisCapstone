@@ -3,6 +3,7 @@ require("dotenv").config();
 
 const express = require("express");
 const mysql = require("mysql2");
+const { Pool } = require("pg"); // Postgres
 const path = require("path");
 const bodyParser = require("body-parser");
 
@@ -41,14 +42,26 @@ userDB.connect(err => {
   }
 });
 
-//here is the middleware
 
+// PostgreSQL: Heroku Postgres for catalog data
+const pgPool = new Pool({
+  user: process.env.PGUSER,
+  password: process.env.PGPASSWORD,
+  database: process.env.PGDATABASE,
+  host: process.env.PGHOST,
+  port: process.env.PGPORT,
+});
+
+pgPool.connect()
+  .then(() => console.log("Connected to PostgreSQL database (Heroku)."))
+  .catch(err => console.error("PostgreSQL connection error:", err.stack));
+
+//Middleware
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//Login Routes here
-
+// ========= LOGIN ROUTES (JawsDB/MySQL) =========
 app.post("/signup", (req, res) => {
   const { username, password } = req.body;
   const sql = "INSERT INTO users (username, password) VALUES (?, ?)";
@@ -80,12 +93,11 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-//The degree planners API routes(from jonathans original server)
-
+// ========= MySQL DEGREE PLANNER ROUTES =========
 app.get("/api/degree/:majorId", (req, res) => {
   const majorId = req.params.majorId;
 
-  const coreCoursesQuery=`SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Core' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = ?)`;
+  const coreCoursesQuery = `SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Core' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = ?)`;
   const mathStatsCoursesQuery = `SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Mathematics and Statistics' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = ?)`;
   const concentrationRequiredQuery = `SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Conc Required' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = ?)`;
   const concentrationElectivesQuery = `SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Conc Elective' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = ?)`;
@@ -96,24 +108,23 @@ app.get("/api/degree/:majorId", (req, res) => {
     courseDB.promise().query(concentrationRequiredQuery, [majorId]),
     courseDB.promise().query(concentrationElectivesQuery, [majorId])
   ])
-  .then(([coreCourses, mathStatsCourses, concentrationRequired, concentrationElectives]) => {
-    res.json({
-      coreCourses: coreCourses[0],
-      mathStatsCourses: mathStatsCourses[0],
-      concentration: {
-        required: concentrationRequired[0],
-        electives: {
-          options: concentrationElectives[0]
+    .then(([coreCourses, mathStatsCourses, concentrationRequired, concentrationElectives]) => {
+      res.json({
+        coreCourses: coreCourses[0],
+        mathStatsCourses: mathStatsCourses[0],
+        concentration: {
+          required: concentrationRequired[0],
+          electives: { options: concentrationElectives[0] }
         }
-      }
+      });
+    })
+    .catch(err => {
+      console.error("Error fetching degree data (MySQL):", err.stack);
+      res.status(500).send("Internal Server Error");
     });
-  })
-  .catch((err) => {
-    console.error("Error fetching degree data:", err.stack);
-    res.status(500).send("Internal Server Error");
-  });
 });
 
+// ========= MySQL GENERAL ROUTES =========
 app.get("/api/courses", (req, res) => {
   const query ="SELECT course_name, description, type FROM Courses";
   courseDB.query(query, (err, results) => {
@@ -158,8 +169,43 @@ app.get("/api/catalogcourses", (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 3000;
+// ========= POSTGRES ROUTES =========
+app.get("/api/pg-degree/:majorId", async (req, res) => {
+  const majorId = req.params.majorId;
 
+  try {
+    const coreCourses = await pgPool.query(`SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Core' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = $1)`, [majorId]);
+    const mathStatsCourses = await pgPool.query(`SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Mathematics and Statistics' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = $1)`, [majorId]);
+    const concentrationRequired = await pgPool.query(`SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Conc Required' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = $1)`, [majorId]);
+    const concentrationElectives = await pgPool.query(`SELECT course_name AS code, description AS title, type FROM Courses WHERE type = 'Conc Elective' AND course_name IN (SELECT course_name FROM CatalogCourses WHERE catalog_id = $1)`, [majorId]);
+
+    res.json({
+      coreCourses: coreCourses.rows,
+      mathStatsCourses: mathStatsCourses.rows,
+      concentration: {
+        required: concentrationRequired.rows,
+        electives: { options: concentrationElectives.rows },
+      },
+    });
+
+  } catch (err) {
+    console.error("Error fetching degree data (Postgres):", err.stack);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+// Additional Postgres APIs if needed (optional)
+app.get("/api/pg-courses", async (req, res) => {
+  try {
+    const result = await pgPool.query("SELECT course_name, description, type FROM Courses");
+    res.json(result.rows);
+  } catch (err) {
+    res.status(500).send("Error fetching courses.");
+  }
+});
+
+// ========= START SERVER =========
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
 });
