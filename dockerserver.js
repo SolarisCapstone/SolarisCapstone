@@ -206,6 +206,61 @@ app.get("/api/catalogcourses", (req, res) => {
  });
 });
 
+// PostgreSQL-based Degree Route
+app.get("/api/pg-degree/:majorId", async (req, res) => {
+  const majorId = req.params.majorId;
+
+  try {
+    const coreCoursesQuery = `
+      SELECT course_name AS code, description AS title
+      FROM Courses
+      WHERE type = 'Core' AND course_name IN (
+        SELECT course_name FROM CatalogCourses WHERE catalog_id = $1
+      )
+    `;
+    const mathStatsCoursesQuery = `
+      SELECT course_name AS code, description AS title
+      FROM Courses
+      WHERE type = 'Mathematics and Statistics' AND course_name IN (
+        SELECT course_name FROM CatalogCourses WHERE catalog_id = $1
+      )
+    `;
+    const concentrationRequiredQuery = `
+      SELECT course_name AS code, description AS title
+      FROM Courses
+      WHERE type = 'Conc Required' AND course_name IN (
+        SELECT course_name FROM CatalogCourses WHERE catalog_id = $1
+      )
+    `;
+    const concentrationElectivesQuery = `
+      SELECT course_name AS code, description AS title
+      FROM Courses
+      WHERE type = 'Conc Elective' AND course_name IN (
+        SELECT course_name FROM CatalogCourses WHERE catalog_id = $1
+      )
+    `;
+
+    const coreCourses = await pool.query(coreCoursesQuery, [majorId]);
+    const mathStatsCourses = await pool.query(mathStatsCoursesQuery, [majorId]);
+    const concentrationRequired = await pool.query(concentrationRequiredQuery, [majorId]);
+    const concentrationElectives = await pool.query(concentrationElectivesQuery, [majorId]);
+
+    res.json({
+      coreCourses: coreCourses.rows,
+      mathStatsCourses: mathStatsCourses.rows,
+      concentration: {
+        required: concentrationRequired.rows,
+        electives: {
+          options: concentrationElectives.rows,
+        },
+      },
+    });
+  } catch (error) {
+    console.error("Error fetching PostgreSQL degree data:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
