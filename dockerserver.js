@@ -1,6 +1,7 @@
 //jawsDB environment
 require("dotenv").config();
-
+//for the usr profiles
+const session= require('express-session');
 
 const express = require("express");
 const { Pool } = require("pg");
@@ -59,7 +60,13 @@ userDB.connect(err => {
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+//the express-session stuff 
+app.use(session({
+  secret: process.env.SESSION_SECRET || "default_secret",
+  resave:false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}));
 
 //Login Routes here
 
@@ -85,11 +92,37 @@ app.post("/login", (req, res) => {
  userDB.query(sql, [username, password], (err, results) => {
    if (err) return res.status(500).send("Login error.");
    if (results.length > 0) {
+
+    req.session.user = {
+      id: results[0].id,
+      username: results[0].username
+    };
+    
+
      res.send("Login successful!");
    } else {
      res.status(401).send("Invalid credentials.");
    }
  });
+});
+
+app.get("/api/session", (req, res) => {
+  if (req.session.user) {
+    res.json({ loggedIn: true, user: req.session.user });
+  } else {
+    res.json({ loggedIn: false });
+  }
+});
+
+app.post("/logout", (req, res) => {
+  req.session.destroy(err => {
+    if (err) {
+      console.error('Failed to destroy session:', err);
+      return res.status(500).send("Logout failed");
+    }
+    res.clearCookie('connect.sid'); // this little snippet clears the cookie
+    res.send("Logged out");
+  });
 });
 
 
