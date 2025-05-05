@@ -253,25 +253,35 @@ app.get("/api/pg-degree/:majorId", async (req, res) => {
   const majorId = req.params.majorId;
 
   try {
-    const courseQuery = `
-      SELECT course_name AS code, 
-             description AS title, 
-             type, 
-             credit_hours
-      FROM Courses
-      WHERE course_name IN (
-        SELECT course_name FROM CatalogCourses WHERE catalog_id = $1
-      )
+    const groupedQuery = `
+      SELECT 
+        c.course_name AS code,
+        c.description AS title,
+        c.type,
+        c.credit_hours
+      FROM Courses c
+      JOIN CatalogCourses cc ON c.course_name = cc.course_name
+      WHERE cc.catalog_id = $1
     `;
-    const result = await pool.query(courseQuery, [majorId]);
 
-    // Optional: add placeholder status (until you wire real UserPlans data)
-    const coursesWithStatus = result.rows.map(course => ({
-      ...course,
-      status: 'needed' // or 'completed' / 'planned' if you can query that later
-    }));
+    const result = await pool.query(groupedQuery, [majorId]);
 
-    res.json({ courses: coursesWithStatus });
+    // Group courses by type
+    const grouped = {};
+    result.rows.forEach(course => {
+      if (!grouped[course.type]) {
+        grouped[course.type] = [];
+      }
+      grouped[course.type].push({
+        code: course.code,
+        title: course.title,
+        credit_hours: course.credit_hours,
+        type: course.type,
+        status: 'needed'  // placeholder for now
+      });
+    });
+
+    res.json(grouped);
   } catch (error) {
     console.error("Error fetching degree data:", error);
     res.status(500).send("Internal Server Error");
