@@ -10,6 +10,7 @@ const bodyParser = require("body-parser");
 const mysql = require("mysql2");
 
 
+
 const app = express();
 
 
@@ -243,4 +244,36 @@ app.get("/api/catalogcourses", (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
  console.log(`Server is running at http://localhost:${PORT}`);
+});
+
+
+
+// please god work for course catalog
+app.get("/api/pg-degree/:majorId", async (req, res) => {
+  const majorId = req.params.majorId;
+
+  try {
+    const courseQuery = `
+      SELECT course_name AS code, 
+             description AS title, 
+             type, 
+             credit_hours
+      FROM Courses
+      WHERE course_name IN (
+        SELECT course_name FROM CatalogCourses WHERE catalog_id = $1
+      )
+    `;
+    const result = await pool.query(courseQuery, [majorId]);
+
+    // Optional: add placeholder status (until you wire real UserPlans data)
+    const coursesWithStatus = result.rows.map(course => ({
+      ...course,
+      status: 'needed' // or 'completed' / 'planned' if you can query that later
+    }));
+
+    res.json({ courses: coursesWithStatus });
+  } catch (error) {
+    console.error("Error fetching degree data:", error);
+    res.status(500).send("Internal Server Error");
+  }
 });

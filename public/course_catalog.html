@@ -34,20 +34,23 @@
   </select>
 
   <!-- Courses Table -->
-  <table id="courseTable" class="w-full border border-gray-300">
-    <thead>
-      <tr class="bg-green-700 text-white">
-        <th class="p-2">Course Code</th>
-        <th class="p-2">Course Title</th>
-        <th class="p-2">Type</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td colspan="3" class="text-center p-4 text-gray-500">Select a concentration to see courses.</td>
-      </tr>
-    </tbody>
-  </table>
+<table id="courseTable" class="w-full border border-gray-300">
+  <thead>
+    <tr class="bg-green-700 text-white">
+      <th class="p-2 w-24">Course Code</th>
+      <th class="p-2">Course Title</th>
+      <th class="p-2 w-24">Credit Hours</th>
+      <th class="p-2">Type</th>
+      <th class="p-2 w-24">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="5" class="text-center p-4 text-gray-500">Select a concentration to see courses.</td>
+    </tr>
+  </tbody>
+</table>
+
 
   <!-- Back button -->
   <div class="mt-6 text-center">
@@ -69,58 +72,51 @@
 <script>
   document.getElementById("concentrationSelect").addEventListener("change", async (event) => {
     const majorId = event.target.value;
-    const tableBody = document.querySelector("#courseTable tbody"); // ✅ fixed typo (was tableBodcoy)
+    const tableBody = document.querySelector("#courseTable tbody");
     tableBody.innerHTML = "";
-  
+
     if (!majorId) {
-      tableBody.innerHTML = `<tr><td colspan="3" class="text-center p-4 text-gray-500">Select a concentration to see courses.</td></tr>`;
+      tableBody.innerHTML = `<tr><td colspan="5" class="text-center p-4 text-gray-500">Select a concentration to see courses.</td></tr>`;
       return;
     }
-  
+
     try {
       const response = await fetch(`http://localhost:3000/api/pg-degree/${majorId}`);
+
+
       if (!response.ok) {
         throw new Error("Failed to fetch course data");
       }
       const data = await response.json();
-  
-      const sections = [
-        { title: "Core Courses", courses: data.coreCourses, type: "Core" },
-        { title: "Mathematics & Statistics Courses", courses: data.mathStatsCourses, type: "Math/Stats" },
-        { title: "Concentration Required Courses", courses: data.concentration.required, type: "Concentration Required" },
-        { title: "Concentration Electives", courses: data.concentration.electives.options, type: "Concentration Elective" }
-      ];
-  
-      sections.forEach(section => {
-        if (section.courses && section.courses.length > 0) {
-          // Section Header
-          const headerRow = document.createElement("tr");
-          headerRow.innerHTML = `<td colspan="3" class="bg-gray-200 p-2 font-bold text-green-700">${section.title}</td>`;
-          tableBody.appendChild(headerRow);
-  
-          // Course Rows
-          section.courses.forEach(course => {
-            const row = document.createElement("tr");
-            row.innerHTML = `
-              <td class="p-2">${course.code}</td>
-              <td class="p-2">${course.title}</td>
-              <td class="p-2">${section.type}</td> <!-- dynamically set Type here -->
-            `;
-            tableBody.appendChild(row);
-          });
-        }
-      });
-  
-      if (tableBody.children.length === 0) {
-        tableBody.innerHTML = `<tr><td colspan="3" class="text-center p-4 text-gray-500">No courses available for this concentration.</td></tr>`;
+
+      if (data.courses && data.courses.length > 0) {
+        data.courses.forEach(course => {
+          let statusEmoji = '🚫'; // default: still needed
+          if (course.status === 'completed') statusEmoji = '✅';
+          else if (course.status === 'planned') statusEmoji = '📝';
+
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td class="p-2 text-center">${course.code}</td>
+            <td class="p-2">${course.title}</td>
+            <td class="p-2 text-center">${course.credit_hours || '-'}</td>
+            <td class="p-2">${course.type}</td>
+            <td class="p-2 text-center">${statusEmoji}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      } else {
+        tableBody.innerHTML = `<tr><td colspan="5" class="text-center p-4 text-gray-500">No courses available for this concentration.</td></tr>`;
       }
-  
+
     } catch (error) {
       console.error("Error loading courses:", error);
-      tableBody.innerHTML = `<tr><td colspan="3" class="text-center p-4 text-red-500">Failed to load courses. Please try again later.</td></tr>`;
+      tableBody.innerHTML = `<tr><td colspan="5" class="text-center p-4 text-red-500">Failed to load courses. Please try again later.</td></tr>`;
     }
   });
-  </script>
+</script>
+
+
   
 </body>
 </html>
