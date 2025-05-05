@@ -42,8 +42,10 @@ CREATE TABLE AdvisorPreferences (
 CREATE TABLE Courses (
     course_name VARCHAR(255) PRIMARY KEY,
     description TEXT NOT NULL,
-    type VARCHAR(255) CHECK (type IN ('Core', 'Mathematics and Statistics', 'Capstone', 'Conc Required', 'Conc Elective', 'Gen Ed', 'Conc Tech Elective')) NOT NULL
+    type VARCHAR(255) CHECK (type IN ('Core', 'Mathematics and Statistics', 'Capstone', 'Conc Required', 'Conc Elective', 'Gen Ed', 'Conc Tech Elective')) NOT NULL,
+    credit_hours INTEGER NOT NULL
 );
+
 
 CREATE TABLE PrerequisiteGroups (
     group_id SERIAL PRIMARY KEY,
@@ -99,6 +101,8 @@ INSERT INTO Catalogs (catalog_id, catalog_name) VALUES
 (7, 'Human-Computer Interaction BA'),
 (8, 'Information Technology BA'),
 (9, 'Web/Mobile Dev & Software Engr BS');
+
+
 
 INSERT INTO Courses (course_name, description, type, credit_hours) VALUES
 
