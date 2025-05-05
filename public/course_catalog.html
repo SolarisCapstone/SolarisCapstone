@@ -1,261 +1,127 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Degree Planner</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body class="bg-green-900 text-white p-6">
-    <!-- Dynamic Header -->
-    <header>
-      <div data-include="components/header.html"></div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNC Charlotte Course Catalog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-green-900 text-white p-6">
 
-    <div class="max-w-5xl mx-auto bg-white text-black p-6 rounded shadow-md">
-      <h1 class="text-2xl font-bold text-green-700">
-        UNC Charlotte CS Degree Planner
-      </h1>
-      <p class="text-gray-600">
-        Below is the list of all required core courses for the Computer Science
-        program.
-      </p>
-      <!-- Core Courses Table -->
-      <table class="w-full mt-4 border border-gray-300">
-        <thead>
-          <tr class="bg-green-700 text-white">
-            <th class="p-2">Course Code</th>
-            <th class="p-2">Course Title</th>
-            <th class="p-2">Credits</th>
-            <th class="p-2">Prerequisites</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="bg-gray-200">
-            <td colspan="4" class="p-2 font-bold text-green-700">
-              Core Courses (29 credit hours)
-            </td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 1212</td>
-            <td class="p-2">Introduction to Computer Science I</td>
-            <td class="p-2">4</td>
-            <td class="p-2">None</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 1213</td>
-            <td class="p-2">Introduction to Computer Science II</td>
-            <td class="p-2">4</td>
-            <td class="p-2">ITSC 1212</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 1600</td>
-            <td class="p-2">Computing Professionals</td>
-            <td class="p-2">2</td>
-            <td class="p-2">None</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 2600</td>
-            <td class="p-2">Computer Science Program, Identity, Career</td>
-            <td class="p-2">2</td>
-            <td class="p-2">None</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 2175</td>
-            <td class="p-2">Logic and Algorithms</td>
-            <td class="p-2">3</td>
-            <td class="p-2">ITSC 1213 or MATH 2165</td>
-          </tr>
-          <tr>
-            <td class="p-2">MATH 2165</td>
-            <td class="p-2">Introduction to Discrete Structures</td>
-            <td class="p-2">3</td>
-            <td class="p-2">None</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 2181</td>
-            <td class="p-2">Introduction to Computer Systems</td>
-            <td class="p-2">4</td>
-            <td class="p-2">ITSC 1213</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 2214</td>
-            <td class="p-2">Data Structures and Algorithms</td>
-            <td class="p-2">3</td>
-            <td class="p-2">ITSC 2175</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 3146</td>
-            <td class="p-2">
-              Introduction to Operating Systems and Networking
-            </td>
-            <td class="p-2">3</td>
-            <td class="p-2">ITSC 2181</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 3155</td>
-            <td class="p-2">Software Engineering</td>
-            <td class="p-2">3</td>
-            <td class="p-2">ITSC 2214</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 3688</td>
-            <td class="p-2">Computers and Their Impact on Society</td>
-            <td class="p-2">3</td>
-            <td class="p-2">None</td>
-          </tr>
-          <!-- Mathematics & Statistics -->
-          <tr class="bg-gray-200">
-            <td colspan="4" class="p-2 font-bold text-green-700">
-              Mathematics & Statistics Courses (6 credit hours)
-            </td>
-          </tr>
-          <tr>
-            <td class="p-2">MATH 2164</td>
-            <td class="p-2">Matrices and Linear Algebra</td>
-            <td class="p-2">3</td>
-            <td class="p-2">None</td>
-          </tr>
-          <tr>
-            <td class="p-2">STAT 2122</td>
-            <td class="p-2">Introduction to Probability and Statistics</td>
-            <td class="p-2">3</td>
-            <td class="p-2">None</td>
-          </tr>
-          <!-- Elective Courses -->
-          <tr class="bg-gray-200">
-            <td colspan="4" class="p-2 font-bold text-green-700">
-              Elective Courses(15 credit hours)
-            </td>
-          </tr>
-          <tr>
-            <td colspan="4" class="p-2 text-gray-500">
-              Select 15 credit hour worth of courses that are not ITIS, ITSC
-              related.
-            </td>
-          </tr>
-          <!-- Capstone Course -->
-          <tr class="bg-gray-200">
-            <td colspan="4" class="p-2 font-bold text-green-700">
-              Capstone Course (3 credit hours)
-            </td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 4155</td>
-            <td class="p-2">Software Development Projects</td>
-            <td class="p-2">3</td>
-            <td class="p-2">Senior Standing</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 4681</td>
-            <td class="p-2">Senior Design I</td>
-            <td class="p-2">3</td>
-            <td class="p-2">Senior Standing</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITSC 4850</td>
-            <td class="p-2">Senior Project I</td>
-            <td class="p-2">3</td>
-            <td class="p-2">Senior Standing</td>
-          </tr>
-          <!-- Concentration Courses -->
-          <tr class="bg-gray-200">
-            <td colspan="4" class="p-2 font-bold text-green-700">
-              Concentration Courses (21 credit hours)
-            </td>
-          </tr>
-          <tr>
-            <td class="p-2">ITCS 3143</td>
-            <td class="p-2">Operating Systems</td>
-            <td class="p-2">3</td>
-            <td class="p-2">ITSC 2181</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITCS 3156</td>
-            <td class="p-2">Introduction to Machine Learning</td>
-            <td class="p-2">3</td>
-            <td class="p-2">STAT 2122</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITCS 3160</td>
-            <td class="p-2">Database Design and Implementation</td>
-            <td class="p-2">3</td>
-            <td class="p-2">ITSC 2214</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITCS 3166</td>
-            <td class="p-2">Introduction to Computer Networks</td>
-            <td class="p-2">3</td>
-            <td class="p-2">ITSC 2181</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITCS 3190</td>
-            <td class="p-2">Introduction to Cloud Computing</td>
-            <td class="p-2">3</td>
-            <td class="p-2">ITSC 2181</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITIS 3200</td>
-            <td class="p-2">Introduction to Information Security</td>
-            <td class="p-2">3</td>
-            <td class="p-2">None</td>
-          </tr>
-          <tr>
-            <td class="p-2">ITIS 3246</td>
-            <td class="p-2">IT Infrastructure and Security</td>
-            <td class="p-2">3</td>
-            <td class="p-2">ITIS 3200</td>
-          </tr>
-        </tbody>
-      </table>
+<!-- Dynamic Header -->
+<header>
+  <div data-include="components/header.html"></div>
+</header>
 
-      <!-- Back to Home button -->
-      <div class="mt-4">
-        <a
-          href="about.html"
-          class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded"
-        >
-          <button>← Back to Home</button>
-        </a>
-      </div>
+<div class="max-w-5xl mx-auto bg-white text-black p-6 rounded shadow-md">
+  <h1 class="text-2xl font-bold text-green-700 mb-4">UNC Charlotte CS Degree Planner</h1>
 
-      <!-- Button to Go to Degree Planning -->
-      <div class="mt-6 text-center">
-        <a
-          href="degree_planner.html"
-          class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded"
-        >
-          Start Degree Planning
-        </a>
-      </div>
-    </div>
+  <p class="text-gray-600 mb-4">Select a concentration below to view required courses.</p>
 
-    <script>
-      fetch("/api/courses")
-        .then((response) => response.json())
-        .then((data) => {
-          const tableBody = document.querySelector("#courseTable tbody");
+  <!-- Concentration Dropdown -->
+  <select id="concentrationSelect" class="p-2 bg-white text-black rounded border mb-6">
+    <option value="">-- Select a Concentration --</option>
+    <option value="1">Bioinformatics BA</option>
+    <option value="2">Bioinformatics BS</option>
+    <option value="3">AI Robotics and Gaming BS</option>
+    <option value="4">Data Science BS</option>
+    <option value="5">Systems and Networks BS</option>
+    <option value="6">Cybersecurity BS</option>
+    <option value="7">Human-Computer Interaction BA</option>
+    <option value="8">Information Technology BA</option>
+    <option value="9">Web/Mobile Dev & Software Engr BS</option>
+  </select>
 
-          data.forEach((course) => {
-            const row = document.createElement("tr");
-            row.innerHTML = `
-                    <td>${course.course_name}</td>
-                    <td>${course.description}</td>
-                    <td>${course.type}</td>
-                `;
-            tableBody.appendChild(row);
-          });
-        })
-        .catch((error) => console.error("Error fetching data:", error));
-    </script>
+  <!-- Courses Table -->
+  <table id="courseTable" class="w-full border border-gray-300">
+    <thead>
+      <tr class="bg-green-700 text-white">
+        <th class="p-2">Course Code</th>
+        <th class="p-2">Course Title</th>
+        <th class="p-2">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="3" class="text-center p-4 text-gray-500">Select a concentration to see courses.</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <!-- Dynamic Footer -->
-    <footer>
-      <div data-include="components/footer.html"></div>
-    </footer>
+  <!-- Back button -->
+  <div class="mt-6 text-center">
+    <a href="about.html" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded">
+      ← Back to Home
+    </a>
+  </div>
+</div>
 
-    <!-- Required for dynamic header/footer loading -->
-    <script src="js/HTMLInclude.min.js"></script>
-  </body>
+<!-- Footer -->
+<footer class="mt-8">
+  <div data-include="components/footer.html"></div>
+</footer>
+
+<!-- Dynamic includes -->
+<script src="js/HTMLInclude.min.js"></script>
+
+<!-- Main Logic -->
+<script>
+document.getElementById("concentrationSelect").addEventListener("change", async (event) => {
+  const majorId = event.target.value;
+  const tableBody = document.querySelector("#courseTable tbody");
+  tableBody.innerHTML = "";
+
+  if (!majorId) {
+    tableBody.innerHTML = `<tr><td colspan="3" class="text-center p-4 text-gray-500">Select a concentration to see courses.</td></tr>`;
+    return;
+  }
+
+  try {
+    
+    const response = await fetch(`http://localhost:3000/api/pg-degree/${majorId}`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch course data");
+    }
+    const data = await response.json();
+
+    const sections = [
+      { title: "Core Courses", courses: data.coreCourses },
+      { title: "Mathematics & Statistics Courses", courses: data.mathStatsCourses },
+      { title: "Concentration Required Courses", courses: data.concentration.required },
+      { title: "Concentration Electives", courses: data.concentration.electives.options }
+    ];
+
+    sections.forEach(section => {
+      if (section.courses && section.courses.length > 0) {
+        // Section Header
+        const headerRow = document.createElement("tr");
+        headerRow.innerHTML = `<td colspan="3" class="bg-gray-200 p-2 font-bold text-green-700">${section.title}</td>`;
+        tableBody.appendChild(headerRow);
+
+        // Course Rows
+        section.courses.forEach(course => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td class="p-2">${course.code}</td>
+            <td class="p-2">${course.title}</td>
+            <td class="p-2">${course.type}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      }
+    });
+
+    if (tableBody.children.length === 0) {
+      tableBody.innerHTML = `<tr><td colspan="3" class="text-center p-4 text-gray-500">No courses available for this concentration.</td></tr>`;
+    }
+
+  } catch (error) {
+    console.error("Error loading courses:", error);
+    tableBody.innerHTML = `<tr><td colspan="3" class="text-center p-4 text-red-500">Failed to load courses. Please try again later.</td></tr>`;
+  }
+});
+</script>
+
+</body>
 </html>

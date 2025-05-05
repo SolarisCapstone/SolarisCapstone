@@ -54,13 +54,33 @@ Given the scope and timeframe of the project, the following constraints have bee
 
 ## Technology Stack
 
-To develop the **SolarisCapstone Interactive Graduation Planner**, we will utilize the following technologies:
+For the **SolarisCapstone Interactive Graduation Planner**, we have used the following technologies:
 
-- **Frontend:** React.js (TBA) / Vue.js (TBA) for an intuitive, interactive user experience
-- **Backend:** Node.js (TBA) / Django (TBA) for handling user input and course logic
-- **Database:** PostgreSQL (TBA) / Firebase (TBA) for managing course requirements and user plans
-- **Authentication:** Firebase/Auth0 (TBA) for secure user login and advisor access
-- **Deployment:** Docker & Heroku (TBA) / AWS (TBA) to host the application with containerized scalability
+- **Frontend:**
+  - HTML, CSS, JavaScript
+
+- **Backend:**
+  - Node.js with Express.js server (dockerserver.js)
+  - PostgreSQL (Heroku Postgres for degree planning and course catalog)
+
+- **Database:**
+  - MySQL (JawsDB on Heroku for login system)
+  - PostgreSQL (Heroku Postgres for degree planning and course catalog)
+
+- **Tools/Other:**
+  -pgAdmin 4 (PostgreSQL management GUI)
+
+  -MySQL Workbench or VS Code Database Extensions
+
+  -Git / GitHub for source control
+
+  -Heroku CLI for deployment
+
+  -Live Server (VS Code Extension for local static HTML testing)
+
+- **Deployment:** Docker for local/remote containerization & Heroku for cloud deployments
+Deployed URL:
+https://teamsolariscapstone-adbfee951637.herokuapp.com/index.html
 
 ---
 
@@ -71,11 +91,64 @@ This project is a collaborative effort by UNC Charlotte Computer Science student
 - **Reid Moseley** – Role (Frontend, Backend, Database, etc.)
 - **Jonathan Revoir** – Role
 - **Vaibhav Satheesh** – Role
-- **Andrew Schmal** – Role
+- **Andrew Schmal** – Backend, Frontend, DevOps
 
 For any inquiries, feel free to reach out via our GitHub Discussions or email.
 
----
+🚀 How to Run the Project (Setup Instructions)
+1. Clone the repository (or download a zip file)
+
+2. Install dependencies
+   npm install
+
+3. Setup the local MySQL Database
+   -Create a local MySQL database named SolarisDatabase
+   -Import the database/database.sql file into your MySQL server (you can use MySQL Workbench or VS Code database extension)
+     Example:
+     mysql -u root -p < database/database.sql
+4. Set up PostgreSQL (for updated course catalog)
+  -Download PostgreSQL 16.8: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+  -Install it normally and remember your password
+
+  -Verify installation: psql --version
+
+  -In pgAdmin 4:
+      -Create a new database named solaris_capstone
+
+      -Leave settings as default
+
+  -In VS Code terminal (Git Bash or CMD): psql -U postgres -d solaris_capstone
+
+  -Then inside the psql prompt: \i database/database_postgres.sql
+
+  -You should see CREATE TABLE and INSERT statements without errors.
+
+  5. Start the server (you can do right click -> open in live terminal on any html page).
+   
+    -Server should open in localhost with something like http://127.0.0.1:5500/public/degree_view.html
+  
+  Notes:
+
+    -You don't need to edit .env manually for database credentials — dockerserver.js handles it.
+
+    -MySQL is used for login system (users table).
+
+    -PostgreSQL is used for updated degree planner catalog data.
+
+
+  Optional:
+
+    -Install VS Code extensions for easier database browsing:
+
+    -MySQL (by cweijan)
+
+    -PostgreSQL Management (by Chris Kolkman)
+
+
+
+   
+   
 
 ## License
 

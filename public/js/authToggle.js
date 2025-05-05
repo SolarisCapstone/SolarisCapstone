@@ -28,3 +28,45 @@
 //     console.log(`[authToggle] Toggled login to ${!currentlyLoggedIn}`);
 //     location.reload();
 //   }
+// real code starts(dynamic header for login)
+
+/*
+document.addEventListener("DOMContentLoaded", () => {
+    fetch('/api/session')
+      .then(response => response.json())
+      .then(data => {
+        if (data.loggedIn) {
+          // Update header login status if it exists
+          const headerStatus = document.getElementById('login-status');
+          if (headerStatus) {
+            headerStatus.innerHTML = `
+              Logged in as ${data.user.username}
+              <button id="logout-btn" style="margin-left: 10px;">Logout</button>
+            `;
+            document.getElementById('logout-btn').addEventListener('click', () => {
+              fetch('/logout', { method: 'POST' })
+                .then(() => location.reload())
+                .catch(error => console.error('Error logging out:', error));
+            });
+          }
+
+          // Update footer login status if it exists
+          const footerStatus = document.getElementById('login-status-footer');
+          if (footerStatus) {
+            footerStatus.innerHTML = `
+              Logged in as ${data.user.username}
+              <button id="logout-btn-footer" style="margin-left: 10px;">Logout</button>
+            `;
+            document.getElementById('logout-btn-footer').addEventListener('click', () => {
+              fetch('/logout', { method: 'POST' })
+                .then(() => location.reload())
+                .catch(error => console.error('Error logging out:', error));
+            });
+          }
+        }
+      })
+      .catch(error => {
+        console.error('Error checking login status:', error);
+      });
+});
+*/

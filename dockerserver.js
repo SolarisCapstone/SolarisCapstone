@@ -1,4 +1,6 @@
 require("dotenv").config();
+//for the usr profiles
+const session= require('express-session');
 
 const express = require("express");
 const { Pool } = require("pg");
@@ -10,11 +12,12 @@ const app = express();
 
 // PostgreSQL connection (used for onboarding + planner)
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "solaris_capstone",
-  password: "batman01R",
-  port: 5432,
+  host: process.env.PGHOST || "localhost",
+  user: process.env.PGUSER || "postgres",
+  password: process.env.PGPASSWORD || "batman01R",
+  database: process.env.PGDATABASE || "solaris_capstone",
+  port: process.env.PGPORT || 5432,
+  ssl: process.env.PGUSESSL === "true" ? { rejectUnauthorized: false } : false
 });
 
 pool.connect((err) => {
@@ -23,6 +26,15 @@ pool.connect((err) => {
     return;
   }
   console.log("Connected to PostgreSQL database.");
+});
+
+// Login-system JawsDB database
+const userDB = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT
 });
 
 // Optional: Login system (JawsDB)
@@ -34,18 +46,26 @@ const userDB = mysql.createConnection({
   port: process.env.DB_PORT
 });
 
-// userDB.connect(err => {
-//   if (err) {
-//     console.error("User DB (JawsDB) connection failed:", err);
-//   } else {
-//     console.log("Connected to JawsDB for Login System.");
-//   }
-// });
+userDB.connect(err => {
+ if (err) {
+   console.error("User DB (JawsDB) connection failed:", err);
+ } else {
+   console.log("Connected to JawsDB for Login System.");
+ }
+});
 
 // Middleware
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// Express-session support
+app.use(session({
+  secret: process.env.SESSION_SECRET || "default_secret",
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}));
 
 // Root route
 app.get("/", (req, res) => {
@@ -56,7 +76,7 @@ app.get("/", (req, res) => {
 // ONBOARDING-RELATED ROUTE
 // -------------------------
 
-// ✅ NEW: Provides catalog_name values for onboarder dropdown
+// Provides catalog_name values for onboarder dropdown
 app.get("/api/concentrations", async (req, res) => {
   try {
     const result = await pool.query("SELECT catalog_name FROM Catalogs ORDER BY catalog_name");
@@ -92,10 +112,33 @@ app.post("/login", (req, res) => {
   userDB.query(sql, [username, password], (err, results) => {
     if (err) return res.status(500).send("Login error.");
     if (results.length > 0) {
+      req.session.user = {
+        id: results[0].id,
+        username: results[0].username
+      };
       res.send("Login successful!");
     } else {
       res.status(401).send("Invalid credentials.");
     }
+  });
+});
+
+app.get("/api/session", (req, res) => {
+  if (req.session.user) {
+    res.json({ loggedIn: true, user: req.session.user });
+  } else {
+    res.json({ loggedIn: false });
+  }
+});
+
+app.post("/logout", (req, res) => {
+  req.session.destroy(err => {
+    if (err) {
+      console.error('Failed to destroy session:', err);
+      return res.status(500).send("Logout failed");
+    }
+    res.clearCookie('connect.sid');
+    res.send("Logged out");
   });
 });
 
