@@ -24,14 +24,20 @@
         <template x-if="step === 1">
           <div>
             <h1 class="text-3xl font-bold mb-4">Welcome!</h1>
-            <p class="mb-6">Let's get started. Tell us your name and email.</p>
+            <p class="mb-6">Let's get started. Tell us your name, email, and set a password.</p>
+
             <input x-model="name" type="text" placeholder="Name" class="w-full p-2 mb-2 rounded border">
             <input x-model="email" type="email" placeholder="Email" class="w-full p-2 mb-2 rounded border">
+            <input x-model="password" type="password" placeholder="Password" class="w-full p-2 mb-2 rounded border">
+
             <label class="flex items-center mb-4">
               <input type="checkbox" x-model="isAdvisor" class="mr-2">
               <span class="text-sm text-gray-800">I am an advisor</span>
             </label>
-            <template x-if="error && (!name || !email)"><p class="text-red-500 text-sm">Please fill out all fields.</p></template>
+
+            <template x-if="error && (!name || !email || !password)">
+              <p class="text-red-500 text-sm">Please fill out all fields including password.</p>
+            </template>
           </div>
         </template>
 
@@ -141,6 +147,7 @@
           step: 1,
           name: '',
           email: '',
+          password: '',
           major: '',
           degree: '',
           concentration: '',
@@ -162,7 +169,7 @@
           },
           nextStep() {
             this.error = false;
-            if (this.step === 1 && (!this.name || !this.email)) this.error = true;
+            if (this.step === 1 && (!this.name || !this.email || !this.password)) this.error = true;
             else if (this.step === 2 && !this.isAdvisor && (!this.major || !this.degree || !this.concentration)) this.error = true;
             else if (this.step === 3 && !this.isAdvisor && (!this.startSemester || !this.startYear || this.creditHours <= 0 || this.takesSummer === '')) this.error = true;
             else if (this.step === 4 && !this.isAdvisor && (!this.graduationTarget)) this.error = true;
@@ -177,6 +184,7 @@
             const payload = {
               name: this.name,
               email: this.email,
+              password: this.password,
               is_advisor: this.isAdvisor,
               major: this.isAdvisor ? null : this.major,
               concentration: this.isAdvisor ? null : this.concentration,
@@ -187,6 +195,7 @@
               summer_credits: this.isAdvisor ? null : this.summerCredits,
               transfer_credits: this.isAdvisor ? null : this.hasTransferCredits
             };
+            console.log("Submitting payload:", payload);
 
             fetch('/api/onboarding', {
               method: 'POST',

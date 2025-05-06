@@ -16,6 +16,7 @@ CREATE TABLE Users (
     user_id SERIAL PRIMARY KEY,
     email VARCHAR(255) NOT NULL UNIQUE,
     name VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     role TEXT CHECK (role IN ('student', 'advisor')) NOT NULL
 );
 
@@ -79,9 +80,9 @@ CREATE TABLE UserPlans (
 );
 
 -- Insert initial users
-INSERT INTO Users (email, name, role) VALUES
-('alice@student.edu', 'Alice Student', 'student'),
-('bob@advisor.edu', 'Bob Advisor', 'advisor');
+INSERT INTO Users (email, name, password, role) VALUES
+('alice@student.edu', 'Alice Student', 'password', 'student'),
+('bob@advisor.edu', 'Bob Advisor', 'password', 'advisor');
 
 -- Insert initial preferences
 INSERT INTO UserPreferences (user_id, major, concentration, start_semester, start_year, credit_hours_per_semester, takes_summer_classes, has_transfer_credits) VALUES

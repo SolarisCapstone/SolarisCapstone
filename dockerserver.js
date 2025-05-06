@@ -74,7 +74,7 @@ app.use(session({
 
 app.post("/signup", (req, res) => {
  const { username, password } = req.body;
- const sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+ const sql = "INSERT INTO Users (username, password) VALUES (?, ?)";
  userDB.query(sql, [username, password], (err) => {
    if (err) {
      if (err.code === "ER_DUP_ENTRY") {
@@ -89,7 +89,7 @@ app.post("/signup", (req, res) => {
 
 app.post("/login", (req, res) => {
  const { username, password } = req.body;
- const sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+ const sql = "SELECT * FROM Users WHERE username = ? AND password = ?";
  userDB.query(sql, [username, password], (err, results) => {
    if (err) return res.status(500).send("Login error.");
    if (results.length > 0) {
@@ -248,6 +248,80 @@ app.get("/api/concentrations", async (req, res) => {
   } catch (err) {
     console.error("Error fetching concentrations:", err);
     res.status(500).send("Server error");
+  }
+});
+
+const bcrypt = require("bcrypt");
+
+app.post("/api/onboarding", async (req, res) => {
+  console.log("Incoming /api/onboarding request body:", req.body);
+  const {
+    name,
+    email,
+    password,
+    is_advisor,
+    major,
+    concentration,
+    semester,
+    year,
+    credit_hours,
+    summer_classes,
+    summer_credits,
+    transfer_credits
+  } = req.body;
+
+
+  const client = await pool.connect();
+  try {
+    await client.query("BEGIN");
+
+    const role = is_advisor ? 'advisor' : 'student';
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    console.log("Inserting into Users...");
+    const userInsert = await client.query(
+      `INSERT INTO Users (email, name, password, role)
+      VALUES ($1, $2, $3, $4)
+      RETURNING user_id`,
+      [email, name, hashedPassword, role]
+    );
+    console.log("Inserted user:", userInsert.rows[0]);
+
+
+    const userId = userInsert.rows[0].user_id;
+
+    if (role === 'student') {
+      await client.query(
+        `INSERT INTO UserPreferences (
+          user_id, major, concentration, start_semester, start_year,
+          credit_hours_per_semester, takes_summer_classes, has_transfer_credits
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
+        [
+          userId,
+          major,
+          concentration,
+          semester,
+          year,
+          credit_hours,
+          summer_classes === 'Yes',
+          transfer_credits === 'Yes'
+        ]
+      );
+    } else {
+      await client.query(
+        `INSERT INTO AdvisorPreferences (user_id) VALUES ($1)`,
+        [userId]
+      );
+    }
+
+    await client.query("COMMIT");
+    res.status(200).send("Preferences saved");
+  } catch (err) {
+    await client.query("ROLLBACK");
+    console.error("Error saving onboarding info:", err.stack); // or err.message
+    res.status(500).send("Failed to save preferences");
+  }finally {
+    client.release();
   }
 });
 
