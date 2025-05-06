@@ -301,13 +301,13 @@ app.post("/api/onboarding", async (req, res) => {
           major,
           concentration,
           semester,
-          year,
-          credit_hours,
-          summer_classes === 'Yes',
-          transfer_credits === 'Yes'
+          parseInt(year),                    // cast to int
+          parseInt(credit_hours),            // cast to int
+          summer_classes === 'Yes',          // cast to boolean
+          transfer_credits === 'Yes'         // cast to boolean
         ]
       );
-    } else {
+    }else {
       await client.query(
         `INSERT INTO AdvisorPreferences (user_id) VALUES ($1)`,
         [userId]
