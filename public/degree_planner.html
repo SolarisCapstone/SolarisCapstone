@@ -107,7 +107,7 @@
 
       <header class="text-center mb-4">
           <h1 class="text-2xl font-bold" style="color: var(--charlotte-green);">Graduation Timeline Planner</h1>
-          <p class="text-black font-semibold mt-1">Degree Select <span id="progress-percent">0%</span></p>
+          <p class="text-black font-semibold mt-1">Degree Select</p>
           <select id="degree-select">
            <option value="1">AI, Robotics, and Gaming Concentration</option>
            <option value="2">Bioinformatics Arts Concentration</option>
@@ -269,7 +269,7 @@
   let prerequisites = {};
   let semesterCourses = {};
 
-  fetch("/api/prerequisites")
+  fetch(`/api/prerequisites?timestamp=${Date.now()}`)
   .then(response => response.json())
   .then(data => {
 
