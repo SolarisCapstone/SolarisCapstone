@@ -287,3 +287,5 @@ app.get("/api/pg-degree/:majorId", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+
+

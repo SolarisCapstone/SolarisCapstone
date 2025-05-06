@@ -3,119 +3,411 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UNC Charlotte Course Catalog</title>
+  <title>UNC Charlotte CS Degree Planner</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Define the UNCC-inspired alternating background colors */
+    .bg-uncc-light { background-color: #F0FDF4; } /* Tailwind green-50 */
+    .bg-uncc-dark { background-color: #DCFCE7; }  /* Tailwind green-100 */
+
+    /* Style for section header rows */
+    .section-header td {
+        background-color: #065F46; /* Tailwind green-800 */
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        /* NEW: Add position sticky for section headers within the scrollable body */
+        position: sticky;
+        top: 48px; /* Height of the main header row (adjust if needed) */
+        z-index: 5; /* Below main header but above course rows */
+    }
+
+    /* Add a subtle hover effect for the course rows */
+    #courseTable tbody tr.course-row:hover {
+        filter: brightness(97%);
+    }
+
+    /* Ensure section headers don't get the hover effect */
+    #courseTable tbody tr.section-header:hover {
+       filter: none;
+       background-color: #065F46 !important;
+    }
+
+    /* Ensure table layout is fixed */
+    #courseTable {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    /* Allow course code text to wrap */
+    #courseTable .course-code-cell {
+        word-wrap: break-word;
+        white-space: normal !important;
+    }
+
+    /* Custom scrollbar for aesthetics (optional) */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #a3a3a3; /* Tailwind gray-400 */
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #737373; /* Tailwind gray-500 */
+    }
+
+    /* Ensure sticky header cells have the correct background */
+    #courseTable thead th {
+        background-color: #047857; /* Match the thead background (green-700) */
+    }
+     /* Ensure sticky section header cells have the correct background */
+    #courseTable tbody .section-header td {
+         background-color: #065F46; /* Match the section header background (green-800) */
+    }
+
+
+  </style>
 </head>
-<body class="bg-green-900 text-white p-6">
+<body class="bg-green-900 text-white p-4 md:p-6 font-sans">
+  <!-- Dynamic Header -->
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+    <div class="max-w-7xl mx-auto bg-gray-100 text-gray-800 p-4 md:p-8 rounded-lg shadow-xl">
+        <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-2 text-center">UNC Charlotte CS Degree Planner</h1>
+        <p id="degreeTypeDisplay" class="text-lg md:text-xl font-semibold text-green-700 mb-5 text-center min-h-[2.5rem] flex items-center justify-center px-2">
+            </p>
 
-<header>
-  <div data-include="components/header.html"></div>
-</header>
+        <p class="text-gray-600 mb-8 text-center text-sm md:text-base">
+            Use this planner to explore your course requirements by concentration.<br>
+            Click a course row to cycle through: <span class="font-semibold text-green-600">Completed ✅</span> → <span class="text-yellow-600 font-semibold">Planned 📝</span> → <span class="text-red-600 font-semibold">Not Taken 🚫</span>.<br/>
+            Hover over course codes to see full names.
+        </p>
 
-<div class="max-w-5xl mx-auto bg-white text-black p-6 rounded shadow-md">
-  <h1 class="text-2xl font-bold text-green-700 mb-4">UNC Charlotte CS Degree Planner</h1>
+        <div class="flex flex-col sm:flex-row justify-center items-center mb-8 space-y-4 sm:space-y-0 sm:space-x-4">
+            <select id="concentrationSelect" class="p-2 w-full sm:w-auto bg-white text-black rounded-md border border-gray-300 shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-150 ease-in-out">
+                <option value="">-- Select a Concentration --</option>
+                <option value="1">Computer Science, Bioinformatics Concentration, B.A.</option>
+                <option value="2">Computer Science, Bioinformatics Concentration, B.S.</option>
+                <option value="3">Computer Science, AI, Robotics, and Gaming Concentration, B.S.</option>
+                <option value="4">Computer Science, Data Science Concentration, B.S.</option>
+                <option value="5">Computer Science, Systems and Networks Concentration, B.S.</option>
+                <option value="6">Computer Science, Cybersecurity Concentration, B.S.</option>
+                <option value="7">Computer Science, Human-Computer Interaction, B.A.</option>
+                <option value="8">Computer Science, Information Technology Concentration, B.A.</option>
+                <option value="9">Computer Science, Web/Mobile Development and Software Engineering Concentration, B.S.</option>
+            </select>
 
-  <p class="text-gray-600 mb-4">Select a concentration below to view required courses.</p>
+            <button id="toggleAllBtn" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 w-full sm:w-auto rounded-md shadow-md hover:shadow-lg transition duration-150 ease-in-out" style="display: none;">
+                Select All Courses
+            </button>
+        </div>
 
-  <select id="concentrationSelect" class="p-2 bg-white text-black rounded border mb-6">
-    <option value="">-- Select a Concentration --</option>
-    <option value="1">Bioinformatics BA</option>
-    <option value="2">Bioinformatics BS</option>
-    <option value="3">AI Robotics and Gaming BS</option>
-    <option value="4">Data Science BS</option>
-    <option value="5">Systems and Networks BS</option>
-    <option value="6">Cybersecurity BS</option>
-    <option value="7">Human-Computer Interaction BA</option>
-    <option value="8">Information Technology BA</option>
-    <option value="9">Web/Mobile Dev & Software Engr BS</option>
-  </select>
+        <div class="overflow-auto rounded-lg border border-gray-300 shadow-md max-h-[70vh]">
+            <table id="courseTable" class="min-w-full divide-y divide-gray-300">
+                <colgroup>
+                     <col style="width: 35%;">
+                     <col style="width: 25%;">
+                     <col style="width: 10%;">
+                     <col style="width: 15%;">
+                     <col style="width: 15%;">
+                </colgroup>
+                <thead class="bg-green-700 sticky top-0 z-10">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider bg-green-700">Course Title</th>
+                        <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider bg-green-700">Course Code</th>
+                        <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider bg-green-700">Credits</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider bg-green-700">Type</th>
+                        <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-white uppercase tracking-wider bg-green-700">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-gray-100 divide-y divide-gray-200">
+                    <tr>
+                        <td colspan="5" class="text-center px-6 py-4 text-sm text-gray-500">Select a concentration to see courses.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-  <table id="courseTable" class="w-full border border-gray-300">
-    <thead>
-      <tr class="bg-green-700 text-white">
-        <th class="p-2 w-24">Course Code</th>
-        <th class="p-2">Course Title</th>
-        <th class="p-2 w-24">Credit Hours</th>
-        <th class="p-2">Type</th>
-        <th class="p-2 w-24">Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td colspan="5" class="text-center p-4 text-gray-500">Select a concentration to see courses.</td>
-      </tr>
-    </tbody>
-  </table>
+        <div class="mt-8 text-center">
+            <a href="about.html" class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded-md shadow-sm hover:shadow-md transition duration-150 ease-in-out">
+                ← Back to Home
+            </a>
+        </div>
+    </div>
 
-  <div class="mt-6 text-center">
-    <a href="about.html" class="bg-green-600 hover:bg-green-500 text-white py-2 px-4 rounded">
-      ← Back to Home
-    </a>
-  </div>
-</div>
+    <footer class="mt-10 text-center text-gray-300 text-sm">
+       <p>&copy; 2025 Degree Planner</p>
+    </footer>
 
-<footer class="mt-8">
+<script>
+// --- SCRIPT LOGIC ---
+const majorFileMap = {
+  "1": "fake_bioinformatics_ba.json",
+  "2": "fake_bioinformatics_bs.json",
+  "3": "fake_ai_robotics_gaming_bs.json",
+  "4": "fake_datascience_bs.json",
+  "5": "fake_systems_networks_bs.json",
+  "6": "fake_cybersecurity_bs.json",
+  "7": "fake_hci_ba.json",
+  "8": "fake_it_ba.json",
+  "9": "fake_web_mobile_swe_bs.json"
+};
+
+let courseDetails = {};
+const savedCourseStates = JSON.parse(localStorage.getItem('courseStates') || '{}');
+let currentDisplayedCourses = [];
+
+// Fetch general course details
+fetch('data/courses.json')
+  .then(res => {
+      if (!res.ok) { throw new Error(`HTTP error! status: ${res.status}`); }
+      return res.json();
+   })
+  .then(data => { courseDetails = data; })
+  .catch(err => console.error("Failed to load courses.json:", err));
+
+// Get reference to the degree type display element
+const degreeTypeDisplay = document.getElementById('degreeTypeDisplay');
+
+// Event listener for the concentration dropdown
+document.getElementById("concentrationSelect").addEventListener("change", async (event) => {
+  const majorId = event.target.value;
+  const selectElement = event.target;
+  const tableBody = document.querySelector("#courseTable tbody");
+  const tableContainer = tableBody.closest('.overflow-auto'); // Get the scrollable container
+  tableBody.innerHTML = ""; // Clear previous content
+  currentDisplayedCourses = [];
+  let currentGlobalRowIndex = 0;
+
+  // --- UPDATED: Display full selected concentration name ---
+  if (majorId) {
+      const selectedOptionText = selectElement.options[selectElement.selectedIndex].text;
+      // Directly use the full text from the option
+      degreeTypeDisplay.textContent = selectedOptionText;
+  } else {
+      degreeTypeDisplay.textContent = ""; // Clear if no concentration selected
+  }
+  // --- END UPDATE ---
+
+  // Reset scroll position of the table container
+  if(tableContainer) {
+    tableContainer.scrollTop = 0;
+  }
+
+
+  if (!majorId) {
+    tableBody.innerHTML = `<tr><td colspan="5" class="text-center px-6 py-4 text-sm text-gray-500">Select a concentration to see courses.</td></tr>`;
+    document.getElementById("toggleAllBtn").style.display = 'none';
+    return;
+  }
+
+  const filename = majorFileMap[majorId];
+  if (!filename) {
+    tableBody.innerHTML = `<tr><td colspan="5" class="text-center px-6 py-4 text-sm text-red-500">Invalid concentration selection.</td></tr>`;
+    document.getElementById("toggleAllBtn").style.display = 'none';
+    degreeTypeDisplay.textContent = ""; // Clear degree type on error
+    return;
+  }
+
+  document.getElementById("toggleAllBtn").style.display = 'inline-block';
+
+  try {
+    const response = await fetch(`data/${filename}`);
+    if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`); }
+    const concentrationData = await response.json();
+    const sectionKeys = Object.keys(concentrationData);
+
+    // Section Rendering Order Logic (Unchanged)
+    const coreKey = sectionKeys.find(k => k.toLowerCase().includes('core'));
+    const capstoneKey = sectionKeys.find(k => k.toLowerCase().includes('capstone'));
+    const mathKey = sectionKeys.find(k => k.toLowerCase().includes('math'));
+
+    // Calculate the top offset for sticky section headers based on the main header height
+    const mainHeaderHeight = document.querySelector('#courseTable thead')?.offsetHeight || 48; // Default fallback height
+    document.documentElement.style.setProperty('--sticky-section-top', `${mainHeaderHeight}px`);
+
+
+    if (coreKey && Array.isArray(concentrationData[coreKey])) {
+        currentGlobalRowIndex = renderSection(coreKey, concentrationData[coreKey], tableBody, currentGlobalRowIndex, mainHeaderHeight);
+    }
+    if (capstoneKey && Array.isArray(concentrationData[capstoneKey])) {
+        currentGlobalRowIndex = renderSection(capstoneKey, concentrationData[capstoneKey], tableBody, currentGlobalRowIndex, mainHeaderHeight);
+    }
+    if (mathKey && mathKey !== coreKey && mathKey !== capstoneKey && Array.isArray(concentrationData[mathKey])) {
+         currentGlobalRowIndex = renderSection(mathKey, concentrationData[mathKey], tableBody, currentGlobalRowIndex, mainHeaderHeight);
+    }
+    sectionKeys.forEach(section => {
+        if (section !== coreKey && section !== capstoneKey && section !== mathKey && Array.isArray(concentrationData[section])) {
+            currentGlobalRowIndex = renderSection(section, concentrationData[section], tableBody, currentGlobalRowIndex, mainHeaderHeight);
+        }
+    });
+
+    // Add initial message back if table is empty after rendering sections
+    if (tableBody.children.length === 0) {
+         tableBody.innerHTML = `<tr><td colspan="5" class="text-center px-6 py-4 text-sm text-gray-500">No courses found for this concentration.</td></tr>`;
+    }
+
+    updateToggleAllButtonText();
+
+  } catch (err) {
+    console.error("Error loading concentration JSON:", err);
+    tableBody.innerHTML = `<tr><td colspan="5" class="text-center px-6 py-4 text-sm text-red-500">Failed to load course data. Please check console.</td></tr>`;
+    document.getElementById("toggleAllBtn").style.display = 'none';
+    degreeTypeDisplay.textContent = ""; // Clear degree type on error too
+  }
+});
+
+/**
+ * Renders a section header and its courses into the table.
+ * @param {string} sectionName - The name of the course section.
+ * @param {Array} courses - An array of course objects.
+ * @param {HTMLElement} tableBody - The tbody element.
+ * @param {number} startingRowIndex - The index for alternating colors.
+ * @param {number} mainHeaderHeight - The height of the main table header in pixels.
+ * @returns {number} The next row index.
+ */
+function renderSection(sectionName, courses, tableBody, startingRowIndex, mainHeaderHeight) { // Added mainHeaderHeight param
+  if (!Array.isArray(courses) || courses.length === 0) return startingRowIndex;
+
+  // Add Section Header Row using CSS class for styling
+  const headerRow = document.createElement("tr");
+  headerRow.className = "section-header"; // Class for CSS styling
+  // Set the top offset dynamically based on the main header's height
+  headerRow.style.top = `${mainHeaderHeight}px`;
+  headerRow.innerHTML = `<td colspan="5" class="px-6 py-3 text-left">${sectionName}</td>`;
+  tableBody.appendChild(headerRow);
+
+  let currentSectionRowIndex = startingRowIndex;
+
+  // Add Course Rows (Logic mostly unchanged)
+  courses.forEach(course => {
+    if (!course || !course.code) {
+        console.warn("Skipping invalid course entry:", sectionName, course);
+        return;
+    }
+    const code = course.code;
+    const info = courseDetails[code] || {
+        name: course.title || 'Unknown Title',
+        type: course.type || 'Unknown Type',
+        credit_hours: course.credit_hours || '-'
+    };
+    currentDisplayedCourses.push(code);
+    const status = savedCourseStates[code] || 'needed';
+
+    const bgClass = currentSectionRowIndex % 2 === 0 ? 'bg-uncc-light' : 'bg-uncc-dark';
+    currentSectionRowIndex++;
+
+    const row = document.createElement("tr");
+    row.className = `text-sm course-row ${bgClass} transition duration-100 ease-in-out`;
+    row.dataset.courseCode = code;
+
+    const statusEmoji = status === 'completed' ? '✅' : status === 'planned' ? '📝' : '🚫';
+
+    row.innerHTML = `
+      <td class="px-6 py-3">${info.name}</td>
+      <td class="px-6 py-3 text-center course-code-cell" title="${info.name}">${code}</td>
+      <td class="px-6 py-3 text-center">${info.credit_hours || '-'}</td>
+      <td class="px-6 py-3">${info.type}</td>
+      <td class="px-6 py-3 text-center status-cell text-2xl">${statusEmoji}</td> `;
+
+    row.addEventListener('click', () => {
+      toggleCourseState(code, row);
+      updateToggleAllButtonText();
+    });
+
+    tableBody.appendChild(row);
+  });
+
+  return currentSectionRowIndex;
+}
+
+/**
+ * Toggles the state of a course and updates the emoji and localStorage. (Unchanged Logic)
+ */
+function toggleCourseState(code, row) {
+    const currentState = savedCourseStates[code] || 'needed';
+    let nextState;
+    let nextEmoji;
+
+    if (currentState === 'needed') {
+        nextState = 'completed';
+        nextEmoji = '✅';
+        savedCourseStates[code] = nextState;
+    } else if (currentState === 'completed') {
+        nextState = 'planned';
+        nextEmoji = '📝';
+        savedCourseStates[code] = nextState;
+    } else { // planned
+        nextState = 'needed';
+        nextEmoji = '🚫';
+        delete savedCourseStates[code];
+    }
+
+    const statusCell = row.querySelector('.status-cell');
+    if (statusCell) {
+        statusCell.textContent = nextEmoji;
+    }
+
+    localStorage.setItem('courseStates', JSON.stringify(savedCourseStates));
+}
+
+/**
+ * Handles the "Select/Unselect All" button click. (Unchanged Logic)
+ */
+document.getElementById("toggleAllBtn").addEventListener("click", () => {
+  const allCurrentlyCompleted = currentDisplayedCourses.length > 0 &&
+                                 currentDisplayedCourses.every(c => savedCourseStates[c] === 'completed');
+  const tableBody = document.querySelector("#courseTable tbody");
+
+  currentDisplayedCourses.forEach(code => {
+    const row = tableBody.querySelector(`tr[data-course-code="${code}"]`);
+    if (!row) return;
+    const statusCell = row.querySelector('.status-cell');
+    if (!statusCell) return;
+
+    if (allCurrentlyCompleted) { // Unselect All -> Needed
+      delete savedCourseStates[code];
+      statusCell.textContent = '🚫';
+    } else { // Select All -> Completed
+      if (savedCourseStates[code] !== 'completed') {
+          savedCourseStates[code] = 'completed';
+          statusCell.textContent = '✅';
+      }
+    }
+  });
+
+  localStorage.setItem('courseStates', JSON.stringify(savedCourseStates));
+  updateToggleAllButtonText();
+});
+
+/**
+ * Updates the text of the "Select/Unselect All" button. (Unchanged Logic)
+ */
+function updateToggleAllButtonText() {
+    const allCompleted = currentDisplayedCourses.length > 0 &&
+                         currentDisplayedCourses.every(code => savedCourseStates[code] === 'completed');
+    document.getElementById("toggleAllBtn").textContent = allCompleted ? "Unselect All Courses" : "Select All Courses";
+}
+
+</script>
+
+<!-- Dynamic Footer -->
+<footer>
   <div data-include="components/footer.html"></div>
 </footer>
 
+<!-- Required for dynamic header/footer loading -->
 <script src="js/HTMLInclude.min.js"></script>
-
-<script>
-  document.getElementById("concentrationSelect").addEventListener("change", async (event) => {
-    const majorId = event.target.value;
-    const tableBody = document.querySelector("#courseTable tbody");
-    tableBody.innerHTML = "";
-
-    if (!majorId) {
-      tableBody.innerHTML = `<tr><td colspan="5" class="text-center p-4 text-gray-500">Select a concentration to see courses.</td></tr>`;
-      return;
-    }
-
-    try {
-      const response = await fetch(`http://localhost:3000/api/pg-degree/${majorId}`);
-      if (!response.ok) throw new Error("Failed to fetch course data");
-
-      const data = await response.json();
-
-      let hasCourses = false;
-
-      Object.keys(data).forEach(sectionType => {
-        const sectionCourses = data[sectionType];
-        if (sectionCourses.length > 0) {
-          hasCourses = true;
-          const headerRow = document.createElement("tr");
-          headerRow.innerHTML = `<td colspan="5" class="bg-gray-200 p-2 font-bold text-green-700">${sectionType}</td>`;
-          tableBody.appendChild(headerRow);
-
-          sectionCourses.forEach(course => {
-            let statusEmoji = '🚫'; // default: still needed
-            if (course.status === 'completed') statusEmoji = '✅';
-            else if (course.status === 'planned') statusEmoji = '📝';
-
-            const row = document.createElement("tr");
-            row.innerHTML = `
-              <td class="p-2 text-center">${course.code}</td>
-              <td class="p-2">${course.title}</td>
-              <td class="p-2 text-center">${course.credit_hours || '-'}</td>
-              <td class="p-2">${course.type}</td>
-              <td class="p-2 text-center">${statusEmoji}</td>
-            `;
-            tableBody.appendChild(row);
-          });
-        }
-      });
-
-      if (!hasCourses) {
-        tableBody.innerHTML = `<tr><td colspan="5" class="text-center p-4 text-gray-500">No courses available for this concentration.</td></tr>`;
-      }
-
-    } catch (error) {
-      console.error("Error loading courses:", error);
-      tableBody.innerHTML = `<tr><td colspan="5" class="text-center p-4 text-red-500">Failed to load courses. Please try again later.</td></tr>`;
-    }
-  });
-</script>
+</body>
 
 </body>
 </html>
