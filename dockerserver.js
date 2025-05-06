@@ -232,9 +232,11 @@ app.get("/api/prerequisites", (req, res) => {
       console.error("Error fetching prerequisites:", err.stack);
       return res.status(500).send("Internal Server Error");
     }
-    res.json(results.rows); // Use `.rows` for PostgreSQL
+    console.log("Fetched prerequisites from database:", results.rows); // Debugging log
+    res.json(results.rows);
   });
 });
+
 
 // app.get("/api/catalogs", (req, res) => {
 //  const query= "SELECT catalog_id, catalog_name, description FROM Catalogs";
