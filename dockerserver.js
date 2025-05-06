@@ -26,7 +26,7 @@ const pool = new Pool({
 });
 
 
-pool.connect((err) => {
+/* pool.connect((err) => {
  if (err) {
    console.error("Database connection failed: " + err.stack);
    return;
@@ -34,7 +34,7 @@ pool.connect((err) => {
  console.log("Connected to PostgreSQL database.");
 }
 );
-
+*/
 
 // Login-system JawsDB database
 const userDB = mysql.createConnection({
@@ -70,11 +70,13 @@ app.use(session({
 }));
 
 //Login Routes here
+//Changed from mySQL to PostgreSQL
 
 
+/* 
 app.post("/signup", (req, res) => {
  const { username, password } = req.body;
- const sql = "INSERT INTO Users (username, password) VALUES (?, ?)";
+ const sql = "INSERT INTO users (username, password) VALUES (?, ?)";
  userDB.query(sql, [username, password], (err) => {
    if (err) {
      if (err.code === "ER_DUP_ENTRY") {
@@ -85,27 +87,77 @@ app.post("/signup", (req, res) => {
    res.send("Signup successful!");
  });
 });
+*/
+// Changed from mySQL to PostgreSQL
+app.post("/signup", async (req, res) => {
+  const { username, password } = req.body;
 
-
-app.post("/login", (req, res) => {
- const { username, password } = req.body;
- const sql = "SELECT * FROM Users WHERE username = ? AND password = ?";
- userDB.query(sql, [username, password], (err, results) => {
-   if (err) return res.status(500).send("Login error.");
-   if (results.length > 0) {
-
-    req.session.user = {
-      id: results[0].id,
-      username: results[0].username
-    };
-    
-
-     res.send("Login successful!");
-   } else {
-     res.status(401).send("Invalid credentials.");
-   }
- });
+  try {
+    await pool.query(
+      `INSERT INTO users (email, name, password, role)
+       VALUES ($1, $2, $3, 'student')`,
+      [username, username, password]
+    );
+    res.send("Signup successful!");
+  } catch (err) {
+    if (err.code === '23505') {
+      res.status(409).send("Username already taken.");
+    } else {
+      console.error("Signup error:", err);
+      res.status(500).send("Error creating user.");
+    }
+  }
 });
+
+
+/* app.post("/login", (req, res) => {
+  const { username, password } = req.body;
+  const sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+  userDB.query(sql, [username, password], (err, results) => {
+    if (err) return res.status(500).send("Login error.");
+    if (results.length > 0) {
+ 
+     req.session.user = {
+       id: results[0].id,
+       username: results[0].username
+     };
+     
+ 
+      res.send("Login successful!");
+    } else {
+      res.status(401).send("Invalid credentials.");
+    }
+  });
+ });
+ */
+
+// Changed from mySQL to PostgreSQL
+app.post("/login", async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const result = await pool.query(
+      `SELECT * FROM users WHERE email = $1 AND password = $2`,
+      [username, password]
+    );
+
+    if (result.rows.length > 0) {
+      const user = result.rows[0];
+      req.session.user = {
+        id: user.user_id,
+        email: user.email,
+        role: user.role
+      };
+      res.send("Login successful!");
+    } else {
+      res.status(401).send("Invalid credentials.");
+    }
+  } catch (err) {
+    console.error("Login error:", err);
+    res.status(500).send("Login error.");
+  }
+});
+
 
 app.get("/api/session", (req, res) => {
   if (req.session.user) {
@@ -259,6 +311,88 @@ app.get("/api/prerequisites", (req, res) => {
 //  });
 // });
 
+
+// Return list of concentrations (catalog names)
+app.get("/api/concentrations", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT DISTINCT catalog_name FROM Catalogs ORDER BY catalog_name");
+    const names = result.rows.map(row => row.catalog_name);
+    res.json(names);
+  } catch (err) {
+    console.error("Error fetching concentrations:", err);
+    res.status(500).send("Failed to fetch concentrations");
+  }
+});
+// Onboarding route for saving user preferences
+app.post("/api/onboarding", async (req, res) => {
+  const {
+    name, email, is_advisor,
+    major, concentration,
+    semester, year, credit_hours,
+    summer_classes, summer_credits,
+    transfer_credits
+  } = req.body;
+
+  try {
+    // 1. Get user_id from existing email
+    const userResult = await pool.query(
+      `SELECT user_id FROM users WHERE email = $1`,
+      [email]
+    );
+
+    if (userResult.rows.length === 0) {
+      return res.status(404).send("User not found. Complete signup first.");
+    }
+
+    const userId = userResult.rows[0].user_id;
+
+    // 2. Route logic: insert into student or advisor preferences
+    if (!is_advisor) {
+      await pool.query(
+        `INSERT INTO UserPreferences (
+          user_id, major, concentration, start_semester, start_year,
+          credit_hours_per_semester, takes_summer_classes, has_transfer_credits
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+        ON CONFLICT (user_id) DO UPDATE SET
+          major = EXCLUDED.major,
+          concentration = EXCLUDED.concentration,
+          start_semester = EXCLUDED.start_semester,
+          start_year = EXCLUDED.start_year,
+          credit_hours_per_semester = EXCLUDED.credit_hours_per_semester,
+          takes_summer_classes = EXCLUDED.takes_summer_classes,
+          has_transfer_credits = EXCLUDED.has_transfer_credits
+        `,
+        [
+          userId,
+          major,
+          concentration,
+          semester,
+          year,
+          credit_hours,
+          summer_classes === 'Yes',
+          transfer_credits === 'Yes'
+        ]
+      );
+    } else {
+      await pool.query(
+        `INSERT INTO AdvisorPreferences (
+          user_id, advising_department, advising_focus, max_advisee_count
+        ) VALUES ($1, $2, $3, $4)
+        ON CONFLICT (user_id) DO UPDATE SET
+          advising_department = EXCLUDED.advising_department,
+          advising_focus = EXCLUDED.advising_focus,
+          max_advisee_count = EXCLUDED.max_advisee_count
+        `,
+        [userId, 'Computer Science', 'General Advising', 25] // Hardcoded for now
+      );
+    }
+
+    res.status(200).send("Preferences saved successfully");
+  } catch (error) {
+    console.error("Error saving onboarding preferences:", error);
+    res.status(500).send("Failed to save onboarding preferences");
+  }
+});
 
 
 // please god work for course catalog/prerequisite planners
