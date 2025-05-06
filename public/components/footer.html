@@ -29,9 +29,31 @@
       style="color: white; margin: 0 10px"
       >GitHub</a
     >
+    <span id="login-status" style="margin-left: 20px; font-weight: bold;"></span>
   </nav>
 
   <div style="font-size: 13px">
     Capstone Project · ITCS 4155 · 2025 · Solaris Team
   </div>
+  <script>
+    fetch('/api/session')
+      .then(res => res.json())
+      .then(data => {
+        const statusElement = document.getElementById("login-status");
+        if (statusElement && data.loggedIn) {
+          statusElement.innerHTML = `
+            Logged in as ${data.user.username}
+            <button id="logout-btn" style="margin-left: 10px;">Logout</button>
+          `;
+          document.getElementById('logout-btn').addEventListener('click', () => {
+            fetch('/logout', { method: 'POST' })
+              .then(() => location.reload())
+              .catch(err => console.error("Logout failed:", err));
+          });
+        }
+      })
+      .catch(err => {
+        console.error("Session check failed:", err);
+      });
+  </script>
 </div>
