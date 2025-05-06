@@ -7,12 +7,12 @@ DROP TABLE IF EXISTS Prerequisites;
 DROP TABLE IF EXISTS Courses;
 DROP TABLE IF EXISTS AdvisorPreferences;
 DROP TABLE IF EXISTS UserPreferences;
-DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS Catalogs;
 DROP TABLE IF EXISTS PrerequisiteGroups;
 
 -- Create tables
-CREATE TABLE Users (
+CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     email VARCHAR(255) NOT NULL UNIQUE,
     name VARCHAR(255) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE Users (
 
 CREATE TABLE UserPreferences (
     preference_id SERIAL PRIMARY KEY,
-    user_id INTEGER NOT NULL REFERENCES Users(user_id) ON DELETE CASCADE,
+    user_id INTEGER NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
     major VARCHAR(255) NOT NULL,
     concentration VARCHAR(255),
     start_semester TEXT CHECK (start_semester IN ('Fall', 'Spring', 'Summer')) NOT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE UserPreferences (
 
 CREATE TABLE AdvisorPreferences (
     preference_id SERIAL PRIMARY KEY,
-    user_id INTEGER NOT NULL REFERENCES Users(user_id) ON DELETE CASCADE,
+    user_id INTEGER NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
     advising_department VARCHAR(255),
     advising_focus TEXT,
     max_advisee_count INTEGER CHECK (max_advisee_count >= 0)
@@ -73,14 +73,14 @@ CREATE TABLE CatalogCourses (
 );
 
 CREATE TABLE UserPlans (
-    user_id INT REFERENCES Users(user_id),
+    user_id INT REFERENCES users(user_id),
     course_name VARCHAR(255) REFERENCES Courses(course_name),
     semester VARCHAR(255),
     PRIMARY KEY (user_id, course_name, semester)
 );
 
 -- Insert initial users
-INSERT INTO Users (email, name, password, role) VALUES
+INSERT INTO users (email, name, password, role) VALUES
 ('alice@student.edu', 'Alice Student', 'password', 'student'),
 ('bob@advisor.edu', 'Bob Advisor', 'password', 'advisor');
 

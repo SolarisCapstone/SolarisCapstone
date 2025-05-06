@@ -278,9 +278,9 @@ app.post("/api/onboarding", async (req, res) => {
     const role = is_advisor ? 'advisor' : 'student';
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    console.log("Inserting into Users...");
+    console.log("Inserting into users...");
     const userInsert = await client.query(
-      `INSERT INTO Users (email, name, password, role)
+      `INSERT INTO users (email, name, password, role)
       VALUES ($1, $2, $3, $4)
       RETURNING user_id`,
       [email, name, hashedPassword, role]
