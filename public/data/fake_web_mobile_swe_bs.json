@@ -1,0 +1,35 @@
+{
+    "Core": [
+      { "code": "ITSC 1212", "title": "Introduction to Computer Science I", "credit_hours": 3, "type": "Core", "status": "needed" },
+      { "code": "ITSC 1213", "title": "Introduction to Computer Science II", "credit_hours": 3, "type": "Core", "status": "needed" },
+      { "code": "ITSC 1600 / 2600", "title": "Computing Professionals", "credit_hours": 1, "type": "Core", "status": "needed" },
+      { "code": "ITSC 2175 / MATH 2165", "title": "Logic and Algorithms", "credit_hours": 3, "type": "Core", "status": "needed" },
+      { "code": "ITSC 2214", "title": "Data Structures and Algorithms", "credit_hours": 3, "type": "Core", "status": "needed" },
+      { "code": "ITSC 2181", "title": "Introduction to Computer Systems", "credit_hours": 3, "type": "Core", "status": "needed" },
+      { "code": "ITSC 3146", "title": "Introduction to Operating Systems and Networking", "credit_hours": 3, "type": "Core", "status": "needed" },
+      { "code": "ITSC 3155", "title": "Software Engineering", "credit_hours": 3, "type": "Core", "status": "needed" },
+      { "code": "ITSC 3688", "title": "Computers and Their Impact on Society", "credit_hours": 3, "type": "Core", "status": "needed" }
+    ],
+    "Mathematics and Statistics": [
+      { "code": "MATH 1241", "title": "Calculus I", "credit_hours": 3, "type": "Mathematics and Statistics", "status": "needed" },
+      { "code": "MATH 1242", "title": "Calculus II", "credit_hours": 3, "type": "Mathematics and Statistics", "status": "needed" },
+      { "code": "MATH 2164", "title": "Matrices and Linear Algebra", "credit_hours": 3, "type": "Mathematics and Statistics", "status": "needed" },
+      { "code": "STAT 2122", "title": "Introduction to Probability and Statistics", "credit_hours": 3, "type": "Mathematics and Statistics", "status": "needed" }
+    ],
+    "Capstone": [
+      { "code": "ITSC 4155 / 4850 / 4851 / 4681 / 4682 / 4750 / 4990 / 4991 / ITCS 4232 / ITIS 4390 / 4246", "title": "Capstone Course", "credit_hours": 3, "type": "Capstone", "status": "needed" }
+    ],
+    "Concentration Required": [
+      { "code": "ITIS 3135", "title": "Web-Based Application Design and Development", "credit_hours": 3, "type": "Concentration Required", "status": "needed" },
+      { "code": "ITIS 3310", "title": "Software Architecture and Design", "credit_hours": 3, "type": "Concentration Required", "status": "needed" },
+      { "code": "ITSC 3160", "title": "Database Design and Implementation", "credit_hours": 3, "type": "Concentration Required", "status": "needed" },
+      { "code": "ITSC 4221", "title": "Secure Programming and Penetration Testing", "credit_hours": 3, "type": "Concentration Required", "status": "needed" }
+    ],
+    "Concentration Electives": [
+      { "code": "ITCS 3112 / ITIS 3130 / 3300 / 3320 / 4166 / 4180 / 4340 / 4350", "title": "Concentration Elective Courses (3 classes)", "credit_hours": 9, "type": "Concentration Elective", "status": "needed" }
+    ],
+    "Concentration Technical Electives": [
+      { "code": "ITIS / ITCS / ITSC / BINF 3xxx or 4xxx (except ITSC 3688)", "title": "Technical Electives (2 classes)", "credit_hours": 6, "type": "Concentration Technical Elective", "status": "needed" }
+    ]
+  }
+  
