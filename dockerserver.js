@@ -193,58 +193,53 @@ app.get("/api/degree/:majorId", async (req, res) => {
 
 
 
-app.get("/api/courses", (req, res) => {
- const query ="SELECT course_name, description, type FROM Courses";
- courseDB.query(query, (err, results) => {
-   if (err) {
-     console.error("Error fetching data from the database: " + err.stack);
-     return res.status(500).send("Internal Server Error");
-   }
-   res.json(results);
- });
-});
-
+// app.get("/api/courses", (req, res) => {
+//  const query ="SELECT course_name, description, type FROM Courses";
+//  courseDB.query(query, (err, results) => {
+//    if (err) {
+//      console.error("Error fetching data from the database: " + err.stack);
+//      return res.status(500).send("Internal Server Error");
+//    }
+//    res.json(results);
+//  });
+// });
 
 app.get("/api/prerequisites", (req, res) => {
- const query= "SELECT course_name, prerequisite_name FROM Prerequisites";
- courseDB.query(query, (err, results) => {
-   if (err) {
-     console.error("Error fetching data from the database: " + err.stack);
-     return res.status(500).send("Internal Server Error");
-   }
-   res.json(results);
- });
+  const query = `
+    SELECT course_name, prerequisite_name 
+    FROM Prerequisites
+  `;
+  pool.query(query, (err, results) => {
+    if (err) {
+      console.error("Error fetching prerequisites:", err.stack);
+      return res.status(500).send("Internal Server Error");
+    }
+    res.json(results.rows); // Use `.rows` for PostgreSQL
+  });
 });
 
-
-app.get("/api/catalogs", (req, res) => {
- const query= "SELECT catalog_id, catalog_name, description FROM Catalogs";
- courseDB.query(query, (err, results) => {
-   if (err) {
-     console.error("Error fetching data from the database: " + err.stack);
-     return res.status(500).send("Internal Server Error");
-   }
-   res.json(results);
- });
-});
-
-
-app.get("/api/catalogcourses", (req, res) => {
- const query ="SELECT catalog_id, course_name FROM CatalogCourses";
- courseDB.query(query, (err, results) => {
-   if (err) {
-     console.error("Error fetching data from the database: " + err.stack);
-     return res.status(500).send("Internal Server Error");
-   }
-   res.json(results);
- });
-});
+// app.get("/api/catalogs", (req, res) => {
+//  const query= "SELECT catalog_id, catalog_name, description FROM Catalogs";
+//  courseDB.query(query, (err, results) => {
+//    if (err) {
+//      console.error("Error fetching data from the database: " + err.stack);
+//      return res.status(500).send("Internal Server Error");
+//    }
+//    res.json(results);
+//  });
+// });
 
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
- console.log(`Server is running at http://localhost:${PORT}`);
-});
+// app.get("/api/catalogcourses", (req, res) => {
+//  const query ="SELECT catalog_id, course_name FROM CatalogCourses";
+//  courseDB.query(query, (err, results) => {
+//    if (err) {
+//      console.error("Error fetching data from the database: " + err.stack);
+//      return res.status(500).send("Internal Server Error");
+//    }
+//    res.json(results);
+//  });
+// });
 
 
 
@@ -276,4 +271,10 @@ app.get("/api/pg-degree/:majorId", async (req, res) => {
     console.error("Error fetching degree data:", error);
     res.status(500).send("Internal Server Error");
   }
+});
+
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+ console.log(`Server is running at http://localhost:${PORT}`);
 });
