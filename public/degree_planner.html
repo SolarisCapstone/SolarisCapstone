@@ -123,6 +123,14 @@
           <div class="progress-bar">
               <div class="progress-bar-fill"></div>
           </div>
+          <div class="mt-2 flex justify-center gap-4">
+            <button onclick="savePlanner()" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded">
+              Save Planner
+            </button>
+            <button onclick="loadPlanner()" class="px-4 py-2 bg-yellow-600 hover:bg-yellow-500 text-white font-bold rounded">
+              Load Last Saved Plan
+            </button>
+          </div>
           <button onclick="addSemester()" class="mt-2 px-4 py-1 bg-white text-green-900 font-bold rounded border border-green-700 hover:bg-green-100">Add Semester</button>
       </header>
     
@@ -541,6 +549,58 @@ document.addEventListener("DOMContentLoaded", () => {
     newClassForm.reset();
   });
 });
+
+function savePlanner() {
+  fetch("/api/save-plan", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(semesterCourses)
+  })
+  .then(res => {
+    if (res.ok) alert("Planner saved successfully!");
+    else throw new Error("Failed to save.");
+  })
+  .catch(err => {
+    console.error("Save error:", err);
+    alert("Failed to save planner.");
+  });
+}
+
+function loadPlanner() {
+  fetch("/api/load-plan")
+  .then(res => {
+    if (!res.ok) throw new Error("Failed to load.");
+    return res.json();
+  })
+  .then(data => {
+    clearSemesters();
+    semesterCourses = data || {};
+    for (let semesterId in semesterCourses) {
+      const semesterEl = document.getElementById(semesterId);
+      semesterCourses[semesterId].forEach(courseId => {
+        const courseEl = document.getElementById(courseId);
+        if (courseEl && semesterEl) {
+          semesterEl.appendChild(courseEl);
+        }
+      });
+    }
+    revalidateAllCourses();
+    updateProgress();
+    alert("Planner loaded!");
+  })
+  .catch(err => {
+    console.error("Load error:", err);
+    alert("Failed to load planner.");
+  });
+}
+
+function clearSemesters() {
+  document.querySelectorAll(".semester").forEach(sem => {
+    const childrenToRemove = Array.from(sem.children).filter(child => child.classList.contains("course"));
+    childrenToRemove.forEach(child => sem.removeChild(child));
+  });
+}
+
 
 
   </script>
