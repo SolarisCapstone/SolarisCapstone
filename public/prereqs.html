@@ -53,9 +53,9 @@
     }
 
     .prereq-node.completed {
-      background-color: #D9F99D;
-      border-color: #84CC16;
-      color: #3F6212;
+      background-color: #BFDBFE; /* light blue */
+      border-color: #60A5FA;
+      color: #1D4ED8;
     }
 
     .prereq-node.completed .course-info {
@@ -96,9 +96,16 @@
   <div class="max-w-4xl mx-auto bg-gray-100 text-gray-800 p-6 rounded-lg shadow-lg">
     <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-4 text-center">Course Prerequisite Visualizer</h1>
     <p class="text-gray-600 mb-4 text-center text-sm md:text-base">
-      Select a course to see its prerequisite chain. Check off completed courses to calculate the minimum semesters needed.
+      Select or search for a course to see its prerequisite chain. Check off completed courses to calculate the minimum semesters needed.
     </p>
 
+    <!-- Search bar -->
+    <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-center gap-2">
+      <input id="courseSearch" type="text" placeholder="Search course name or code..." class="p-2 w-full md:w-1/2 bg-white text-black rounded border border-gray-300 shadow-sm focus:ring-2 focus:ring-green-500">
+      <button id="resetCompleted" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded shadow">Reset Completed Courses</button>
+    </div>
+
+    <!-- Dropdown -->
     <div class="mb-4 flex flex-col items-center">
       <label for="courseSelect" class="block text-lg font-medium text-gray-700 mb-2">Select Target Course:</label>
       <select id="courseSelect" class="p-2 w-full max-w-md bg-white text-black rounded border border-gray-300 shadow-sm focus:ring-2 focus:ring-green-500">
@@ -155,15 +162,18 @@ async function fetchCourseData() {
   }
 }
 
-function populateSelect() {
+function populateSelect(filtered = '') {
   const select = document.getElementById('courseSelect');
   select.innerHTML = '<option value="">-- Choose a Course --</option>';
-  Object.keys(courseData).sort().forEach(code => {
-    const option = document.createElement('option');
-    option.value = code;
-    option.textContent = `${code} - ${courseData[code].name}`;
-    select.appendChild(option);
-  });
+  Object.keys(courseData)
+    .filter(code => code.toLowerCase().includes(filtered) || courseData[code].name.toLowerCase().includes(filtered))
+    .sort()
+    .forEach(code => {
+      const option = document.createElement('option');
+      option.value = code;
+      option.textContent = `${code} - ${courseData[code].name}`;
+      select.appendChild(option);
+    });
   select.disabled = false;
 }
 
@@ -216,6 +226,24 @@ document.addEventListener('DOMContentLoaded', async () => {
   courseData = await fetchCourseData();
   if (!courseData) return;
   populateSelect();
+
+  document.getElementById('courseSearch').addEventListener('input', e => {
+    const query = e.target.value.trim().toLowerCase();
+    populateSelect(query);
+  });
+
+  document.getElementById('resetCompleted').addEventListener('click', () => {
+    if (confirm('Are you sure you want to reset all completed courses?')) {
+      completedCourses.clear();
+      saveCompletedCourses();
+      const selected = document.getElementById('courseSelect').value;
+      if (selected) {
+        document.getElementById('prereq-display').innerHTML = buildTree(selected);
+        const minSem = calculateMinSemesters(selected);
+        document.getElementById('semester-info').innerHTML = `Minimum semesters required: <strong>${minSem}</strong>`;
+      }
+    }
+  });
 
   document.getElementById('courseSelect').addEventListener('change', e => {
     const code = e.target.value;
