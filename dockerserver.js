@@ -26,7 +26,7 @@ const pool = new Pool({
 });
 
 
-/* pool.connect((err) => {
+pool.connect((err) => {
  if (err) {
    console.error("Database connection failed: " + err.stack);
    return;
@@ -34,7 +34,7 @@ const pool = new Pool({
  console.log("Connected to PostgreSQL database.");
 }
 );
-*/
+
 
 // Login-system JawsDB database
 const userDB = mysql.createConnection({
@@ -73,7 +73,7 @@ app.use(session({
 //Changed from mySQL to PostgreSQL
 
 
-/* 
+
 app.post("/signup", (req, res) => {
  const { username, password } = req.body;
  const sql = "INSERT INTO users (username, password) VALUES (?, ?)";
@@ -87,30 +87,9 @@ app.post("/signup", (req, res) => {
    res.send("Signup successful!");
  });
 });
-*/
-// Changed from mySQL to PostgreSQL
-app.post("/signup", async (req, res) => {
-  const { username, password } = req.body;
-
-  try {
-    await pool.query(
-      `INSERT INTO users (email, name, password, role)
-       VALUES ($1, $2, $3, 'student')`,
-      [username, username, password]
-    );
-    res.send("Signup successful!");
-  } catch (err) {
-    if (err.code === '23505') {
-      res.status(409).send("Username already taken.");
-    } else {
-      console.error("Signup error:", err);
-      res.status(500).send("Error creating user.");
-    }
-  }
-});
 
 
-/* app.post("/login", (req, res) => {
+app.post("/login", (req, res) => {
   const { username, password } = req.body;
   const sql = "SELECT * FROM users WHERE username = ? AND password = ?";
   userDB.query(sql, [username, password], (err, results) => {
@@ -129,35 +108,6 @@ app.post("/signup", async (req, res) => {
     }
   });
  });
- */
-
-// Changed from mySQL to PostgreSQL
-app.post("/login", async (req, res) => {
-  const { username, password } = req.body;
-
-  try {
-    const result = await pool.query(
-      `SELECT * FROM users WHERE email = $1 AND password = $2`,
-      [username, password]
-    );
-
-    if (result.rows.length > 0) {
-      const user = result.rows[0];
-      req.session.user = {
-        id: user.user_id,
-        email: user.email,
-        role: user.role
-      };
-      res.send("Login successful!");
-    } else {
-      res.status(401).send("Invalid credentials.");
-    }
-  } catch (err) {
-    console.error("Login error:", err);
-    res.status(500).send("Login error.");
-  }
-});
-
 
 app.get("/api/session", (req, res) => {
   if (req.session.user) {
