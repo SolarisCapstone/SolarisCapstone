@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NinerTrack Planner - Prereqs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --charlotte-green: #046a38;
+      --charlotte-light-green: #78be21;
+      --charlotte-dark-gray: #1e1e1e;
+      --charlotte-light-gray: #f4f4f4;
+    }
+
+    .prereq-node {
+      padding: 12px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      background-color: #E0F2FE;
+      border: 2px solid #7DD3FC;
+      color: #075985;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    .prereq-node .course-info {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .prereq-node .course-code {
+      font-weight: 600;
+    }
+
+    .prereq-children {
+      margin-top: 8px;
+      padding-left: 20px;
+      border-left: 2px dashed var(--charlotte-green);
+      width: 100%;
+    }
+
+    #prereq-display > .prereq-node {
+      background-color: #D1FAE5;
+      border-color: #6EE7B7;
+      color: #065F46;
+      font-weight: bold;
+    }
+
+    .prereq-node.completed {
+      background-color: #BFDBFE; /* light blue */
+      border-color: #60A5FA;
+      color: #1D4ED8;
+    }
+
+    .prereq-node.completed .course-info {
+      text-decoration: line-through;
+      opacity: 0.8;
+    }
+
+    #semester-info {
+      margin-bottom: 1rem;
+      padding: 12px;
+      background-color: #FEFCE8;
+      border: 2px solid #FDE047;
+      border-radius: 6px;
+      color: #854D0E;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    input.course-complete-checkbox {
+      transform: scale(1.3);
+      cursor: pointer;
+    }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+  </style>
+</head>
+<body class="bg-green-900 text-white flex flex-col min-h-screen font-sans">
+
+<header>
+  <div data-include="components/header.html"></div>
+</header>
+
+<main class="flex-grow container mx-auto px-4 py-8">
+  <div class="max-w-4xl mx-auto bg-gray-100 text-gray-800 p-6 rounded-lg shadow-lg">
+    <h1 class="text-2xl md:text-3xl font-bold text-green-800 mb-4 text-center">Course Prerequisite Visualizer</h1>
+    <p class="text-gray-600 mb-4 text-center text-sm md:text-base">
+      Select or search for a course to see its prerequisite chain. Check off completed courses to calculate the minimum semesters needed.
+    </p>
+
+    <!-- Search bar -->
+    <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-center gap-2">
+      <input id="courseSearch" type="text" placeholder="Search course name or code..." class="p-2 w-full md:w-1/2 bg-white text-black rounded border border-gray-300 shadow-sm focus:ring-2 focus:ring-green-500">
+      <button id="resetCompleted" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded shadow">Reset Completed Courses</button>
+    </div>
+
+    <!-- Dropdown -->
+    <div class="mb-4 flex flex-col items-center">
+      <label for="courseSelect" class="block text-lg font-medium text-gray-700 mb-2">Select Target Course:</label>
+      <select id="courseSelect" class="p-2 w-full max-w-md bg-white text-black rounded border border-gray-300 shadow-sm focus:ring-2 focus:ring-green-500">
+        <option value="">Loading courses...</option>
+      </select>
+    </div>
+
+    <div id="semester-info" class="hidden"></div>
+
+    <div id="prereq-display" class="p-4 border border-gray-300 rounded bg-white min-h-[200px] overflow-auto">
+      <p class="text-center italic text-gray-500">Select a course above to view its prerequisites.</p>
+    </div>
+
+    <div class="mt-6 text-center space-x-4">
+      <a href="degree_planner.html" class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded shadow">← Back to Degree Planner</a>
+      <a href="course_catalog.html" class="bg-gray-600 hover:bg-gray-700 text-white py-2 px-4 rounded shadow">View Course Catalog →</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div data-include="components/footer.html"></div>
+</footer>
+
+<script src="js/HTMLInclude.min.js"></script>
+
+<script>
+let courseData = null;
+let completedCourses = new Set();
+
+function loadCompletedCourses() {
+  const saved = localStorage.getItem('completedCourses');
+  if (saved) {
+    try {
+      completedCourses = new Set(JSON.parse(saved));
+    } catch {
+      completedCourses = new Set();
+    }
+  }
+}
+
+function saveCompletedCourses() {
+  localStorage.setItem('completedCourses', JSON.stringify([...completedCourses]));
+}
+
+async function fetchCourseData() {
+  try {
+    const res = await fetch('data/courses-with-prereqs.json');
+    if (!res.ok) throw new Error('Failed to load course data');
+    return await res.json();
+  } catch (err) {
+    console.error(err);
+    return null;
+  }
+}
+
+function populateSelect(filtered = '') {
+  const select = document.getElementById('courseSelect');
+  select.innerHTML = '<option value="">-- Choose a Course --</option>';
+  Object.keys(courseData)
+    .filter(code => code.toLowerCase().includes(filtered) || courseData[code].name.toLowerCase().includes(filtered))
+    .sort()
+    .forEach(code => {
+      const option = document.createElement('option');
+      option.value = code;
+      option.textContent = `${code} - ${courseData[code].name}`;
+      select.appendChild(option);
+    });
+  select.disabled = false;
+}
+
+function buildTree(code, visited = new Set()) {
+  if (visited.has(code)) {
+    return `<div class="prereq-node circular-warning">Circular dependency: ${code}</div>`;
+  }
+  visited.add(code);
+  const course = courseData[code];
+  if (!course) {
+    visited.delete(code);
+    return `<div class="prereq-node missing-info">${code} - Info not found</div>`;
+  }
+
+  const isCompleted = completedCourses.has(code);
+  const completedClass = isCompleted ? 'completed' : '';
+
+  let childrenHTML = '';
+  if (course.prereqs.length > 0) {
+    childrenHTML = '<div class="prereq-children">' +
+      course.prereqs.map(pr => buildTree(pr, new Set(visited))).join('') +
+      '</div>';
+  }
+
+  visited.delete(code);
+  return `
+    <div class="prereq-node ${completedClass}" data-code="${code}">
+      <div class="course-info">
+        <label class="flex items-center gap-2">
+          <input type="checkbox" class="course-complete-checkbox" data-code="${code}" ${isCompleted ? 'checked' : ''}>
+          <span><span class="course-code">${code}</span> - ${course.name}</span>
+        </label>
+      </div>
+      ${childrenHTML}
+    </div>
+  `;
+}
+
+function calculateMinSemesters(code, memo = {}) {
+  if (completedCourses.has(code)) return 0;
+  if (memo[code] !== undefined) return memo[code];
+  const course = courseData[code];
+  if (!course || course.prereqs.length === 0) return memo[code] = 1;
+  const prereqDepths = course.prereqs.map(pr => calculateMinSemesters(pr, memo));
+  return memo[code] = Math.max(...prereqDepths) + 1;
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  loadCompletedCourses();
+  courseData = await fetchCourseData();
+  if (!courseData) return;
+  populateSelect();
+
+  document.getElementById('courseSearch').addEventListener('input', e => {
+    const query = e.target.value.trim().toLowerCase();
+    populateSelect(query);
+  });
+
+  document.getElementById('resetCompleted').addEventListener('click', () => {
+    if (confirm('Are you sure you want to reset all completed courses?')) {
+      completedCourses.clear();
+      saveCompletedCourses();
+      const selected = document.getElementById('courseSelect').value;
+      if (selected) {
+        document.getElementById('prereq-display').innerHTML = buildTree(selected);
+        const minSem = calculateMinSemesters(selected);
+        document.getElementById('semester-info').innerHTML = `Minimum semesters required: <strong>${minSem}</strong>`;
+      }
+    }
+  });
+
+  document.getElementById('courseSelect').addEventListener('change', e => {
+    const code = e.target.value;
+    if (!code) {
+      document.getElementById('prereq-display').innerHTML = '<p class="text-center italic text-gray-500">Select a course above to view its prerequisites.</p>';
+      document.getElementById('semester-info').classList.add('hidden');
+      return;
+    }
+    document.getElementById('prereq-display').innerHTML = buildTree(code);
+    const minSem = calculateMinSemesters(code);
+    document.getElementById('semester-info').innerHTML = `Minimum semesters required: <strong>${minSem}</strong>`;
+    document.getElementById('semester-info').classList.remove('hidden');
+  });
+
+  document.getElementById('prereq-display').addEventListener('change', e => {
+    if (e.target.classList.contains('course-complete-checkbox')) {
+      const code = e.target.dataset.code;
+      if (e.target.checked) {
+        completedCourses.add(code);
+      } else {
+        completedCourses.delete(code);
+      }
+      saveCompletedCourses();
+      const selected = document.getElementById('courseSelect').value;
+      if (selected) {
+        document.getElementById('prereq-display').innerHTML = buildTree(selected);
+        const minSem = calculateMinSemesters(selected);
+        document.getElementById('semester-info').innerHTML = `Minimum semesters required: <strong>${minSem}</strong>`;
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>
