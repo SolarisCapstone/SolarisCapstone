@@ -244,7 +244,6 @@ INSERT INTO PrerequisiteGroups (group_id, logic_type) VALUES
     (1, 'AND'),
     (2, 'OR');
 INSERT INTO Prerequisites (course_name, prerequisite_name, group_id) VALUES
-    ('MATH 1241', 'MATH 1103', NULL),
     ('MATH 1242', 'MATH 1241', NULL),
     ('MATH 2164', 'MATH 1120', 2),
     ('MATH 2164', 'MATH 1241', 2),
@@ -343,6 +342,25 @@ INSERT INTO Prerequisites (course_name, prerequisite_name, group_id) VALUES
     ('ITIS 4260', 'STAT 1222', 2),
     ('ITIS 4260', 'STAT 2122', 2),
     ('ITIS 4261', 'ITSC 3146', NULL);
+
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'MATH 1103';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'MATH 1120';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'STAT 1220';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'STAT 1221';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'MATH 1121';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'BIOL 1110';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'BIOL 1110L';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'BIOL 2120';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'PSYCH 1101';
 
 INSERT INTO CatalogCourses (catalog_id, course_name) VALUES 
     (1, 'ITSC 1212'),

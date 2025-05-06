@@ -338,6 +338,26 @@ INSERT INTO Prerequisites (course_name, prerequisite_name, group_id) VALUES
     ('ITIS 4260', 'STAT 2122', 2),
     ('ITIS 4261', 'ITSC 3146', NULL);
 
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'MATH 1103';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'MATH 1120';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'STAT 1220';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'STAT 1221';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'MATH 1121';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'BIOL 1110';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'BIOL 1110L';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'BIOL 2120';
+DELETE FROM Prerequisites
+WHERE prerequisite_name = 'PSYCH 1101';
+
+
 INSERT INTO CatalogCourses (catalog_id, course_name) VALUES 
     (1, 'ITSC 1212'),
     (1, 'ITSC 1213'),
