@@ -115,6 +115,32 @@ app.get("/api/session", (req, res) => {
   }
 });
 
+// Save user planner data
+app.post("/api/save-plan", (req, res) => {
+  if (!req.session.user) return res.status(401).send("Not logged in");
+
+  const planData = JSON.stringify(req.body);
+  const sql = "UPDATE users SET plan_data = ? WHERE id = ?";
+  userDB.query(sql, [planData, req.session.user.id], (err) => {
+    if (err) return res.status(500).send("Failed to save plan");
+    res.send("Plan saved");
+  });
+});
+
+// Load user planner data
+app.get("/api/load-plan", (req, res) => {
+  if (!req.session.user) return res.status(401).send("Not logged in");
+
+  const sql = "SELECT plan_data FROM users WHERE id = ?";
+  userDB.query(sql, [req.session.user.id], (err, results) => {
+    if (err) return res.status(500).send("Failed to load plan");
+    if (results.length === 0) return res.status(404).send("No user found");
+
+    const plan = results[0].plan_data ? JSON.parse(results[0].plan_data) : {};
+    res.json(plan);
+  });
+});
+
 app.post("/logout", (req, res) => {
   req.session.destroy(err => {
     if (err) {
