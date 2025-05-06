@@ -2,7 +2,16 @@
 <html>
   <head>
     <title>Login</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --charlotte-green: #046a38;
+    --charlotte-light-green: #78be21;
+    --charlotte-dark-gray: #1e1e1e;
+    --charlotte-light-gray: #f4f4f4;
+  }
+</style>
+<link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body class="login-page">
     <!-- Dynamic Header -->
@@ -49,6 +58,10 @@
     
         const message = await res.text();
         alert(message);
+
+        if (res.ok) {
+      location.reload(); // if the login is successfull refresh.
+    }
       });
     </script>
   </body>
