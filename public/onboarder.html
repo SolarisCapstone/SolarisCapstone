@@ -10,30 +10,42 @@
   </head>
 
   <body class="bg-green-900 text-white flex flex-col min-h-screen">
-    <!-- Dynamic Header -->
     <header>
       <div data-include="components/header.html"></div>
     </header>
 
     <main class="flex-grow flex justify-center items-center p-10">
-      <div x-data="onboarding()" class="w-full max-w-2xl bg-white text-black p-8 rounded-lg shadow-lg">
+      <div x-data="onboarding()" x-init="init()" class="w-full max-w-2xl bg-white text-black p-8 rounded-lg shadow-lg">
         <div class="text-center mb-6">
-          <p class="text-lg text-green-900">Awesome! Step <span x-text="step"></span>/6 - You're doing great!</p>
+          <p class="text-lg text-green-900">Step <span x-text="step"></span><span x-show="!isAdvisor">/6</span></p>
         </div>
 
+        <!-- Step 1 -->
         <template x-if="step === 1">
           <div>
             <h1 class="text-3xl font-bold mb-4">Welcome!</h1>
-            <p class="mb-6">Let's get started. Tell us your name and email.</p>
+            <p class="mb-6">Let's get started. Tell us your name, email, and set a password.</p>
+
             <input x-model="name" type="text" placeholder="Name" class="w-full p-2 mb-2 rounded border">
-            <input x-model="email" type="email" placeholder="Email" class="w-full p-2 mb-4 rounded border">
-            <template x-if="error && (!name || !email)"><p class="text-red-500 text-sm">Please fill out all fields.</p></template>
+            <input x-model="email" type="email" placeholder="Email" class="w-full p-2 mb-2 rounded border">
+            <input x-model="password" type="password" placeholder="Password" class="w-full p-2 mb-2 rounded border">
+
+            <label class="flex items-center mb-4">
+              <input type="checkbox" x-model="isAdvisor" class="mr-2">
+              <span class="text-sm text-gray-800">I am an advisor</span>
+            </label>
+
+            <template x-if="error && (!name || !email || !password)">
+              <p class="text-red-500 text-sm">Please fill out all fields including password.</p>
+            </template>
           </div>
         </template>
 
-        <template x-if="step === 2">
+        <!-- Step 2 -->
+        <template x-if="step === 2 && !isAdvisor">
           <div>
             <h1 class="text-3xl font-bold mb-4">Degree & Concentration</h1>
+            <input x-model="major" type="text" placeholder="Major (e.g., Computer Science)" class="w-full p-2 mb-2 rounded border">
             <select x-model="degree" class="w-full p-2 mb-2 rounded border">
               <option disabled selected value="">Select Degree</option>
               <option>Bachelor of Science</option>
@@ -41,15 +53,18 @@
             </select>
             <select x-model="concentration" class="w-full p-2 mb-4 rounded border">
               <option disabled selected value="">Select Concentration</option>
-              <option>AI & Robotics</option>
-              <option>Cybersecurity</option>
-              <option>Data Science</option>
+              <template x-for="c in concentrationOptions" :key="c">
+                <option x-text="c"></option>
+              </template>
             </select>
-            <template x-if="error && (!degree || !concentration)"><p class="text-red-500 text-sm">Please select both degree and concentration.</p></template>
+            <template x-if="error && (!major || !degree || !concentration)">
+              <p class="text-red-500 text-sm">Please fill out all fields.</p>
+            </template>
           </div>
         </template>
 
-        <template x-if="step === 3">
+        <!-- Step 3 -->
+        <template x-if="step === 3 && !isAdvisor">
           <div>
             <h1 class="text-3xl font-bold mb-4">Timeline Preferences</h1>
             <select x-model="startSemester" class="w-full p-2 mb-2 rounded border">
@@ -68,11 +83,14 @@
             <input x-show="takesSummer === 'Yes'" x-model="summerCredits" type="number" placeholder="Summer Credit Hours" class="w-full p-2 mb-2 rounded border">
             <template x-if="creditHours > 18"><p class="text-yellow-600 text-sm">Warning: Heavy load (>18 credit hours)!</p></template>
             <template x-if="summerCredits > 14"><p class="text-yellow-600 text-sm">Warning: High summer load (>14 credits)!</p></template>
-            <template x-if="error && (!startSemester || !startYear || startYear < 2025 || !creditHours || creditHours <= 0 || !takesSummer)"><p class="text-red-500 text-sm">Please complete all fields correctly.</p></template>
+            <template x-if="error && (!startSemester || !startYear || creditHours <= 0 || takesSummer === '')">
+              <p class="text-red-500 text-sm">Please complete all fields correctly.</p>
+            </template>
           </div>
         </template>
 
-        <template x-if="step === 4">
+        <!-- Step 4 -->
+        <template x-if="step === 4 && !isAdvisor">
           <div>
             <h1 class="text-3xl font-bold mb-4">Graduation Target</h1>
             <select x-model="graduationTarget" class="w-full p-2 mb-4 rounded border">
@@ -81,11 +99,14 @@
               <option>Within 4 years</option>
               <option>Specific Year</option>
             </select>
-            <template x-if="error && !graduationTarget"><p class="text-red-500 text-sm">Please select a graduation target.</p></template>
+            <template x-if="error && !graduationTarget">
+              <p class="text-red-500 text-sm">Please select a graduation target.</p>
+            </template>
           </div>
         </template>
 
-        <template x-if="step === 5">
+        <!-- Step 5 -->
+        <template x-if="step === 5 && !isAdvisor">
           <div>
             <h1 class="text-3xl font-bold mb-4">Transfer Credits</h1>
             <select x-model="hasTransferCredits" class="w-full p-2 mb-4 rounded border">
@@ -93,23 +114,18 @@
               <option>Yes</option>
               <option>No</option>
             </select>
-            <div x-show="hasTransferCredits === 'Yes'" class="mt-4">
-              <h2 class="text-xl mb-2">Select Transferred Gen Ed Courses:</h2>
-              <div class="flex flex-col space-y-2">
-                <label><input type="checkbox" class="mr-2"> English Composition</label>
-                <label><input type="checkbox" class="mr-2"> College Algebra</label>
-                <label><input type="checkbox" class="mr-2"> Intro to Psychology</label>
-                <label><input type="checkbox" class="mr-2"> Public Speaking</label>
-              </div>
-            </div>
-            <template x-if="error && !hasTransferCredits"><p class="text-red-500 text-sm">Please answer about transfer credits.</p></template>
+            <template x-if="error && !hasTransferCredits">
+              <p class="text-red-500 text-sm">Please answer about transfer credits.</p>
+            </template>
           </div>
         </template>
 
+        <!-- Step 6 -->
         <template x-if="step === 6">
           <div class="text-center">
             <h1 class="text-3xl font-bold mb-4">All Set!</h1>
             <p class="mb-6">You're ready to start planning your graduation journey!</p>
+            <button @click="submitForm" class="bg-blue-700 hover:bg-blue-600 py-2 px-6 rounded text-white">Submit</button>
           </div>
         </template>
 
@@ -120,21 +136,19 @@
       </div>
     </main>
 
-    <!-- Dynamic Footer -->
     <footer>
       <div data-include="components/footer.html"></div>
     </footer>
 
-    <!-- Required for dynamic header/footer loading -->
     <script src="js/HTMLInclude.min.js"></script>
-
-    <!-- AlpineJS Setup -->
     <script>
       function onboarding() {
         return {
           step: 1,
           name: '',
           email: '',
+          password: '',
+          major: '',
           degree: '',
           concentration: '',
           startSemester: '',
@@ -144,19 +158,61 @@
           summerCredits: '',
           graduationTarget: '',
           hasTransferCredits: '',
+          concentrationOptions: [],
+          isAdvisor: false,
           error: false,
+          init() {
+            fetch('/api/concentrations')
+              .then(res => res.json())
+              .then(data => { this.concentrationOptions = data; })
+              .catch(err => console.error("Failed to load concentrations:", err));
+          },
           nextStep() {
             this.error = false;
-            if (this.step === 1 && (!this.name || !this.email)) this.error = true;
-            else if (this.step === 2 && (!this.degree || !this.concentration)) this.error = true;
-            else if (this.step === 3 && (!this.startSemester || !this.startYear || this.startYear < 2025 || !this.creditHours || this.creditHours <= 0 || !this.takesSummer)) this.error = true;
-            else if (this.step === 4 && (!this.graduationTarget)) this.error = true;
-            else if (this.step === 5 && (!this.hasTransferCredits)) this.error = true;
+            if (this.step === 1 && (!this.name || !this.email || !this.password)) this.error = true;
+            else if (this.step === 2 && !this.isAdvisor && (!this.major || !this.degree || !this.concentration)) this.error = true;
+            else if (this.step === 3 && !this.isAdvisor && (!this.startSemester || !this.startYear || this.creditHours <= 0 || this.takesSummer === '')) this.error = true;
+            else if (this.step === 4 && !this.isAdvisor && (!this.graduationTarget)) this.error = true;
+            else if (this.step === 5 && !this.isAdvisor && (!this.hasTransferCredits)) this.error = true;
             else this.step++;
           },
           prevStep() {
             this.error = false;
             this.step--;
+          },
+          submitForm() {
+            const payload = {
+              name: this.name,
+              email: this.email,
+              password: this.password,
+              is_advisor: this.isAdvisor,
+              major: this.isAdvisor ? null : this.major,
+              concentration: this.isAdvisor ? null : this.concentration,
+              semester: this.isAdvisor ? null : this.startSemester,
+              year: this.isAdvisor ? null : this.startYear,
+              credit_hours: this.isAdvisor ? null : this.creditHours,
+              summer_classes: this.isAdvisor ? null : this.takesSummer,
+              summer_credits: this.isAdvisor ? null : this.summerCredits,
+              transfer_credits: this.isAdvisor ? null : this.hasTransferCredits
+            };
+            console.log("Submitting payload:", payload);
+
+            fetch('/api/onboarding', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            })
+            .then(response => {
+              if (response.ok) {
+                window.location.href = this.isAdvisor ? '/advisor_dashboard.html' : '/dashboard.html';
+              } else {
+                throw new Error('Submission failed');
+              }
+            })
+            .catch(error => {
+              console.error('Error:', error);
+              alert('Failed to save preferences.');
+            });
           }
         }
       }
