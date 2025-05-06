@@ -89,6 +89,9 @@
       footer a button {
           font-size: 14px;
       }
+      .hidden {
+    display: none;
+  }
   </style>
 </head>
 <body class="bg-green-900 text-white">
@@ -171,7 +174,7 @@
           </div>
          
               <div class="course-category-box" id="concentration-required" ondrop="drop(event)" ondragover="allowDrop(event)">
-                  <h2>Concentration Required Course - Choose One</h2>
+                  <h2>Concentration Required Course</h2>
                   <!-- <div class="course" id="ITCS3153" draggable="true" ondragstart="drag(event)">ITCS 3153 - Introduction to Artificial Intelligence</div>
                   <div class="course" id="ITCS3156" draggable="true" ondragstart="drag(event)">ITCS 3156 - Introduction to Machine Learning</div> -->
               </div>
@@ -193,6 +196,45 @@
                   <div class="course" id="ITCS4236" draggable="true" ondragstart="drag(event)">ITCS 4236 - Artificial Intelligence for Computer Games</div> -->
               </div>
 
+<div id="add-class-container" style="position: fixed; top: 20px; right: 20px;">
+  <button id="add-class-button" class="bg-green-700 hover:bg-green-600 text-white px-4 py-2 rounded">
+    Add a Class
+  </button>
+</div>
+
+<div id="add-class-form" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white p-6 rounded shadow-lg text-black w-96">
+    <h2 class="text-lg font-bold mb-4">Add a New Class</h2>
+    <form id="new-class-form">
+      <label class="block mb-2">
+        Course Name:
+        <input type="text" id="new-course-name" class="w-full p-2 border rounded" required />
+      </label>
+      <label class="block mb-2">
+        Prerequisite:
+        <input type="text" id="new-course-prerequisite" class="w-full p-2 border rounded" />
+      </label>
+      <label class="block mb-4">
+        Course Type:
+        <select id="new-course-type" class="w-full p-2 border rounded" required>
+            <option value="core-classes">Core</option>
+            <option value="math-classes">Math</option>
+            <option value="concentration-required">Concentration Required</option>
+            <option value="concentration-electives">Concentration Elective</option>
+          </select>
+        </select>
+      </label>
+      <div class="flex justify-between">
+        <button type="submit" class="bg-green-700 hover:bg-green-600 text-white px-4 py-2 rounded">
+          Add Class
+        </button>
+        <button type="button" id="cancel-add-class" class="bg-red-500 hover:bg-red-400 text-white px-4 py-2 rounded">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
 
           </section>
         
@@ -436,6 +478,57 @@ function populateCategoryBox(categoryId, courses) {
       categoryBox.appendChild(courseDiv);
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const addClassButton = document.getElementById("add-class-button");
+  const addClassForm = document.getElementById("add-class-form");
+  const cancelAddClass = document.getElementById("cancel-add-class");
+  const newClassForm = document.getElementById("new-class-form");
+
+  addClassButton.addEventListener("click", () => {
+    addClassForm.classList.remove("hidden");
+  });
+
+  cancelAddClass.addEventListener("click", () => {
+    addClassForm.classList.add("hidden");
+  });
+
+  newClassForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const courseName = document.getElementById("new-course-name").value.trim();
+    const prerequisite = document.getElementById("new-course-prerequisite").value.trim();
+    const courseType = document.getElementById("new-course-type").value;
+
+    const normalizedCourseName = courseName.replace(/\s+/g, "");
+    const normalizedPrerequisite = prerequisite.replace(/\s+/g, "");
+
+    const categoryBox = document.getElementById(courseType);
+    if (categoryBox) {
+      const courseDiv = document.createElement("div");
+      courseDiv.className = "course";
+      courseDiv.id = normalizedCourseName;
+      courseDiv.setAttribute("draggable", "true");
+      courseDiv.setAttribute("ondragstart", "drag(event)");
+      courseDiv.textContent = courseName;
+      categoryBox.appendChild(courseDiv);
+
+      if (prerequisite) {
+        if (!prerequisites[normalizedCourseName]) {
+          prerequisites[normalizedCourseName] = [];
+        }
+        prerequisites[normalizedCourseName].push(normalizedPrerequisite);
+      }
+
+      console.log(`Added new course: ${courseName} (Prerequisite: ${prerequisite || "None"})`);
+    } else {
+      console.error(`Category box with id "${courseType}" not found.`);
+    }
+
+    addClassForm.classList.add("hidden");
+    newClassForm.reset();
+  });
+});
 
 
   </script>
