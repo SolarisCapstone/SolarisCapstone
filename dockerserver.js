@@ -301,40 +301,30 @@ app.get("/api/pg-degree/:majorId", async (req, res) => {
   }
 });
 
-// New API: Get all courses and their prerequisites (combined)
-app.get("/api/courses-with-prereqs", async (req, res) => {
+app.get('/api/courses-with-prereqs', async (req, res) => {
   try {
-    // Fetch all courses
-    const coursesResult = await pool.query(`
-      SELECT course_name, description
-      FROM Courses
-    `);
-
-    // Fetch all prerequisites
-    const prereqsResult = await pool.query(`
-      SELECT course_name, prerequisite_name
-      FROM Prerequisites
-    `);
-
-    // Build a map: course_code → { name, prereqs: [] }
-    const courseMap = {};
+    // Get all courses
+    const coursesResult = await pool.query('SELECT course_name, description FROM Courses');
+    const courses = {};
     coursesResult.rows.forEach(row => {
-      courseMap[row.course_name] = {
+      courses[row.course_name] = {
         name: row.description,
         prereqs: []
       };
     });
 
+    // Get all prerequisites
+    const prereqsResult = await pool.query('SELECT course_name, prerequisite_name FROM Prerequisites');
     prereqsResult.rows.forEach(row => {
-      if (row.prerequisite_name && courseMap[row.course_name]) {
-        courseMap[row.course_name].prereqs.push(row.prerequisite_name);
+      if (courses[row.course_name]) {
+        courses[row.course_name].prereqs.push(row.prerequisite_name);
       }
     });
 
-    res.json(courseMap);
+    res.json(courses);
   } catch (error) {
-    console.error("Error fetching courses with prerequisites:", error.stack);
-    res.status(500).send("Internal Server Error: Could not fetch combined course/prerequisite data.");
+    console.error('Error fetching courses with prerequisites:', error);
+    res.status(500).send('Internal Server Error');
   }
 });
 
