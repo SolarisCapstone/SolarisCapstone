@@ -1,0 +1,722 @@
+{
+    "MATH 1100": {
+      "name": "College Algebra",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 1101": {
+      "name": "College Algebra with Workshop",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 1102": {
+      "name": "Introduction to Mathematical Thinking",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 1103": {
+      "name": "Precalculus Mathematics for Science and Engineering",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 1105": {
+      "name": "Finite Mathematics",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 1120": {
+      "name": "Calculus for Business",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 1121": {
+      "name": "Calculus for Engineering Technology",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 1241": {
+      "name": "Calculus I",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 1242": {
+      "name": "Calculus II",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 2120": {
+      "name": "Intermediate Applied Calculus",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 2164": {
+      "name": "Matrices and Linear Algebra",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 2165": {
+      "name": "Introduction to Discrete Structures",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 2171": {
+      "name": "Differential Equations",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 2228": {
+      "name": "Actuarial Science IA: Mathematical Theory of Interest",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 3122": {
+      "name": "Probability & Statistics I",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 3123": {
+      "name": "Probability & Statistics II",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 3141": {
+      "name": "Advanced Calculus of One Variable",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 3142": {
+      "name": "Advanced Calculus of Several Variables",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 3163": {
+      "name": "Introduction to Modern Algebra",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 3171": {
+      "name": "Applied Mathematics",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 3181": {
+      "name": "Fundamental Concepts of Geometry",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 3228": {
+      "name": "Actuarial Science IB",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 4051": {
+      "name": "Computational Exploration and Generation of Data",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 4109": {
+      "name": "History of Mathematical Thought",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 4161": {
+      "name": "Number Theory",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 4163": {
+      "name": "Modern Algebra",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 4164": {
+      "name": "Abstract Linear Algebra",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 4181": {
+      "name": "Introduction to Topology",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 4226": {
+      "name": "Mathematics of Financial Markets",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 4228": {
+      "name": "Actuarial Science IIA",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "MATH 4229": {
+      "name": "Actuarial Science IIB",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "STAT 1220": {
+      "name": "Elements of Statistics I (Business)",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "STAT 1221": {
+      "name": "Elements of Statistics I",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "STAT 1222": {
+      "name": "Introduction to Statistics",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "STAT 1322": {
+      "name": "Introduction to Statistics II",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "STAT 2122": {
+      "name": "Introduction to Probability and Statistics",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "STAT 2223": {
+      "name": "Elements of Statistics II",
+      "type": "Mathematics and Statistics",
+      "credit_hours": 3
+    },
+    "ITSC 1212": {
+      "name": "Introduction to Computer Science",
+      "type": "Core",
+      "credit_hours": 4
+    },
+    "ITSC 1213": {
+      "name": "Introduction to Computer Science II",
+      "type": "Core",
+      "credit_hours": 4
+    },
+    "ITSC 2214": {
+      "name": "Data Structures and Algorithms",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITSC 1110": {
+      "name": "Introduction to Computer Science Principles",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITSC 1200": {
+      "name": "Freshman Seminar",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITSC 1501": {
+      "name": "Global Social Science: Interconnected World of Technology",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITSC 1600": {
+      "name": "Computing Professionals",
+      "type": "Core",
+      "credit_hours": 2
+    },
+    "ITSC 2175": {
+      "name": "Logic and Algorithms",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITSC 2181": {
+      "name": "Introduction to Computer Systems",
+      "type": "Core",
+      "credit_hours": 4
+    },
+    "ITSC 2600": {
+      "name": "Computer Science Program, Identity, Career",
+      "type": "Core",
+      "credit_hours": 2
+    },
+    "ITSC 3146": {
+      "name": "Intro Operating Systems & Networking",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITSC 3155": {
+      "name": "Software Engineering",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITSC 3688": {
+      "name": "Computers and their Impact on Society",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITSC 3790": {
+      "name": "Honors Research",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITSC 3990": {
+      "name": "Undergraduate Research",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITCS 4238": {
+      "name": "Intelligent and Interactive System Studio",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITIS 4390": {
+      "name": "Interaction Design Projects",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITIS 4246": {
+      "name": "Competitive Cyber Defense",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITSC 4155": {
+      "name": "Software Development Projects",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITCS 4232": {
+      "name": "Game Design and Development Studio",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITSC 4681": {
+      "name": "Senior Design I",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITSC 4682": {
+      "name": "Senior Design II",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITSC 4750": {
+      "name": "Honors Thesis",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITSC 4850": {
+      "name": "Senior Project I",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITSC 4851": {
+      "name": "Senior Project II",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITSC 4990": {
+      "name": "Undergraduate Research",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITSC 4991": {
+      "name": "Undergraduate Thesis",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "ITCS 3050": {
+      "name": "Topics in Computer Science",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITCS 3112": {
+      "name": "Design and Implementation of Object-Oriented Systems",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 3120": {
+      "name": "Intro to Interactive Computer Graphics",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 3143": {
+      "name": "Operating Systems",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 3153": {
+      "name": "Intro to Artificial Intelligence",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "ITCS 3156": {
+      "name": "Intro to Machine Learning",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "ITCS 3160": {
+      "name": "Database Design and Implementation",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITCS 3162": {
+      "name": "Intro to Data Mining",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "ITCS 3166": {
+      "name": "Intro to Computer Networks",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 3190": {
+      "name": "Cloud Computing for Data Analysis",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 3216": {
+      "name": "Intro to Cognitive Science",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4010": {
+      "name": "Topics in Computer Science",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITCS 4101": {
+      "name": "Introduction to Natural Language Processing",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4102": {
+      "name": "Programming Languages",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4114": {
+      "name": "Real World Algorithms",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4121": {
+      "name": "Information Visualization",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4122": {
+      "name": "Visual Analytics",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITCS 4123": {
+      "name": "Visualization and Visual Communication",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4124": {
+      "name": "Advanced 3D Computer Graphics",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4141": {
+      "name": "Computer Systems and Architecture",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4145": {
+      "name": "Parallel Programming",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITCS 4150": {
+      "name": "Mobile Robotics",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4151": {
+      "name": "Intelligent Robotics",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4152": {
+      "name": "Intro to Computer Vision",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4180": {
+      "name": "Mobile Application Development",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITCS 4230": {
+      "name": "Intro to Game Design and Development",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4231": {
+      "name": "Advanced Game Design and Development",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITCS 4236": {
+      "name": "Artificial Intellegence for Computer Games",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITIS 3130": {
+      "name": "Intro to Human-Centered Computing",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITIS 3135": {
+      "name": "Web-based Application Design and Development",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITIS 3140": {
+      "name": "User Experience Methods",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITIS 3200": {
+      "name": "Intro to Info Security & Privacy",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITIS 3216": {
+      "name": "Intro to Cognitive Science",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITIS 3246": {
+      "name": "IT Infrastructure and SEC",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "ITIS 3300": {
+      "name": "Software Req and Project Management",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITIS 3310": {
+      "name": "Software Architecture and Design",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "ITIS 3320": {
+      "name": "Intro to Info Security & Privacy",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITIS 4010": {
+      "name": "Topics in Software & Info Sys",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITIS 4166": {
+      "name": "Network-Based App Development",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "ITIS 4180": {
+      "name": "Mobile Application Development",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITIS 4214": {
+      "name": "Usable Security and Privacy",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "ITIS 4221": {
+      "name": "Secure Programming and Penetration Testing",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "ITIS 4250": {
+      "name": "Computer Forensics",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "ITIS 4260": {
+      "name": "Intro to Security Analysis",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "ITIS 4261": {
+      "name": "Intro to Secured Cloud Computing",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "ITIS 4310": {
+      "name": "Web Mining",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITIS 4350": {
+      "name": "Design Prototyping",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "ITIS 4353": {
+      "name": "Social Design Technology",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITIS 4355": {
+      "name": "Accessible Design and Implementation",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITIS 4358": {
+      "name": "Physical Computing",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "ITIS 4360": {
+      "name": "Human-Centered Artificial Intelligence",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "BINF 1101": {
+      "name": "Intro to Bioinformatics and Genomics",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "BINF 2111": {
+      "name": "Intro to Bioinformatics Computing",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "BINF 3101": {
+      "name": "Sequence Analysis",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "BINF 3121": {
+      "name": "Statistics for Bioinformatics",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "BINF 3131": {
+      "name": "Bioinformatics Algorithms",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "BINF 3201": {
+      "name": "Genomic Methods",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "BINF 3900": {
+      "name": "Undergraduate Research",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "BINF 4211": {
+      "name": "Applied Data Mining for Bioinformatics",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "BINF 4171": {
+      "name": "Business of Biotechnology",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "BINF 4191": {
+      "name": "Life Sciences and the Law",
+      "type": "Conc Elective",
+      "credit_hours": 3
+    },
+    "BINF 4600": {
+      "name": "Bioinformatics and Genomics Seminar",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "BINF 4650": {
+      "name": "Senior Project",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "BINF 4900": {
+      "name": "Principles of Team Science",
+      "type": "Capstone",
+      "credit_hours": 3
+    },
+    "BIOL 1000": {
+      "name": "Special Topics in Biology",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "BIOL 1110": {
+      "name": "Principles of Biology I",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "BIOL 1110L": {
+      "name": "Principles of Biology I Laboratory",
+      "type": "Core",
+      "credit_hours": 1
+    },
+    "BIOL 1115": {
+      "name": "Principles of Biology II",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "BIOL 2000": {
+      "name": "Special Topics in Biology",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "BIOL 2120": {
+      "name": "General Biology I",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "BIOL 2120L": {
+      "name": "General Biology I Laboratory",
+      "type": "Core",
+      "credit_hours": 1
+    },
+    "BIOL 2130": {
+      "name": "General Biology II",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "BIOL 3111": {
+      "name": "Cell Biology",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "BIOL 3166": {
+      "name": "Genetics",
+      "type": "Conc Required",
+      "credit_hours": 3
+    },
+    "CHEM 1251": {
+      "name": "General Chemistry I",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "CHEM 1251L": {
+      "name": "General Chemistry I Lab",
+      "type": "Core",
+      "credit_hours": 1
+    },
+    "CHEM 1252": {
+      "name": "General Chemistry II",
+      "type": "Core",
+      "credit_hours": 3
+    },
+    "PSYCH 1101": {
+      "name": "General Psychology",
+      "type": "Gen Ed",
+      "credit_hours": 3
+    },
+    "PHIL 2105": {
+      "name": "Deductive Logic",
+      "type": "Gen Ed",
+      "credit_hours": 3
+    },
+    "CHEM 1252L": {
+      "name": "General Chemistry II Lab",
+      "type": "Core",
+      "credit_hours": 1
+    }
+  }

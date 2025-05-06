@@ -1,0 +1,39 @@
+{
+  "Core Classes": [
+    { "code": "ITSC 1212", "title": "Intro to Computer Science I", "credit_hours": 3, "type": "Core", "status": "needed" },
+    { "code": "ITSC 1213", "title": "Intro to Computer Science II", "credit_hours": 3, "type": "Core", "status": "needed" },
+    { "code": "ITSC 1600 / 2600", "title": "Computing Professionals", "credit_hours": 1, "type": "Core", "status": "needed" },
+    { "code": "ITSC 2175 / MATH 2165", "title": "Logic and Algorithms", "credit_hours": 3, "type": "Core", "status": "needed" },
+    { "code": "ITSC 2214", "title": "Data Structures and Algorithms", "credit_hours": 3, "type": "Core", "status": "needed" },
+    { "code": "ITSC 3688", "title": "Computers and Their Impact on Society", "credit_hours": 3, "type": "Core", "status": "needed" }
+  ],
+  "Mathematics and Statistics": [
+    { "code": "MATH 1241", "title": "Calculus I", "credit_hours": 3, "type": "Math", "status": "needed" },
+    { "code": "STAT 1220", "title": "Elements of Statistics I (BUSN)", "credit_hours": 3, "type": "Math", "status": "needed" },
+    { "code": "BINF 3121", "title": "Statistics for Bioinformatics", "credit_hours": 3, "type": "Math", "status": "needed" }
+  ],
+  "Related Courses": [
+    { "code": "BIOL 2120", "title": "General Biology I", "credit_hours": 3, "type": "Related", "status": "needed" },
+    { "code": "BIOL 2130", "title": "General Biology II", "credit_hours": 3, "type": "Related", "status": "needed" },
+    { "code": "CHEM 1251", "title": "General Chemistry I", "credit_hours": 3, "type": "Related", "status": "needed" },
+    { "code": "CHEM 1251L", "title": "General Chemistry I Lab", "credit_hours": 1, "type": "Related", "status": "needed" },
+    { "code": "CHEM 1252", "title": "General Chemistry II", "credit_hours": 3, "type": "Related", "status": "needed" },
+    { "code": "CHEM 1252L", "title": "General Chemistry II Lab", "credit_hours": 1, "type": "Related", "status": "needed" }
+  ],
+  "Capstone Course": [
+    { "code": "BINF 4650 / 4900 / ITSC 4681 / 4682 / 4750 / 4900 / 4990 / 4991 / ITCS 4232 / ITIS 4390 / 4246", "title": "Capstone Course (choose one)", "credit_hours": 3, "type": "Capstone", "status": "needed" }
+  ],
+  "Concentration in Bioinformatics": [
+    { "code": "BINF 1101", "title": "Introduction to Bioinformatics and Genomics", "credit_hours": 3, "type": "Concentration", "status": "needed" },
+    { "code": "BINF 2111", "title": "Introduction to Bioinformatics Computing", "credit_hours": 3, "type": "Concentration", "status": "needed" },
+    { "code": "BINF 3101", "title": "Sequence Analysis", "credit_hours": 3, "type": "Concentration", "status": "needed" },
+    { "code": "BINF 4600", "title": "Bioinformatics and Genomics Seminar", "credit_hours": 1, "type": "Concentration", "status": "needed" },
+    { "code": "BIOL 3111", "title": "Cell Biology", "credit_hours": 3, "type": "Concentration", "status": "needed" },
+    { "code": "BINF 3166", "title": "Genetics", "credit_hours": 3, "type": "Concentration", "status": "needed" }
+  ],
+  "Concentration Electives": [
+    { "code": "BINF 4211", "title": "Database / Analytics", "credit_hours": 3, "type": "Elective", "status": "needed" },
+    { "code": "BINF 4171 / 4191", "title": "Professional Development", "credit_hours": 1, "type": "Elective", "status": "needed" },
+    { "code": "BINF 3131 / 3201", "title": "Upper-Division Elective", "credit_hours": 3, "type": "Elective", "status": "needed" }
+  ]
+}

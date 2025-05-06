@@ -89,6 +89,9 @@
       footer a button {
           font-size: 14px;
       }
+      .hidden {
+    display: none;
+  }
   </style>
 </head>
 <body class="bg-green-900 text-white">
@@ -104,7 +107,6 @@
 
       <header class="text-center mb-4">
           <h1 class="text-2xl font-bold" style="color: var(--charlotte-green);">Graduation Timeline Planner</h1>
-          <h2 class="text-lg font-semibold text-black">Computer Science, AI, Robotics, and Gaming Concentration, B.S.</h2>
           <p class="text-black font-semibold mt-1">Degree Select <span id="progress-percent">0%</span></p>
           <select id="degree-select">
            <option value="1">AI, Robotics, and Gaming Concentration</option>
@@ -171,7 +173,7 @@
           </div>
          
               <div class="course-category-box" id="concentration-required" ondrop="drop(event)" ondragover="allowDrop(event)">
-                  <h2>Concentration Required Course - Choose One</h2>
+                  <h2>Concentration Required Course</h2>
                   <!-- <div class="course" id="ITCS3153" draggable="true" ondragstart="drag(event)">ITCS 3153 - Introduction to Artificial Intelligence</div>
                   <div class="course" id="ITCS3156" draggable="true" ondragstart="drag(event)">ITCS 3156 - Introduction to Machine Learning</div> -->
               </div>
@@ -193,6 +195,45 @@
                   <div class="course" id="ITCS4236" draggable="true" ondragstart="drag(event)">ITCS 4236 - Artificial Intelligence for Computer Games</div> -->
               </div>
 
+<div id="add-class-container" style="position: fixed; top: 20px; right: 20px;">
+  <button id="add-class-button" class="bg-green-700 hover:bg-green-600 text-white px-4 py-2 rounded">
+    Add a Class
+  </button>
+</div>
+
+<div id="add-class-form" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white p-6 rounded shadow-lg text-black w-96">
+    <h2 class="text-lg font-bold mb-4">Add a New Class</h2>
+    <form id="new-class-form">
+      <label class="block mb-2">
+        Course Name (Ex. ITCS 1213):
+        <input type="text" id="new-course-name" class="w-full p-2 border rounded" required />
+      </label>
+      <label class="block mb-2">
+        Prerequisite (Ex. ITCS 1212):
+        <input type="text" id="new-course-prerequisite" class="w-full p-2 border rounded" />
+      </label>
+      <label class="block mb-4">
+        Course Type:
+        <select id="new-course-type" class="w-full p-2 border rounded" required>
+            <option value="core-classes">Core</option>
+            <option value="math-classes">Math</option>
+            <option value="concentration-required">Concentration Required</option>
+            <option value="concentration-electives">Concentration Elective</option>
+          </select>
+        </select>
+      </label>
+      <div class="flex justify-between">
+        <button type="submit" class="bg-green-700 hover:bg-green-600 text-white px-4 py-2 rounded">
+          Add Class
+        </button>
+        <button type="button" id="cancel-add-class" class="bg-red-500 hover:bg-red-400 text-white px-4 py-2 rounded">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
 
           </section>
         
@@ -224,32 +265,118 @@
        function drag(ev) {
           ev.dataTransfer.setData("text", ev.target.id);
       }
-       function drop(ev) {
+ 
+  let prerequisites = {};
+  let semesterCourses = {};
+
+  fetch("/api/prerequisites")
+  .then(response => response.json())
+  .then(data => {
+
+    prerequisites = data.reduce((acc, { course_name, prerequisite_name }) => {
+      const normalizedCourseName = course_name.replace(/\s+/g, "");
+      const normalizedPrerequisiteName = prerequisite_name.replace(/\s+/g, "");
+
+      if (!acc[normalizedCourseName]) acc[normalizedCourseName] = [];
+      acc[normalizedCourseName].push(normalizedPrerequisiteName);
+      return acc;
+    }, {});
+
+  })
+  .catch(error => console.error("Error fetching prerequisites:", error));
+
+// Track courses that have already shown an error message
+const coursesWithErrors = new Set();
+
+function validatePrerequisites(courseId, semesterId) {
+  console.log(`Validating prerequisites for course: ${courseId} in semester: ${semesterId}`);
+
+  // Get the prerequisites for the course
+  const prereqs = prerequisites[courseId] || [];
+  console.log(`Prerequisites for ${courseId}:`, prereqs);
+
+  // Get all semesters and sort them in chronological order
+  const semesters = Object.keys(semesterCourses).sort((a, b) => {
+    const [termA, yearA] = [a.slice(0, -2), parseInt(a.slice(-2))];
+    const [termB, yearB] = [b.slice(0, -2), parseInt(b.slice(-2))];
+    const termOrder = { spring: 1, summer: 2, fall: 3 };
+    return yearA - yearB || termOrder[termA] - termOrder[termB];
+  });
+  console.log("Sorted semesters:", semesters);
+
+  // Find the index of the current semester
+  const currentSemesterIndex = semesters.indexOf(semesterId);
+  console.log(`Current semester index for ${semesterId}:`, currentSemesterIndex);
+
+  // Check for unmet prerequisites
+  let unmetPrereqs = prereqs.filter(prereq => {
+    const isMet = semesters
+      .slice(0, currentSemesterIndex) // Only consider semesters before the current one
+      .some(sem => semesterCourses[sem]?.includes(prereq)); // Check if the prerequisite is in any of those semesters
+    console.log(`Checking prerequisite ${prereq}:`, isMet ? "Met" : "Not Met");
+    return !isMet;
+  });
+
+  console.log(`Unmet prerequisites for ${courseId}:`, unmetPrereqs);
+
+  const courseElement = document.getElementById(courseId);
+  if (courseElement) {
+    if (unmetPrereqs.length > 0) {
+      console.log(`Setting ${courseId} to red due to unmet prerequisites.`);
+      courseElement.style.backgroundColor = "red";
+      courseElement.title = `Missing prerequisites: ${unmetPrereqs.join(", ")}`;
+
+      // Show an alert only if the error hasn't been shown before
+      if (!coursesWithErrors.has(courseId)) {
+        alert(`The course "${courseId}" has unmet prerequisites: ${unmetPrereqs.join(", ")}`);
+        coursesWithErrors.add(courseId); // Mark the course as having shown an error
+      }
+    } else {
+      console.log(`All prerequisites met for ${courseId}. Setting to default color.`);
+      courseElement.style.backgroundColor = "var(--charlotte-light-gray)";
+      courseElement.title = "";
+
+      // Remove the course from the error tracking set if prerequisites are now met
+      coursesWithErrors.delete(courseId);
+    }
+  } else {
+    console.error(`Course element with ID ${courseId} not found in the DOM.`);
+  }
+}
+
+function revalidateAllCourses() {
+  console.log("Revalidating prerequisites for all courses...");
+
+  Object.keys(semesterCourses).forEach(semesterId => {
+    semesterCourses[semesterId].forEach(courseId => {
+      validatePrerequisites(courseId, semesterId);
+    });
+  });
+}
+
+
+function drop(ev) {
   ev.preventDefault();
   const data = ev.dataTransfer.getData("text");
   const dragged = document.getElementById(data);
 
-
-
-
-  // Allow drop if the target is a semester OR course-category box
   const dropTarget = ev.target.closest('.semester, .course-category-box');
   if (dropTarget && !dropTarget.classList.contains('course')) {
-      dropTarget.appendChild(dragged);
-      updateProgress();
+    dropTarget.appendChild(dragged);
+
+    const semesterId = dropTarget.id;
+    if (!semesterCourses[semesterId]) semesterCourses[semesterId] = [];
+    semesterCourses[semesterId].push(dragged.id);
+
+    console.log("Updated semesterCourses:", semesterCourses);
+
+    revalidateAllCourses();
+
+    updateProgress();
   } else {
-      // Invalid drop location
-      const box = ev.target.closest('.course-category-box, .semester');
-      if (box) {
-          box.style.borderColor = "red";
-          setTimeout(() => box.style.borderColor = "var(--charlotte-green)", 1000);
-      }
-      alert("You can only place courses into semesters or course categories, not onto individual courses.");
+    alert("You can only place courses into semesters or course categories.");
   }
 }
-
-
-
 
        function updateProgress() {
           const placed = document.querySelectorAll('.semester .course').length;
@@ -363,6 +490,57 @@ function populateCategoryBox(categoryId, courses) {
       categoryBox.appendChild(courseDiv);
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const addClassButton = document.getElementById("add-class-button");
+  const addClassForm = document.getElementById("add-class-form");
+  const cancelAddClass = document.getElementById("cancel-add-class");
+  const newClassForm = document.getElementById("new-class-form");
+
+  addClassButton.addEventListener("click", () => {
+    addClassForm.classList.remove("hidden");
+  });
+
+  cancelAddClass.addEventListener("click", () => {
+    addClassForm.classList.add("hidden");
+  });
+
+  newClassForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const courseName = document.getElementById("new-course-name").value.trim();
+    const prerequisite = document.getElementById("new-course-prerequisite").value.trim();
+    const courseType = document.getElementById("new-course-type").value;
+
+    const normalizedCourseName = courseName.replace(/\s+/g, "");
+    const normalizedPrerequisite = prerequisite.replace(/\s+/g, "");
+
+    const categoryBox = document.getElementById(courseType);
+    if (categoryBox) {
+      const courseDiv = document.createElement("div");
+      courseDiv.className = "course";
+      courseDiv.id = normalizedCourseName;
+      courseDiv.setAttribute("draggable", "true");
+      courseDiv.setAttribute("ondragstart", "drag(event)");
+      courseDiv.textContent = courseName;
+      categoryBox.appendChild(courseDiv);
+
+      if (prerequisite) {
+        if (!prerequisites[normalizedCourseName]) {
+          prerequisites[normalizedCourseName] = [];
+        }
+        prerequisites[normalizedCourseName].push(normalizedPrerequisite);
+      }
+
+      console.log(`Added new course: ${courseName} (Prerequisite: ${prerequisite || "None"})`);
+    } else {
+      console.error(`Category box with id "${courseType}" not found.`);
+    }
+
+    addClassForm.classList.add("hidden");
+    newClassForm.reset();
+  });
+});
 
 
   </script>

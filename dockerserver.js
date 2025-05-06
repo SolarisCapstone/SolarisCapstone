@@ -190,175 +190,147 @@ app.get("/api/degree/:majorId", async (req, res) => {
  }
 });
 
+// --- Prerequisite planner shit (i hope) ---
 
-
-
-app.get("/api/courses", (req, res) => {
- const query ="SELECT course_name, description, type FROM Courses";
- courseDB.query(query, (err, results) => {
-   if (err) {
-     console.error("Error fetching data from the database: " + err.stack);
-     return res.status(500).send("Internal Server Error");
-   }
-   res.json(results);
- });
+app.get("/api/courses", async (req, res) => {
+  // Selects course code and its name (description), orders them for the dropdown
+  // Ensure your 'Courses' table has 'course_name' and 'description' columns
+  const query = "SELECT course_name AS code, description AS name FROM Courses ORDER BY course_name";
+  try {
+    // Execute the query using the PostgreSQL pool
+    const results = await pool.query(query);
+    // Send the resulting rows as JSON
+    res.json(results.rows);
+  } catch (error) {
+    // Log any errors and send a 500 status code
+    console.error("Error fetching courses:", error.stack);
+    res.status(500).send("Internal Server Error: Could not fetch courses.");
+  }
 });
 
+// --- End of code to add ---
+
+
+// app.get("/api/courses", (req, res) => {
+//  const query ="SELECT course_name, description, type FROM Courses";
+//  courseDB.query(query, (err, results) => {
+//    if (err) {
+//      console.error("Error fetching data from the database: " + err.stack);
+//      return res.status(500).send("Internal Server Error");
+//    }
+//    res.json(results);
+//  });
+// });
 
 app.get("/api/prerequisites", (req, res) => {
- const query= "SELECT course_name, prerequisite_name FROM Prerequisites";
- courseDB.query(query, (err, results) => {
-   if (err) {
-     console.error("Error fetching data from the database: " + err.stack);
-     return res.status(500).send("Internal Server Error");
-   }
-   res.json(results);
- });
-});
-
-
-app.get("/api/catalogs", (req, res) => {
- const query= "SELECT catalog_id, catalog_name, description FROM Catalogs";
- courseDB.query(query, (err, results) => {
-   if (err) {
-     console.error("Error fetching data from the database: " + err.stack);
-     return res.status(500).send("Internal Server Error");
-   }
-   res.json(results);
- });
-});
-
-
-app.get("/api/catalogcourses", (req, res) => {
- const query ="SELECT catalog_id, course_name FROM CatalogCourses";
- courseDB.query(query, (err, results) => {
-   if (err) {
-     console.error("Error fetching data from the database: " + err.stack);
-     return res.status(500).send("Internal Server Error");
-   }
-   res.json(results);
- });
-});
-
-app.get("/api/concentrations", async (req, res) => {
-  try {
-    const result = await pool.query("SELECT DISTINCT catalog_name FROM Catalogs ORDER BY catalog_name");
-    const concentrations = result.rows.map(row => row.catalog_name);
-    res.json(concentrations);
-  } catch (err) {
-    console.error("Error fetching concentrations:", err);
-    res.status(500).send("Server error");
-  }
-});
-
-const bcrypt = require("bcrypt");
-
-app.post("/api/onboarding", async (req, res) => {
-  console.log("Incoming /api/onboarding request body:", req.body);
-  const {
-    name,
-    email,
-    password,
-    is_advisor,
-    major,
-    concentration,
-    semester,
-    year,
-    credit_hours,
-    summer_classes,
-    summer_credits,
-    transfer_credits
-  } = req.body;
-
-
-  const client = await pool.connect();
-  try {
-    await client.query("BEGIN");
-
-    const role = is_advisor ? 'advisor' : 'student';
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    console.log("Inserting into users...");
-    const userInsert = await client.query(
-      `INSERT INTO users (email, name, password, role)
-      VALUES ($1, $2, $3, $4)
-      RETURNING user_id`,
-      [email, name, hashedPassword, role]
-    );
-    console.log("Inserted user:", userInsert.rows[0]);
-
-
-    const userId = userInsert.rows[0].user_id;
-
-    if (role === 'student') {
-      await client.query(
-        `INSERT INTO UserPreferences (
-          user_id, major, concentration, start_semester, start_year,
-          credit_hours_per_semester, takes_summer_classes, has_transfer_credits
-        ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
-        [
-          userId,
-          major,
-          concentration,
-          semester,
-          parseInt(year),                    // cast to int
-          parseInt(credit_hours),            // cast to int
-          summer_classes === 'Yes',          // cast to boolean
-          transfer_credits === 'Yes'         // cast to boolean
-        ]
-      );
-    }else {
-      await client.query(
-        `INSERT INTO AdvisorPreferences (user_id) VALUES ($1)`,
-        [userId]
-      );
+  const query = `
+    SELECT course_name, prerequisite_name 
+    FROM Prerequisites
+  `;
+  pool.query(query, (err, results) => {
+    if (err) {
+      console.error("Error fetching prerequisites:", err.stack);
+      return res.status(500).send("Internal Server Error");
     }
+    res.json(results.rows); // Use `.rows` for PostgreSQL
+  });
+});
 
-    await client.query("COMMIT");
-    res.status(200).send("Preferences saved");
-  } catch (err) {
-    await client.query("ROLLBACK");
-    console.error("Error saving onboarding info:", err.stack); // or err.message
-    res.status(500).send("Failed to save preferences");
-  }finally {
-    client.release();
+// app.get("/api/catalogs", (req, res) => {
+//  const query= "SELECT catalog_id, catalog_name, description FROM Catalogs";
+//  courseDB.query(query, (err, results) => {
+//    if (err) {
+//      console.error("Error fetching data from the database: " + err.stack);
+//      return res.status(500).send("Internal Server Error");
+//    }
+//    res.json(results);
+//  });
+// });
+
+
+// app.get("/api/catalogcourses", (req, res) => {
+//  const query ="SELECT catalog_id, course_name FROM CatalogCourses";
+//  courseDB.query(query, (err, results) => {
+//    if (err) {
+//      console.error("Error fetching data from the database: " + err.stack);
+//      return res.status(500).send("Internal Server Error");
+//    }
+//    res.json(results);
+//  });
+// });
+
+
+
+// please god work for course catalog/prerequisite planners
+app.get("/api/pg-degree/:majorId", async (req, res) => {
+  const majorId = req.params.majorId;
+
+  try {
+    const groupedQuery = `
+      SELECT 
+        c.course_name AS code,
+        c.description AS title,
+        c.type,
+        c.credit_hours
+      FROM Courses c
+      JOIN CatalogCourses cc ON c.course_name = cc.course_name
+      WHERE cc.catalog_id = $1
+    `;
+
+    const result = await pool.query(groupedQuery, [majorId]);
+
+    // Group courses by type
+    const grouped = {};
+    result.rows.forEach(course => {
+      if (!grouped[course.type]) {
+        grouped[course.type] = [];
+      }
+      grouped[course.type].push({
+        code: course.code,
+        title: course.title,
+        credit_hours: course.credit_hours,
+        type: course.type,
+        status: 'needed'  // placeholder for now
+      });
+    });
+
+    res.json(grouped);
+  } catch (error) {
+    console.error("Error fetching degree data:", error);
+    res.status(500).send("Internal Server Error");
   }
 });
+
+app.get('/api/courses-with-prereqs', async (req, res) => {
+  try {
+    // Get all courses
+    const coursesResult = await pool.query('SELECT course_name, description FROM Courses');
+    const courses = {};
+    coursesResult.rows.forEach(row => {
+      courses[row.course_name] = {
+        name: row.description,
+        prereqs: []
+      };
+    });
+
+    // Get all prerequisites
+    const prereqsResult = await pool.query('SELECT course_name, prerequisite_name FROM Prerequisites');
+    prereqsResult.rows.forEach(row => {
+      if (courses[row.course_name]) {
+        courses[row.course_name].prereqs.push(row.prerequisite_name);
+      }
+    });
+
+    res.json(courses);
+  } catch (error) {
+    console.error('Error fetching courses with prerequisites:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
 
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
  console.log(`Server is running at http://localhost:${PORT}`);
-});
-
-
-
-// please god work for course catalog
-app.get("/api/pg-degree/:majorId", async (req, res) => {
-  const majorId = req.params.majorId;
-
-  try {
-    const courseQuery = `
-      SELECT course_name AS code, 
-             description AS title, 
-             type, 
-             credit_hours
-      FROM Courses
-      WHERE course_name IN (
-        SELECT course_name FROM CatalogCourses WHERE catalog_id = $1
-      )
-    `;
-    const result = await pool.query(courseQuery, [majorId]);
-
-    // Optional: add placeholder status (until you wire real UserPlans data)
-    const coursesWithStatus = result.rows.map(course => ({
-      ...course,
-      status: 'needed' // or 'completed' / 'planned' if you can query that later
-    }));
-
-    res.json({ courses: coursesWithStatus });
-  } catch (error) {
-    console.error("Error fetching degree data:", error);
-    res.status(500).send("Internal Server Error");
-  }
 });

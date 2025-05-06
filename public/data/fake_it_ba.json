@@ -1,0 +1,29 @@
+{
+    "Core": [
+      { "code": "ITSC 1212", "title": "Introduction to Computer Science I", "credit_hours": 3, "type": "Core", "status": "needed" },
+      { "code": "ITSC 1213", "title": "Introduction to Computer Science II", "credit_hours": 3, "type": "Core", "status": "needed" },
+      { "code": "ITSC 1600 / 2600", "title": "Computing Professionals", "credit_hours": 1, "type": "Core", "status": "needed" },
+      { "code": "ITSC 2175 / MATH 2165", "title": "Logic and Algorithms", "credit_hours": 3, "type": "Core", "status": "needed" },
+      { "code": "ITSC 2214", "title": "Data Structures and Algorithms", "credit_hours": 3, "type": "Core", "status": "needed" },
+      { "code": "ITSC 3688", "title": "Computers and Their Impact on Society", "credit_hours": 3, "type": "Core", "status": "needed" }
+    ],
+    "Mathematics and Statistics": [
+      { "code": "MATH 1241", "title": "Calculus", "credit_hours": 3, "type": "Mathematics and Statistics", "status": "needed" },
+      { "code": "STAT 1220", "title": "Elements of Statistics I (BUSN)", "credit_hours": 3, "type": "Mathematics and Statistics", "status": "needed" },
+      { "code": "STAT 2223", "title": "Elements of Statistics II", "credit_hours": 3, "type": "Mathematics and Statistics", "status": "needed" }
+    ],
+    "Capstone": [
+      { "code": "ITSC 4155 / 4750 / 4850 / 4851 / 4681 / 4682 / 4990 / 4991 / ITIS 4390 / 4246 / ITCS 4232", "title": "Capstone Course", "credit_hours": 3, "type": "Capstone", "status": "needed" }
+    ],
+    "Concentration Required": [
+      { "code": "ITIS 3130", "title": "Human-Centered Design", "credit_hours": 3, "type": "Concentration Required", "status": "needed" },
+      { "code": "ITIS 3135", "title": "Web-Based Application Design and Development", "credit_hours": 3, "type": "Concentration Required", "status": "needed" },
+      { "code": "ITIS 3200", "title": "Introduction to Information Security and Privacy", "credit_hours": 3, "type": "Concentration Required", "status": "needed" },
+      { "code": "ITIS 3300", "title": "Software Requirements and Project Management", "credit_hours": 3, "type": "Concentration Required", "status": "needed" },
+      { "code": "ITIS 3160", "title": "Database Design and Implementation", "credit_hours": 3, "type": "Concentration Required", "status": "needed" }
+    ],
+    "Technical Elective": [
+      { "code": "ITCS/ITIS/ITSC/BINF 3xxx-4xxx (except ITSC 3688)", "title": "Technical Elective Courses", "credit_hours": 18, "type": "Technical Elective", "status": "needed" }
+    ]
+  }
+  
