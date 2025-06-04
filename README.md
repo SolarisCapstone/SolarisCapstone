@@ -88,10 +88,10 @@ https://teamsolariscapstone-adbfee951637.herokuapp.com/index.html
 
 This project is a collaborative effort by UNC Charlotte Computer Science students:
 
-- **Reid Moseley** – Role (Frontend, Backend, Database, etc.)
+- **Andrew Schmal** – Backend, Frontend, DevOps
 - **Jonathan Revoir** – Role
 - **Vaibhav Satheesh** – Role
-- **Andrew Schmal** – Backend, Frontend, DevOps
+- **Reid Moseley** – Role (Frontend, Backend, Database, etc.)
 
 For any inquiries, feel free to reach out via our GitHub Discussions or email.
 
